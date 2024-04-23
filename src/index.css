@@ -1,22 +1,25 @@
 html, body {
   height: 100%;
   margin: 0;
+  background-color: #a3d441;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   position: relative;
+  height: auto;
 }
 
 .header {
   width: 100%;
-  height: auto;
+  height: 12vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 }
+
 
 .logo {
   width: 15vw;
@@ -65,6 +68,81 @@ html, body {
 
 .ReactModal__Overlay--before-close{
   opacity: 0;
+}
+@keyframes rotate360 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.left-photo, .svg-img {
+  animation: rotate360 180s linear infinite; /* Применяем анимацию к обоим фотографиям */
+}
+.header {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #286043;
+  border-color: transparent;
+  border-style: solid;
+  border-radius: 0px 0px 0px 113px;
+  overflow: hidden;
+  margin-left: auto;
+  position: relative; /* Изменение позиционирования на relative */
+  z-index: 10;
+}
+.left-photo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: 200px; /* настройте максимальную ширину фотографии по вашему усмотрению */
+  height: auto; /* чтобы сохранить пропорции фотографии */
+  margin-top: 40px; /* отступ сверху */
+  margin-left: -75px;
+  z-index: 2;
+}
+.svg-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: auto;
+  margin-top: -521px;
+  margin-left: -629px;
+  z-index: 1;
+}
+
+.logo {
+  padding: 10px;
+}
+
+.logo img {
+  max-width: 100px; /* максимальная ширина логотипа */
+}
+
+.menu {
+  display: flex; /* меню в один ряд */
+}
+
+.main-menu ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex; /* меню в один ряд */
+}
+
+.main-menu li {
+  margin-right: 20px;
+  color: #fff; /* цвет текста в меню */
+  font-weight: bold;
+}
+.main-items {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .Modal {
@@ -133,38 +211,763 @@ html, body {
 }
 
 
-
-.main {
+.content-container {
+  /*display: flex;*/
+  flex-direction: column;
+  align-items: center; /* Чтобы разместить по центру по вертикали */
+  height: auto;
+}
+.content-container-footer {
   display: flex;
+  flex-direction: column;
+  align-items: center; /* Чтобы разместить по центру по вертикали */
+  height: auto;
+}
+.main {
+  overflow: hidden;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Высота равная высоте видимой области экрана */
-  background-color: gray;
+  height: auto;
+  /*background-color: #f0f0f0;*/
   background-size: cover;
   width: 100%;
   font-size: 0.83vw;
 }
-.slider {
-  max-width: 85%; /* Максимальная ширина слайдера */
-  text-align: center; /* Центрирование элементов внутри слайдера */
+.accordion-example {
+  position: relative;
+  z-index: 10;
+  margin-top: 3vw;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+  /*overflow: hidden;*/
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Высота равная высоте видимой области экрана */
+  /*background-color: #f0f0f0;*/
+  background-size: cover;
+  width: 100%;
+  font-size: 0.83vw;
 }
-.slider img {
-  margin-left: 20vw;
-  width: 50%; /* Ширина изображения будет равна ширине родительского контейнера */
-  height: auto; /* Автоматическое масштабирование высоты (сохранение пропорций) */
+.MuiAccordion-root:first-child {
+  background-color: white; /* Цвет фона для закрытого аккордеона */
+  transition: background-color 0.3s; /* Плавное изменение цвета фона */
+  border-top-left-radius: 36px !important;
+  border-top-right-radius: 36px !important;
+  border-bottom-right-radius: 36px !important;
+  border-bottom-left-radius: 36px !important;
 }
+.MuiAccordion-root.Mui-expanded:first-child {
+  background-color: #286043; /* Цвет фона для раскрытого аккордеона */
+}
+.MuiAccordion-rounded {
+  color: white !important;
+  background-color: white; /* Цвет фона для закрытого аккордеона */
+  transition: background-color 0.3s !important; /* Плавное изменение цвета фона */
+  border-top-left-radius: 36px !important;
+  border-top-right-radius: 36px !important;
+  border-bottom-right-radius: 36px !important;
+  border-bottom-left-radius: 36px !important;
+
+}
+.MuiAccordion-root:before {
+  display: none;
+}
+
+.MuiAccordion-root.Mui-expanded {
+  background-color: #286043; /* Цвет фона для раскрытого аккордеона */
+}
+
+.makeStyles-heading-3.Mui-expanded {
+  flex-basis: 70.33% !important;
+  color: white;
+}
+.MuiAccordion-root.Mui-expanded .makeStyles-heading-3 {
+  color: white; /* Изменение цвета текста при открытии аккордеона */
+}
+.makeStyles-heading-3 {
+  flex-basis: 70.33% !important;
+  color: #286043; /* Цвет текста по умолчанию */
+  transition: color 0.3s ease; /* Добавляем анимацию перехода для цвета текста */
+}
+.MuiAccordion-root.Mui-expanded .MuiAccordionSummary-content {
+  color: black !important;
+}
+
+.makeStyles-heading-3.Mui-expanded {
+  flex-basis: 70.33% !important;
+}
+
+.MuiAccordion-root.Mui-expanded .heading {
+  color: white !important; /* Изменение цвета текста заголовка при открытии */
+}
+
+.MuiAccordion-root.Mui-expanded .MuiAccordionSummary-content {
+  margin: 20px 0; /* Установка отступа для контента при открытии */
+}
+.makeStyles-root-2 {
+  width: 70% !important;
+  margin-left: 16vw;
+}
+.accordion__item {
+  flex-direction: row-reverse; /* Открывать элементы аккордеона справа */
+}
+/*.slick-slide img {*/
+/*  display: flex !important;*/
+/*}*/
+/*.slick-next:before {*/
+/*  font-size: 5vw !important;*/
+/*  margin-left: -0.8vw;*/
+/*  color: gray !important;*/
+/*}*/
+/*.slick-prev:before {*/
+/*  font-size: 5vw !important;*/
+/*  color: gray !important;*/
+/*  margin-left: -1.8vw;*/
+/*}*/
+/*.slider {*/
+/*  background-color: white;*/
+/*  max-width: 135%; !* Максимальная ширина слайдера *!*/
+/*  overflow: unset;*/
+/*  !*text-align: center; !* Центрирование элементов внутри слайдера *!*!*/
+/*}*/
+/*.slick-track {*/
+/*  overflow: auto;*/
+/*  margin-left: 4vw !important;*/
+/*}*/
+/*.slick-next {*/
+/*  z-index: 5;*/
+/*  right: 46.5vw !important;*/
+/*}*/
+/*.slick-prev {*/
+/*  z-index: 5;*/
+/*  left: 45vw !important;*/
+/*}*/
+/*.slider img {*/
+/*  margin-left: 0.1px;*/
+/*  max-width: 34vw;*/
+/*  height: 25vw;*/
+/*}*/
+/*.slick-slide.slick-active{*/
+/*  opacity: 0.5; !* Изначально делаем центральную фотографию полностью непрозрачной *!*/
+/*  transition: opacity 0.5s ease;*/
+/*}*/
+.slider-container {
+  position: relative; /* Устанавливаем позиционирование для контейнера слайдера */
+  max-width: 565px; /* Устанавливаем максимальную ширину для слайдера */
+  overflow: hidden; /* Скрываем содержимое, которое выходит за пределы слайдера */
+  margin: 0 auto; /* Автоматическое выравнивание слайдера по центру */
+  text-align: center; /* Центрируем элементы слайдера внутри слайдера */
+}
+
+.slick-prev {
+  left: 63px !important;
+  z-index: 1 !important; /* Устанавливаем z-index, чтобы стрелка была поверх содержимого слайдера */
+}
+.slick-prev,
+.slick-next {
+  width: 40px !important;
+  height: 40px !important;
+  position: absolute !important; /* Позиционирование абсолютное для точного размещения */
+  top: 50% !important; /* Положение по вертикали в центре */
+  transform: translateY(-50%); /* Смещение по вертикали */
+  z-index: 55 !important; /* Устанавливаем z-index, чтобы быть поверх других элементов */
+  background-color: #fff; /* Цвет фона */
+  padding: 5px !important; /* Отступ вокруг содержимого */
+  /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); !* Тень, указывающая наличие элемента за пределами *!*/
+  cursor: pointer; /* Показываем, что элемент является интерактивным */
+}
+.slick-slider {
+  width: 500px;
+}
+.slick-list {
+  margin-left: 5vw !important;
+}
+
+
+/*.slick-current {*/
+
+/*  opacity: 1 !important;*/
+/*}*/
+/*.slick-list {*/
+/*  position: relative;*/
+/*  display: block;*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*}*/
+/*.accordion {*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  width: 150vw;*/
+/*  background-color: darkgoldenrod;*/
+/*}*/
+.MuiAccordionSummary-content {
+  text-align: center !important;
+  flex-basis: 80.33% !important;
+}
+.MuiIconButton-root {
+  padding: 0.2vw !important;
+}
+.MuiSvgIcon-root {
+  font-size: 2rem !important;
+}
+.MuiIconButton-root {
+  color: black !important;
+}
+.MuiIconButton-edgeEnd {
+  margin-right: 8px !important;
+}
+
+.MuiAccordionSummary-root .MuiAccordionSummary-expandIcon,
+.MuiAccordionSummary-root .MuiIconButton-root {
+  transition: all 0.3s ease; /* Плавный переход для всех свойств при hover */
+}
+
+
+
+.MuiAccordionSummary-root .MuiIconButton-root {
+  color: white !important;
+}
+/*.MuiAccordionSummary-root:hover .MuiIconButton-root {*/
+/*  color: #c2b8b8 !important;*/
+/*}*/
+.MuiAccordionSummary-root.Mui-expanded .MuiAccordionSummary-expandIcon {
+  color: #286043 !important;
+}
+.MuiAccordionSummary-root.Mui-expanded .MuiAccordionSummary-expandIcon {
+  background-color: white !important;
+}
+.MuiAccordionSummary-root .MuiAccordionSummary-expandIcon {
+  background-color: green !important;
+}
+.MuiAccordionSummary-root {
+  display: flex;
+  padding: 15px 25px !important;
+  min-height: 48px;
+  transition: min-height 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.MuiButtonBase-root {
+  border-radius: 2vw;
+}
+.makeStyles-heading-2 {
+
+  font-size: 1.9375rem !important;
+  flex-basis: 100.33% !important;
+  font-weight: 700 !important;
+  flex-shrink: 0;
+}
+.MuiTypography-body1 {
+  font-size: 1.1375rem !important;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+   letter-spacing: 0.00938em;
+  text-align: left !important;
+}
+
+
+
+
+
+
+
 
 .footer {
+  display: flex;
+  font-size: 2vw;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5.3vw;
+  padding-top: 5.46vw;
+  padding-bottom: 5.5vw;
+  /*background-color: #007E36;*/
+}
+
+
+@keyframes chaotic-movement {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(10px, -10px) rotate(10deg);
+  }
+  50% {
+    transform: translate(-10px, 10px) rotate(-10deg);
+  }
+  75% {
+    transform: translate(10px, 10px) rotate(-20deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+
+.image {
+  animation: chaotic-movement 15s infinite linear;
+  backface-visibility: hidden;
+}
+
+/* WINNERS ------------------------------------------------------ */
+.winners {
+  margin-top: -0.1vw;
+  padding-top: 1.56vw;
+  background-image: linear-gradient(#03BE53, #009640, #00622A);
+}
+.winners-text {
+  margin-top: 0vw;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-size: 3.66vw;
+  line-height: 4.03vw;
+  color: #EEF3EC;
+  font-family: 'Acrom Medium', Arial, sans-serif;
+}
+.winners-top-input {
+  display: flex;
+  text-align: center;
+  margin-left: 13.875vw;
+  margin-top: 2.41666666666667vw;
+}
+.winners-left-input {
+  display: flex;
+  width: 23.06vw;
+  height: 3.66vw;
+}
+.winners-right-input {
+  display: flex;
+  width: 23.06vw;
+  height: 3.66vw;
+  margin-left: 12.5vw;
+}
+.winners-panel {
+  padding-top: 5.13vw;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+}
+.winners-items {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+
+.winners-item {
+  margin-left: 0.625vw;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0.989583333333333vw 1.5625vw;
+  white-space: nowrap;
+  cursor: pointer;
+
+  border: 0.104166666666667vw solid #eef3ec;
+  border-radius: 4.21875vw;
+}
+.winners-item-title {
+  color: #EEF3EC;
+  font-weight: 500;
+  font-size: 1.04vw;
+  line-height: 1.25vw;
+  text-align: center;
+}
+.winners-js-form {
+  display: block;
+  margin-top: 0em;
+}
+
+.winners-js-form-search {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 23.4375vw;
+  margin-left: 2.041666666666667vw;
+}
+.winners-button-field {
+  width: 0.9375vw;
+  height: 0.9375vw;
   position: absolute;
+  top: 50%;
+  left: 1.666666666666667vw;
+  transform: translateY(-50%);
+  border: none;
+  padding: 0;
+  z-index: 1;
+}
+.table-body-winners {
+  background-color: #ffffff26;
+  border: .07vw solid #ffffff4d;
+  border-radius: 1.46vw;
+  display: flex;
+  flex-flow: row nowrap;
+  font-family: Halvar Mittelschrift Rg, sans-serif;
+  font-size: 1.17vw;
+  font-weight: 400;
+  height: 4.03vw;
+  justify-content: flex-start;
+  margin-left: .2vw;
+  margin-top: .6520833333333333vw;
+  text-align: center;
+  width: 58.35vw;
+}
+.winners-search-field {
   width: 100%;
-  height: 10vw;
-  background-color: #f0f0f0;
+}
+.field-label {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.field-input {
+  background: #234a30;
+  border-radius: 4.21875vw;
+  border: none;
+  color: #eef3ec;
+}
+.field-placeholder {
+  padding: 1.09375vw 4.479166666666667vw 1.09375vw 3.072916666666667vw;
+  font-size: 1.041666666666667vw;
+  line-height: 1.25vw;
+  width: 23.4375vw;
+}
+.winners-tabs-content {
+  padding-top: 1.56vw;
+}
+.winners-tabs-content-ticket {
+  margin-left: 3.2vw;
+  margin-top: -1.3vw;
+}
+.table-ticket {
+  border-radius: 0.520833333333333vw;
+  padding: 1.041666666666667vw 0 1.5625vw;
+  width: 50.8125vw;
+}
+.table {
+  border-radius: 0.520833333333333vw;
+  padding: 1.041666666666667vw 0 1.5625vw;
+  width: 77.8125vw;
+  min-height: 20vw;
+}
+.table-head {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  color: #FFFFFF;
+  line-height: 1.63vw;
+  margin-top: 0.55vw;
+  font-weight: 400;
+  font-size: 1.17vw;
+  font-family: 'Acrom Medium', Arial, sans-serif;
+}
+.head-colm-date {
+  min-width: 25.364583vw;
+  margin-top: -0.5vw;
+
+}
+.head-colm-prize {
+  min-width: 13.427083333333336vw;
+  padding: 0 1.445833333333333vw 0 16.345833333333333vw;
+  margin-top: -0.7vw;
+}
+.head-colm-phone-ticket {
+  min-width: 16.614583333333332vw;
+  margin-top: -0.35vw;
+  margin-left: -0.2vw;
+}
+.head-colm-phone {
+  min-width: 16.614583vw;
+  margin-top: -0.7vw;
+  margin-left: 1.8vw;
+}
+.head-colm-date-ticket {
+  min-width: 5.364583vw;
+  margin-top: -0.3vw;
+  margin-left: -2.7vw;
+
+}
+.head-colm-date {
+  min-width: 25.364583vw;
+  margin-top: -0.5vw;
+
+}
+.head-colm-prize1-ticket {
+  min-width: 13.427083333333336vw;
+  /* margin-top: 1.7vw; */
+  margin-left: -0.9vw;
+}
+.head-colm-prize1 {
+  width: 15.427083vw;
+  margin-top: 1.7vw;
+  margin-left: -1vw;
+}
+.head-colm-phone1-ticket {
+  min-width: 17.364583333333332vw;
+  /* margin-top: 0.75vw; */
+  margin-left: -0.9vw;
+}
+.head-colm-phone1 {
+  min-width: 17.364583333333332vw;
+  margin-top: 1.75vw;
+  margin-left: 1.1vw;
+}
+.head-colm-date1-ticket {
+  min-width: 15.364583vw;
+  height: auto;
+  margin-top: 1.65vw;
+}
+.head-colm-date1 {
+  min-width: 20.364583vw;
+  margin-top: 1.65vw;
+  margin-left: -0.7vw;
+}
+.colm-text {
+  text-transform: uppercase;
+}
+.colm-text-ticket {
+  text-transform: uppercase;
+  font-size: 1.17vw;
+  font-family: "Acrom Medium", Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.63vw;
+}
+.colm-ticket-none {
+  display: none;
+}
+.head-colm-prize1-ticket {
+  min-width: 13.427083333333336vw;
+  /* margin-top: 1.7vw; */
+  margin-left: -0.9vw;
+}
+.head-colm-prize1 {
+  width: 15.427083vw;
+  margin-top: 1.7vw;
+  margin-left: -1vw;
+}
+.head-colm-phone1-ticket {
+  min-width: 17.364583333333332vw;
+  /* margin-top: 0.75vw; */
+  margin-left: -0.9vw;
+}
+.head-colm-phone1 {
+  min-width: 17.364583333333332vw;
+  margin-top: 1.75vw;
+  margin-left: 1.1vw;
+}
+.head-colm-date1-ticket {
+  min-width: 15.364583vw;
+  height: auto;
+  margin-top: 1.65vw;
+}
+.head-colm-date1 {
+  min-width: 20.364583vw;
+  margin-top: 1.65vw;
+  margin-left: -0.7vw;
+}
+.colm-text {
+  text-transform: uppercase;
+}
+.colm-text-ticket {
+  text-transform: uppercase;
+  font-size: 1.17vw;
+  font-family: "Acrom Medium", Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.63vw;
+}
+.colm-ticket-none {
+  display: none;
+}
+.decl-text {
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  width: 42.35vw;
+  margin-top: -3.5vw;
+  font-size: 1.32vw;
+  line-height: 1.76vw;
+  margin-bottom: 4.5vw;
+  text-align: center;
+  color: white;
+  margin-left: -1vw;
+}
+.colm-tel-none {
+  width: 17.60vw;
+  height: 5.87vw;
+  display: inline-block;
+  float: left;
+  text-align: left;
+  margin-left: -9vw;
+  margin-top: 5.1vw;
+}
+
+.colm-data-none {
+  width: 17.60vw;
+  height: 5.87vw;
+  text-align: left;
+  display: inline-block;
+  float: left;
+  margin-left: -9vw;
+  margin-top: 2.4vw;
+}
+
+.colm-prize-none {
+  width: 17.60vw;
+  text-align: left;
+  height: 5.87vw;
+  display: inline-block;
+  float: left;
+  margin-left: -9vw;
+  margin-top: 2.4vw;
+}
+
+.colm-tel {
+  float: left;
+  margin-top: 5.3vw;
+  margin-left: 6.5vw;
+  text-align: left;
+}
+
+.colm-data {
+  float: left;
+  text-align: left;
+  margin-top: 2.2vw;
+  margin-left: 6.5vw;
+}
+
+.colm-prize {
+  float: left;
+  text-align: left;
+  margin-top: 2.2vw;
+  margin-left: 6.5vw;
+  width: 42.67vw;
+  height: 11.73vw;
+}
+.decl-bonus-text {
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  width: 42.35vw;
+  margin-top: -1.5vw;
+  font-size: 1.32vw;
+  line-height: 1.76vw;
+  margin-bottom: 3.5vw;
+  text-align: center;
+  color: white;
+  margin-left: -1vw;
+}
+.colm-data-ticket-none {
+  display: none;
+}
+.colm-status-ticket-none {
+  display: none;
+}
+.colm-text1-ticket {
+  margin-left: 3vw;
+  margin-top: 0vw;
+}
+.colm-text1-data-ticket {
+  margin-left: -4.3vw;
+  margin-top: 0vw;
+}
+.centered-ticket-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-ticket {
+  display: flex;
+  align-items: center;
+}
+.colm-text1-status-ticket1-fail {
+  width: 17.59vw;
+  height: 2.64vw;
+  margin-left: 1vw;
+  margin-top: 0.1vw;
+  margin-bottom: 1.4vw;
+}
+.colm-text1-status-ticket1-complete {
+  display: inline-block;
+  width: 19.59vw;
+  height: auto;
+  margin-left: 2.75vw;
+  margin-top: 0.1vw;
+  margin-bottom: 1.4vw;
+  text-align: left;
+}
+.colm-text1-status-ticket1-check {
+  width: 19.59vw;
+  height: 2.64vw;
+  margin-left: -2.15vw;
+  margin-top: -0.4vw;
+  margin-bottom: 1.4vw;
+  text-align: left;
+}
+.colm-text1-status-ticket3 {
+  margin-left: -11.2vw;
+  margin-top: -2.9vw;
+  margin-bottom: 1.4vw;
+}
+.table-body-ticket {
+  color: #eef3ec;
+  font: 500 1.041666666666667vw 'Montserrat', sans-serif;
+  line-height: 1.041666666666667vw;
+  margin-left: 0vw;
+  margin-top: 0.6vw;
+}
+.table-body {
+  color: #eef3ec;
+  font: 500 1.041666666666667vw 'Montserrat', sans-serif;
+  line-height: 1.041666666666667vw;
+  margin-left: 9.5vw;
+  margin-top: 1vw;
 }
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+  .Modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: #FFFFFF4D;
+    width: 89.33vw;
+    height: auto;
+    min-height: 89vw;
+    padding: 1.46vw;
+    border-radius: 0.37vw;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  .textarea-sms {
+    overflow: auto;
+    min-width: 63vw;
+    max-width: 88vw;
+  }
+
+}
 
 
 
@@ -182,6 +985,14 @@ html, body {
 
 
 @media screen and (max-width: 767px) {
+  .header {
+    background-color: #a3d441;
+    width: 100%;
+    height: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   .Modal {
     position: fixed;
     top: 50%;
