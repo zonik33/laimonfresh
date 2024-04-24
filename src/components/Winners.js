@@ -1,6 +1,7 @@
 import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
 import axios from "axios";
 import {useLocation} from "react-router-dom";
+import howFull5 from "../image/img_36.png";
 
 
 export default function Winners(props) {
@@ -370,26 +371,51 @@ export default function Winners(props) {
                                             <div className={'table-body-winners'}>
                                                 <div className={'head-colm-prize1'}>1
                                                 </div>
-                                                <div className={'head-colm-phone1'}>1
+                                                <div className={'head-colm-name'}>Марго Р.
                                                 </div>
-                                                <div className={'head-colm-date1'}>1
+                                                <div className={'head-colm-phone1'}>25982628750
                                                 </div>
-                                            </div>
-                                            <div className={'table-body-winners'}>
-                                                <div className={'head-colm-prize1'}>1
-                                                </div>
-                                                <div className={'head-colm-phone1'}>1
-                                                </div>
-                                                <div className={'head-colm-date1'}>1
+                                                <div className={'head-colm-date1'}>
+                                                    <img alt="Приз"/>
                                                 </div>
                                             </div>
                                             <div className={'table-body-winners'}>
                                                 <div className={'head-colm-prize1'}>1
                                                 </div>
-                                                <div className={'head-colm-phone1'}>1
+                                                <div className={'head-colm-name'}>Владислав А.
                                                 </div>
-                                                <div className={'head-colm-date1'}>1
+                                                <div className={'head-colm-phone1'}>25982628750
                                                 </div>
+                                                <div className={'head-colm-date1'}>
+                                                    <img alt="Приз"/>
+                                                </div>
+                                            </div>
+                                            <div className={'table-body-winners'}>
+                                                <div className={'head-colm-prize1'}>1
+                                                </div>
+                                                <div className={'head-colm-name'}>Галина Г.
+                                                </div>
+                                                <div className={'head-colm-phone1'}>25982628750
+                                                </div>
+                                                <div className={'head-colm-date1'}>
+                                                    <img alt="Приз"/>
+                                                </div>
+                                            </div>
+                                            <div className={'winners-all'}>
+                                            <a href={'#'}>Показать всех</a>
+                                            </div>
+                                            <div className={'winners-text'}>Главный приз
+                                            </div>
+                                            <div className={'table-body-winners'}>
+                                                <div className={'head-colm-prize1'}>1
+                                                </div>
+                                                <div className={'head-colm-name'}>Галина Г.
+                                                </div>
+                                                <div className={'head-colm-phone1'}>25982628750
+                                                </div>
+                                                {/*<div className={'head-colm-date1'}>*/}
+                                                {/*    <img alt="Приз"/>*/}
+                                                {/*</div>*/}
                                             </div>
 
                                             <p id={'pageCount'}></p>
@@ -421,8 +447,9 @@ export default function Winners(props) {
 
                                     </div>
                                     <div className={'winners-videos'}>
-                                        {/*<a href={'winners-videos/'}>Видео-записи розыгрышей</a>*/}
+                                        {/*<a href={'#'}>Показать всех</a>*/}
                                     </div>
+
                                 </div>
                             </div>
                         </div>

@@ -1,7 +1,7 @@
 html, body {
+  background-color: #a3d441;
   height: 100%;
   margin: 0;
-  background-color: #a3d441;
 }
 
 .container {
@@ -12,12 +12,19 @@ html, body {
 }
 
 .header {
+  /*background-color: #234a30;*/
   width: 100%;
   height: 12vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
+}
+.MuiAccordion-rounded:last-child {
+  margin-bottom: 25vw;
+}
+.MuiAccordion-root.Mui-expanded:last-child {
+  margin-bottom: 25vw !important;
 }
 
 
@@ -88,7 +95,7 @@ html, body {
   background-color: #286043;
   border-color: transparent;
   border-style: solid;
-  border-radius: 0px 0px 0px 113px;
+  border-radius: 0px 0px 0px 5.89vw;
   overflow: hidden;
   margin-left: auto;
   position: relative; /* Изменение позиционирования на relative */
@@ -98,10 +105,10 @@ html, body {
   position: absolute;
   left: 0;
   top: 0;
-  max-width: 200px; /* настройте максимальную ширину фотографии по вашему усмотрению */
+  max-width: 10.42vw; /* настройте максимальную ширину фотографии по вашему усмотрению */
   height: auto; /* чтобы сохранить пропорции фотографии */
-  margin-top: 40px; /* отступ сверху */
-  margin-left: -75px;
+  margin-top: 2.08vw; /* отступ сверху */
+  margin-left: -3.91vw;
   z-index: 2;
 }
 .svg-img {
@@ -115,11 +122,11 @@ html, body {
 }
 
 .logo {
-  padding: 10px;
+  padding: 0.52vw;
 }
 
 .logo img {
-  max-width: 100px; /* максимальная ширина логотипа */
+  max-width: 5.21vw; /* максимальная ширина логотипа */
 }
 
 .menu {
@@ -134,7 +141,7 @@ html, body {
 }
 
 .main-menu li {
-  margin-right: 20px;
+  margin-right: 1.04vw;
   color: #fff; /* цвет текста в меню */
   font-weight: bold;
 }
@@ -216,34 +223,210 @@ html, body {
   flex-direction: column;
   align-items: center; /* Чтобы разместить по центру по вертикали */
   height: auto;
+  padding-bottom: 5vw;
 }
 .content-container-footer {
+  background-color: #286043;
   display: flex;
   flex-direction: column;
   align-items: center; /* Чтобы разместить по центру по вертикали */
   height: auto;
 }
 .main {
-  overflow: hidden;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  /*background-color: #f0f0f0;*/
+  background-color: #a3d441;
   background-size: cover;
   width: 100%;
+  height: 40.95vw;
+  font-family: 'Circe', sans-serif;
+  font-weight: 700;
+  scroll-behavior: smooth;
   font-size: 0.83vw;
+  line-height: 1.5;
+}
+#wave-container-test {
+  width: 100%;
+  height: 5.21vw;
+  overflow: hidden;
+  background: orange;
+}
+
+#wave-test {
+  display: block;
+  position: relative;
+  height: 2.08vw;
+  background: #a3d441;
+}
+
+#wave-test:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  width: 100%;
+  height: 15.63vw;
+  background: orange;
+  right: -25%;
+  top: 1.04vw;
+}
+
+#wave-test:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  width: 100%;
+  height: 15.63vw;
+  background: #a3d441;
+  left: -25%;
+  top: -12.50vw;
+}
+
+
+#wave-container-test-2 {
+  width: 100%;
+  height: 5.21vw;
+  overflow: hidden;
+  background: #60af7d;
+}
+
+#wave-test-2 {
+  display: block;
+  position: relative;
+  height: 2.08vw;
+  background: orange;
+}
+
+#wave-test-2:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  width: 100%;
+  height: 15.63vw;
+  background: #60af7d;
+  right: -25%;
+  top: 1.04vw;
+}
+
+#wave-test-2:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  width: 100%;
+  height: 15.63vw;
+  background: orange;
+  left: -25%;
+  top: -12.50vw;
+}
+#wave-container-test-3 {
+  width: 100%;
+  height: 5.21vw;
+  overflow: hidden;
+  background: #a3d441;;
+}
+
+#wave-test-3 {
+  display: block;
+  position: relative;
+  height: 2.08vw;
+  background: #60af7d;
+}
+
+#wave-test-3:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  width: 100%;
+  height: 15.63vw;
+  background: #a3d441;
+  right: -25%;
+  top: 1.04vw;
+}
+
+#wave-test-3:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  width: 100%;
+  height: 15.63vw;
+  background: #60af7d;
+  left: -25%;
+  top: -12.50vw;
+}
+#wave-container-test-4 {
+  width: 100%;
+  height: 5.21vw;
+  overflow: hidden;
+  background: #286043;
+}
+
+#wave-test-4 {
+  display: block;
+  position: relative;
+  height: 2.08vw;
+  background: #a3d441;
+}
+
+#wave-test-4:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  width: 100%;
+  height: 15.63vw;
+  background: #286043;
+  right: -25%;
+  top: 1.04vw;
+}
+
+#wave-test-4:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  width: 100%;
+  height: 15.63vw;
+  background: #a3d441;
+  left: -25%;
+  top: -12.50vw;
+}
+
+/*#wave-test:after {*/
+/*  content: "";*/
+/*  display: block;*/
+/*  position: absolute;*/
+/*  border-radius: 100%;*/
+/*  width: 100%;*/
+/*  height: 300px;*/
+/*  background-color: #a3d441;*/
+/*  left: -26%;*/
+/*  top: -256px;*/
+/*  margin-top: 0vw;*/
+/*}*/
+.bottle-left {
+  flex: 1;
+  padding: 0 0 0 0;
+}
+.bottle-float-left {
+  width: 76.5%;
+  height: 100%;
+  margin-top: 8.55vw;
+  margin-left: 8.53vw;
+  transform: rotate(1.7deg);
 }
 .accordion-example {
   position: relative;
   z-index: 10;
-  margin-top: 3vw;
-  padding-top: 5vw;
-  padding-bottom: 5vw;
+  padding-top: 7vw;
+  padding-bottom: 0vw;
   /*overflow: hidden;*/
   justify-content: center;
   align-items: center;
   height: auto; /* Высота равная высоте видимой области экрана */
-  /*background-color: #f0f0f0;*/
+  background-color: #a3d441;
   background-size: cover;
   width: 100%;
   font-size: 0.83vw;
@@ -251,22 +434,21 @@ html, body {
 .MuiAccordion-root:first-child {
   background-color: white; /* Цвет фона для закрытого аккордеона */
   transition: background-color 0.3s; /* Плавное изменение цвета фона */
-  border-top-left-radius: 36px !important;
-  border-top-right-radius: 36px !important;
-  border-bottom-right-radius: 36px !important;
-  border-bottom-left-radius: 36px !important;
+  border-top-left-radius: 1.88vw !important;
+  border-top-right-radius: 1.88vw !important;
+  border-bottom-right-radius: 1.88vw !important;
+  border-bottom-left-radius: 1.88vw !important;
 }
 .MuiAccordion-root.Mui-expanded:first-child {
   background-color: #286043; /* Цвет фона для раскрытого аккордеона */
 }
 .MuiAccordion-rounded {
+  margin-bottom: 1vw;
   color: white !important;
   background-color: white; /* Цвет фона для закрытого аккордеона */
   transition: background-color 0.3s !important; /* Плавное изменение цвета фона */
-  border-top-left-radius: 36px !important;
-  border-top-right-radius: 36px !important;
-  border-bottom-right-radius: 36px !important;
-  border-bottom-left-radius: 36px !important;
+  border: 2px solid #286043 !important;
+  border-radius: 1.8vw !important;
 
 }
 .MuiAccordion-root:before {
@@ -285,7 +467,7 @@ html, body {
   color: white; /* Изменение цвета текста при открытии аккордеона */
 }
 .makeStyles-heading-3 {
-  flex-basis: 70.33% !important;
+  flex-basis: 100.33% !important;
   color: #286043; /* Цвет текста по умолчанию */
   transition: color 0.3s ease; /* Добавляем анимацию перехода для цвета текста */
 }
@@ -300,9 +482,12 @@ html, body {
 .MuiAccordion-root.Mui-expanded .heading {
   color: white !important; /* Изменение цвета текста заголовка при открытии */
 }
+.slick-slide {
+  margin-right: 0vw;
+}
 
 .MuiAccordion-root.Mui-expanded .MuiAccordionSummary-content {
-  margin: 20px 0; /* Установка отступа для контента при открытии */
+  margin: 1.04vw 0; /* Установка отступа для контента при открытии */
 }
 .makeStyles-root-2 {
   width: 70% !important;
@@ -334,10 +519,10 @@ html, body {
 /*  overflow: auto;*/
 /*  margin-left: 4vw !important;*/
 /*}*/
-/*.slick-next {*/
-/*  z-index: 5;*/
-/*  right: 46.5vw !important;*/
-/*}*/
+.slick-next {
+  z-index: 5;
+  right: -1.5vw !important;
+}
 /*.slick-prev {*/
 /*  z-index: 5;*/
 /*  left: 45vw !important;*/
@@ -352,35 +537,197 @@ html, body {
 /*  transition: opacity 0.5s ease;*/
 /*}*/
 .slider-container {
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-start;
   position: relative; /* Устанавливаем позиционирование для контейнера слайдера */
-  max-width: 565px; /* Устанавливаем максимальную ширину для слайдера */
+  max-width: 80.88vw; /* Устанавливаем максимальную ширину для слайдера */
   overflow: hidden; /* Скрываем содержимое, которое выходит за пределы слайдера */
   margin: 0 auto; /* Автоматическое выравнивание слайдера по центру */
   text-align: center; /* Центрируем элементы слайдера внутри слайдера */
+  margin-top: 2vw;
+  margin-left: 13.5vw;
 }
 
 .slick-prev {
-  left: 63px !important;
+  color: white !important;
+  left: -0.5vw !important;
   z-index: 1 !important; /* Устанавливаем z-index, чтобы стрелка была поверх содержимого слайдера */
+}
+.slick-prev:before,
+.slick-next:before
+{
+  font-family: 'slick';
+  font-size: 4vw !important;
+  line-height: 1 !important;
+
+  opacity: 1 !important;
+  color: white !important;
+  background-color: transparent !important; /* Убираем фоновый цвет */
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .slick-prev,
 .slick-next {
-  width: 40px !important;
-  height: 40px !important;
+  background-color: transparent !important; /* Убираем фоновый цвет */
+  color: white !important; /* Меняем цвет стрелки на белый */
+  width: 2.08vw !important;
+  height: 2.08vw !important;
   position: absolute !important; /* Позиционирование абсолютное для точного размещения */
   top: 50% !important; /* Положение по вертикали в центре */
   transform: translateY(-50%); /* Смещение по вертикали */
   z-index: 55 !important; /* Устанавливаем z-index, чтобы быть поверх других элементов */
   background-color: #fff; /* Цвет фона */
-  padding: 5px !important; /* Отступ вокруг содержимого */
+  padding: 0.26vw !important; /* Отступ вокруг содержимого */
   /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); !* Тень, указывающая наличие элемента за пределами *!*/
   cursor: pointer; /* Показываем, что элемент является интерактивным */
 }
 .slick-slider {
-  width: 500px;
+  width: 70.46vw;
 }
 .slick-list {
   margin-left: 5vw !important;
+}
+.how-tickets-img {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 2vw 0vw 0vw 0vw;
+}
+.how-tickets-img, .how-tickets-img-second {
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-start;
+}
+.how-tickets-img-second {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: -1vw 0vw 0vw -1.5vw;
+  background-color: #8080807F;
+  border: 1px solid rgba(3, 190, 83, 0.5);
+  border-radius: 0.52vw;
+  box-shadow: 0 0 0.26vw #009640;
+  height: 4.5vw;
+  z-index: 11;
+  padding-left: 2vw;
+  padding-top: 1.3vw;
+  padding-bottom: 0.8vw;
+}
+.how-full4-img,
+.how-full44-img,
+.how-full444-img,
+.how-full4444-img {
+  width: 100%;
+}
+.how-full4-img img {
+  /*border: 0.35vw solid white;*/
+
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.how-full4-img img,
+.how-full44-img img,
+.how-full444-img img,
+.how-full4444-img img {
+  margin-right: 0vw;
+  width: 81%;
+  transition: transform 0.5s ease;
+  /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); !* добавляем пассивное свечение *!*/
+  position: relative;
+}
+.how-full4-img img::after,
+.how-full44-img img::after,
+.how-full444-img img::after,
+.how-full4444-img img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: blink 2s infinite; /* применяем анимацию мигания */
+  opacity: 0;
+}
+.how-full4-img img:hover,
+.how-full44-img img:hover,
+.how-full444-img img:hover,
+.how-full4444-img img:hover {
+  /*transform: scale(1.1); !* увеличиваем масштаб при наведении *!*/
+  box-shadow: 0 0 0.3vw rgba(0, 0, 0, 0.5); /* увеличиваем масштаб и изменяем свечение при наведении */
+}
+.how-full4-img img:hover::after,
+.how-full44-img img:hover::after,
+.how-full444-img img:hover::after,
+.how-full4444-img img:hover::after {
+  opacity: 1;
+}
+.for-test-img img {
+  width: 86.1%;
+  margin-left: -1vw;
+}
+.for-test-img-test img {
+  width: 65%;
+  margin-left: -3.5vw;
+}
+.for-test-img-second img {
+  width: 64.6%;
+  margin-left: -7.1vw;
+}
+.for-test-img-third img {
+  margin-left: -10.5vw;
+}
+
+.how-full44-img-second img {
+  width: 80%;
+}
+.how-full4-img-second img{
+  width: 80%;
+}
+.how-full412-img-second img {
+  width: 90%;
+  margin-left: -0.4vw;
+}
+.how-full444-img-second img{
+  width: 80%;
+}
+.how-full4444-img-second img{
+  width: 70%;
+  margin-left: 1vw;
+  margin-top: -0.2vw;
+}
+.how-full4444-img-second {
+  margin-top: 0.45vw;
+}
+.how-full44445-img-second img {
+  width: 90%;
+  margin-left: -0.4vw;
+  transition: opacity 0.3s ease; /* добавляем плавный переход для свойства opacity */
+  opacity: 1;
+}
+.how-full44445-img-second img {
+}
+
+.how-full44445-img-second img:hover {
+  transition: opacity 0.3s ease; /* добавляем плавный переход для свойства opacity */
+  opacity: 1; /* Плавно скрываем изображение при наведении */
+}
+
+.how-full4-img a,
+.how-full44-img a,
+.how-full444-img a,
+.how-full4444-img a {
+  width: 15vw;
 }
 
 
@@ -409,13 +756,13 @@ html, body {
   padding: 0.2vw !important;
 }
 .MuiSvgIcon-root {
-  font-size: 2rem !important;
+  font-size: 3rem !important;
 }
 .MuiIconButton-root {
   color: black !important;
 }
 .MuiIconButton-edgeEnd {
-  margin-right: 8px !important;
+  margin-right: 0.42vw!important;
 }
 
 .MuiAccordionSummary-root .MuiAccordionSummary-expandIcon,
@@ -442,9 +789,11 @@ html, body {
 }
 .MuiAccordionSummary-root {
   display: flex;
-  padding: 15px 25px !important;
-  min-height: 48px;
+  padding: 0.78vw 1.30vw !important;
+  min-height: 2.50vw;
   transition: min-height 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  /*border: 2px solid #286043 !important;*/
+  /*border-radius: 1.8vw !important;*/
 }
 .MuiButtonBase-root {
   border-radius: 2vw;
@@ -457,13 +806,28 @@ html, body {
   flex-shrink: 0;
 }
 .MuiTypography-body1 {
-  font-size: 1.1375rem !important;
+  font-size: 1.3rem !important;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
-  line-height: 1.5;
-   letter-spacing: 0.00938em;
+  line-height: 1.2;
+  letter-spacing: 0.00938em;
   text-align: left !important;
 }
+.makeStyles-line-5 {
+  width: 100%;
+  margin: 0px 0px 25px 5px;
+  border-top: 2px solid #ccc;
+  background-color: #fff;
+}
+.heading-id {
+  margin-left: 2vw;
+  font-size: 3vw;
+}
+.heading-name {
+  margin-left: 1vw;
+  font-size: 1.8vw;
+}
+
 
 
 
@@ -507,12 +871,73 @@ html, body {
   animation: chaotic-movement 15s infinite linear;
   backface-visibility: hidden;
 }
+/* PRODUCTS********************************** */
+.products {
+  background-color: orange;
+  margin-top: -6vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HOW ********************************** */
+.wrapper-how {
+  width: 88.6vw;
+  margin-left: 0.75vw;
+  overflow: hidden;
+}
+.how {
+  background-size: cover;
+  height: 35vw;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  min-width: initial;
+  scroll-behavior: smooth;
+  font-size: 0.83vw;
+  line-height: 1.5;
+  margin-top: 0;
+  padding-top: 1.46vw;
+  background-color: #60af7d;
+}
+.prizes-text {
+  margin: 3vw auto;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-family: 'Acrom Medium', Arial, sans-serif;
+  color: #EEF3EC;
+  font-size: 2.66vw;
+  line-height: 4.03vw;
+  width: 101.75vw;
+  height: 8.05vw;
+}
+
+
+
 
 /* WINNERS ------------------------------------------------------ */
 .winners {
+  height: 66vw;
+  width: 100%;
   margin-top: -0.1vw;
   padding-top: 1.56vw;
-  background-image: linear-gradient(#03BE53, #009640, #00622A);
+  background-color: #60af7d;
 }
 .winners-text {
   margin-top: 0vw;
@@ -523,6 +948,22 @@ html, body {
   line-height: 4.03vw;
   color: #EEF3EC;
   font-family: 'Acrom Medium', Arial, sans-serif;
+}
+.for-faq {
+  font-size: 2.66vw;
+  text-transform: none;
+  text-align: left;
+  margin-left: 22vw;
+  margin-bottom: 3vw;
+  color: #234a30;
+}
+.for-slider {
+  width: 35vw;
+  font-size: 2.66vw;
+  text-transform: none;
+  text-align: center;
+  margin: 6vw auto; /* задаем отступы сверху и снизу auto, чтобы элемент располагался по центру горизонтально */
+  color: #234a30;
 }
 .winners-top-input {
   display: flex;
@@ -727,7 +1168,10 @@ html, body {
 .head-colm-date1 {
   min-width: 20.364583vw;
   margin-top: 1.65vw;
-  margin-left: -0.7vw;
+  margin-left: auto; /* Чтобы прижать к правому краю */
+}
+.winners-all {
+  padding: 5vw;
 }
 .colm-text {
   text-transform: uppercase;
@@ -748,9 +1192,15 @@ html, body {
   margin-left: -0.9vw;
 }
 .head-colm-prize1 {
-  width: 15.427083vw;
+  width: 6.427083vw;
   margin-top: 1.7vw;
   margin-left: -1vw;
+}
+.head-colm-name{
+  width: 9.427083vw;
+  margin-top: 1.7vw;
+  margin-left: 1vw;
+  text-align: left;
 }
 .head-colm-phone1-ticket {
   min-width: 17.364583333333332vw;
@@ -758,9 +1208,9 @@ html, body {
   margin-left: -0.9vw;
 }
 .head-colm-phone1 {
-  min-width: 17.364583333333332vw;
+  min-width: 4.364583vw;
   margin-top: 1.75vw;
-  margin-left: 1.1vw;
+  margin-left: 29.1vw;
 }
 .head-colm-date1-ticket {
   min-width: 15.364583vw;
@@ -768,9 +1218,9 @@ html, body {
   margin-top: 1.65vw;
 }
 .head-colm-date1 {
-  min-width: 20.364583vw;
+  min-width: 8.364583vw;
   margin-top: 1.65vw;
-  margin-left: -0.7vw;
+  margin-left: auto; /* Чтобы прижать к правому краю */
 }
 .colm-text {
   text-transform: uppercase;
