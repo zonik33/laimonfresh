@@ -9,7 +9,14 @@ import Winners from "./Winners";
 import howFull5 from '../image/img_36.png';
 import How from "./How";
 import Products from "./Products";
-import wintohealth from '../image/prizes-right.png'
+import wintohealth from '../image/img.png'
+import inputcode from '../image/img_2.png'
+import uptree from '../image/img_3.png'
+import lefttree from '../image/img_4.png'
+import gps from '../image/img_5.png'
+import nature from '../image/img_6.png'
+import bigline from '../image/img_7.png'
+import wintohealth2 from '../image/img_1.png'
 
 export default function Main(props) {
     const settings = {
@@ -27,26 +34,27 @@ export default function Main(props) {
             <div className={'main'} id={'main'}>
                 <div className={'main-items'}>
                     <div className={'winners-text for-main'}>Летопутешествие с laimon fresh
+                        <input type="text" maxlength="20" placeholder=""/>
+                        <img className={'bottle-float-left inputcode'} src={inputcode}/>
                     </div>
                     <div className={'bottle-left'}>
+                        <img className={'bottle-float-left uptree'} src={uptree}/>
                         <img className={'bottle-float-left'} src={wintohealth}/>
+                        <img className={'bottle-float-left two'} src={wintohealth2}/>
+                        <img className={'bottle-float-left gps'} src={gps}/>
+                        <img className={'bottle-float-left lefttree'} src={lefttree}/>
+                        <img className={'bottle-float-left nature'} src={nature}/>
+                        <img className={'bottle-float-left bigline'} src={bigline}/>
                     </div>
+                    <p className="absolute-text">Москва</p>
                     <div className={'main-text-text'}>
+
                         {/*<div className={'main-text'}> Купите билет и получите гарантированный приз от 585 ЗОЛОТОЙ! Выиграйте медицинскую страховку!</div>*/}
                         <div className={'main-text'}>
-                            <div className={'buy-block'}>
-                                <a className={'buy-block-a'}>КУПИТЕ</a>
-                                <p className={'buy-block-p'}>БИЛЕТ<br></br> с 1.02.2024 <br></br>по 31.03.2024</p>
-                            </div>
-                            <div className={'take-block'}>
-                                <a className={'take-block-a'}>ПОЛУЧИТЕ</a>
-                                <p className={'take-block-p'}>Гарантированный подарок от 585 золотой*</p>
-                            </div>
-                            <div className={'win-block'}>
-                                <a className={'win-block-a'}>ВЫИГРАЙТЕ</a>
-                                <p className={'win-block-p'}>Медицинскую <br></br>страховку <br></br>каждый день</p>
-                            </div>
                         </div>
+                    </div>
+                    <div className={'right-float-img'}>
+
                     </div>
                 </div>
             </div>

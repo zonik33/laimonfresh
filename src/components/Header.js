@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
-import logo1 from '../image/logo1.png';
+import logo2 from '../image/logo2.png';
 import lemondots from '../image/lemon.png';
 import dotslemon from '../image/Dots.svg';
 
@@ -20,16 +20,16 @@ export default function Header(props) {
             <div className="header" id="header">
 
                 <div className="logo">
-                    <img src={logo1} alt="Logo"/>
+                    <img src={logo2} alt="Logo"/>
                 </div>
                 <div className="menu">
                     <nav className="main-menu">
                         <ul>
-                            <li>Правила</li>
-                            <li>Призы</li>
-                            <li>Победители</li>
-                            <li>Вопросы</li>
-                            <li>Личный кабинет</li>
+                            <li className={'li-rules'}><a href={'#'}>Правила</a></li>
+                            <li className={'li-ont'}><a href={'#'}>Призы</a></li>
+                            <li className={'li-ont'}><a href={'#'}>Победители</a></li>
+                            <li className={'li-ont'}><a href={'#'}>Вопросы/ответы</a></li>
+                            <li className={'li-lc'}><a href={'#'}>Личный кабинет</a></li>
                         </ul>
                     </nav>
                 </div>
