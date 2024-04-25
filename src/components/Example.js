@@ -213,6 +213,9 @@ export default function ControlledAccordions() {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
+            <div className={'winners-all example-all'}>
+                <a className={'winners-all-a'} href={'#'}>Весь список</a>
+            </div>
         </div>
     );
 }

@@ -15,6 +15,8 @@ import uptree from '../image/img_3.png'
 import lefttree from '../image/img_4.png'
 import gps from '../image/img_5.png'
 import nature from '../image/img_6.png'
+import tree5555 from '../image/img_25.png'
+import tree6666 from '../image/img_26.png'
 import bigline from '../image/img_7.png'
 import wintohealth2 from '../image/img_1.png'
 import HowPrizes from "./HowPrizes";
@@ -83,6 +85,8 @@ export default function Main(props) {
             <div className={'accordion-example'}>
                 <div className={'winners-text for-faq'}>Часто задаваемые вопросы
                 </div>
+                <img className={'bottle-float-left example-tree5'} src={tree5555}/>
+                <img className={'bottle-float-left example-tree6'} src={tree6666}/>
                 <Example/>
                 <div id="wave-container-test-4">
                     <div id="wave-test-4">
