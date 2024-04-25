@@ -1,4 +1,5 @@
 import logo2 from "../image/logo2.png";
+import treepape from "../image/img_27.png";
 import React from "react";
 
 export default function Footer (props) {
@@ -10,6 +11,7 @@ export default function Footer (props) {
                 <div className={'footer'} id={'footer'}>
                     <div className="logo logo-footer">
                         <img src={logo2} alt="Logo"/>
+                        <img className={'bottle-float-left treepape-footer'} src={treepape} alt="Logo"/>
                     </div>
                     <div className="menu">
                         <nav className="main-menu">
