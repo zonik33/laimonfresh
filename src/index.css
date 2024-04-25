@@ -744,7 +744,7 @@ html, body {
 }
 
 .main-menu a:hover {
-  color: #a3d441;
+  color: rgba(245, 199, 78, 1);
 }
 .main-items {
   display: flex;
@@ -820,11 +820,12 @@ html, body {
 
 
 .content-container {
-  /*display: flex;*/
+  display: flex;
   flex-direction: column;
   align-items: center; /* Чтобы разместить по центру по вертикали */
   height: auto;
   padding-bottom: 5vw;
+  width: 95vw;
 }
 .content-container-footer {
   background-color: #286043;
@@ -887,7 +888,7 @@ html, body {
   width: 100%;
   height: 5.21vw;
   overflow: hidden;
-  background: #60af7d;
+  background: rgba(91, 171, 113, 1);
 }
 
 #wave-test-2 {
@@ -904,7 +905,7 @@ html, body {
   border-radius: 100%;
   width: 100%;
   height: 15.63vw;
-  background: #60af7d;
+  background: rgba(91, 171, 113, 1);
   right: -25%;
   top: 1.04vw;
 }
@@ -931,7 +932,7 @@ html, body {
   display: block;
   position: relative;
   height: 2.08vw;
-  background: #60af7d;
+  background: rgba(91, 171, 113, 1);
 }
 
 #wave-test-3:before {
@@ -953,7 +954,7 @@ html, body {
   border-radius: 100%;
   width: 100%;
   height: 15.63vw;
-  background: #60af7d;
+  background: rgba(91, 171, 113, 1);
   left: -25%;
   top: -12.50vw;
 }
@@ -1020,6 +1021,20 @@ html, body {
   height: 100%;
   z-index: 5;
 }
+.bottle-float-left.twotree {
+  position: absolute;
+  margin-top: -14.65vw;
+  margin-left: 33.83vw;
+  width: 14.5%;
+  height: 3%;
+  z-index: 5;
+  right: 0;
+}
+.bigline-container {
+  flex: 0;
+  padding: 0 0 0 0;
+  position: relative;
+}
 
 .bottle-float-left.two {
   position: absolute;
@@ -1031,13 +1046,42 @@ html, body {
   right: 0;
 
 }
+.bottle-float-left.berry {
+  position: absolute;
+  margin-top: 18.55vw;
+  margin-left: -23.67vw;
+  width: 8%;
+  height: 2.1%;
+  z-index: 4;
+}
+.bottle-float-left.berry-prizes {
+  position: absolute;
+  margin-top: 2.95vw;
+  margin-left: 41.93vw;
+  width: 8%;
+  height: 2.1%;
+  transform: scaleX(-1);
+}
 .bottle-float-left.inputcode {
   position: absolute;
   margin-top: 3.03vw;
   margin-left: -46.57vw;
   width: 21.9%;
   height: 1.5%;
-  z-index: 4;
+  z-index: 6;
+
+}
+.winners-text-inputcode {
+  margin: -2.6vw 0vw 0vw 6.35vw;
+}
+.text-inputcode {
+  margin: 0vw 0vw 0vw 0vw;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 1.25vw;
+  line-height: 1.18vw;
+  text-transform: none;
+
 
 }
 .bottle-float-left.uptree {
@@ -1046,6 +1090,87 @@ html, body {
   margin-left: -7.57vw;
   width: 4.3%;
   height: 1.38%;
+  z-index: 4;
+  animation: sbs-23142 15s infinite linear; /* Применяем анимацию petal-animation на протяжении 5 секунд бесконечно */
+  backface-visibility: hidden;
+}
+.bottle-float-left.uptree-prod {
+  position: absolute;
+  margin-top: -1.9vw;
+  margin-left: -29.07vw;
+  width: 4.6%;
+  height: 1.9%;
+  z-index: 4;
+  animation: sbs-231425214-52151 15s infinite linear; /* Применяем анимацию petal-animation на протяжении 5 секунд бесконечно */
+  backface-visibility: hidden;
+}
+.bottle-float-left.gps-top-product {
+  position: absolute;
+  margin-top: -1.3vw;
+  margin-left: -11.17vw;
+  width: 3.4%;
+  height: 1.1%;
+  z-index: 4;
+}
+.bottle-float-left.nv {
+  position: absolute;
+  margin-top: -4.3vw;
+  margin-left: 27.83vw;
+  width: 3.4%;
+  height: 1.1%;
+  z-index: 4;
+}
+.bottle-float-left.gps-down-product {
+  position: absolute;
+  margin-top: 41.7vw;
+  margin-left: -80.87vw;
+  width: 3.4%;
+  height: 1.1%;
+  z-index: 4;
+}
+.bottle-float-left.top-tree-prod{
+  position: absolute;
+  margin-top: 7.5vw;
+  margin-left: -64vw;
+  width: 5.6%;
+  height: 1.9%;
+  z-index: 4;
+  animation: sbs-231425214 15s infinite linear; /* Применяем анимацию petal-animation на протяжении 5 секунд бесконечно */
+  backface-visibility: hidden;
+}
+.bottle-float-left.top-tree-how {
+  position: absolute;
+  margin-top: 14.5vw;
+  margin-left: 30vw;
+  width: 5.6%;
+  height: 1.4%;
+  z-index: 4;
+  animation: sbs-231425214 15s infinite linear;
+  backface-visibility: hidden;
+}
+.bottle-float-left.left-line-how {
+  position: absolute;
+  margin-top: -71.5vw;
+  margin-left: -59vw;
+  width: 97vw;
+  height: 198vw;
+  z-index: 1;
+}
+.bottle-float-left.down-line-winners {
+  position: absolute;
+  margin-top: 11.1vw;
+  margin-left: -33vw;
+  width: 54.10vw;
+  height: 19.31vw;
+  z-index: 1;
+  transform: rotate(-1deg);
+}
+.bottle-float-left.down-tree-prod {
+  position: absolute;
+  margin-top: 38.973vw;
+  margin-left: -47.97vw;
+  width: 7.3%;
+  height: 1.968%;
   z-index: 4;
   animation: sbs-23142 15s infinite linear; /* Применяем анимацию petal-animation на протяжении 5 секунд бесконечно */
   backface-visibility: hidden;
@@ -1060,12 +1185,69 @@ html, body {
   animation: sbs-23142-552431 2s infinite linear;
   backface-visibility: hidden;
 }
+.bottle-float-left.lime {
+  position: absolute;
+  margin-top: 38.53vw;
+  margin-left: -0.97vw;
+  right: 0;
+  width: 13.9%;
+  height: 4.3%;
+  z-index: 4;
+}
 .bottle-float-left.gps {
   position: absolute;
   margin-top: 39.13vw;
   margin-left: -81.07vw;
-  width: 3.3%;
-  height: 1.23%;
+  width: 3.4%;
+  height: 1.1%;
+  z-index: 4;
+}
+.bottle-float-left.gps-sochi {
+  position: absolute;
+  margin-top: 19.73vw;
+  margin-left: -40.97vw;
+  width: 3.4%;
+  height: 1.1%;
+  z-index: 4;
+}
+.bottle-float-left.gps-kalin {
+  position: absolute;
+  margin-top: 2.73vw;
+  margin-left: -37.97vw;
+  width: 3.4%;
+  height: 1.1%;
+  z-index: 4;
+}
+.bottle-float-left.gps-eka {
+  position: absolute;
+  margin-top: 10.99vw;
+  margin-left: 25.67vw;
+  width: 3.4%;
+  height: 1%;
+  z-index: 4;
+}
+.bottle-float-left.gps-novo {
+  position: absolute;
+  margin-top: 30.73vw;
+  margin-left: 38.03vw;
+  width: 3.4%;
+  height: 1%;
+  z-index: 4;
+}
+.bottle-float-left.gps-vlad {
+  position: absolute;
+  margin-top: 32.33vw;
+  margin-left: -21.97vw;
+  width: 3.4%;
+  height: 1%;
+  z-index: 4;
+}
+.bottle-float-left.gps-chel {
+  position: absolute;
+  margin-top: 21.83vw;
+  margin-left: 26.03vw;
+  width: 3.4%;
+  height: 1.1%;
   z-index: 4;
 }
 .bottle-float-left.lefttree {
@@ -1076,6 +1258,16 @@ html, body {
   height: 3.4%;
   z-index: 4;
   animation: sbs-23142 15s infinite linear; /* Применяем анимацию petal-animation на протяжении 5 секунд бесконечно */
+  backface-visibility: hidden;
+}
+.bottle-float-left.lefttree-how {
+  position: absolute;
+  margin-top: -5.4vw;
+  margin-left: -48.47vw;
+  width: 12%;
+  height: 3.4%;
+  z-index: 4;
+  animation: sbs-23142 15s infinite linear;
   backface-visibility: hidden;
 }
 @keyframes sbs-23142 {
@@ -1089,6 +1281,40 @@ html, body {
   }
   66% {
     transform: translateX(-36px) translateY(30px) rotate(0deg);
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: translateX(0px) translateY(0px) rotate(0deg);
+  }
+}
+@keyframes sbs-231425214 {
+  0% {
+    transform: translateX(0px) translateY(0px) rotate(0deg);
+    animation-timing-function: linear;
+  }
+  33% {
+    transform: translateX(-14px) translateY(16px) rotate(13deg);
+    animation-timing-function: linear;
+  }
+  66% {
+    transform: translateX(24px) translateY(18px) rotate(0deg);
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: translateX(0px) translateY(0px) rotate(0deg);
+  }
+}
+@keyframes sbs-231425214-52151 {
+  0% {
+    transform: translateX(0px) translateY(0px) rotate(0deg);
+    animation-timing-function: linear;
+  }
+  33% {
+    transform: translateX(14px) translateY(16px) rotate(13deg);
+    animation-timing-function: linear;
+  }
+  66% {
+    transform: translateX(-4px) translateY(18px) rotate(0deg);
     animation-timing-function: ease-in-out;
   }
   100% {
@@ -1111,11 +1337,11 @@ html, body {
 
 .bottle-float-left.bigline {
   position: absolute;
-  margin-top: 44.53vw;
-  margin-left: -92.97vw;
-  width: 97.9%;
-  height: 74.1%;
-  z-index: 4;
+  margin-top: 44.73vw;
+  margin-left: 66.03vw;
+  width: 97vw;
+  height: 226vw;
+  z-index: 1;
   right: 0;
 }
 .container-absolute {
@@ -1133,9 +1359,96 @@ html, body {
   position: absolute;
   margin: 44vw 21vw 5vw 12vw;
 }
+.absolute-text.sochi {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Inter";
+  font-size: 1.74vw;
+  font-weight: 700;
+  line-height: 2.08vw;
+  position: absolute;
+  margin: 8vw 21vw 5vw 10vw;
+}
+.absolute-text.kalin {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Inter";
+  font-size: 1.74vw;
+  font-weight: 700;
+  line-height: 2.08vw;
+  position: absolute;
+  margin: 7.2vw 21vw 5vw -12.4vw;
+}
+.absolute-text.eka {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Inter";
+  font-size: 1.74vw;
+  font-weight: 700;
+  line-height: 2.08vw;
+  position: absolute;
+  margin: 15.2vw 21vw 5vw 51.6vw;
+}
+.absolute-text.novo {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Inter";
+  font-size: 1.74vw;
+  font-weight: 700;
+  line-height: 2.08vw;
+  position: absolute;
+  margin: 36.2vw 21vw 5vw 63.6vw;
+  z-index: 1;
+}
+.absolute-text.vlad {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Inter";
+  font-size: 1.74vw;
+  font-weight: 700;
+  line-height: 2.08vw;
+  position: absolute;
+  margin: 37.5vw 21vw 5vw 3.6vw;
+  z-index: 1;
+}
+.absolute-text.nv{
+  width: 25vw;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Inter";
+  font-size: 1.74vw;
+  font-weight: 700;
+  line-height: 2.08vw;
+  position: absolute;
+  margin: 0vw 21vw 5vw 62vw;
+}
+.absolute-text.chel {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Inter";
+  font-size: 1.74vw;
+  font-weight: 700;
+  line-height: 2.08vw;
+  position: absolute;
+  margin: 10.2vw 21vw 5vw 74.4vw;
+}
+.absolute-text.prod {
+  color: rgba(0, 98, 65, 0.5);
+  width: 20vw;
+  font-family: "Inter";
+  font-size: 1.74vw;
+  font-weight: 700;
+  line-height: 2.08vw;
+  position: absolute;
+  margin: 3.8vw 6vw 4vw 78vw;
+}
+.absolute-text.how {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  /* width: 20vw; */
+  font-family: "Inter";
+  font-size: 1.74vw;
+  font-weight: 700;
+  line-height: 2.08vw;
+  position: absolute;
+  margin: -4.055vw 6vw 4vw 15.3vw;
+}
 .accordion-example {
   position: relative;
-  z-index: 10;
+  z-index: 0;
   padding-top: 7vw;
   padding-bottom: 0vw;
   /*overflow: hidden;*/
@@ -1150,13 +1463,13 @@ html, body {
 .MuiAccordion-root:first-child {
   background-color: white; /* Цвет фона для закрытого аккордеона */
   transition: background-color 0.3s; /* Плавное изменение цвета фона */
-  border-top-left-radius: 1.88vw !important;
-  border-top-right-radius: 1.88vw !important;
-  border-bottom-right-radius: 1.88vw !important;
-  border-bottom-left-radius: 1.88vw !important;
+  border-top-left-radius: 2.88vw !important;
+  border-top-right-radius: 2.88vw !important;
+  border-bottom-right-radius: 2.88vw !important;
+  border-bottom-left-radius: 2.88vw !important;
 }
 .MuiAccordion-root.Mui-expanded:first-child {
-  background-color: #286043; /* Цвет фона для раскрытого аккордеона */
+  background-color: rgba(0, 98, 65, 1); /* Цвет фона для раскрытого аккордеона */
 }
 .MuiAccordion-rounded {
   margin-bottom: 1vw;
@@ -1164,7 +1477,7 @@ html, body {
   background-color: white; /* Цвет фона для закрытого аккордеона */
   transition: background-color 0.3s !important; /* Плавное изменение цвета фона */
   border: 2px solid #286043 !important;
-  border-radius: 1.8vw !important;
+  border-radius: 2.8vw !important;
 
 }
 .MuiAccordion-root:before {
@@ -1172,7 +1485,7 @@ html, body {
 }
 
 .MuiAccordion-root.Mui-expanded {
-  background-color: #286043; /* Цвет фона для раскрытого аккордеона */
+  background-color: rgba(0, 98, 65, 1); /* Цвет фона для раскрытого аккордеона */
 }
 
 .makeStyles-heading-3.Mui-expanded {
@@ -1206,8 +1519,8 @@ html, body {
   margin: 1.04vw 0; /* Установка отступа для контента при открытии */
 }
 .makeStyles-root-2 {
-  width: 70% !important;
-  margin-left: 16vw;
+  width: 86% !important;
+  margin-left: 7vw;
 }
 .accordion__item {
   flex-direction: row-reverse; /* Открывать элементы аккордеона справа */
@@ -1237,7 +1550,8 @@ html, body {
 /*}*/
 .slick-next {
   z-index: 5;
-  right: -1.5vw !important;
+  right: -3.5vw !important;
+
 }
 /*.slick-prev {*/
 /*  z-index: 5;*/
@@ -1253,21 +1567,21 @@ html, body {
 /*  transition: opacity 0.5s ease;*/
 /*}*/
 .slider-container {
+  z-index: 5;
   align-items: flex-start;
   display: flex;
   justify-content: flex-start;
-  position: relative; /* Устанавливаем позиционирование для контейнера слайдера */
-  max-width: 80.88vw; /* Устанавливаем максимальную ширину для слайдера */
-  overflow: hidden; /* Скрываем содержимое, которое выходит за пределы слайдера */
-  margin: 0 auto; /* Автоматическое выравнивание слайдера по центру */
-  text-align: center; /* Центрируем элементы слайдера внутри слайдера */
-  margin-top: 2vw;
-  margin-left: 13.5vw;
+  position: relative;
+  max-width: 80.88vw;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: -4.7vw;
+  margin-left: 5.7vw;
 }
 
 .slick-prev {
   color: white !important;
-  left: -0.5vw !important;
+  left: 1.5vw !important;
   z-index: 1 !important; /* Устанавливаем z-index, чтобы стрелка была поверх содержимого слайдера */
 }
 .slick-prev:before,
@@ -1291,7 +1605,7 @@ html, body {
   width: 2.08vw !important;
   height: 2.08vw !important;
   position: absolute !important; /* Позиционирование абсолютное для точного размещения */
-  top: 50% !important; /* Положение по вертикали в центре */
+  top: 24% !important;
   transform: translateY(-50%); /* Смещение по вертикали */
   z-index: 55 !important; /* Устанавливаем z-index, чтобы быть поверх других элементов */
   background-color: #fff; /* Цвет фона */
@@ -1300,7 +1614,7 @@ html, body {
   cursor: pointer; /* Показываем, что элемент является интерактивным */
 }
 .slick-slider {
-  width: 70.46vw;
+  width: 80.46vw;
 }
 .slick-list {
   margin-left: 5vw !important;
@@ -1335,7 +1649,20 @@ html, body {
 .how-full44-img,
 .how-full444-img,
 .how-full4444-img {
+  margin-right: 2vw;
   width: 100%;
+}
+.lf-text {
+  margin: 3.5vw 0vw 0vw 3.3vw;
+  display: block;
+  position: relative;
+  width: 14vw;
+  height: 20vw;
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 1.74vw;
+  line-height: 1.67vw;
+  color: rgba(0, 98, 65, 1);
 }
 .how-full4-img img {
   /*border: 0.35vw solid white;*/
@@ -1356,8 +1683,8 @@ html, body {
 .how-full44-img img,
 .how-full444-img img,
 .how-full4444-img img {
-  margin-right: 0vw;
-  width: 81%;
+  margin-right: 2vw;
+  width: 70%;
   transition: transform 0.5s ease;
   /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); !* добавляем пассивное свечение *!*/
   position: relative;
@@ -1375,19 +1702,19 @@ html, body {
   animation: blink 2s infinite; /* применяем анимацию мигания */
   opacity: 0;
 }
-.how-full4-img img:hover,
-.how-full44-img img:hover,
-.how-full444-img img:hover,
-.how-full4444-img img:hover {
-  /*transform: scale(1.1); !* увеличиваем масштаб при наведении *!*/
-  box-shadow: 0 0 0.3vw rgba(0, 0, 0, 0.5); /* увеличиваем масштаб и изменяем свечение при наведении */
-}
-.how-full4-img img:hover::after,
-.how-full44-img img:hover::after,
-.how-full444-img img:hover::after,
-.how-full4444-img img:hover::after {
-  opacity: 1;
-}
+/*.how-full4-img img:hover,*/
+/*.how-full44-img img:hover,*/
+/*.how-full444-img img:hover,*/
+/*.how-full4444-img img:hover {*/
+/*  !*transform: scale(1.1); !* увеличиваем масштаб при наведении *!*!*/
+/*  box-shadow: 0 0 0.3vw rgba(0, 0, 0, 0.5); !* увеличиваем масштаб и изменяем свечение при наведении *!*/
+/*}*/
+/*.how-full4-img img:hover::after,*/
+/*.how-full44-img img:hover::after,*/
+/*.how-full444-img img:hover::after,*/
+/*.how-full4444-img img:hover::after {*/
+/*  opacity: 1;*/
+/*}*/
 .for-test-img img {
   width: 86.1%;
   margin-left: -1vw;
@@ -1443,7 +1770,8 @@ html, body {
 .how-full44-img a,
 .how-full444-img a,
 .how-full4444-img a {
-  width: 15vw;
+  display: flex;
+  width: 30vw;
 }
 
 
@@ -1478,7 +1806,8 @@ html, body {
   color: black !important;
 }
 .MuiIconButton-edgeEnd {
-  margin-right: 0.42vw!important;
+  margin-right: 2.72vw !important;
+  margin-top: 1vw !important;
 }
 
 .MuiAccordionSummary-root .MuiAccordionSummary-expandIcon,
@@ -1501,12 +1830,12 @@ html, body {
   background-color: white !important;
 }
 .MuiAccordionSummary-root .MuiAccordionSummary-expandIcon {
-  background-color: green !important;
+  background-color: rgba(0, 98, 65, 1) !important;
 }
 .MuiAccordionSummary-root {
   display: flex;
   padding: 0.78vw 1.30vw !important;
-  min-height: 2.50vw;
+  min-height: 9.24vw;
   transition: min-height 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   /*border: 2px solid #286043 !important;*/
   /*border-radius: 1.8vw !important;*/
@@ -1522,26 +1851,38 @@ html, body {
   flex-shrink: 0;
 }
 .MuiTypography-body1 {
-  font-size: 1.3rem !important;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-weight: 400;
-  line-height: 1.2;
+  font-size: 1.25vw !important;
+  font-family: Inter, sans-serif !important;
+  font-weight: 400 !important;
+  line-height: 1.53vw !important;
   letter-spacing: 0.00938em;
   text-align: left !important;
 }
 .makeStyles-line-5 {
-  width: 100%;
-  margin: 0px 0px 25px 5px;
-  border-top: 2px solid #ccc;
+  width: 97% !important;
+  margin: 0.28vw 0vw 1.67vw 0vw !important;
+  border-top: 1px solid #ccc;
   background-color: #fff;
 }
+.MuiAccordionDetails-root {
+  display: flex;
+  padding: 1.04vw 1.94vw 4.17vw 4.17vw !important;
+}
 .heading-id {
-  margin-left: 2vw;
-  font-size: 3vw;
+  font-weight: 500;
+  font-family: Inter;
+  margin-left: 2.5vw;
+  font-size: 4.17vw;
+  line-height: 5.07vw;
+
 }
 .heading-name {
-  margin-left: 1vw;
-  font-size: 1.8vw;
+  margin-left: 2vw;
+  margin-top: -0.5vw; /* Добавлено для поднятия текста выше без отступа */
+  font-weight: 500;
+  font-family: 'Inter';
+  font-size: 2.08vw;
+  line-height: 2.50vw;
 }
 
 
@@ -1589,8 +1930,12 @@ html, body {
 }
 /* PRODUCTS********************************** */
 .products {
+  display: flex;
+  height: 43vw;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
   background-color: rgba(248, 214, 72, 1);
-  margin-top: -6vw;
 }
 
 
@@ -1615,7 +1960,7 @@ html, body {
 /* HOW ********************************** */
 .wrapper-how {
   width: 88.6vw;
-  margin-left: 0.75vw;
+  margin-left: 7vw;
   overflow: hidden;
 }
 .how {
@@ -1629,31 +1974,221 @@ html, body {
   line-height: 1.5;
   margin-top: 0;
   padding-top: 1.46vw;
-  background-color: #60af7d;
+  background-color: rgba(91, 171, 113, 1);
 }
 .prizes-text {
   margin: 3vw auto;
+  margin-top: 0.8vw;
+  margin-left: -7.8vw;
   text-transform: uppercase;
   text-align: center;
-  font-weight: 700;
-  font-family: 'Acrom Medium', Arial, sans-serif;
+  font-weight: 400;
+  font-family: 'Acrom Medium', AutumnSweaterLaimon, sans-serif;
   color: #EEF3EC;
-  font-size: 2.66vw;
-  line-height: 4.03vw;
+  font-size: 3.47vw;
+  line-height: 3.33vw;
   width: 101.75vw;
   height: 8.05vw;
 }
+.prizes-text-next {
+  margin: 3vw auto;
+  margin-top: 7vw;
+  margin-left: -7.8vw;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  font-family: 'Acrom Medium', AutumnSweaterLaimon, sans-serif;
+  color: #EEF3EC;
+  font-size: 3.47vw;
+  line-height: 3.33vw;
+  width: 101.75vw;
+  height: 8.05vw;
+}
+.center-container {
+  margin: 4vw 2.67vw 0vw 0vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(245, 245, 237, 0.7);
+  border-radius: 2.43vw;
+}
+
+.container-sub {
+  margin-left: 2vw;
+  width: 85.69vw;
+  height: 15.35vw;
+}
+
+.main-div {
+  width: 83%;
+  height: 4%;
+  border-radius: 35px;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+}
+
+.sub-div {
+  width: 30%;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  /*border-bottom: 1px solid rgba(0, 98, 65, 1);*/
+  /*background-color: rgba(0, 98, 65, 1); !* Цвет фона подложки *!*/
+}
+.sub-div-text {
+  width: 18.96vw;
+  height: 5vw;
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 1.25vw;
+  line-height: 1.53vw;
+  color: rgba(0, 98, 65, 1);
+}
+.sub-div img {
+  margin: -5vw 0vw 2vw -1vw;
+  max-width: 44%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.sub-div p {
+  margin: -0.9vw 0vw 0vw 2.5vw;
+}
+.vertical-line {
+  margin-top: 3vw;
+  width: 0.14vw;
+  height: 66%;
+  background-color: rgba(0, 98, 65, 1);
+}
+
+
+
+/* HOW-PRIZES ********************************** */
+.wrapper-how-prizes {
+  width: 88.6vw;
+  margin-left: 7vw;
+  overflow: hidden;
+}
+.how-prizes {
+  background-size: cover;
+  height: auto;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  min-width: initial;
+  scroll-behavior: smooth;
+  font-size: 0.83vw;
+  line-height: 1.5;
+  margin-top: 0;
+  padding-top: 1.46vw;
+  background-color: rgba(91, 171, 113, 1);
+}
+/*.prizes-text-next {*/
+/*  font-size: 24px;*/
+/*  font-weight: bold;*/
+/*  margin-bottom: 20px;*/
+/*}*/
+
+.prizes-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+.million {
+  margin: -6.7vw 0vw 0vw 1.9vw;
+  width: 26.88vw;
+  height: 26.88vw;
+}
+.left-p-name-low {
+  margin: 0vw 0vw 0vw 7.1vw;
+  width: 15.97vw;
+  height: 5vw;
+  font-size: 1.11vw;
+  line-height: 1.18vw;
+  color: rgba(255, 255, 255, 1);
+  font-family: Inter;
+  font-weight: 500;
+}
+
+.right {
+  margin: -4vw 0vw 0vw -10vw;
+  flex: 1 1;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
+.right-p-name {
+  margin: -0.65vw 0vw 2vw 4vw;
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 1.74vw;
+  line-height: 1.67vw;
+  text-transform: uppercase;
+  color: white;
+}
+.right-p-name.down {
+  margin: 3.35vw 0vw 2vw 4vw;
+
+}
+.right-p-name.left-down {
+  margin: 0.85vw 0vw 1vw 1.6vw;
+
+}
+.new-block {
+  background-color: rgba(140, 196, 155, 1);
+  margin: -1vw 0vw 0vw 19.7vw;
+  width: 34.72vw;
+  height: 7.01vw;
+  border-radius: 3.47vw;
+}
+.right-p-prizes {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 1.53vw;
+  line-height: 1.60vw;
+  color: white;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.images img {
+  margin-left: 5vw;
+  margin-right: 0vw;
+  width: 8.75vw;
+  height: 8.75vw;
+  height: auto;
+  margin: 0.35vw;
+}
+.image-container {
+  text-align: center;
+  margin-right: -0.7vw;
+  margin-left: 4.1vw;
+}
+
+.image-container p {
+  margin: 0.19vw 0vw 0vw -0.6vw;
+}
+
 
 
 
 
 /* WINNERS ------------------------------------------------------ */
 .winners {
-  height: 66vw;
+  height: 74.5vw;
   width: 100%;
-  margin-top: -0.1vw;
-  padding-top: 1.56vw;
-  background-color: #60af7d;
+  margin-top: -6.1vw;
+  padding-top: 0.56vw;
+  background-color: rgba(91, 171, 113, 1);
 }
 .winners-text {
   z-index: 5;
@@ -1669,21 +2204,45 @@ html, body {
   text-align: left;
   color: rgba(0, 98, 65, 1);
 }
+.winners-text.winners-main {
+  z-index: 5;
+  width: 50vw;
+  margin-top: 8.5vw;
+  margin-left: 36.4vw;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 3.47vw;
+  line-height: 4.31vw;
+  color: #EEF3EC;
+  font-family: 'AutumnSweaterLaimon', Arial, sans-serif;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+}
+.winners-text.second {
+  margin: 6vw 0vw 2.2vw 20.7vw;
+}
 .for-faq {
-  font-size: 2.66vw;
+  font-family: 'AutumnSweaterLaimon', Arial, sans-serif;
+  font-size: 3.47vw;
+  font-weight: 400;
+  line-height: 4.31vw;
   text-transform: none;
   text-align: left;
-  margin-left: 22vw;
-  margin-bottom: 3vw;
-  color: #234a30;
+  margin-left: 29.9vw;
+  margin-top: 11.8vw;
+  margin-bottom: 4vw;
+  color: rgba(0, 98, 65, 1);
 }
 .for-slider {
-  width: 35vw;
-  font-size: 2.66vw;
+  width: 38vw;
+  font-size: 3.47vw;
   text-transform: none;
   text-align: center;
-  margin: 6vw auto; /* задаем отступы сверху и снизу auto, чтобы элемент располагался по центру горизонтально */
-  color: #234a30;
+  margin: 6vw auto;
+  margin-top: 2.2vw;
+  margin-left: 31vw;
+  color: rgba(0, 98, 65, 1);
+  line-height: 1;
 }
 .winners-top-input {
   display: flex;
@@ -1764,20 +2323,20 @@ html, body {
   z-index: 1;
 }
 .table-body-winners {
-  background-color: #ffffff26;
+  background-color: rgba(245, 245, 237, 0.7);
   border: .07vw solid #ffffff4d;
-  border-radius: 1.46vw;
+  border-radius: 1.04vw 1.04vw 0.35vw 1.04vw;
   display: flex;
   flex-flow: row nowrap;
   font-family: Halvar Mittelschrift Rg, sans-serif;
   font-size: 1.17vw;
   font-weight: 400;
-  height: 4.03vw;
+  height: 5.23vw;
   justify-content: flex-start;
-  margin-left: .2vw;
-  margin-top: .6520833333333333vw;
+  margin-left: -4.8vw;
+  margin-top: 0.652083vw;
   text-align: center;
-  width: 58.35vw;
+  width: 71.35vw;
 }
 .winners-search-field {
   width: 100%;
@@ -1866,6 +2425,11 @@ html, body {
   margin-left: -0.9vw;
 }
 .head-colm-prize1 {
+  font-size: 1.74vw;
+  line-height: 2.08vw;
+  font-weight: 600;
+  font-family: Inter;
+  color: rgba(0, 98, 65, 1);
   width: 15.427083vw;
   margin-top: 1.7vw;
   margin-left: -1vw;
@@ -1876,6 +2440,12 @@ html, body {
   margin-left: -0.9vw;
 }
 .head-colm-phone1 {
+  font-size: 1.25vw;
+  line-height: 1.5vw;
+  letter-spacing: 0.07vw;
+  font-weight: 500;
+  font-family: Inter;
+  color: rgba(0, 98, 65, 1);
   min-width: 17.364583333333332vw;
   margin-top: 1.75vw;
   margin-left: 1.1vw;
@@ -1891,7 +2461,29 @@ html, body {
   margin-left: auto; /* Чтобы прижать к правому краю */
 }
 .winners-all {
-  padding: 5vw;
+  background-color: rgba(0, 98, 65, 1);
+  border: .07vw solid #ffffff4d;
+  border-radius: 1.04vw 1.04vw 0.35vw 1.04vw;
+  font-family: Halvar Mittelschrift Rg, sans-serif;
+  font-size: 1.17vw;
+  font-weight: 400;
+  height: 4.03vw;
+  justify-content: flex-start;
+  margin-left: -4.8vw;
+  margin-top: 1.352083vw;
+  text-align: center;
+  width: 71.35vw;
+  display: flex; /* Добавлено */
+  align-items: center; /* Добавлено */
+}
+.winners-all-a {
+  font-size: 1.74vw;
+  line-height: 1.67vw;
+  font-family: Inter;
+  font-weight: 600;
+  color: rgba(245, 245, 237, 1);
+  text-decoration: none;
+  margin: 0 auto; /* Добавлено */
 }
 .colm-text {
   text-transform: uppercase;
@@ -1917,10 +2509,16 @@ html, body {
   margin-left: -1vw;
 }
 .head-colm-name{
-  width: 9.427083vw;
-  margin-top: 1.7vw;
-  margin-left: 1vw;
+  font-size: 1.74vw;
+  line-height: 2.08vw;
+  font-weight: 600;
+  font-family: Inter;
+  color: rgba(0, 98, 65, 1);
+  width: 20.427083vw;
+  margin-top: 1.6vw;
+  margin-left: 2.2vw;
   text-align: left;
+  letter-spacing: 0.1vw;
 }
 .head-colm-phone1-ticket {
   min-width: 17.364583333333332vw;
@@ -1928,9 +2526,9 @@ html, body {
   margin-left: -0.9vw;
 }
 .head-colm-phone1 {
-  min-width: 4.364583vw;
-  margin-top: 1.75vw;
-  margin-left: 29.1vw;
+  min-width: 0.364583vw;
+  margin-top: 2vw;
+  padding-left: 25.2vw;
 }
 .head-colm-date1-ticket {
   min-width: 15.364583vw;
@@ -1941,6 +2539,11 @@ html, body {
   min-width: 8.364583vw;
   margin-top: 1.65vw;
   margin-left: auto; /* Чтобы прижать к правому краю */
+}
+.winners-prize-img {
+  margin: -1vw 0vw 0vw 3vw;
+  width: 3.96vw;
+  height: 3.96vw;
 }
 .colm-text {
   text-transform: uppercase;
@@ -2094,12 +2697,12 @@ html, body {
   font: 500 1.041666666666667vw 'Montserrat', sans-serif;
   line-height: 1.041666666666667vw;
   margin-left: 9.5vw;
-  margin-top: 1vw;
+  margin-top: -1vw;
 }
 input[type="text"] {
   font-family: Inter;
   width: 28.56vw;
-  height: 4.10vw;
+  height: 4.8vw;
   border: 0.14vw solid red;
   border-radius: 3.68vw;
   padding: 0.35vw;
@@ -2109,6 +2712,8 @@ input[type="text"] {
   text-align: center;
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
+  z-index: 5;
+  position: relative;
 }
 
 input[type="text"]:focus {

@@ -1,7 +1,11 @@
 import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
 import axios from "axios";
 import {useLocation} from "react-router-dom";
-import howFull5 from "../image/img_36.png";
+import winnersprize from "../image/img_21.png";
+import gps from "../image/img_5.png";
+import berry from "../image/img_22.png";
+import leftlinehow from "../image/img_8.png";
+import lastone from "../image/img_24.png";
 
 
 export default function Winners(props) {
@@ -360,7 +364,7 @@ export default function Winners(props) {
     return (
         <div className={'winners'} id={'winners'} ref={winnersRef}>
             <div className={'wrapper'}>
-                <div className={'winners-text'}>Победители недели
+                <div className={'winners-text winners-main'}>Победители недели
                 </div>
                     <div className={'winners-tabs-content'}>
                         <div className={'tab'}>
@@ -371,41 +375,54 @@ export default function Winners(props) {
                                             <div className={'table-body-winners'}>
                                                 <div className={'head-colm-prize1'}>1
                                                 </div>
-                                                <div className={'head-colm-name'}>Марго Р.
+                                                <div className={'head-colm-name'}>Анастасия А.
                                                 </div>
                                                 <div className={'head-colm-phone1'}>25982628750
                                                 </div>
                                                 <div className={'head-colm-date1'}>
-                                                    <img alt="Приз"/>
+                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                         src={winnersprize}/>
                                                 </div>
                                             </div>
                                             <div className={'table-body-winners'}>
-                                                <div className={'head-colm-prize1'}>1
+                                                <div className={'head-colm-prize1'}>2
                                                 </div>
-                                                <div className={'head-colm-name'}>Владислав А.
+                                                <div className={'head-colm-name'}>Антон Г.
                                                 </div>
                                                 <div className={'head-colm-phone1'}>25982628750
                                                 </div>
                                                 <div className={'head-colm-date1'}>
-                                                    <img alt="Приз"/>
+                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                         src={winnersprize}/>
                                                 </div>
                                             </div>
                                             <div className={'table-body-winners'}>
-                                                <div className={'head-colm-prize1'}>1
+                                                <div className={'head-colm-prize1'}>3
                                                 </div>
-                                                <div className={'head-colm-name'}>Галина Г.
+                                                <div className={'head-colm-name'}>Светлана С.
                                                 </div>
                                                 <div className={'head-colm-phone1'}>25982628750
                                                 </div>
                                                 <div className={'head-colm-date1'}>
-                                                    <img alt="Приз"/>
+                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                         src={winnersprize}/>
                                                 </div>
                                             </div>
                                             <div className={'winners-all'}>
-                                            <a href={'#'}>Показать всех</a>
+                                                <a className={'winners-all-a'} href={'#'}>Весь список</a>
                                             </div>
-                                            <div className={'winners-text'}>Главный приз
+                                            <img className={'bottle-float-left gps-kalin'} src={gps}/>
+                                            <img className={'bottle-float-left berry-prizes'} src={berry}/>
+                                            <img className={'bottle-float-left down-line-winners'} src={lastone}/>
+                                            <p className="absolute-text kalin">Калининград</p>
+                                            <div className={'winners-text winners-main second'}>Главный приз
                                             </div>
+                                            <p className="absolute-text eka">Екатеринбург</p>
+                                            <p className="absolute-text novo">Новосибирск</p>
+                                            <p className="absolute-text vlad">Владивосток</p>
+                                            <img className={'bottle-float-left gps-eka'} src={gps}/>
+                                            <img className={'bottle-float-left gps-novo'} src={gps}/>
+                                            <img className={'bottle-float-left gps-vlad'} src={gps}/>
                                             <div className={'table-body-winners'}>
                                                 <div className={'head-colm-prize1'}>1
                                                 </div>
@@ -447,7 +464,7 @@ export default function Winners(props) {
 
                                     </div>
                                     <div className={'winners-videos'}>
-                                        {/*<a href={'#'}>Показать всех</a>*/}
+                                    {/*<a href={'#'}>Показать всех</a>*/}
                                     </div>
 
                                 </div>

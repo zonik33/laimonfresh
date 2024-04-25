@@ -17,6 +17,7 @@ import gps from '../image/img_5.png'
 import nature from '../image/img_6.png'
 import bigline from '../image/img_7.png'
 import wintohealth2 from '../image/img_1.png'
+import HowPrizes from "./HowPrizes";
 
 export default function Main(props) {
     const settings = {
@@ -36,6 +37,9 @@ export default function Main(props) {
                     <div className={'winners-text for-main'}>Летопутешествие с laimon fresh
                         <input type="text" maxlength="20" placeholder=""/>
                         <img className={'bottle-float-left inputcode'} src={inputcode}/>
+                        <div className={'winners-text-inputcode'}>
+                            <span className={'text-inputcode'}>*найди код под крышкой/ключиком и введи промокод</span>
+                        </div>
                     </div>
                     <div className={'bottle-left'}>
                         <img className={'bottle-float-left uptree'} src={uptree}/>
@@ -44,7 +48,9 @@ export default function Main(props) {
                         <img className={'bottle-float-left gps'} src={gps}/>
                         <img className={'bottle-float-left lefttree'} src={lefttree}/>
                         <img className={'bottle-float-left nature'} src={nature}/>
-                        <img className={'bottle-float-left bigline'} src={bigline}/>
+                    </div>
+                    <div className={'bigline-container'}>
+                    <img className={'bottle-float-left bigline'} src={bigline}/>
                     </div>
                     <p className="absolute-text">Москва</p>
                     <div className={'main-text-text'}>
@@ -68,7 +74,7 @@ export default function Main(props) {
                 </div>
             </div>
             <How/>
-            {/*<Prizes/>*/}
+            <HowPrizes/>
             <Winners/>
             <div id="wave-container-test-3">
                 <div id="wave-test-3">

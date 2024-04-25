@@ -6,8 +6,21 @@ import Example from "./Example";
 import "react-accessible-accordion/dist/fancy-example.css";
 import Footer from "./Footer";
 import Winners from "./Winners";
-import howFull5 from '../image/img_36.png';
+import lfmint from '../image/lf-mint.png';
+import lfmango from '../image/lf-mango.png';
+import lfberries from '../image/lf-berries.png';
+import lfpear from '../image/lf-pear.png';
 import How from "./How";
+import uptree from "../image/img_3.png";
+import wintohealth from "../image/img.png";
+import wintohealth2 from "../image/img_1.png";
+import gps from "../image/img_5.png";
+import toptreeprod from "../image/img_10.png";
+import downtreeprod from "../image/img_11.png";
+import lefttree from "../image/img_4.png";
+import nature from "../image/img_6.png";
+import bigline from "../image/img_7.png";
+import limeright from "../image/img_12.png";
 
 export default function Products(props) {
     const settings = {
@@ -16,7 +29,7 @@ export default function Products(props) {
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 5555,
         pauseOnHover: true
     };
 
@@ -29,38 +42,47 @@ export default function Products(props) {
 
                     <Slider {...settings}>
                         <div className="how-full44-img">
-                            <a href="#" target="_blank"><img
-                                src={howFull5}/></a>
-                            <span> Тут название продукта </span>
+                            <a><img
+                                src={lfmint}/></a>
+                            <span className={'lf-text'}> Laimon Fresh Mint </span>
                         </div>
                         <div className="how-full44-img">
-                            <a href="#" target="_blank"><img
-                                src={howFull5}/></a>
-                            <span> Тут название продукта </span>
+                            <a><img
+                                src={lfmango}/></a>
+                            <span className={'lf-text'}> Laimon Fresh Mango </span>
                         </div>
                         <div className="how-full44-img">
-                            <a href="#" target="_blank"><img
-                                src={howFull5}/></a>
-                            <span> Тут название продукта </span>
+                            <a><img
+                                src={lfberries}/></a>
+                            <span className={'lf-text'}> Laimon Fresh Berries </span>
                         </div>
                         <div className="how-full44-img">
-                            <a href="#" target="_blank"><img
-                                src={howFull5}/></a>
-                            <span> Тут название продукта </span>
+                            <a><img
+                                src={lfpear}/></a>
+                            <span className={'lf-text'}> Laimon Fresh Pear </span>
                         </div>
                         <div className="how-full44-img">
-                            <a href="#" target="_blank"><img
-                                src={howFull5}/></a>
-                            <span> Тут название продукта </span>
+                            <a><img
+                                src={lfmint}/></a>
+                            <span className={'lf-text'}> Laimon Fresh Mint </span>
                         </div>
                         <div className="how-full44-img">
-                            <a href="#" target="_blank"><img
-                                src={howFull5}/></a>
-                            <span> Тут название продукта </span>
+                            <a><img
+                                src={lfmango}/></a>
+                            <span className={'lf-text'}> Laimon Fresh Mango </span>
                         </div>
                     </Slider>
                 </div>
             </div>
+            <div className={'bottle-left'}>
+                <img className={'bottle-float-left uptree-prod'} src={uptree}/>
+                <img className={'bottle-float-left gps-down-product'} src={gps}/>
+                <img className={'bottle-float-left gps-top-product'} src={gps}/>
+                <img className={'bottle-float-left down-tree-prod'} src={downtreeprod}/>
+                <img className={'bottle-float-left top-tree-prod'} src={toptreeprod}/>
+                <img className={'bottle-float-left lime'} src={limeright}/>
+            </div>
+            <p className="absolute-text prod">Санкт-Петербург</p>
         </div>
     )
 }
