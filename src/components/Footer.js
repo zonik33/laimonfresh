@@ -3,8 +3,6 @@ import treepape from "../image/img_27.png";
 import React from "react";
 
 export default function Footer (props) {
-
-
     return (
         <footer>
             <div className={'content-container-footer'}>
@@ -16,11 +14,11 @@ export default function Footer (props) {
                     <div className="menu">
                         <nav className="main-menu">
                             <ul>
-                                <li className={'li-rules'}><a href={'#'}>Правила</a></li>
+                                <li className={'li-rules'}><a href={'rules.pdf'}>Правила</a></li>
                                 <li className={'li-ont'}><a href={'#'}>Призы</a></li>
                                 <li className={'li-ont'}><a href={'#'}>Победители</a></li>
-                                <li className={'li-ont'}><a href={'#'}>Вопросы/ответы</a></li>
-                                <li className={'li-lc'}><a href={'#'}>Личный кабинет</a></li>
+                                <li className={'li-ont'}><a href={'faq'}>Вопросы/ответы</a></li>
+                                <li className={'li-lc'}><a href={'profile'}>Личный кабинет</a></li>
                             </ul>
                         </nav>
                     </div>

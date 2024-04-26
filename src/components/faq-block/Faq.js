@@ -1,16 +1,24 @@
-import React, { useState } from 'react';
-import Modal from 'react-modal';
-import logo2 from '../image/logo2.png';
-import lemondots from '../image/lemon.png';
-import dotslemon from '../image/Dots.svg';
+import React, {useState} from "react";
+import lemondots from "../../image/lemon.png";
+import dotslemon from "../../image/Dots.svg";
+import logo2 from "../../image/logo2.png";
+import ControlledAccordions from "../Example";
+import Footer from "../Footer";
+import tree5555 from "../../image/img_25.png";
+import tree6666 from "../../image/img_26.png";
+import Example from "../Example";
+import {Link} from "react-router-dom";
 
-export default function Header(props) {
+export default function Faq(props) {
     const [showPopup, setShowPopup] = useState(false);
 
     const togglePopup = () => {
         setShowPopup(!showPopup);
         document.body.style.overflow = showPopup ? 'auto' : 'hidden';
 
+    };
+    const handleImageClick = () => {
+        window.location.href = '/'
     };
 
     return (
@@ -20,7 +28,11 @@ export default function Header(props) {
             <div className="header" id="header">
 
                 <div className="logo">
-                    <img src={logo2} alt="Logo"/>
+                    <Link to="">
+                    <img src={logo2} alt="Logo" onMouseOver={() => { /* Обработчик наведения на картинку */
+                    }} onClick={handleImageClick}
+                    />
+                    </Link>
                 </div>
                 <div className="menu">
                     <nav className="main-menu">
@@ -28,8 +40,8 @@ export default function Header(props) {
                             <li className={'li-rules'}><a href={'#'}>Правила</a></li>
                             <li className={'li-ont'}><a href={'#'}>Призы</a></li>
                             <li className={'li-ont'}><a href={'#'}>Победители</a></li>
-                            <li className={'li-ont'}><a href={'faq'}>Вопросы/ответы</a></li>
-                            <li className={'li-lc'}><a href={'#'}>Личный кабинет</a></li>
+                            <li className={'li-ont ok'}><a className={'active-block'} href={'#'}>Вопросы/ответы</a></li>
+                            <li className={'li-lc'}><a href={'profile'}>Личный кабинет</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -73,6 +85,23 @@ export default function Header(props) {
                 {/*    <button onClick={togglePopup}>Закрыть</button>*/}
                 {/*</Modal>*/}
             </div>
+            <div className={'accordion-example faq'}>
+                <div className={'winners-text for-faq faq'}>Часто задаваемые вопросы
+                </div>
+                <img className={'bottle-float-left example-tree5'} src={tree5555}/>
+                <img className={'bottle-float-left example-tree6'} src={tree6666}/>
+                <Example/>
+                <div className={'faq-question'}>
+                    <a onClick={''}>Задать свой вопрос</a>
+                </div>
+                <div id="wave-container-test-4">
+                    <div id="wave-test-4">
+                    </div>
+                </div>
+            </div>
+            <Footer/>
         </header>
+
+
     );
 }

@@ -736,6 +736,10 @@ html, body {
 .main-menu .li-ont{
   margin-right: -1vw;
 }
+.main-menu .active-block {
+  color: rgba(245, 199, 78, 1);
+}
+
 .main-menu .li-lc{
   margin-left: 1.6vw;
 }
@@ -1063,8 +1067,8 @@ html, body {
   position: absolute;
   margin-top: -9.45vw;
   margin-left: 48.5vw;
-  width: 13%;
-  height: 3%;
+  width: 8.47vw;
+  height: 10vw;
   z-index: 4;
 }
 .bottle-float-left.example-tree5 {
@@ -1492,6 +1496,22 @@ html, body {
   background-size: cover;
   width: 100%;
   font-size: 0.83vw;
+}
+.accordion-example.faq {
+  padding-top: 0vw;
+}
+.faq-question {
+  margin-left: 1vw;
+  text-decoration: underline;
+  color: rgba(0, 98, 65, 1);
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 1.74vw;
+  line-height: 1.67vw;
+  margin-bottom: 12vw;
+}
+.faq-question a:hover{
+  cursor: pointer;
 }
 .MuiAccordion-root:first-child {
   background-color: white; /* Цвет фона для закрытого аккордеона */
@@ -2339,6 +2359,14 @@ backface-visibility: hidden;
   margin-bottom: 4vw;
   color: rgba(0, 98, 65, 1);
 }
+.for-faq.faq{
+  margin-top: 4.8vw;
+}
+.for-faq.lc{
+  margin-left: 37.5vw;
+  margin-top: 4.8vw;
+  margin-bottom: 40vw;
+}
 .for-slider {
   z-index: 5;
   width: 38vw;
@@ -2845,6 +2873,10 @@ input[type="text"] {
 input[type="text"]:focus {
   border-color: rgba(0, 98, 65, 1); /* Change the border color when input is focused */
   box-shadow: 0 0 0.5vw rgba(0, 98, 65, 1); /* Add a box shadow for visual indication */
+}
+
+.controlledAccordions-div-faq {
+  margin-top: 5vw;
 }
 
 
