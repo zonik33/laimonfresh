@@ -24,7 +24,7 @@ export default function Faq(props) {
     return (
         <header>
             <img src={lemondots} alt="Photo" className="left-photo"/>
-            <img src={dotslemon} alt="SVG" className="svg-img"/>
+            <img src={dotslemon} alt="SVG" className="svg-img faq"/>
             <div className="header" id="header">
 
                 <div className="logo">
@@ -90,7 +90,9 @@ export default function Faq(props) {
                 </div>
                 <img className={'bottle-float-left example-tree5'} src={tree5555}/>
                 <img className={'bottle-float-left example-tree6'} src={tree6666}/>
+                <div className={'mega-test'}>
                 <Example/>
+                </div>
                 <div className={'faq-question'}>
                     <a onClick={''}>Задать свой вопрос</a>
                 </div>

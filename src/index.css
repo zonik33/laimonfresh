@@ -666,6 +666,10 @@ html, body {
 .left-photo, .svg-img {
   animation: rotate360 180s linear infinite; /* Применяем анимацию к обоим фотографиям */
 }
+.svg-img.faq {
+  z-index: 1;
+  animation: rotate360 180s linear infinite; /* Применяем анимацию к обоим фотографиям */
+}
 .header {
   width: 90%;
   display: flex;
@@ -1030,6 +1034,10 @@ html, body {
   height: 100%;
   z-index: 5;
 }
+.mega-test {
+  position: relative;
+  z-index: 5;
+}
 .bottle-float-left.twotree {
   position: absolute;
   margin-top: -14.65vw;
@@ -1059,9 +1067,11 @@ html, body {
   position: absolute;
   margin-top: 18.55vw;
   margin-left: -23.67vw;
-  width: 8%;
-  height: 2.1%;
+  width: 8.06vw;
+  height: 8.26vw;
   z-index: 4;
+  animation: sbs-231425214-52151 15s infinite linear;
+  backface-visibility: hidden;
 }
 .bottle-float-left.treepape-footer {
   position: absolute;
@@ -1081,6 +1091,17 @@ html, body {
   animation: sbs-231425214-52151 15s infinite linear;
   backface-visibility: hidden;
 }
+.bottle-float-left.fruit {
+  position: absolute;
+  margin-top: -42.95vw;
+  margin-left: -48.97vw;
+  width: auto;
+  height: 22.08vw;
+  z-index: 4;
+  /* animation: sbs-231425214-52151 15s infinite linear; */
+  backface-visibility: hidden;
+  transform: rotate(12deg);
+}
 .bottle-float-left.example-tree6 {
   position: absolute;
   margin-top: 18.05vw;
@@ -1095,9 +1116,11 @@ html, body {
   position: absolute;
   margin-top: 2.95vw;
   margin-left: 41.93vw;
-  width: 8%;
-  height: 2.1%;
+  width: 8.06vw;
+  height: 8.26vw;
   transform: scaleX(-1);
+  animation: sbs-23142-left 15s infinite linear;
+  backface-visibility: hidden;
 }
 .bottle-float-left.inputcode {
   position: absolute;
@@ -1145,8 +1168,8 @@ html, body {
   position: absolute;
   margin-top: -1.3vw;
   margin-left: -11.17vw;
-  width: 3.4%;
-  height: 1.1%;
+  width: 3.47vw;
+  height: 4.24vw;
   z-index: 4;
 }
 .bottle-float-left.nv {
@@ -1161,8 +1184,8 @@ html, body {
   position: absolute;
   margin-top: 41.7vw;
   margin-left: -80.87vw;
-  width: 3.4%;
-  height: 1.1%;
+  width: 3.47vw;
+  height: 4.24vw;
   z-index: 4;
 }
 .bottle-float-left.top-tree-prod{
@@ -1235,56 +1258,56 @@ html, body {
   position: absolute;
   margin-top: 39.13vw;
   margin-left: -81.07vw;
-  width: 3.4%;
-  height: 1.1%;
+  width: 3.47vw;
+  height: 4.24vw;
   z-index: 4;
 }
 .bottle-float-left.gps-sochi {
   position: absolute;
   margin-top: 19.73vw;
   margin-left: -40.97vw;
-  width: 3.4%;
-  height: 1.1%;
+  width: 3.47vw;
+  height: 4.24vw;
   z-index: 4;
 }
 .bottle-float-left.gps-kalin {
   position: absolute;
   margin-top: 2.73vw;
   margin-left: -37.97vw;
-  width: 3.4%;
-  height: 1.1%;
+  width: 3.47vw;
+  height: 4.24vw;
   z-index: 4;
 }
 .bottle-float-left.gps-eka {
   position: absolute;
   margin-top: 10.99vw;
   margin-left: 25.67vw;
-  width: 3.4%;
-  height: 1%;
+  width: 3.47vw;
+  height: 4.24vw;
   z-index: 4;
 }
 .bottle-float-left.gps-novo {
   position: absolute;
   margin-top: 30.73vw;
   margin-left: 38.03vw;
-  width: 3.4%;
-  height: 1%;
+  width: 3.47vw;
+  height: 4.24vw;
   z-index: 4;
 }
 .bottle-float-left.gps-vlad {
   position: absolute;
   margin-top: 32.33vw;
   margin-left: -21.97vw;
-  width: 3.4%;
-  height: 1%;
+  width: 3.47vw;
+  height: 4.24vw;
   z-index: 4;
 }
 .bottle-float-left.gps-chel {
   position: absolute;
   margin-top: 21.83vw;
   margin-left: 26.03vw;
-  width: 3.4%;
-  height: 1.1%;
+  width: 3.47vw;
+  height: 4.24vw;
   z-index: 4;
 }
 .bottle-float-left.lefttree {
@@ -1318,6 +1341,23 @@ html, body {
   }
   66% {
     transform: translateX(-36px) translateY(30px) rotate(0deg);
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: translateX(0px) translateY(0px) rotate(0deg);
+  }
+}
+@keyframes sbs-23142-left {
+  0% {
+    transform: translateX(0px) translateY(0px) rotate(0deg);
+    animation-timing-function: linear;
+  }
+  33% {
+    transform: translateX(-32px) translateY(38px) rotate(15deg);
+    animation-timing-function: linear;
+  }
+  66% {
+    transform: translateX(-15px) translateY(15px) rotate(0deg);
     animation-timing-function: ease-in-out;
   }
   100% {
@@ -1499,6 +1539,17 @@ html, body {
 }
 .accordion-example.faq {
   padding-top: 0vw;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 0vw;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+   background-color: inherit;
+
+  width: 100%;
+  font-size: 0.83vw;
 }
 .faq-question {
   margin-left: 1vw;
@@ -1522,6 +1573,7 @@ html, body {
   border-bottom-left-radius: 2.88vw !important;
 }
 .MuiAccordion-root.Mui-expanded:first-child {
+  z-index: 5;
   background-color: rgba(0, 98, 65, 1); /* Цвет фона для раскрытого аккордеона */
 }
 .MuiAccordion-rounded {
@@ -1572,8 +1624,12 @@ html, body {
   margin: 1.04vw 0; /* Установка отступа для контента при открытии */
 }
 .makeStyles-root-2 {
+  z-index: 5 !important;
   width: 86% !important;
   margin-left: 7vw;
+}
+.centered-container {
+  z-index: 5 !important;
 }
 .accordion__item {
   flex-direction: row-reverse; /* Открывать элементы аккордеона справа */
@@ -1887,6 +1943,7 @@ html, body {
 }
 .MuiAccordionSummary-root {
   display: flex;
+  z-index: 5 !important;
   padding: 0.78vw 1.30vw !important;
   min-height: 9.24vw;
   transition: min-height 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
