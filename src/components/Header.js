@@ -27,7 +27,7 @@ export default function Header(props) {
                         <ul>
                             <li className={'li-rules'}><a href={'#'}>Правила</a></li>
                             <li className={'li-ont'}><a href={'#'}>Призы</a></li>
-                            <li className={'li-ont'}><a href={'#'}>Победители</a></li>
+                            <li className={'li-ont'}><a href={'winners'}>Победители</a></li>
                             <li className={'li-ont'}><a href={'faq'}>Вопросы/ответы</a></li>
                             <li className={'li-lc'}><a href={'profile'}>Личный кабинет</a></li>
                         </ul>

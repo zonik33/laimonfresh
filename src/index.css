@@ -977,14 +977,12 @@ html, body {
   overflow: hidden;
   background: #286043;
 }
-
 #wave-test-4 {
   display: block;
   position: relative;
   height: 2.08vw;
   background: #a3d441;
 }
-
 #wave-test-4:before {
   content: "";
   display: block;
@@ -996,7 +994,6 @@ html, body {
   right: -25%;
   top: 1.04vw;
 }
-
 #wave-test-4:after {
   content: "";
   display: block;
@@ -1004,7 +1001,41 @@ html, body {
   border-radius: 100%;
   width: 100%;
   height: 15.63vw;
-  background: #a3d441;
+  background: rgba(91, 171, 113, 1);
+  left: -25%;
+  top: -12.50vw;
+}
+#wave-container-test-44 {
+  width: 100%;
+  height: 5.21vw;
+  overflow: hidden;
+  background: #286043;
+}
+#wave-test-44 {
+  display: block;
+  position: relative;
+  height: 2.08vw;
+  background: rgba(91, 171, 113, 1);
+}
+#wave-test-44:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  width: 100%;
+  height: 15.63vw;
+  background: #286043;
+  right: -25%;
+  top: 1.04vw;
+}
+#wave-test-44:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  width: 100%;
+  height: 15.63vw;
+  background: rgba(91, 171, 113, 1);
   left: -25%;
   top: -12.50vw;
 }
@@ -1725,6 +1756,148 @@ html, body {
 .slick-slider {
   width: 80.46vw;
 }
+.slick-slider.winnersSearch {
+width: 22.57vw;
+  height: 4.17vw;
+  margin-left: 59vw;
+  margin-top: -5vw;
+}
+.winnersSearch .slick-list {
+  margin-left: 7vw !important;
+}
+.scroll-container {
+  position: relative;
+  overflow: hidden;
+  width: 79.24vw;
+  height: 55.94vw;
+}
+
+.scroll-content {
+  position: relative;
+  overflow-y: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.scrollbar-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 0.37vw;
+  background-color: #f1f1f1;
+  opacity: 0.5;
+  border-radius: 0.29vw;
+  margin-left: 4.2vw;
+  margin-top: 1.8vw;
+  height: 27.82vw;
+}
+
+.scrollbar-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.29vw;
+  background-color: yellow;
+  border-radius: 0.29vw;
+  height: 3.66vw;
+  transition: background-color 0.3s, transform 0.3s; /* Добавлено свойство transform в transition */
+}
+
+.scroll-content::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-content:hover .scrollbar-thumb {
+  background-color: #555;
+}
+.scroll-content:hover .scrollbar-thumb:active,
+.scroll-content:hover .scrollbar-thumb:focus {
+  transform: translateY(100%); /* Добавлено свойство transform для передвижения скролла */
+}
+.scroll-content::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-content:hover .scrollbar-thumb {
+  background-color: #555;
+}
+
+.scroll-content:hover .scrollbar-thumb:active {
+  background-color: #333;
+}
+
+.scroll-content:hover .scrollbar-thumb:active,
+.scroll-content:hover .scrollbar-thumb:focus {
+  transform: translateY(100%);
+}
+
+.custom-simple-bar2 .simplebar-track.simplebar-vertical {
+  display: none;
+  background-color: #FFFFFF26;
+  left: 0;
+  margin-left: 4.2vw;
+  margin-top: 1.8vw;
+  width: 0.44vw !important;
+  height: 27.96vw;
+  opacity: 1 !important;
+}
+.custom-simple-bar2 .simplebar-scrollbar::before {
+  background-color: #FFFFFF !important;
+  width: 0.44vw !important;
+  margin-left: -0.1vw;
+}
+
+.custom-simple-bar2 .simplebar-scrollbar.simplebar-visible:before {
+  opacity: 1 !important;
+
+}
+
+
+
+.custom-simple-bar2 .simplebar-content {
+  height: auto;
+}
+.custom-simple-bar2 .simplebar-scrollable-y {
+  max-height: 165vw !important;
+}
+.custom-simple-bar1 .simplebar-scrollable-y {
+  max-height: 32.94vw !important;
+}
+.custom-simple-bar1 .simplebar-content {
+  height: 18vw;
+}
+.custom-simple-bar1 .simplebar-scrollbar.simplebar-visible:before {
+  opacity: 1 !important;
+}
+.custom-simple-bar1 .simplebar-track.simplebar-vertical {
+  background-color: #FFFFFF;
+}
+.custom-simple-bar1 .simplebar-track.simplebar-vertical {
+  background-color: #E0DFE1;
+  width: 0.44vw !important;
+  height: 14.64vw;
+  opacity: 1 !important;
+  left: 0;
+  margin-left: 20.8vw;
+  margin-top: 1vw;
+}
+.custom-simple-bar1 .simplebar-scrollbar::before {
+  background: linear-gradient(#DA4DA3,#8B3A99,#2F46B0) !important;
+  width: 0.44vw !important;
+  margin-left: -0.1vw;
+}
+
+.slider-search-winnersall {
+  margin: 0.7vw 0vw 0vw 0vw;
+  border-radius: 1.04vw;
+  color: white;
+  font-family: 'Acrom Medium', AutumnSweaterLaimon, sans-serif;
+  font-weight: 400;
+  font-size: 2.15vw;
+  line-height: 2.71vw;
+  background-color: rgba(0, 98, 65, 1);
+}
 .slick-list {
   margin-left: 5vw !important;
 }
@@ -2373,6 +2546,10 @@ backface-visibility: hidden;
   padding-top: 0.56vw;
   background-color: rgba(91, 171, 113, 1);
 }
+.winners.all {
+  height: auto;
+  margin-top: -7.1vw;
+}
 .winners-text {
   z-index: 5;
   width: 50vw;
@@ -2400,6 +2577,14 @@ backface-visibility: hidden;
   font-family: 'AutumnSweaterLaimon', Arial, sans-serif;
   text-align: left;
   color: rgba(255, 255, 255, 1);
+}
+.winners-main.left {
+  margin-left: 14.4vw;
+}
+.winners-main.center {
+  margin-top: 10.5vw;
+  margin-left: 40.4vw;
+  margin-bottom: 15vw;
 }
 .winners-text.second {
   margin: 6vw 0vw 2.2vw 20.7vw;
@@ -2531,6 +2716,9 @@ backface-visibility: hidden;
   margin-top: 0.652083vw;
   text-align: center;
   width: 71.35vw;
+}
+.table-body-winners.mill {
+  margin-bottom: 10vw;
 }
 .winners-search-field {
   width: 100%;

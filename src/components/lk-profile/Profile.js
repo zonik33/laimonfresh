@@ -49,40 +49,7 @@ export default function Profile(props) {
                     {/*<p>Телефон: Ваш номер телефона</p>*/}
                     {/*<p>Время работы: Ваши рабочие часы</p>*/}
                 </div>
-                {/*<button onClick={togglePopup} className="btn-leave-request">Оставить заявку</button>*/}
-                {/*<Modal closeTimeoutMS={300}*/}
-                {/*    className={{*/}
-                {/*        base: 'Modal',*/}
-                {/*        afterOpen: showPopup ? 'ReactModal__Overlay--after-open' : '',*/}
-                {/*        beforeClose: showPopup ? 'ReactModal__Overlay--before-close' : '',*/}
-                {/*    }}*/}
-                {/*    overlayClassName="Overlay"*/}
-                {/*    isOpen={showPopup}*/}
-                {/*    onRequestClose={togglePopup}*/}
-                {/*    style={{*/}
-                {/*        overlay: {*/}
-                {/*            backgroundColor: 'rgba(0, 0, 0, 0.5)',*/}
-                {/*            zIndex: 9999,*/}
-                {/*        },*/}
-                {/*        content: {*/}
-                {/*            position: 'absolute',*/}
-                {/*            top: '50%',*/}
-                {/*            left: '50%',*/}
-                {/*            transform: 'translate(-50%, -50%)',*/}
-                {/*            backgroundColor: '#fff',*/}
-                {/*            padding: '20px',*/}
-                {/*            borderRadius: '5px',*/}
-                {/*            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',*/}
-                {/*        },*/}
-                {/*    }}*/}
-                {/*    contentLabel="Оставить заявку"*/}
-                {/*>*/}
-                {/*    <input type="text" placeholder="Имя" />*/}
-                {/*    <input type="email" placeholder="Email" />*/}
-                {/*    <textarea className={'textarea-sms'} placeholder="Сообщение"/>*/}
-                {/*    <button>Отправить</button>*/}
-                {/*    <button onClick={togglePopup}>Закрыть</button>*/}
-                {/*</Modal>*/}
+
             </div>
             <div className={'accordion-example faq'}>
                 <div className={'winners-text for-faq lc'}>Личный кабинет
