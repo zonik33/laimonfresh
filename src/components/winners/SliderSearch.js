@@ -6,7 +6,7 @@ export default function SliderSearch() {
         className: 'winnersSearch',
         dots: false,
         infinite: true,
-        speed: 500,
+        speed: 0,
         slidesToShow: 1,
         slidesToScroll: 1,
     };
@@ -16,19 +16,19 @@ export default function SliderSearch() {
                 <p className={'slider-search-winnersall'}>с 01.01 по 01.01</p>
             </div>
             <div>
-                <p className={'slider-search-winnersall'}>с 01.01 по 01.01</p>
+                <p className={'slider-search-winnersall'}>с 02.01 по 02.01</p>
             </div>
             <div>
-                <p className={'slider-search-winnersall'}>с 01.01 по 01.01</p>
+                <p className={'slider-search-winnersall'}>с 03.01 по 03.01</p>
             </div>
             <div>
-                <p className={'slider-search-winnersall'}>с 01.01 по 01.01</p>
+                <p className={'slider-search-winnersall'}>с 04.01 по 04.01</p>
             </div>
             <div>
-                <p className={'slider-search-winnersall'}>с 01.01 по 01.01</p>
+                <p className={'slider-search-winnersall'}>с 05.01 по 05.01</p>
             </div>
             <div>
-                <p className={'slider-search-winnersall'}>с 01.01 по 01.01</p>
+                <p className={'slider-search-winnersall'}>с 06.01 по 06.01</p>
             </div>
         </Slider>
     );

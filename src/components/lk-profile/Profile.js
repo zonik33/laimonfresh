@@ -15,6 +15,7 @@ import prizevk from "../../image/img_18.png";
 import prizeyandex from "../../image/img_19.png";
 import prizesert from "../../image/img_20.png";
 import twotree from "../../image/img_23.png";
+import lcexit from "../../image/img_30.png";
 import gps from "../../image/img_5.png";
 import ScrollPrizes from "../../Scroll/ScrollPrizes";
 import ScrollWinners from "../../Scroll/ScrollWinners";
@@ -53,6 +54,9 @@ export default function Profile(props) {
     const winnersRef = useRef(null);
     const faqRef = useRef(null);
     const supportRef = useRef(null);
+    const handleClick = () => {
+        window.location.href = '/'; // замените ссылкой, на которую вы хотите перейти
+    };
     return (
         <header>
             <img src={lemondots} alt="Photo" className="left-photo"/>
@@ -92,6 +96,11 @@ export default function Profile(props) {
             </div>
             <div className={'accordion-example faq lc'}>
                 <div className={'winners-text for-faq lc'}>Здравствуйте, Александр Ф.
+                    <div>
+                        <img className={'bottle-float-left exit-lc'} onClick={handleClick} src={lcexit}/>
+                        <p className={'bottle-float-left exit-lc-text'}>выйти</p>
+
+                    </div>
                 </div>
                 <div className={'lc-text lc-settings'}>изменить свои данные
                 </div>

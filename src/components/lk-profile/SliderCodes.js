@@ -6,7 +6,7 @@ export default function SliderCodes() {
         className: 'winnersSearchCodes',
         dots: false,
         infinite: true,
-        speed: 500,
+        speed: 0,
         slidesToShow: 1,
         slidesToScroll: 1,
     };
@@ -16,13 +16,13 @@ export default function SliderCodes() {
                 <p className={'slider-codes-winnersall'}>521321521</p>
             </div>
             <div>
-                <p className={'slider-codes-winnersall'}>521321521</p>
+                <p className={'slider-codes-winnersall'}>85234144</p>
             </div>
             <div>
-                <p className={'slider-codes-winnersall'}>521321521</p>
+                <p className={'slider-codes-winnersall'}>27575</p>
             </div>
             <div>
-                <p className={'slider-codes-winnersall'}>521321521</p>
+                <p className={'slider-codes-winnersall'}>731215</p>
             </div>
         </Slider>
     );
