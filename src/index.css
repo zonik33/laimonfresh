@@ -934,11 +934,58 @@ html, body {
   left: -25%;
   top: -12.50vw;
 }
+#wave-container-test-22 {
+  width: 100%;
+  height: 5.21vw;
+  overflow: hidden;
+  background: rgba(91, 171, 113, 1);
+}
+
+#wave-test-22 {
+  display: block;
+  position: relative;
+  height: 2.08vw;
+  background: #a3d441;
+}
+
+#wave-test-22:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  width: 100%;
+  height: 15.63vw;
+  background: rgba(91, 171, 113, 1);
+  right: -25%;
+  top: 1.04vw;
+}
+
+#wave-test-22:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  width: 100%;
+  height: 15.63vw;
+  background: #a3d441;
+  left: -25%;
+  top: -12.50vw;
+}
+.jss2 {
+  width: 87%;
+  margin-left: 7vw !important;
+}
+.jss3 {
+  color: #286043 !important;
+  font-size: 0.9375rem !important;
+  flex-basis: 100.33% !important;
+  flex-shrink: 0 !important;
+}
 #wave-container-test-3 {
   width: 100%;
   height: 5.21vw;
   overflow: hidden;
-  background: #a3d441;;
+  background: #a3d441;
 }
 
 #wave-test-3 {
@@ -1165,7 +1212,23 @@ html, body {
 .winners-text-inputcode {
   margin: -2.6vw 0vw 0vw 6.35vw;
 }
+.winners-text-inputcode.lc {
+  margin: -1.48vw 0vw 0vw 6.35vw;
+}
 .text-inputcode {
+  margin: 0vw 0vw 0vw 0vw;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 1.25vw;
+  line-height: 1.18vw;
+  text-transform: none;
+}
+.text-block-inputcode {
+  display: block;
+  margin: 31vw 0vw 0vw -44vw;
+}
+.text-inputcode.lc {
+  color:rgba(0, 98, 65, 1);
   margin: 0vw 0vw 0vw 0vw;
   font-family: Inter;
   font-weight: 400;
@@ -1483,7 +1546,7 @@ html, body {
   font-weight: 700;
   line-height: 2.08vw;
   position: absolute;
-  margin: 7.2vw 21vw 5vw -12.4vw;
+  margin: 8.2vw 22vw 7vw -9.4vw;
 }
 .absolute-text.eka {
   color: rgba(255, 255, 255, 0.5);
@@ -1492,7 +1555,7 @@ html, body {
   font-weight: 700;
   line-height: 2.08vw;
   position: absolute;
-  margin: 15.2vw 21vw 5vw 51.6vw;
+  margin: 15.2vw 21vw 5vw 53.6vw;
 }
 .absolute-text.novo {
   color: rgba(255, 255, 255, 0.5);
@@ -1501,7 +1564,7 @@ html, body {
   font-weight: 700;
   line-height: 2.08vw;
   position: absolute;
-  margin: 36.2vw 21vw 5vw 63.6vw;
+  margin: 35.2vw 23vw 5vw 67.6vw;
   z-index: 1;
 }
 .absolute-text.vlad {
@@ -1511,7 +1574,7 @@ html, body {
   font-weight: 700;
   line-height: 2.08vw;
   position: absolute;
-  margin: 37.5vw 21vw 5vw 3.6vw;
+  margin: 36.5vw 21vw 5vw 6.6vw;
   z-index: 1;
 }
 .absolute-text.nv{
@@ -1578,13 +1641,25 @@ html, body {
   align-items: center;
   height: auto;
    background-color: inherit;
-
+  width: 100%;
+  font-size: 0.83vw;
+}
+.accordion-example.lc {
+  padding-top: 0vw;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 0vw;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background-color: inherit;
   width: 100%;
   font-size: 0.83vw;
 }
 .faq-question {
   margin-left: 1vw;
-  text-decoration: underline;
+  /*text-decoration: underline;*/
   color: rgba(0, 98, 65, 1);
   font-family: Inter;
   font-weight: 600;
@@ -1593,7 +1668,6 @@ html, body {
   margin-bottom: 12vw;
 }
 .faq-question a:hover{
-  cursor: pointer;
 }
 .MuiAccordion-root:first-child {
   background-color: white; /* Цвет фона для закрытого аккордеона */
@@ -1631,6 +1705,9 @@ html, body {
 .MuiAccordion-root.Mui-expanded .makeStyles-heading-3 {
   color: white; /* Изменение цвета текста при открытии аккордеона */
 }
+.MuiAccordion-root.Mui-expanded .jss3 {
+  color: white !important; /* Изменение цвета текста при открытии аккордеона */
+}
 .makeStyles-heading-3 {
   flex-basis: 100.33% !important;
   color: #286043; /* Цвет текста по умолчанию */
@@ -1661,6 +1738,11 @@ html, body {
 }
 .centered-container {
   z-index: 5 !important;
+  width: 86% !important;
+}
+.centered-container.jss2 {
+  z-index: 5 !important;
+  width: 86% !important;
 }
 .accordion__item {
   flex-direction: row-reverse; /* Открывать элементы аккордеона справа */
@@ -1741,7 +1823,7 @@ html, body {
 .slick-prev,
 .slick-next {
   background-color: transparent !important; /* Убираем фоновый цвет */
-  color: white !important; /* Меняем цвет стрелки на белый */
+  color: orange !important; /* Меняем цвет стрелки на белый */
   width: 2.08vw !important;
   height: 2.08vw !important;
   position: absolute !important; /* Позиционирование абсолютное для точного размещения */
@@ -1757,26 +1839,84 @@ html, body {
   width: 80.46vw;
 }
 .slick-slider.winnersSearch {
-width: 22.57vw;
+  width: 22.57vw;
   height: 4.17vw;
-  margin-left: 59vw;
+  margin-left: 61.5vw;
   margin-top: -5vw;
 }
 .winnersSearch .slick-list {
   margin-left: 7vw !important;
 }
+.slick-slider.winnersSearchCodes {
+  width: 22.57vw;
+  height: 4.17vw;
+  margin-left: 0.5vw;
+  margin-top: 3vw;
+}
+.winnersSearchCodes .slick-list {
+  margin-left: 3vw !important;
+}
+.winnersSearch .slick-list {
+  margin-left: 7vw !important;
+}
+.slick-slider.center {
+  z-index: 2;
+  background-color: rgba(245, 245, 237, 0.7);
+  width: 72.57vw;
+  height: 26.17vw;
+  margin-left: -1.5vw;
+  margin-top: 7vw;
+  border-radius: 2.43vw;
+}
+.center .slick-list {
+  margin-left: 0vw !important;
+}
+.winnersSearchCodes .slick-prev::before
+{
+  margin-left: -6vw !important;
+  margin-top: 3vw !important;
+}
+.winnersSearchCodes .slick-prev,
+.winnersSearchCodes .slick-next
+{
+  margin-top: 0.5vw !important;
+}
 .scroll-container {
   position: relative;
   overflow: hidden;
   width: 79.24vw;
-  height: 55.94vw;
+  height: 60.5vw;
+}
+.simplebar-wrapper {
+  height: auto !important;
 }
 
 .scroll-content {
   position: relative;
-  overflow-y: auto;
   height: 100%;
   width: 100%;
+}
+.winnersSearch .slick-prev,
+.winnersSearch .slick-next
+{
+}
+.winnersSearch .slick-prev:hover,
+.winnersSearch .slick-prev:focus,
+.winnersSearch .slick-next:hover,
+.winnersSearch .slick-next:focus
+{
+}
+.winnersSearch .slick-prev::before,
+.winnersSearch .slick-next::before
+{
+  font-family: 'slick';
+  font-size: 20px;
+  line-height: 1;
+
+  opacity: .75;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .scrollbar-track {
@@ -1833,63 +1973,48 @@ width: 22.57vw;
 }
 
 .custom-simple-bar2 .simplebar-track.simplebar-vertical {
-  display: none;
-  background-color: #FFFFFF26;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.7);
   left: 0;
-  margin-left: 4.2vw;
-  margin-top: 1.8vw;
+  margin-left: 73.6vw;
+  margin-top: 0.75vw;
   width: 0.44vw !important;
-  height: 27.96vw;
+  height: auto;
   opacity: 1 !important;
+  border-radius: 50px; /* Преобразовать в круг */
+  z-index: 2;
+  overflow: visible; /* Разрешаем элементам выходить за пределы блока */
 }
 .custom-simple-bar2 .simplebar-scrollbar::before {
-  background-color: #FFFFFF !important;
-  width: 0.44vw !important;
-  margin-left: -0.1vw;
+  display: block; /* Изменим значение display на block */
+  position: absolute;
+  z-index: 9999; /* Поднимаем ползунок на самый верх */
+  width: 2.08vw !important;
+  height: 2.08vw;
+  margin-left: -0.9vw;
+  background-color: rgba(0, 98, 65, 1) !important;
+  border-radius: 50%; /* Преобразовать в круг */
 }
 
 .custom-simple-bar2 .simplebar-scrollbar.simplebar-visible:before {
   opacity: 1 !important;
-
+  background-color: rgba(0, 98, 65, 1);
 }
 
 
 
 .custom-simple-bar2 .simplebar-content {
+  overflow: visible; /* Разрешаем элементам выходить за пределы блока */
   height: auto;
 }
 .custom-simple-bar2 .simplebar-scrollable-y {
   max-height: 165vw !important;
-}
-.custom-simple-bar1 .simplebar-scrollable-y {
-  max-height: 32.94vw !important;
-}
-.custom-simple-bar1 .simplebar-content {
-  height: 18vw;
-}
-.custom-simple-bar1 .simplebar-scrollbar.simplebar-visible:before {
-  opacity: 1 !important;
-}
-.custom-simple-bar1 .simplebar-track.simplebar-vertical {
-  background-color: #FFFFFF;
-}
-.custom-simple-bar1 .simplebar-track.simplebar-vertical {
-  background-color: #E0DFE1;
-  width: 0.44vw !important;
-  height: 14.64vw;
-  opacity: 1 !important;
-  left: 0;
-  margin-left: 20.8vw;
-  margin-top: 1vw;
-}
-.custom-simple-bar1 .simplebar-scrollbar::before {
-  background: linear-gradient(#DA4DA3,#8B3A99,#2F46B0) !important;
-  width: 0.44vw !important;
-  margin-left: -0.1vw;
-}
 
+
+}
 .slider-search-winnersall {
-  margin: 0.7vw 0vw 0vw 0vw;
+  padding: 0.89vw 1vw 0.89vw 1vw;
+  margin: 0vw 0vw 0vw 0vw;
   border-radius: 1.04vw;
   color: white;
   font-family: 'Acrom Medium', AutumnSweaterLaimon, sans-serif;
@@ -1898,6 +2023,47 @@ width: 22.57vw;
   line-height: 2.71vw;
   background-color: rgba(0, 98, 65, 1);
 }
+.slider-codes-winnersall {
+  padding: 1.8vw 2.5vw 1.79vw 2.8vw;
+  margin: 0vw 0vw 0vw 0vw;
+  border-radius: 4.04vw;
+  color: rgba(0, 98, 65, 1);
+  font-family: 'Acrom Medium', Inter, sans-serif;
+  font-weight: 500;
+  font-size: 1.25vw;
+  line-height: 1.53vw;
+  background-color: white;
+}
+.slider-cards-winnersall-img {
+  width: 18.75vw;
+  height: 24.31vw;
+  margin: 2vw;
+}
+.slider-cards-winnersall-img a {
+
+}
+.slider-cards-winnersall-img.blurred {
+  opacity: 0.5;
+}
+.slider-cards-winnersall {
+  width: 18.75vw;
+  height: 24.31vw;
+  padding: 1.8vw 2.5vw 1.79vw 2.8vw;
+  margin: 0vw 0vw 0vw 0vw;
+  border-radius: 4.04vw;
+  color: rgba(0, 98, 65, 1);
+  font-family: 'Acrom Medium', Inter, sans-serif;
+  font-weight: 500;
+  font-size: 1.25vw;
+  line-height: 1.53vw;
+}
+.cards-img {
+  position: relative;
+  z-index: 1;
+  width: 18.75vw;
+  height: 24.31vw;
+}
+
 .slick-list {
   margin-left: 5vw !important;
 }
@@ -1926,6 +2092,7 @@ width: 22.57vw;
   padding-left: 2vw;
   padding-top: 1.3vw;
   padding-bottom: 0.8vw;
+
 }
 .how-full4-img,
 .how-full44-img,
@@ -2158,6 +2325,9 @@ width: 22.57vw;
   font-size: 4.17vw;
   line-height: 5.07vw;
 
+}
+.MuiAccordion-root.Mui-expanded .MuiAccordionSummary-content {
+  color: white !important;
 }
 .heading-name {
   margin-left: 2vw;
@@ -2454,6 +2624,11 @@ backface-visibility: hidden;
   display: flex;
   flex-direction: column;
 }
+.left.lc {
+  display: flex;
+  flex-direction: column;
+  margin: 4.5vw 0vw 0vw 5.5vw;
+}
 .million {
   margin: -6.7vw 0vw 0vw 1.9vw;
   width: 26.88vw;
@@ -2477,6 +2652,13 @@ backface-visibility: hidden;
   display: flex;
   flex-direction: column;
 }
+.right.lc {
+  margin: -3.8vw 0vw 0vw -15.45vw;
+  flex: 1 1;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
 .right-p-name {
   margin: -0.65vw 0vw 2vw 4vw;
   font-family: Inter;
@@ -2493,6 +2675,24 @@ backface-visibility: hidden;
 .right-p-name.left-down {
   margin: 0.85vw 0vw 1vw 1.6vw;
 
+}
+.left-p-name.lc {
+  margin: 2.35vw 0vw -1vw 3.4vw;
+  font-family: 'AutumnSweaterLaimon', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 2.50vw;
+  line-height: 3.13vw;
+  text-transform: uppercase;
+  color: rgba(0, 98, 65, 1);
+}
+.right-p-name.lc {
+  margin: 2.35vw 0vw -1vw 8.2vw;
+  font-family: 'AutumnSweaterLaimon', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 2.50vw;
+  line-height: 3.13vw;
+  text-transform: uppercase;
+  color: rgba(0, 98, 65, 1);
 }
 .new-block {
   background-color: rgba(140, 196, 155, 1);
@@ -2564,6 +2764,38 @@ backface-visibility: hidden;
   text-align: left;
   color: rgba(0, 98, 65, 1);
 }
+.lc-text-profile-d {
+  margin: -5.2vw 0vw 0vw 12.5vw;
+  width: 55.76vw;
+  height: 4.31vw;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 3.47vw;
+  line-height: 4.31vw;
+  font-family: 'AutumnSweaterLaimon', Arial, sans-serif;
+  color: rgba(0, 98, 65, 1);
+}
+.lc-text-profile-d-down {
+  margin: 0.8vw 0vw 0vw 12.6vw;
+  width: 55.49vw;
+  height: 7.50vw;
+  text-transform: none;
+  text-align: center;
+  font-weight: 400;
+  font-size: 2.08vw;
+  line-height: 2.50vw;
+  font-family: Inter;
+  color: rgba(0, 98, 65, 1);
+}
+.lc-text {
+  margin: -3.6vw 0vw 0vw 1.8vw;
+  font-size: 1.39vw;
+  line-height: 1.67vw;
+  font-weight: 400;
+  font-family: Inter;
+  color: rgba(0, 98, 65, 1);
+  text-decoration: underline;
+}
 .winners-text.winners-main {
   z-index: 5;
   width: 50vw;
@@ -2578,16 +2810,33 @@ backface-visibility: hidden;
   text-align: left;
   color: rgba(255, 255, 255, 1);
 }
+.winners-text.lc {
+  z-index: 5;
+  width: 50vw;
+  margin-top: 8.5vw;
+  margin-left: 32.4vw;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 3.47vw;
+  line-height: 4.31vw;
+  color: #EEF3EC;
+  font-family: 'AutumnSweaterLaimon', Arial, sans-serif;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+}
 .winners-main.left {
   margin-left: 14.4vw;
 }
 .winners-main.center {
-  margin-top: 10.5vw;
-  margin-left: 40.4vw;
-  margin-bottom: 15vw;
+  margin-top: 10vw;
+  margin-left: 41.8vw;
+  margin-bottom: 9.9vw;
+}
+.winners-text.second-second {
+  margin: 6vw 0vw 2.2vw 26.1vw;
 }
 .winners-text.second {
-  margin: 6vw 0vw 2.2vw 20.7vw;
+  margin: 6vw 0vw 2.2vw 26.7vw;
 }
 .for-faq {
   font-family: 'AutumnSweaterLaimon', Arial, sans-serif;
@@ -2601,13 +2850,13 @@ backface-visibility: hidden;
   margin-bottom: 4vw;
   color: rgba(0, 98, 65, 1);
 }
-.for-faq.faq{
+.for-faq.faq {
   margin-top: 4.8vw;
 }
-.for-faq.lc{
-  margin-left: 37.5vw;
-  margin-top: 4.8vw;
-  margin-bottom: 40vw;
+.for-faq.lc {
+  color: rgba(0, 98, 65, 1);
+  margin-left: 30.5vw;
+  margin-top: 3.4vw;
 }
 .for-slider {
   z-index: 5;
@@ -2712,7 +2961,6 @@ backface-visibility: hidden;
   font-weight: 400;
   height: 5.23vw;
   justify-content: flex-start;
-  margin-left: -4.8vw;
   margin-top: 0.652083vw;
   text-align: center;
   width: 71.35vw;
@@ -2851,7 +3099,7 @@ backface-visibility: hidden;
   font-weight: 400;
   height: 4.03vw;
   justify-content: flex-start;
-  margin-left: -4.8vw;
+  margin-left: 0.1vw;
   margin-top: 1.352083vw;
   text-align: center;
   width: 71.35vw;
@@ -2866,6 +3114,75 @@ backface-visibility: hidden;
   color: rgba(245, 245, 237, 1);
   text-decoration: none;
   margin: 0 auto; /* Добавлено */
+}
+.winners-all-a.faq {
+  font-size: 1.74vw;
+  line-height: 1.67vw;
+  font-family: Inter;
+  font-weight: 600;
+  color: rgba(245, 245, 237, 1);
+  text-decoration: none;
+  margin: 0 auto; /* Добавлено */
+  background-color: rgba(0, 98, 65, 1);
+  border: .07vw solid #ffffff4d;
+  padding: 1vw 36vw;
+  width: 85.35vw;
+  border-radius: 1.04vw 1.04vw 0.35vw 1.04vw;
+  transition: all 0.3s ease; /* добавлена анимация */
+}
+.winners-all-a.winners-test-a {
+  z-index: 2;
+  position: relative;
+  display: block;
+  width: 19.35vw;
+  font-size: 1.74vw;
+  line-height: 1.67vw;
+  font-family: Inter;
+  margin-top: -2vw;
+  font-weight: 600;
+  color: rgba(245, 245, 237, 1);
+  text-decoration: none;
+  margin: 0 auto;
+  background-color: rgba(0, 98, 65, 1);
+  border: .07vw solid #ffffff4d;
+  padding: 1vw 26vw 1vw 26vw;
+  border-radius: 1.04vw 1.04vw 0.35vw 1.04vw;
+  transition: all 0.3s ease;
+}
+.winners-all-a.winners {
+  font-size: 1.74vw;
+  line-height: 1.67vw;
+  font-family: Inter;
+  font-weight: 600;
+  color: rgba(245, 245, 237, 1);
+  text-decoration: none;
+  margin: 0 auto; /* Добавлено */
+  background-color: rgba(0, 98, 65, 1);
+  border: .07vw solid #ffffff4d;
+  padding: 1vw 25vw;
+  border-radius: 1.04vw 1.04vw 0.35vw 1.04vw;
+  transition: all 0.3s ease; /* добавлена анимация */
+}
+.winners-all-a.winners:hover {
+  color: #dcdcdc;
+  background-color: #286043; /* изменение цвета при наведении */
+  transform: scale(1.05); /* увеличение размера элемента при наведении */
+}
+.winners-all-a.winners-test-a:hover {
+  color: #dcdcdc;
+  background-color: #286043; /* изменение цвета при наведении */
+}
+.winners-all-a.faq:hover {
+  color: #dcdcdc;
+  background-color: #286043; /* изменение цвета при наведении */
+}
+.example-all-test {
+  margin-bottom: 4vw;
+  margin-top: 2.652083vw;
+}
+.example-all-test.winners-test {
+  margin-bottom: 0vw;
+  margin-top: 1.652083vw;
 }
 .winners-all.example-all {
   background-color: rgba(0, 98, 65, 1);
@@ -3095,8 +3412,8 @@ backface-visibility: hidden;
   color: #eef3ec;
   font: 500 1.041666666666667vw 'Montserrat', sans-serif;
   line-height: 1.041666666666667vw;
-  margin-left: 9.5vw;
-  margin-top: -1vw;
+  margin-left: 7.2vw;
+  margin-top: 0.7vw;
 }
 input[type="text"] {
   font-family: Inter;

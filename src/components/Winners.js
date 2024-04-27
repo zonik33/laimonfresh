@@ -15,7 +15,7 @@ export default function Winners(props) {
     const [totalPages, setTotalPages] = useState(null); // Используем useState для хранения значения totalPages
     let [currentPage, setCurrentPage] = useState(1); // Используем useState для хранения значения currentPage
     const [selectedPage, setSelectedPage] = useState(currentPage);
-    const pageNumbersRef = useRef(null);
+
     const listRef = useRef(null);
 
     const handleSearch = () => {
@@ -122,7 +122,6 @@ export default function Winners(props) {
 
 
     useEffect(() => {
-        const pageNumbers = pageNumbersRef.current;
         const listElement = listRef.current;
 
         const prevPage = document.getElementById('prevPage');
@@ -201,10 +200,6 @@ export default function Winners(props) {
         }
 
         function renderPageNumbers() {
-            if (pageNumbersRef.current && totalPages > 0) {
-                // Очистить контейнер номеров страниц
-                pageNumbersRef.current.innerHTML = '';
-            }
             const showFirstEllipsis = currentPage > 2;
             const showLastEllipsis = currentPage < totalPages - 2;
             let startPage;
@@ -228,7 +223,6 @@ export default function Winners(props) {
                 const ellipsisStart = document.createElement('span');
                 ellipsisStart.innerText = '...';
                 ellipsisStart.classList.add('page-number');
-                pageNumbers.appendChild(ellipsisStart);
             }
 
             for (let i = startPage; i <= endPage; i++) {
@@ -258,14 +252,14 @@ export default function Winners(props) {
                     span.classList.remove('hover');
                 });
 
-                pageNumbers.appendChild(span);
+
             }
 
             if (showLastEllipsis) {
                 const ellipsisEnd = document.createElement('span');
                 ellipsisEnd.innerText = '...';
                 ellipsisEnd.classList.add('page-number');
-                pageNumbers.appendChild(ellipsisEnd);
+
             }
             const lastPageElement = document.createElement('span');
             lastPageElement.innerText = totalPages;
@@ -278,9 +272,7 @@ export default function Winners(props) {
                 moveList();
             });
 
-            if (currentPage !== totalPages) { // Only show the last page element when there are more than two pages or the total pages is two
-                pageNumbers.appendChild(lastPageElement);
-            }
+
 
         }
 
@@ -408,8 +400,8 @@ export default function Winners(props) {
                                                          src={winnersprize}/>
                                                 </div>
                                             </div>
-                                            <div className={'winners-all'}>
-                                                <a className={'winners-all-a'} href={'#'}>Весь список</a>
+                                            <div className={'example-all-test winners-test'}>
+                                                <a className={'winners-all-a winners-test-a'} href={'winners'}>Весь список</a>
                                             </div>
                                             <img className={'bottle-float-left gps-kalin'} src={gps}/>
                                             <img className={'bottle-float-left berry-prizes'} src={berry}/>
@@ -433,31 +425,6 @@ export default function Winners(props) {
                                                 {/*<div className={'head-colm-date1'}>*/}
                                                 {/*    <img alt="Приз"/>*/}
                                                 {/*</div>*/}
-                                            </div>
-
-                                            <p id={'pageCount'}></p>
-                                            <div id="paginator">
-
-                                                {/*<img src={paginatorLeft} alt="Button" id="prevPage"*/}
-                                                {/*     className={'paginatorLeft'}/>*/}
-                                                <>
-
-
-                                                    <div ref={listRef}>
-                                                        {/* Список элементов страниц */}
-                                                    </div>
-
-                                                    <div ref={pageNumbersRef} id="pageNumbersContainer"
-                                                         className="page-numbers-wrapper">
-                                                        {/* Кнопки для навигации по страницам */}
-                                                    </div>
-
-
-                                                </>
-
-                                                {/*<img src={paginatorRight} alt="Button" id="nextPage"*/}
-                                                {/*     className={'paginatorRight'}/>*/}
-
                                             </div>
 
                                         </div>

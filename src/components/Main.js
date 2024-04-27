@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -21,8 +21,38 @@ import fruit from '../image/img_28.png'
 import bigline from '../image/img_7.png'
 import wintohealth2 from '../image/img_1.png'
 import HowPrizes from "./HowPrizes";
+import {useLocation} from "react-router-dom";
+
 
 export default function Main(props) {
+    const prizesRef = useRef(null);
+    const winnersRef = useRef(null);
+    const faqRef = useRef(null);
+    const supportRef = useRef(null);
+
+    const location = useLocation();
+    const params = new URLSearchParams(location.search);
+    const activeSection = params.get("section");
+
+    useEffect(() => {
+        if (activeSection === "how-prizes" && prizesRef.current) {
+            setTimeout(() => {
+                prizesRef.current.scrollIntoView({ behavior: "smooth" });
+            }, 0);
+        } else if (activeSection === "winners" && winnersRef.current) {
+            setTimeout(() => {
+                winnersRef.current.scrollIntoView({ behavior: "smooth" });
+            }, 0);
+        } else if (activeSection === "faq" && faqRef.current) {
+            setTimeout(() => {
+                faqRef.current.scrollIntoView({ behavior: "smooth" });
+            }, 0);
+        } else if (activeSection === "support" && supportRef.current) {
+            setTimeout(() => {
+                supportRef.current.scrollIntoView({ behavior: "smooth" });
+            }, 0);
+        }
+    }, [activeSection]);
     const settings = {
         dots: false,
         infinite: true,
@@ -84,7 +114,7 @@ export default function Main(props) {
                 </div>
             </div>
             <div className={'accordion-example'}>
-                <div className={'winners-text for-faq'}>Часто задаваемые вопросы
+                <div className={'winners-text for-faq' } id={'faq'} ref={faqRef}>Часто задаваемые вопросы
                 </div>
                 <img className={'bottle-float-left fruit'} src={fruit}/>
                 <img className={'bottle-float-left example-tree5'} src={tree5555}/>

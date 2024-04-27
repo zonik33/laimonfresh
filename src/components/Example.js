@@ -38,7 +38,9 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+
 export default function ControlledAccordions() {
+
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
     const [panelNumber, setPanelNumber] = React.useState(1); // Хранит текущий номер панели
@@ -58,7 +60,7 @@ export default function ControlledAccordions() {
                 onChange={handleChange('panel1')}
             >
                 <AccordionSummary
-                    expandIcon={expanded === 'panel1' ? <NorthEastIcon /> : <NorthEastIcon />}
+                    expandIcon={expanded === 'panel1' ? <NorthEastIcon/> : <NorthEastIcon/>}
                     aria-controls="panel1-content"
                     id="panel1-header"
                 >
@@ -92,7 +94,8 @@ export default function ControlledAccordions() {
                     aria-controls="panel2-content"
                     id="panel2-header"
                 >
-                    <Typography className={classes.heading}><b className={'heading-id'}>02</b> <span className={'heading-name'}>Users</span></Typography>
+                    <Typography className={classes.heading}><b className={'heading-id'}>02</b> <span
+                        className={'heading-name'}>Users</span></Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
@@ -114,7 +117,8 @@ export default function ControlledAccordions() {
                     aria-controls="panel2-content"
                     id="panel2-header"
                 >
-                    <Typography className={classes.heading}><b className={'heading-id'}>03</b> <span className={'heading-name'}>Advanced
+                    <Typography className={classes.heading}><b className={'heading-id'}>03</b> <span
+                        className={'heading-name'}>Advanced
                         settings</span></Typography>
                     <Typography className={classes.secondaryHeading}>
                     </Typography>
@@ -139,51 +143,13 @@ export default function ControlledAccordions() {
                     aria-controls="panel2-content"
                     id="panel2-header"
                 >
-                    <Typography className={classes.heading}><b className={'heading-id'}>04</b> <span className={'heading-name'}>В чем заключается акция и как принять в ней
+                    <Typography className={classes.heading}><b className={'heading-id'}>04</b> <span
+                        className={'heading-name'}>В чем заключается акция и как принять в ней
                         участие?</span></Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
                         {expanded === 'panel4' && <div className={classes.line}></div>}
-                        Для участия в акции Вам необходимо в период с «01» февраля 2024г. по «31» марта 2024г.
-                        приобрести от 1 (одного) билета «Мечталлион», «Пять-о-Пять», «12 Добрых дел», «Лавина призов» на
-                        сайте nloto.ru или в мобильном приложении «Национальная Лотерея», а также в отделениях Почты
-                        России или в магазинах-партнерах. Далее зарегистрировать приобретенный билет в акции «Отмечайте
-                        на здоровье», для этого есть несколько вариантов:
-                        <br/><br/>
-
-                        <b>Вариант 1:</b>
-                        <br/><br/>
-                        - перейти на промо-сайт акции nloto-promo.ru;
-                        <br/>
-                        - пройти регистрацию, то есть создать Личный кабинет на промо-сайте nloto-promo.ru, указав номер
-                        мобильного телефона и приняв согласие на обработку персональных данных, установленных настоящими
-                        Правилами;
-                        <br/>
-                        - зарегистрировать приобретенный билет в созданном Личном кабинете. При этом, если лотерейный
-                        билет приобретен на сайте nloto.ru, в мобильном приложении «Национальная Лотерея» или в
-                        магазинах-партнерах с указанием номера телефона, то регистрировать билет не нужно. После
-                        регистрации или авторизации он автоматически появится в вашем Личном кабинете. Если лотерейный
-                        билет приобретен в магазинах-партнерах без указания номера мобильного телефона, то после
-                        регистрации на промо-сайте nloto-promo.ru в созданном Личном кабинете нажмите на кнопку
-                        «Зарегистрировать билеты» введите номер билета.
-                        <br/><br/>
-
-                        <b>Вариант 2:</b>
-                        <br/><br/>
-                        - позвонить по телефону горячей линии 8-800-333-73-33, сообщив, что желаете принять участие в
-                        акции «Отмечайте на здоровье»;
-                        <br/>
-                        - сообщить оператору номер мобильного телефона, на который будет создан Личный кабинет на
-                        промо-сайте nloto-promo.ru. Далее Вам поступит смс-уведомление с логином и паролем от входа;
-                        <br/>
-                        - назвать номер приобретенного билета. При этом, если лотерейный билет приобретен на сайте
-                        nloto.ru, в мобильном приложении «Национальная Лотерея» или в магазинах-партнерах с указанием
-                        номера телефона, то после регистрации или авторизации он автоматически появится в вашем Личном
-                        кабинете. Если лотерейный билет приобретен в магазинах-партнерах без указания номера мобильного,
-                        то сообщите номер оператору, который зарегистрирует его в акции.
-                        <br/><br/>
-
                         Далее получайте призы в рамках проводимой акции!
                     </Typography>
                 </AccordionDetails>
@@ -200,7 +166,8 @@ export default function ControlledAccordions() {
                     aria-controls="panel2-content"
                     id="panel2-header"
                 >
-                    <Typography className={classes.heading}><b className={'heading-id'}>05</b> <span className={'heading-name'}>Advanced
+                    <Typography className={classes.heading}><b className={'heading-id'}>05</b> <span
+                        className={'heading-name'}>Advanced
                         settings</span></Typography>
                     <Typography className={classes.secondaryHeading}>
                     </Typography>
@@ -213,8 +180,8 @@ export default function ControlledAccordions() {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-            <div className={'winners-all example-all'}>
-                <a className={'winners-all-a'} href={'#'}>Весь список</a>
+            <div className={'example-all-test'}>
+            <a className={'winners-all-a faq'} href={'faq'}>Весь список</a>
             </div>
         </div>
     );

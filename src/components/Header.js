@@ -3,6 +3,9 @@ import Modal from 'react-modal';
 import logo2 from '../image/logo2.png';
 import lemondots from '../image/lemon.png';
 import dotslemon from '../image/Dots.svg';
+import ScrollPrizes from "../Scroll/ScrollPrizes";
+import ScrollWinners from "../Scroll/ScrollWinners";
+import ScrollFaq from "../Scroll/ScrollFaq";
 
 export default function Header(props) {
     const [showPopup, setShowPopup] = useState(false);
@@ -12,6 +15,7 @@ export default function Header(props) {
         document.body.style.overflow = showPopup ? 'auto' : 'hidden';
 
     };
+
 
     return (
         <header>
@@ -25,10 +29,16 @@ export default function Header(props) {
                 <div className="menu">
                     <nav className="main-menu">
                         <ul>
-                            <li className={'li-rules'}><a href={'#'}>Правила</a></li>
-                            <li className={'li-ont'}><a href={'#'}>Призы</a></li>
-                            <li className={'li-ont'}><a href={'winners'}>Победители</a></li>
-                            <li className={'li-ont'}><a href={'faq'}>Вопросы/ответы</a></li>
+                            <li className={'li-rules'}><a href={'#'}> Правила</a></li>
+                            <li className={'li-ont'}><a className="smooth" href={'#how-prizes'} onClick={(event) => {
+                                ScrollPrizes(event);
+                            }}>Призы</a></li>
+                            <li className={'li-ont'}><a className="smooth" href={'#winners'} onClick={(event) => {
+                                ScrollWinners(event);
+                            }}>Победители</a></li>
+                            <li className={'li-ont'}><a className="smooth" href={'#faq'} onClick={(event) => {
+                                ScrollFaq(event);
+                            }}>Вопросы/ответы</a></li>
                             <li className={'li-lc'}><a href={'profile'}>Личный кабинет</a></li>
                         </ul>
                     </nav>

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useRef, useState} from "react";
 import lemondots from "../../image/lemon.png";
 import dotslemon from "../../image/Dots.svg";
 import logo2 from "../../image/logo2.png";
@@ -7,7 +7,20 @@ import Footer from "../Footer";
 import tree5555 from "../../image/img_25.png";
 import tree6666 from "../../image/img_26.png";
 import Example from "../Example";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import million from "../../image/img_17.png";
+import inputcode from "../../image/img_2.png";
+import HowPrizes from "../HowPrizes";
+import prizevk from "../../image/img_18.png";
+import prizeyandex from "../../image/img_19.png";
+import prizesert from "../../image/img_20.png";
+import twotree from "../../image/img_23.png";
+import gps from "../../image/img_5.png";
+import ScrollPrizes from "../../Scroll/ScrollPrizes";
+import ScrollWinners from "../../Scroll/ScrollWinners";
+import ScrollFaq from "../../Scroll/ScrollFaq";
+import SliderCodes from "./SliderCodes";
+import SliderCards from "./SliderCards";
 
 export default function Profile(props) {
     const [showPopup, setShowPopup] = useState(false);
@@ -20,6 +33,26 @@ export default function Profile(props) {
     const handleImageClick = () => {
         window.location.href = '/'
     };
+    const navigate = useNavigate();
+
+    const handleGoToPrizes = (event) => {
+        event.preventDefault();
+        navigate("/?section=how-prizes"); // Передаем параметр "section" в URL
+    };
+
+    const handleGoToWinners = (event) => {
+        event.preventDefault();
+        navigate("/?section=winners"); // Передаем параметр "section" в URL
+    };
+    const handleGoToFaq = (event) => {
+        event.preventDefault();
+        navigate("/?section=faq"); // Передаем параметр "section" в URL
+    };
+    const [activeSection, setActiveSection] = useState(null);
+    const prizesRef = useRef(null);
+    const winnersRef = useRef(null);
+    const faqRef = useRef(null);
+    const supportRef = useRef(null);
     return (
         <header>
             <img src={lemondots} alt="Photo" className="left-photo"/>
@@ -36,11 +69,17 @@ export default function Profile(props) {
                 <div className="menu">
                     <nav className="main-menu">
                         <ul>
-                            <li className={'li-rules'}><a href={'#'}>Правила</a></li>
-                            <li className={'li-ont'}><a href={'#'}>Призы</a></li>
-                            <li className={'li-ont'}><a href={'#'}>Победители</a></li>
-                            <li className={'li-ont ok'}><a  href={'faq'}>Вопросы/ответы</a></li>
-                            <li className={'li-lc'}><a className={'active-block'}href={'#'}>Личный кабинет</a></li>
+                            <li className={'li-rules'}><a href={'#'}> Правила</a></li>
+                            <li className={'li-ont'}><a className="smooth" href={'#how-prizes'} onClick={(event) => {
+                                handleGoToPrizes(event)
+                            }}>Призы</a></li>
+                            <li className={'li-ont'}><a className="smooth" href={'#winners'} onClick={(event) => {
+                                handleGoToWinners(event)
+                            }}>Победители</a></li>
+                            <li className={'li-ont'}><a className="smooth" href={'#faq'} onClick={(event) => {
+                                handleGoToFaq(event)
+                            }}>Вопросы/ответы</a></li>
+                            <li className={'li-lc'}><a className={'active-block'} href={'profile'}>Личный кабинет</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -51,12 +90,80 @@ export default function Profile(props) {
                 </div>
 
             </div>
-            <div className={'accordion-example faq'}>
-                <div className={'winners-text for-faq lc'}>Личный кабинет
+            <div className={'accordion-example faq lc'}>
+                <div className={'winners-text for-faq lc'}>Здравствуйте, Александр Ф.
                 </div>
-                <div id="wave-container-test-4">
-                    <div id="wave-test-4">
+                <div className={'lc-text lc-settings'}>изменить свои данные
+                </div>
+                <div className={'prizes-content lc'}>
+                    <div className={'left lc'}>
+                        <p className={'left-p-name left-down lc checks'}>Мои коды</p>
+                        <SliderCodes/>
                     </div>
+                    <div className={'right lc'}>
+                        <div className={'winners-text for-main lc'}>
+                            <p className={'right-p-name left-down lc'}>Зарегистрировать новый код</p>
+                            <input type="text" maxLength="20" placeholder=""/>
+                            <img className={'bottle-float-left inputcode'} src={inputcode}/>
+                            <div className={'winners-text-inputcode lc'}>
+                                <span
+                                    className={'text-inputcode lc'}>*найди код под крышкой/ключиком и введи промокод</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className={'winners-text lc-text-profile'}>
+                    <p className={'lc-text-profile-d'}>Твоё летопутешествие с Laimon Fresh</p>
+                    <p
+                        className={'lc-text-profile-d-down'}>Соберите все 10 карточек городов, что бы принять участие
+                        в розыгрыше главного приза. <br></br>1 код = 1 карточка</p>
+
+                    <SliderCards/>
+
+                </div>
+            </div>
+            <div id="wave-container-test-22">
+                <div id="wave-test-22">
+                </div>
+            </div>
+            <div className={'how-prizes'} id={'how-prizes'}>
+                <div className={'wrapper-how-prizes'}>
+                    <div className={'prizes-text-next'}>Какие призы возможно выиграть?</div>
+                    <div className={'prizes-content'}>
+                        <div className={'left'}>
+                            <img className={'million'} src={million} alt="Million"/>
+                            <p className={'right-p-name left-down'}>Главный приз</p>
+                            <p className={'left-p-name-low'}>собери карточки 10 городов и участвуй в розыгрыше главного
+                                приза</p>
+                        </div>
+                        <div className={'right'}>
+                            <p className={'right-p-name'}>еженедельные призы:</p>
+                            <div className={'images'}>
+                                <div className="image-container">
+                                    <img src={prizevk} alt="Image"/>
+                                    <p className={'right-p-prizes'}>Подписка <br></br>VK Music</p>
+                                </div>
+                                <div className="image-container">
+                                    <img src={prizeyandex} alt="Image 2"/>
+                                    <p className={'right-p-prizes'}>Подписка <br></br>Яндекс Плюс</p>
+                                </div>
+                                <div className="image-container">
+                                    <img src={prizesert} alt="Image 3"/>
+                                    <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р</p>
+                                </div>
+                            </div>
+                            <p className={'right-p-name down'}>МОМЕНТАЛЬНЫЕ ПРИЗЫ</p>
+                            <div className={'new-block'}>
+                            </div>
+                        </div>
+
+                    </div>
+                    <p className="absolute-text nv">Нижний новгород</p>
+
+                </div>
+            </div>
+            <div id="wave-container-test-44">
+                <div id="wave-test-44">
                 </div>
             </div>
             <Footer/>

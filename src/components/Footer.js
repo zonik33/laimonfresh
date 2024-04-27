@@ -1,8 +1,29 @@
 import logo2 from "../image/logo2.png";
 import treepape from "../image/img_27.png";
-import React from "react";
+import React, {useRef, useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 export default function Footer (props) {
+    const navigate = useNavigate();
+
+    const handleGoToPrizes = (event) => {
+        event.preventDefault();
+        navigate("/?section=how-prizes"); // Передаем параметр "section" в URL
+    };
+
+    const handleGoToWinners = (event) => {
+        event.preventDefault();
+        navigate("/?section=winners"); // Передаем параметр "section" в URL
+    };
+    const handleGoToFaq = (event) => {
+        event.preventDefault();
+        navigate("/?section=faq"); // Передаем параметр "section" в URL
+    };
+    const [activeSection, setActiveSection] = useState(null);
+    const prizesRef = useRef(null);
+    const winnersRef = useRef(null);
+    const faqRef = useRef(null);
+    const supportRef = useRef(null);
     return (
         <footer>
             <div className={'content-container-footer'}>
@@ -14,17 +35,26 @@ export default function Footer (props) {
                     <div className="menu">
                         <nav className="main-menu">
                             <ul>
-                                <li className={'li-rules'}><a href={'rules.pdf'}>Правила</a></li>
-                                <li className={'li-ont'}><a href={'#'}>Призы</a></li>
-                                <li className={'li-ont'}><a href={'#'}>Победители</a></li>
-                                <li className={'li-ont'}><a href={'faq'}>Вопросы/ответы</a></li>
-                                <li className={'li-lc'}><a href={'profile'}>Личный кабинет</a></li>
+                                <li className={'li-rules'}><a href={'#'}> Правила</a></li>
+                                <li className={'li-ont'}><a className="smooth" href={'#how-prizes'}
+                                                            onClick={(event) => {
+                                                                handleGoToPrizes(event)
+                                                            }}>Призы</a></li>
+                                <li className={'li-ont'}><a className="smooth" href={'#winners'} onClick={(event) => {
+                                    handleGoToWinners(event)
+                                }}>Победители</a></li>
+                                <li className={'li-ont'}><a className="smooth" href={'#faq'} onClick={(event) => {
+                                    handleGoToFaq(event)
+                                }}>Вопросы/ответы</a></li>
+                                <li className={'li-lc'}><a href={'profile'}>Личный
+                                    кабинет</a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
                 <div className="left-footer">
-                    <p>А также некоторые особенности внутренней политики формируют глобальную экономическую сеть и при этом — указаны как претенденты на роль ключевых.</p>
+                    <p>А также некоторые особенности внутренней политики формируют глобальную экономическую сеть и при
+                        этом — указаны как претенденты на роль ключевых.</p>
                     <p className={'footer-padding-text'}>info@promo.laimonfresh.ch</p>
                 </div>
                 <div className="right-footer">
