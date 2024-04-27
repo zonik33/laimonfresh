@@ -3,12 +3,20 @@ import Slider from "react-slick";
 import lfmint from "../../image/img_29.png";
 
 export default function SliderCards() {
-    const [numToShow, setNumToShow] = useState(1); // Количество карточек для отображения
+    const [numToShow, setNumToShow] = useState(4); // Количество карточек для отображения
     const [openCardsCount, setOpenCardsCount] = useState(1); // Количество открытых карточек
+    const [selectedImage, setSelectedImage] = useState(null); // Состояние выбранного изображения
 
     useEffect(() => {
         setOpenCardsCount(Math.min(numToShow, 10)); // Ограничиваем количество открытых карточек числом 10
     }, [numToShow]);
+
+    const handleImageClick = (index) => {
+        setSelectedImage(index);
+        setTimeout(() => {
+            setSelectedImage(null); // Сброс выбранного изображения после задержки
+        }, 1500);
+    };
 
     const settings = {
         className: "center",
@@ -20,29 +28,30 @@ export default function SliderCards() {
     };
 
     const renderCard = (index) => {
-        if (index < numToShow) {
-            return (
-                <div className={'slider-cards-winnersall-img'} key={index}>
-                    <a><img className={'cards-img'} src={lfmint} alt={`Card ${index + 1}`} /></a>
-                </div>
-            );
-        } else {
-            return (
-                <div className={'slider-cards-winnersall-img blurred'} key={index}>
-                    <a><img className={'cards-img'} src={lfmint} alt={`Blurred Card ${index + 1}`} /></a>
-                </div>
-            );
-        }
+        const isBlurred = index >= numToShow;
+        const isEnlarged = selectedImage === index;
+
+        return (
+            <div className={`slider-cards-winnersall-img ${isBlurred ? 'blurred' : ''}`} key={index}>
+                <a onClick={!isBlurred ? () => handleImageClick(index) : null}>
+                    <img
+                        className={`cards-img ${isEnlarged ? 'enlarge' : ''} ${!isBlurred ? 'cursor-pointer' : ''}`}
+                        src={lfmint}
+                        alt={`Card ${index + 1}`}
+                    />
+                </a>
+            </div>
+        );
     };
 
     return (
         <div className="slider-container">
             <Slider {...settings}>
-                {[...Array(10).keys()].map(index => renderCard(index))} {/* Генерация карточек */}
+                {[...Array(10).keys()].map(index => renderCard(index))}
             </Slider>
             <div className={'text-block-inputcode'}>
-            <span className={'text-inputcode'}>всего собрано карточек</span>
-            <p className={'text-inputcode'}>{openCardsCount} из 10</p> {/* Отображение количества открытых карточек */}
+                <span className={'text-inputcode'}>всего собрано карточек</span>
+                <p className={'text-inputcode cards-prize'}>{openCardsCount} из 10</p>
             </div>
         </div>
     );

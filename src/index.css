@@ -1223,6 +1223,11 @@ html, body {
   line-height: 1.18vw;
   text-transform: none;
 }
+.text-inputcode.cards-prize {
+  font-size: 3.47vw;
+  margin-top: 1vw;
+  margin-bottom: 5vw;font-family: AutumnSweaterLaimon;
+}
 .text-block-inputcode {
   display: block;
   margin: 31vw 0vw 0vw -44vw;
@@ -1876,6 +1881,14 @@ html, body {
   margin-left: -6vw !important;
   margin-top: 3vw !important;
 }
+.center .slick-prev {
+  margin-left: -7.3vw !important;
+  margin-top: 5vw;
+}
+.center .slick-next {
+  margin-left: 5vw !important;
+  margin-top: 5vw !important;
+}
 .winnersSearchCodes .slick-prev,
 .winnersSearchCodes .slick-next
 {
@@ -2043,7 +2056,7 @@ html, body {
 
 }
 .slider-cards-winnersall-img.blurred {
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .slider-cards-winnersall {
   width: 18.75vw;
@@ -2062,6 +2075,24 @@ html, body {
   z-index: 1;
   width: 18.75vw;
   height: 24.31vw;
+}
+.cards-img.cursor-pointer {
+  cursor: pointer;
+}
+.cards-img.enlarge {
+  transform: scale(1.1); /* Изображение увеличивается в 1.2 раза */
+  transition: transform 0.3s ease; /* Анимация изменения масштаба */
+}
+.cards-img {
+  transition: transform 0.5s ease; /* Задаем CSS transition для свойства transform */
+}
+
+.enlarge {
+  /*transform: scale(1); !* Увеличиваем размер при нажатии *!*/
+}
+
+.shrink {
+  transform: scale(1); /* Возвращаем размер к обычному значению */
 }
 
 .slick-list {
