@@ -2,35 +2,65 @@ import React, {useRef, useState} from "react";
 import lemondots from "../../image/lemon.png";
 import dotslemon from "../../image/Dots.svg";
 import logo2 from "../../image/logo2.png";
-import ControlledAccordions from "../Example";
 import Footer from "../Footer";
-import tree5555 from "../../image/img_25.png";
-import tree6666 from "../../image/img_26.png";
-import Example from "../Example";
 import {Link, useNavigate} from "react-router-dom";
 import million from "../../image/img_17.png";
 import inputcode from "../../image/img_2.png";
-import HowPrizes from "../HowPrizes";
 import prizevk from "../../image/img_18.png";
 import prizeyandex from "../../image/img_19.png";
 import prizesert from "../../image/img_20.png";
-import twotree from "../../image/img_23.png";
 import lcexit from "../../image/img_30.png";
-import gps from "../../image/img_5.png";
-import ScrollPrizes from "../../Scroll/ScrollPrizes";
-import ScrollWinners from "../../Scroll/ScrollWinners";
-import ScrollFaq from "../../Scroll/ScrollFaq";
 import SliderCodes from "./SliderCodes";
 import SliderCards from "./SliderCards";
+import PopupRegister from "../Popups/PopupRegister";
+import PopupLogin from "../Popups/PopupLogin";
+import PopupAddCode from "../Popups/PopupAddCode";
+import PopupPasswordNewStepOne from "../Popups/PopupPasswordNewStepOne";
+import PopupPasswordNewStepTwo from "../Popups/PopupPasswordNewStepTwo";
+import PopupSuccessEmail from "../Popups/PopupSuccessEmail";
+import PopupSuccessCode from "../Popups/PopupSuccessCode";
+import PopupSuccessPassword from "../Popups/PopupSuccessPassword";
+import PopupFail from "../Popups/PopupFail";
 
 export default function Profile(props) {
-    const [showPopup, setShowPopup] = useState(false);
-
-    const togglePopup = () => {
-        setShowPopup(!showPopup);
-        document.body.style.overflow = showPopup ? 'auto' : 'hidden';
-
+    const [isPopupOpen, setIsPopupOpen] = useState(null);
+    const openPopup = (popupName) => {
+        setIsPopupOpen(popupName);
+        document.body.classList.add("no-scroll");
     };
+    function openPopup3() {
+        document.getElementById("popup-password-step-two").style.display = "block";
+        document.body.classList.add("no-scroll");
+    }
+
+    const closePopup = () => {
+        setIsPopupOpen(false);
+        document.body.classList.remove("no-scroll");
+    };
+
+
+    const auth_key = localStorage.getItem('auth_key');
+    const isAuthenticated = !!auth_key;
+    const handleOnClick = () => {
+
+            document.body.classList.add("no-scroll");
+            // document.body.style.overflow = "hidden"; // Разблокируйте прокрутку страницы
+            // document.documentElement.style.overflow = "hidden"; // Разблокируйте прокрутку страницы
+    };
+    const handleOnClickCode = () => {
+
+        document.body.classList.add("no-scroll");
+        // document.body.style.overflow = "hidden"; // Разблокируйте прокрутку страницы
+        // document.documentElement.style.overflow = "hidden"; // Разблокируйте прокрутку страницы
+    };
+
+
+
+    // const togglePopup = () => {
+    //     setShowPopup(!showPopup);
+    //     document.body.style.overflow = showPopup ? 'auto' : 'hidden';
+    //
+    // };
     const handleImageClick = () => {
         window.location.href = '/'
     };
@@ -102,7 +132,8 @@ export default function Profile(props) {
 
                     </div>
                 </div>
-                <div className={'lc-text lc-settings'}>изменить свои данные
+                <div className={'lc-text lc-settings'}>
+                    <a onClick={openPopup3}>изменить свои данные</a>
                 </div>
                 <div className={'prizes-content lc'}>
                     <div className={'left lc'}>
@@ -112,7 +143,18 @@ export default function Profile(props) {
                     <div className={'right lc'}>
                         <div className={'winners-text for-main lc'}>
                             <p className={'right-p-name left-down lc'}>Зарегистрировать новый код</p>
-                            <input type="text" maxLength="20" placeholder=""/>
+                            <input
+                                type="text"
+                                className={'new-code'}
+                                onClick={() => openPopup('AddCode')}
+                                maxLength="20"
+                                readOnly
+                                placeholder=""
+                            />
+                            {isPopupOpen === 'AddCode' && (
+                                <PopupAddCode showPopup={true} closeModal={closePopup} />
+                            )}
+
                             <img className={'bottle-float-left inputcode'} src={inputcode}/>
                             <div className={'winners-text-inputcode lc'}>
                                 <span
@@ -175,6 +217,12 @@ export default function Profile(props) {
                 <div id="wave-test-44">
                 </div>
             </div>
+            <PopupSuccessCode/>
+            <PopupSuccessPassword/>
+            <PopupSuccessEmail/>
+            <PopupPasswordNewStepOne/>
+            <PopupPasswordNewStepTwo/>
+            <PopupLogin/>
             <Footer/>
         </header>
 

@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
-import Modal from 'react-modal';
+import React, {useState} from 'react';
 import logo2 from '../image/logo2.png';
 import lemondots from '../image/lemon.png';
 import dotslemon from '../image/Dots.svg';
 import ScrollPrizes from "../Scroll/ScrollPrizes";
 import ScrollWinners from "../Scroll/ScrollWinners";
 import ScrollFaq from "../Scroll/ScrollFaq";
+import PopupSuccessCode from "./Popups/PopupSuccessCode";
+import PopupPasswordNewStepOne from "./Popups/PopupPasswordNewStepOne";
+import PopupPasswordNewStepTwo from "./Popups/PopupPasswordNewStepTwo";
+import PopupRegister from "./Popups/PopupRegister";
+import PopupLogin from "./Popups/PopupLogin";
+import PopupSuccessPassword from "./Popups/PopupSuccessPassword";
+import PopupSuccessEmail from "./Popups/PopupSuccessEmail";
+import PopupSuccessRegister from "./Popups/PopupSuccessRegister";
 
 export default function Header(props) {
     const [showPopup, setShowPopup] = useState(false);
@@ -49,40 +56,14 @@ export default function Header(props) {
                     {/*<p>Время работы: Ваши рабочие часы</p>*/}
                 </div>
                 {/*<button onClick={togglePopup} className="btn-leave-request">Оставить заявку</button>*/}
-                {/*<Modal closeTimeoutMS={300}*/}
-                {/*    className={{*/}
-                {/*        base: 'Modal',*/}
-                {/*        afterOpen: showPopup ? 'ReactModal__Overlay--after-open' : '',*/}
-                {/*        beforeClose: showPopup ? 'ReactModal__Overlay--before-close' : '',*/}
-                {/*    }}*/}
-                {/*    overlayClassName="Overlay"*/}
-                {/*    isOpen={showPopup}*/}
-                {/*    onRequestClose={togglePopup}*/}
-                {/*    style={{*/}
-                {/*        overlay: {*/}
-                {/*            backgroundColor: 'rgba(0, 0, 0, 0.5)',*/}
-                {/*            zIndex: 9999,*/}
-                {/*        },*/}
-                {/*        content: {*/}
-                {/*            position: 'absolute',*/}
-                {/*            top: '50%',*/}
-                {/*            left: '50%',*/}
-                {/*            transform: 'translate(-50%, -50%)',*/}
-                {/*            backgroundColor: '#fff',*/}
-                {/*            padding: '20px',*/}
-                {/*            borderRadius: '5px',*/}
-                {/*            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',*/}
-                {/*        },*/}
-                {/*    }}*/}
-                {/*    contentLabel="Оставить заявку"*/}
-                {/*>*/}
-                {/*    <input type="text" placeholder="Имя" />*/}
-                {/*    <input type="email" placeholder="Email" />*/}
-                {/*    <textarea className={'textarea-sms'} placeholder="Сообщение"/>*/}
-                {/*    <button>Отправить</button>*/}
-                {/*    <button onClick={togglePopup}>Закрыть</button>*/}
-                {/*</Modal>*/}
             </div>
+            <PopupSuccessCode/>
+            <PopupSuccessPassword/>
+            <PopupSuccessEmail/>
+            <PopupPasswordNewStepOne/>
+            <PopupPasswordNewStepTwo/>
+            <PopupLogin/>
+            <PopupSuccessRegister/>
         </header>
     );
 }

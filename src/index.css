@@ -653,6 +653,7 @@ html, body {
 
 .ReactModal__Overlay--before-close{
   opacity: 0;
+  pointer-events: none
 }
 @keyframes rotate360 {
   0% {
@@ -829,6 +830,9 @@ html, body {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 9998;
+}
+.ReactModal__Overlay--after-open:focus {
+  outline: none;
 }
 
 
@@ -1149,6 +1153,114 @@ html, body {
   font-family: Inter;
   color: rgba(0, 98, 65, 1);
 }
+.bottle-float-left.exit-register {
+  right: 0;
+  padding-right: 0.7vw;
+  margin: -4.2vw 0vw 0vw 35vw;
+  position: absolute;
+  width: 3.40vw;
+  height: 3.40vw;
+  z-index: 5;
+  transition: opacity 0.3s ease;
+}
+.bottle-float-left.success-email {
+  margin: -13.34vw 0vw 0vw 32vw;
+}
+.bottle-float-left.success-image {
+  padding-right: 0.7vw;
+  margin: -7.2vw 0vw 0vw -3.6vw;
+  position: absolute;
+  width: 6.81vw;
+  height: 6.39vw;
+  z-index: 5;
+  transition: opacity 0.3s ease;
+}
+.bottle-float-left.fail-image {
+  padding-right: 0.7vw;
+  margin: 6.8vw 0vw 2vw 15vw;
+  position: absolute;
+  width: 8.26vw;
+  height: 8.2vw;
+  z-index: 5;
+  transition: opacity 0.3s ease;
+}
+.register-main-text {
+  display: flex; /* Используем Flexbox */
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: center; /* Центрирование по вертикали */
+  height: 100%; /* Для центрирования по вертикали */
+  color: rgba(0, 98, 65, 1);
+  font-family: 'AutumnSweaterLaimon', Arial, sans-serif;
+  font-size: 2.78vw;
+  font-weight: 400;
+  line-height: 3.61vw;
+}
+.register-main-text.top-margin {
+  margin-top: 12.5vw;
+}
+.register-main-text.new-meow {
+  text-align: center;
+  margin-bottom: 4vw;
+}
+.register-main-text.fail-red {
+  margin-top: 16vw;
+  text-align: center;
+  color: rgba(227, 29, 26, 1);
+}
+.register-inputs-text {
+  text-align: left;
+  color: rgba(58, 58, 58, 1);
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 1.18vw;
+  line-height: 1.46vw;
+  margin-bottom: 0.5vw;
+  margin-left: 2vw;
+}
+.register-inputs-text.login {
+  text-align: left;
+  color: rgba(58, 58, 58, 1);
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 1.18vw;
+  line-height: 1.46vw;
+  margin-bottom: 0.5vw;
+  margin-left: 0.5vw;
+}
+.register-inputs-text.code-left {
+  text-align: center;
+  color: rgba(0, 98, 65, 1);
+  display: flex; /* Используем Flexbox */
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: center; /* Центрирование по вертикали */
+  height: 100%; /* Для центрирования по вертикали */
+  margin-bottom: 3.5vw;
+}
+.register-inputs-text.new-password {
+  color: rgba(0, 98, 65, 1);
+  display: flex; /* Используем Flexbox */
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: center; /* Центрирование по вертикали */
+  height: 100%; /* Для центрирования по вертикали */
+  margin-bottom: 2.5vw;
+}
+.register-inputs-text.new-reg {
+  color: rgba(0, 98, 65, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  margin-bottom: 2.5vw;
+  margin-top: -3vw;
+  margin-left: 0vw;
+}
+
+
+.bottle-float-left.exit-register:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
 .bigline-container {
   flex: 0;
   padding: 0 0 0 0;
@@ -1164,6 +1276,36 @@ html, body {
   z-index: 4;
   right: 0;
 
+}
+.full-image-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+}
+
+.full-image-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px); /* Apply a blur effect for modern browsers */
+  -webkit-backdrop-filter: blur(5px); /* Add support for older versions of Safari */
+}
+.no-scroll {
+  overflow: hidden !important; /* Запретить прокрутку */
+}
+
+.full-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 80%;
+  max-height: 80%;
 }
 .bottle-float-left.berry {
   position: absolute;
@@ -2843,6 +2985,8 @@ backface-visibility: hidden;
   color: rgba(0, 98, 65, 1);
 }
 .lc-text {
+  position: relative;
+  z-index: 10;
   margin: -3.6vw 0vw 0vw 1.8vw;
   font-size: 1.39vw;
   line-height: 1.67vw;
@@ -2851,6 +2995,10 @@ backface-visibility: hidden;
   color: rgba(0, 98, 65, 1);
   text-decoration: underline;
 }
+.lc-text.lc-settings:hover {
+  cursor: pointer;
+}
+
 .winners-text.winners-main {
   z-index: 5;
   width: 50vw;
@@ -3471,7 +3619,7 @@ backface-visibility: hidden;
   margin-left: 7.2vw;
   margin-top: 0.7vw;
 }
-input[type="text"] {
+input.new-code {
   font-family: Inter;
   width: 28.56vw;
   height: 4.1vw;
@@ -3487,16 +3635,176 @@ input[type="text"] {
   z-index: 5;
   position: relative;
 }
-
-input[type="text"]:focus {
+input.new-code:hover {
   border-color: rgba(0, 98, 65, 1); /* Change the border color when input is focused */
   box-shadow: 0 0 0.5vw rgba(0, 98, 65, 1); /* Add a box shadow for visual indication */
+  cursor: pointer;
 }
+.container-register {
+  padding: 0vw 1vw;
+}
+.register-inputs {
+  border: 1px white solid;
+  color: rgba(0, 98, 65, 1);
+  font-family: Inter;
+  font-size: 1.18vw;
+  line-height: 1.46vw;
+  width: 34.31vw;
+  height: 4.17vw;
+  border-radius: 1.04vw;
+  background-color: rgba(255, 255, 255, 1);
+  padding-left: 1.5vw; /* Пример отступа в 1.5vw с левой стороны */
+}
+.register-inputs:focus {
+  outline: none;
+}
+.register-inputs.code-bottom {
+  margin-bottom: -1.2vw;
+}
+.input-checkbox {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+.register-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3vw;
+}
+
+.register-button {
+  font-size: 1.74vw;
+  font-family: Inter;
+  line-height: 1.67vw;
+  font-weight: 600;
+  width: 27.08vw;
+  height: 5.07vw;
+  border-radius: 3.68vw;
+  color: white;
+  background: linear-gradient(to right, rgba(255, 200, 40, 1), rgba(227, 29, 26, 1) 40%);
+  border: 1px solid white;
+}
+.register-button.code-down {
+  margin-bottom: -2.7vw;
+}
+.register-button:hover {
+  cursor: pointer;
+}
+.text-laimon {
+  text-decoration: underline;
+  color: rgba(219, 2, 72, 1) !important;
+}
+.text-laimon:hover {
+cursor: pointer;
+}
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 2.20vw;
+  height: 2.20vw;
+  background-color: #FFFFFF;
+  border-radius: 1.44vw;
+  margin-left: -3vw;
+  margin-top: 0.65vw;
+  margin-bottom: 1.3vw;
+}
+.popup-p-center p {
+  font-family: Inter;
+  font-size: 1.18vw;
+  font-weight: 400;
+  line-height: 1.46vw;
+  width: 23.65vw;
+  height: 2.27vw;
+  margin: -3.5vw 0 1vw 3.1vw;
+  color: rgba(0, 98, 65, 1);
+
+}
+.popup-p-center{
+  margin-left: 3.13vw;
+  margin-top: 1.39vw;
+}
+.popup-p-center.down{
+  margin-left: 7.13vw;
+  margin-top: 3.89vw;
+  margin-bottom: -2vw;
+}
+.popup-p-center.down-login{
+  margin-left: 5.13vw;
+  margin-top: 4.89vw;
+  margin-bottom: -2vw;
+}
+.custom-checkbox:before {
+  content: '';
+  display: inline-block;
+  width: 1.46vw;
+  height: 1.135vw;
+  background-image: url("./image/vector.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.1s ease-in;
+}
+.custom-checkbox.error {
+  border: 0.07vw solid red;
+}
+.input-checkbox:checked + .custom-checkbox:before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
 
 .controlledAccordions-div-faq {
   margin-top: 5vw;
 }
 
+
+
+
+
+
+#popup-content, #popup-content-banner {
+  left: 50%;
+  height: auto;
+  border-radius: 2.08vw;
+  padding: 1.6vw;
+  width: 40.42vw;
+  position: absolute;
+  overflow: hidden;
+
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.popup-content-code {
+  background-color: rgba(162, 212, 65, 1);
+  border-radius: 1.83vw;
+  margin-top: 0;
+  padding: 2.6vw 6.94vw;
+  scrollbar-color: gray #d3d3d3;
+  scrollbar-width: thin;
+  width: 22.8vw;
+}
+.popup-content-code {
+  height: 18.4vw;
+}
+.popup {
+  background-color: rgba(0, 0, 0, .5);
+  display: none;
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  transition: opacity .5s ease-in-out;
+  width: 100%;
+  z-index: 9999;
+}
 
 
 

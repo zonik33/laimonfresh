@@ -6,7 +6,7 @@ import Nav from "./Nav/Nav";
 import Faq from "./components/faq-block/Faq";
 import Profile from "./components/lk-profile/Profile";
 import WinnersAll from "./components/winners/WinnersAll";
-
+import Modal from "react-modal";
 
 function App() {
     return (

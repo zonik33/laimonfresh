@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -22,9 +22,24 @@ import bigline from '../image/img_7.png'
 import wintohealth2 from '../image/img_1.png'
 import HowPrizes from "./HowPrizes";
 import {useLocation} from "react-router-dom";
+import PopupAddCode from "./Popups/PopupAddCode";
+import PopupSuccessCode from "./Popups/PopupSuccessCode";
+import PopupRegister from "./Popups/PopupRegister";
 
 
 export default function Main(props) {
+    const [isPopupOpen, setIsPopupOpen] = useState(null);
+    const openPopup = (popupName) => {
+        if (!isPopupOpen) {
+            setIsPopupOpen(popupName);
+            document.body.classList.add("no-scroll");
+        }
+    };
+
+    const closePopup = () => {
+        setIsPopupOpen(null);  // Add this line to reset isPopupOpen
+        document.body.classList.remove("no-scroll");
+    };
     const prizesRef = useRef(null);
     const winnersRef = useRef(null);
     const faqRef = useRef(null);
@@ -68,7 +83,17 @@ export default function Main(props) {
             <div className={'main'} id={'main'}>
                 <div className={'main-items'}>
                     <div className={'winners-text for-main'}>Летопутешествие с laimon fresh
-                        <input type="text" maxlength="20" placeholder=""/>
+                        <input
+                            type="text"
+                            className={'new-code'}
+                            onClick={() => openPopup('Register')}
+                            maxLength="20"
+                            readOnly
+                            placeholder=""
+                        />
+                        {isPopupOpen === 'Register' && (
+                            <PopupRegister showPopup={true} closeModal={closePopup} />
+                        )}
                         <img className={'bottle-float-left inputcode'} src={inputcode}/>
                         <div className={'winners-text-inputcode'}>
                             <span className={'text-inputcode'}>*найди код под крышкой/ключиком и введи промокод</span>
@@ -128,6 +153,7 @@ export default function Main(props) {
             {/*<Questions/>*/}
             {/*<Footer/>*/}
             <Footer/>
+            <PopupSuccessCode/>
         </main>
     );
 }
