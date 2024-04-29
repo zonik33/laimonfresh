@@ -21,6 +21,10 @@ import PopupSuccessEmail from "../Popups/PopupSuccessEmail";
 import PopupSuccessCode from "../Popups/PopupSuccessCode";
 import PopupSuccessPassword from "../Popups/PopupSuccessPassword";
 import PopupFail from "../Popups/PopupFail";
+import berry from "../../image/img_22.png";
+import tree5555 from "../../image/img_25.png";
+import owntree from "../../image/img_34.png";
+import limeright from "../../image/img_12.png";
 
 export default function Profile(props) {
     const [isPopupOpen, setIsPopupOpen] = useState(null);
@@ -113,7 +117,8 @@ export default function Profile(props) {
                             <li className={'li-ont'}><a className="smooth" href={'#faq'} onClick={(event) => {
                                 handleGoToFaq(event)
                             }}>Вопросы/ответы</a></li>
-                            <li className={'li-lc'}><a className={'active-block'} href={'profile'}>Личный кабинет</a></li>
+                            <li className={'li-lc'}><a className={'active-block'} href={'profile'}>Личный кабинет</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -140,6 +145,8 @@ export default function Profile(props) {
                         <p className={'left-p-name left-down lc checks'}>Мои коды</p>
                         <SliderCodes/>
                     </div>
+                    <img className={'bottle-float-left berry-profile'} src={berry}/>
+                    <img className={'bottle-float-left example-tree5 profile'} src={tree5555}/>
                     <div className={'right lc'}>
                         <div className={'winners-text for-main lc'}>
                             <p className={'right-p-name left-down lc'}>Зарегистрировать новый код</p>
@@ -152,7 +159,7 @@ export default function Profile(props) {
                                 placeholder=""
                             />
                             {isPopupOpen === 'AddCode' && (
-                                <PopupAddCode showPopup={true} closeModal={closePopup} />
+                                <PopupAddCode showPopup={true} closeModal={closePopup}/>
                             )}
 
                             <img className={'bottle-float-left inputcode'} src={inputcode}/>
@@ -177,6 +184,8 @@ export default function Profile(props) {
                 <div id="wave-test-22">
                 </div>
             </div>
+            <img className={'bottle-float-left example-tree5 profile-down'} src={owntree}/>
+            <img className={'bottle-float-left lime-profile'} src={limeright}/>
             <div className={'how-prizes'} id={'how-prizes'}>
                 <div className={'wrapper-how-prizes'}>
                     <div className={'prizes-text-next'}>Какие призы возможно выиграть?</div>

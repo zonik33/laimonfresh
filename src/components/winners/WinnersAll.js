@@ -16,6 +16,8 @@ import axios from "axios";
 import SliderSearch from "./SliderSearch";
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
+import owntreep from "../../image/img_36.png";
+import limeright1 from "../../image/img_35.png";
 
 export default function WinnersAll(props) {
     const [showPopup, setShowPopup] = useState(false);
@@ -441,6 +443,8 @@ export default function WinnersAll(props) {
                 <div className={'wrapper'}>
                     <div className={'winners-text winners-main center'}>Победители
                     </div>
+                    <img className={'bottle-float-left example-tree5 winners'} src={tree5555}/>
+                    <img className={'bottle-float-left example-tree6 winners'} src={tree6666}/>
                     <div className={'winners-text winners-main left'}>Победители недели
                     </div>
                     <SliderSearch/>
@@ -448,366 +452,370 @@ export default function WinnersAll(props) {
                         <div className={'tab'}>
                             <div className={'tab-inner'}>
                                 <div className={'table'}>
-                                <div className={'table-body'}>
+                                    <div className={'table-body'}>
                                         <div className={'table-body'}>
-                                        <div className="scroll-container">
+                                            <div className="scroll-container">
                                                 <div className="scroll-content">
-                                            <div className="custom-simple-bar2">
-                                                <SimpleBar forceVisible="y" autoHide={false} style={{
-                                                    maxHeight: 450,
-                                                    left: 0, top: 0, bottom: 0, width: '100%', position: 'absolute'
-                                                }}>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>2
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Антон Г.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>3
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Светлана С.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
-                                                    <div className={'table-body-winners'}>
-                                                        <div className={'head-colm-prize1'}>1
-                                                        </div>
-                                                        <div className={'head-colm-name'}>Анастасия А.
-                                                        </div>
-                                                        <div className={'head-colm-phone1'}>25982628750
-                                                        </div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'}
-                                                                 src={winnersprize}/>
-                                                        </div>
-                                                    </div>
+                                                    <div className="custom-simple-bar2">
+                                                        <SimpleBar forceVisible="y" autoHide={false} style={{
+                                                            maxHeight: 450,
+                                                            left: 0,
+                                                            top: 0,
+                                                            bottom: 0,
+                                                            width: '100%',
+                                                            position: 'absolute'
+                                                        }}>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>2
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Антон Г.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>3
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Светлана С.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-winners'}>
+                                                                <div className={'head-colm-prize1'}>1
+                                                                </div>
+                                                                <div className={'head-colm-name'}>Анастасия А.
+                                                                </div>
+                                                                <div className={'head-colm-phone1'}>25982628750
+                                                                </div>
+                                                                <div className={'head-colm-date1'}>
+                                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                                         src={winnersprize}/>
+                                                                </div>
+                                                            </div>
 
-                                                </SimpleBar>
-                                            </div>
+                                                        </SimpleBar>
+                                                    </div>
                                                 </div>
                                             </div>
                                             {/*<div className={'winners-all'}>*/}
@@ -836,9 +844,9 @@ export default function WinnersAll(props) {
                                                 {/*    <img alt="Приз"/>*/}
                                                 {/*</div>*/}
                                             </div>
-
-
-
+                                            <img className={'bottle-float-left example-tree5 faq-down'} src={owntreep}/>
+                                            <img className={'bottle-float-left berry-winners'} src={berry}/>
+                                            <img className={'bottle-float-left lime-winners'} src={limeright1}/>
 
 
                                         </div>
@@ -859,8 +867,8 @@ export default function WinnersAll(props) {
                 <div id="wave-container-test-44">
                     <div id="wave-test-44">
                     </div>
+                </div>
             </div>
-        </div>
     <Footer/>
 </header>
 

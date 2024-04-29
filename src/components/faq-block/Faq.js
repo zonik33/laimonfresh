@@ -18,6 +18,8 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import AddIcon from '@material-ui/icons/Add';
 import SouthWestIcon from '@mui/icons-material/SouthWest';
 import NorthEastIcon from '@mui/icons-material/NorthEast';
+import owntreep from "../../image/img_36.png";
+import limeright1 from "../../image/img_35.png";
 
 const useStyles = makeStyles((theme) => ({
     circleIcon: {
@@ -459,6 +461,8 @@ export default function Faq(props) {
                         <div className={'faq-question'}>
                             <a>info@promo.laimonfresh.ch</a>
                         </div>
+                        <img className={'bottle-float-left example-tree5 faq-down'} src={owntreep}/>
+                        <img className={'bottle-float-left lime-faq'} src={limeright1}/>
                     </div>
                 </div>
 

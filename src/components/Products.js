@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -21,6 +21,7 @@ import lefttree from "../image/img_4.png";
 import nature from "../image/img_6.png";
 import bigline from "../image/img_7.png";
 import limeright from "../image/img_12.png";
+import { debounce } from 'lodash';
 
 export default function Products(props) {
     const settings = {
@@ -32,6 +33,30 @@ export default function Products(props) {
         autoplaySpeed: 5555,
         pauseOnHover: true
     };
+    const settingsMobile = {
+        className: 'mobileProducts',
+        dots: false,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5555,
+        pauseOnHover: true
+    };
+    const [sliderSettings, setSliderSettings] = useState(settings);
+
+    const handleResize = debounce(() => {
+        if (window.innerWidth <= 767) {
+            setSliderSettings(settingsMobile);
+        } else {
+            setSliderSettings(settings);
+        }
+    }, 200); // Debounce time in milliseconds
+
+    useEffect(() => {
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, [settingsMobile, settings, handleResize]);
 
     return (
         <div className={'products'}>
@@ -40,7 +65,7 @@ export default function Products(props) {
                 </div>
                 <div className="slider-container">
 
-                    <Slider {...settings}>
+                    <Slider {...sliderSettings}>
                         <div className="how-full44-img">
                             <a><img
                                 src={lfmint}/></a>

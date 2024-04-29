@@ -25,6 +25,7 @@ import {useLocation} from "react-router-dom";
 import PopupAddCode from "./Popups/PopupAddCode";
 import PopupSuccessCode from "./Popups/PopupSuccessCode";
 import PopupRegister from "./Popups/PopupRegister";
+import owntreep from "../image/img_36.png";
 
 
 export default function Main(props) {
@@ -141,7 +142,7 @@ export default function Main(props) {
             <div className={'accordion-example'}>
                 <div className={'winners-text for-faq' } id={'faq'} ref={faqRef}>Часто задаваемые вопросы
                 </div>
-                <img className={'bottle-float-left fruit'} src={fruit}/>
+                <img className={'bottle-float-left example-tree5 main-down'} src={owntreep}/>
                 <img className={'bottle-float-left example-tree5'} src={tree5555}/>
                 <img className={'bottle-float-left example-tree6'} src={tree6666}/>
                 <Example/>

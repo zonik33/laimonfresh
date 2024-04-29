@@ -569,11 +569,11 @@
   font-family: 'AutumnSweaterLaimon';
   src: url('fonts/Autumn/Autumn Sweater_Laimon.ttf');
 }
-
-html, body {
+body {
   background-color: #a3d441;
   height: 100%;
-  margin: 0;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -1335,6 +1335,52 @@ html, body {
   animation: sbs-231425214-52151 15s infinite linear;
   backface-visibility: hidden;
 }
+.bottle-float-left.example-tree5.winners {
+  width: 6vw;
+  margin-top: -13.95vw;
+  margin-left: 26.33vw;
+  transform: rotate(-104deg);
+  height: auto;
+  animation: sbs-231425214-52151 15s infinite linear;
+  backface-visibility: hidden;
+}
+.bottle-float-left.example-tree5.profile {
+  margin-top: 25.05vw;
+  margin-left: 85.13vw;
+  width: 8.19vw;
+  height: 8.89vw;
+}
+.bottle-float-left.example-tree5.profile-down {
+  z-index: 4;
+  margin-top: -8.95vw;
+  margin-left: -42.87vw;
+  width: 12.01vw;
+  height: 14.31vw;
+
+}
+.bottle-float-left.example-tree5.faq-down {
+  z-index: 4;
+  margin-top: -15.95vw;
+  margin-left: -42.87vw;
+  width: 17.01vw;
+  height: auto;
+}
+.bottle-float-left.example-tree5.main-down {
+z-index: 4;
+margin-top: -40.95vw;
+margin-left: -47.87vw;
+width: 21.01vw;
+height: auto;
+}
+.bottle-float-left.lime-winners {
+  position: absolute;
+  margin-top: -51.17vw;
+  margin-left: -2.97vw;
+  right: 0;
+  width: 8vw;
+  height: 17vw;
+  z-index: 4;
+}
 .bottle-float-left.fruit {
   position: absolute;
   margin-top: -42.95vw;
@@ -1356,10 +1402,40 @@ html, body {
   animation: sbs-231425214 15s infinite linear;
   backface-visibility: hidden;
 }
+.bottle-float-left.example-tree6.winners {
+  position: absolute;
+  margin-top: 27.05vw;
+  margin-left: -46.67vw;
+  width: 8vw;
+  height: auto;
+  z-index: 4;
+  animation: sbs-231425214 15s infinite linear;
+  backface-visibility: hidden;
+}
 .bottle-float-left.berry-prizes {
   position: absolute;
   margin-top: 2.95vw;
   margin-left: 41.93vw;
+  width: 8.06vw;
+  height: 8.26vw;
+  transform: scaleX(-1);
+  animation: sbs-23142-left 15s infinite linear;
+  backface-visibility: hidden;
+}
+.bottle-float-left.berry-profile {
+  position: absolute;
+  margin-top: 2.25vw;
+  margin-left: 37.93vw;
+  width: 8.06vw;
+  height: 8.26vw;
+  transform: scaleX(-1);
+  animation: sbs-23142-left 15s infinite linear;
+  backface-visibility: hidden;
+}
+.bottle-float-left.berry-winners {
+  position: absolute;
+  margin-top: -16.75vw;
+  margin-left: 16.93vw;
   width: 8.06vw;
   height: 8.26vw;
   transform: scaleX(-1);
@@ -1515,8 +1591,26 @@ html, body {
   margin-top: 38.53vw;
   margin-left: -0.97vw;
   right: 0;
-  width: 13.9%;
-  height: 4.3%;
+  width: 13.60vw;
+  height: 15.60vw;
+  z-index: 4;
+}
+.bottle-float-left.lime-profile {
+  position: absolute;
+  margin-top: -8.47vw;
+  margin-left: 0.03vw;
+  right: 0;
+  width: 13.60vw;
+  height: 15.60vw;
+  z-index: 4;
+}
+.bottle-float-left.lime-faq {
+  position: absolute;
+  margin-top: -25.47vw;
+  margin-left: -2.97vw;
+  right: 0;
+  width: 8vw;
+  height: 17vw;
   z-index: 4;
 }
 .bottle-float-left.gps {
@@ -1836,7 +1930,7 @@ html, body {
   font-weight: 600;
   font-size: 1.74vw;
   line-height: 1.67vw;
-  margin-bottom: 12vw;
+  margin-bottom: 21vw;
 }
 .faq-question a:hover{
 }
@@ -3170,7 +3264,7 @@ backface-visibility: hidden;
   width: 71.35vw;
 }
 .table-body-winners.mill {
-  margin-bottom: 10vw;
+  margin-bottom: 19vw;
 }
 .winners-search-field {
   width: 100%;
@@ -3836,9 +3930,9 @@ cursor: pointer;
 
 @media screen and (max-width: 767px) {
   .header {
-    background-color: #a3d441;
+    background-color: rgba(0, 98, 65, 1);
     width: 100%;
-    height: 20vw;
+    height: 16.93vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -3862,4 +3956,849 @@ cursor: pointer;
     min-width: 63vw;
     max-width: 88vw;
   }
+    iframe {
+      margin-top: 25vw;
+    }
+    .popupCode-input.error {
+      border: 1px solid red;
+      border-radius: 4vw;
+    }
+    .popupPassword-input.error {
+      border: 1px solid red;
+      border-radius: 4vw;
+    }
+
+    header .menu {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      right: 0;
+      z-index: 50;
+      overflow-y: auto;
+      background-color: #FFFFFF;
+      animation: burgerAnimation 0.4s;
+
+    }
+    header .menu-content{
+      width: auto;
+      position: absolute;
+      flex-direction: column;
+      row-gap: 7vw;
+      margin-top: 6.52vw;
+    }
+    header .menu-content a {
+      font-size: 2vw;
+      padding: 0;
+    }
+
+    header .container {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      max-width: none;
+      z-index: 5;
+    }
+    header .logo.transparent {
+      opacity: 0.5; /* устанавливаем полностью прозрачный */
+    }
+    header .logo.visible  {
+      opacity: 1; /* устанавливаем полностью непрозрачный */
+    }
+    header .logo{
+      overflow: hidden;
+      position: relative;
+      z-index: 6;
+      transition: opacity 0.5s ease; /* добавляем переходную анимацию прозрачности */
+    }
+    .main {
+      background-color: #B1C728;
+      max-width: none;
+      width: 100%;
+      height: 100%;
+    }
+    .prizes {
+      max-width: none;
+    }
+    footer {
+      max-width: none;
+    }
+
+
+    header .logo {
+      position: absolute;
+      width: 83.3vw;
+      height: auto;
+      margin-left: -5.7vw;
+      margin-top: 2vw;
+      z-index: 51;
+    }
+
+    header .logo-text {
+      position: absolute;
+      width: 32.3vw;
+      height: auto;
+      margin-left: -4.7vw;
+      margin-top: 3vw;
+      z-index: 51;
+    }
+    header .menu {
+      flex-direction: column;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      right: 0;
+      overflow-y: auto;
+      background-color: #FFFFFF;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    header .menu.show {
+      display: flex;
+      position: fixed;
+      flex-direction: column;
+      height: 100%;
+      width: 100vw;
+      right: 0;
+      overflow-y: auto;
+      background-image: linear-gradient(#00622A, #009640, #03BE53);
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+
+    html.menu-open,
+    body.menu-open {
+      overflow: hidden;
+    }
+
+
+    header .menu.show .logo-content.logo-text {
+      display: block;
+      text-align: center;
+      font-size: 2.5vw;
+      color: white;
+      margin-top: 2vw;
+
+    }
+    .error-page-block {
+    }
+
+    .menu .backFaq {
+      display: none;
+    }
+
+    header .menu-content {
+      position: absolute;
+      flex-direction: column;
+      row-gap: 8.6vw;
+      margin-top: 32vw;
+      align-items: initial;
+    }
+
+    header .menu-content a {
+      font-size: 5.87vw;
+      line-height: 6.40vw;
+      padding: 0;
+      margin-left:8vw;
+    }
+
+    header .menu-content.backFaq a {
+      font-size: 9.87vw;
+      line-height: 6.40vw;
+      padding: 0;
+    }
+
+    .button-animation {
+      line-height: 4.53vw;
+      text-decoration: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      border: none;
+      background-color: transparent;
+      margin-top: -1.2vw;
+      font-size: 4.27vw;
+      height: 1.1vw;
+      font-family: 'Acrom Medium', Arial, sans-serif;
+      font-weight: 400;
+      color: #FFFFFF;
+      margin-left: 1.5vw;
+    }
+  .left-photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 26.62vw;
+    height: auto;
+    margin-top: 3.78vw;
+    margin-left: -10.31vw;
+    z-index: 2;
+  }
+  .svg-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 91.32vw;
+    height: 91.32vw;
+    margin-top: -28.5vw;
+    margin-left: -43.15vw;
+    z-index: 1;
+  }
+  .logo img {
+    margin-left: -7.3vw;
+    width: 74%;
+  }
+
+    .header-burger {
+      display: flex;
+      width: 13vw;
+      height: 13vw;
+      right: 0;
+      margin-left: 83.5vw;
+      margin-top: 1.2vw;
+      cursor: pointer;
+      position: relative;
+      z-index: 9999;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+    .header-burger.active {
+      transform: rotate(90deg);
+    }
+
+    .header-burger span {
+      height: 0.7vw;
+      margin-top: -4vw;
+      width: 10vw;
+      transform: scale(1);
+      background-color: rgba(255, 255, 255, 1);
+      border-radius: 0.5vw;
+    }
+
+    .header-burger::before,
+    .header-burger::after {
+      content: "";
+      position: absolute;
+      height: 0.7vw;
+      width: 10vw;
+      margin-top: 3.2vw;
+      background-color: rgba(255, 255, 255, 1);
+      transition: all 0.3s ease 0s;
+      border-radius: 0.5vw;
+      z-index: 1;
+    }
+
+    .header-burger::before {
+      top: calc(50% - 1.4vw);
+    }
+
+    .header-burger::after {
+      bottom: calc(50% - 0.4vw);
+    }
+
+    .header-burger.active span {
+      transform: scale(0);
+    }
+
+    .header-burger.active::before {
+      width: 10vw;
+      margin: 1.35vw 0vw 0vw 0vw;
+      transform: rotate(-45deg) translate(0, -50%);
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+    .header-burger.active::after {
+      width: 10vw;
+      margin: 0vw 0vw 0.35vw 0vw;
+      transform: rotate(45deg) translate(0, 50%);
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+
+    .main {
+      padding: 50.5vw 0;
+      background-color: rgba(162, 212, 65, 1);
+      background-size: cover;
+      width: 100%;
+      height: 169vw;
+      font-family: 'Circe', sans-serif;
+      font-weight: 700;
+      scroll-behavior: smooth;
+      font-size: 0.83vw;
+      line-height: 1.5;
+      clip-path: polygon(0 0, 100% 0, 100% 95.3%, 0 100%);
+    }
+
+
+    .main-text {
+      display: none;
+    }
+
+    .button-animation-text {
+      display: none;
+    }
+  .winners-text {
+    z-index: 5;
+    width: 65vw;
+    margin-top: -42.8vw;
+    margin-left: 12.6vw;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 10.13vw;
+    line-height: 9.6vw;
+    color: #EEF3EC;
+    font-family: 'AutumnSweaterLaimon', Arial, sans-serif;
+    text-align: center;
+    color: rgba(0, 98, 65, 1);
+  }
+  .bottle-float-left {
+    position: absolute;
+    margin-top: -34.65vw;
+    margin-left: -78.17vw;
+    width: 80.5%;
+    height: auto;
+    z-index: 5;
+  }
+  .bottle-float-left.nature {
+    position: absolute;
+    margin-top: -17.47vw;
+    margin-left: -21.97vw;
+    width: 20.9%;
+    height: auto;
+    z-index: 4;
+    animation: sbs-23142-552431 2s infinite linear;
+    backface-visibility: hidden;
+  }
+  .bottle-float-left.lefttree {
+    position: absolute;
+    margin-top: -12.4vw;
+    margin-left: -82.47vw;
+    width: 22%;
+    height: auto;
+    z-index: 4;
+    animation: sbs-23142 25s infinite linear;
+    backface-visibility: hidden;
+  }
+  .bottle-float-left.two {
+    position: absolute;
+    margin-top: 11.75vw;
+    margin-left: -47.17vw;
+    width: 94.5%;
+    height: auto;
+    z-index: 4;
+    right: 0;
+  }
+  .bottle-float-left.uptree {
+    display: none;
+    position: absolute;
+    margin-top: 12.63vw;
+    margin-left: -7.57vw;
+    width: 4.3%;
+    height: 1.38%;
+    z-index: 4;
+    animation: sbs-23142 15s infinite linear;
+    backface-visibility: hidden;
+  }
+  .bottle-float-left.inputcode {
+    position: absolute;
+    margin-top: 111.03vw;
+    margin-left: -72.57vw;
+    width: 46.81vw;
+    height: 14.27vw;
+    z-index: 6;
+  }
+  input.new-code {
+    font-family: Inter;
+    width: 57.56vw;
+    height: 14.1vw;
+    border: 0.14vw solid red;
+    border-radius: 6.68vw;
+    padding: 0.35vw;
+    font-size: 1.11vw;
+    margin-top: 111.1vw;
+    margin-left: -40.2vw;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    z-index: 5;
+    position: absolute;
+  }
+  .text-inputcode {
+    position: absolute;
+    width: 62vw;
+    margin: 121.8vw 0vw 0vw -30vw;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 3.47vw;
+    line-height: 3.27vw;
+    text-transform: none;
+  }
+
+
+  .products {
+    display: flex;
+    height: 155vw;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: rgba(248, 214, 72, 1);
+  }
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding-bottom: 5vw;
+    width: 95vw;
+  }
+  .winners-text.for-slider {
+    z-index: 5;
+    width: 68vw;
+    font-size: 10.47vw;
+    text-transform: none;
+    text-align: center;
+    margin: 17vw auto;
+    margin-top: 14.2vw;
+    margin-left: 16vw;
+    color: rgba(0, 98, 65, 1);
+    line-height: 1;
+  }
+  .slider-container {
+    z-index: 5;
+    align-items: flex-start;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    max-width: 80.88vw;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: -9.7vw;
+    margin-left: 4.7vw;
+  }
+  #wave-container-test {
+    width: 100%;
+    height: 5.21vw;
+    overflow: hidden;
+    background: rgba(248, 214, 72, 1);
+  }
+  .bottle-float-left.lime {
+    position: absolute;
+    margin-top: -20.47vw;
+    margin-left: -15.2vw;
+    width: 18.6vw;
+    height: 22.6vw;
+    z-index: 4;
+    right: 0;
+  }
+  #wave-test {
+    display: block;
+    position: relative;
+    height: 2.08vw;
+    background: #a3d441;
+  }
+  #wave-test:before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100%;
+    width: 100%;
+    height: 15.63vw;
+    background: rgba(248, 214, 72, 1);
+    right: -25%;
+    top: 1.04vw;
+  }
+  #wave-test:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100%;
+    width: 100%;
+    height: 15.63vw;
+    background: #a3d441;
+    left: -25%;
+    top: -12.50vw;
+  }
+  .how-full4-img img, .how-full44-img img, .how-full444-img img, .how-full4444-img img {
+    width: 269%;
+    transition: transform 0.5s ease;
+    position: relative;
+  }
+  .slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 15vw !important;
+    line-height: 1 !important;
+    margin-left: -4vw;
+    opacity: 1 !important;
+    color: white !important;
+    background-color: transparent !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .slick-prev, .slick-next {
+    background-color: transparent !important;
+    color: orange !important;
+    width: 2.08vw !important;
+    height: 2.08vw !important;
+    position: absolute !important;
+    top: 33% !important;
+    transform: translateY(-50%);
+    z-index: 55 !important;
+    background-color: #fff;
+    padding: 0.26vw !important;
+    cursor: pointer;
+  }
+  .slick-list {
+    margin-left: 4vw !important;
+  }
+  .lf-text {
+    margin: 7.5vw 0vw 0vw 15.3vw;
+    display: block;
+    position: relative;
+    width: 50vw;
+    height: 20vw;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 6.67vw;
+    line-height: 6.67vw;
+    color: rgba(0, 98, 65, 1);
+  }
+  /*html, body {*/
+  /*  background-color: white;*/
+  /*  height: 100%;*/
+  /*  margin: 0;*/
+  /*  margin: 0;*/
+  /*  padding: 0;*/
+  /*}*/
+  /*body {*/
+  /*  background-size: cover;*/
+  /*  font-size: 1.11vw;*/
+  /*  height: auto;*/
+  /*  line-height: 1.5;*/
+  /*  margin: 0;*/
+  /*  min-width: 0;*/
+  /*  min-width: auto;*/
+  /*  padding: 0;*/
+  /*  scroll-behavior: smooth;*/
+  /*}*/
+  /*.container {*/
+  /*  display: flex;*/
+  /*  flex-direction: column;*/
+  /*  position: relative;*/
+  /*  height: auto;*/
+  /*  width: 100%;*/
+  /*}*/
+
+  * {
+    /*margin: 0;*/
+    /*padding: 0;*/
+    box-sizing: border-box;
+  }
+  .bottle-float-left.down-tree-prod {
+    display: none;
+    position: absolute;
+    margin-top: 38.973vw;
+    margin-left: -47.97vw;
+    width: 7.3%;
+    height: 1.968%;
+    z-index: 4;
+    animation: sbs-23142 15s infinite linear;
+    backface-visibility: hidden;
+  }
+  .bottle-float-left.top-tree-prod {
+    display: none;
+  }
+  .bottle-float-left.uptree-prod {
+    display: none;
+  }
+  .bottle-float-left.gps {
+    display: none;
+  }
+  .absolute-text {
+    display: none;
+  }
+  .bottle-float-left.gps-down-product {
+    display: none;
+  }
+  .bottle-float-left.gps-top-product {
+    display: none;
+  }
+
+
+
+
+  .prizes-text {
+    margin: 3vw auto;
+    margin-top: 13.8vw;
+    margin-left: 1.2vw;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Acrom Medium', AutumnSweaterLaimon, sans-serif;
+    color: #EEF3EC;
+    font-size: 10.13vw;
+    line-height: 9.60vw;
+    width: 86.75vw;
+    height: 8.05vw;
+  }
+  .center-container {
+    height: 140.5vw;
+    width: 68vw;
+    margin: 21vw 1.67vw 0 9vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(245, 245, 237, 0.7);
+    border-radius: 9.43vw;
+  }
+  .main-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sub-div {
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .vertical-line {
+    display: none;
+    border-left: 2px solid #000; /* или другой цвет, толщину и стиль линии, как вам нужно */
+  }
+
+  .how {
+    background-size: cover;
+    height: 193vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    min-width: initial;
+    scroll-behavior: smooth;
+    font-size: 0.83vw;
+    line-height: 1.5;
+    margin-top: 0;
+    padding-top: 1.46vw;
+    background-color: rgba(91, 171, 113, 1);
+  }
+  .sub-div img {
+    margin: -14vw 0vw 2vw -1vw;
+    max-width: 28vw;
+    height: auto;
+    border-radius: 50%;
+  }
+  .sub-div-text {
+    margin-left: -14vw !important;
+    width: 53.96vw;
+    height: 8vw;
+    margin-top: 0vw !important;
+    margin-bottom: 9vw !important;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 4vw;
+    line-height: 4.80vw;
+    color: rgba(0, 98, 65, 1);
+  }
+  .sub-div p {
+    margin: 1.1vw 0vw 0vw 3.5vw;
+  }
+
+
+  .how-prizes {
+    background-size: cover;
+    height: 452vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    min-width: initial;
+    scroll-behavior: smooth;
+    font-size: 0.83vw;
+    line-height: 1.5;
+    margin-top: 0;
+    padding-top: 1.46vw;
+    background-color: rgba(91, 171, 113, 1);
+  }
+  .bottle-float-left.twotree {
+    display: none;
+  }
+  .bottle-float-left.nv {
+    display: none;
+  }
+  .bottle-float-left.berry {
+    position: absolute;
+    margin-top: -38.45vw;
+    margin-left: 13.33vw;
+    width: 24.06vw;
+    height: 24.26vw;
+    z-index: 4;
+    animation: sbs-231425214-52151 15s infinite linear;
+    backface-visibility: hidden;
+  }
+  .bottle-float-left.top-tree-how {
+    display: none;
+  }
+  .bottle-float-left.lefttree-how {
+    display: none;
+  }
+  .bottle-float-left.gps-sochi {
+    display: none;
+  }
+  .bottle-float-left.gps-chel {
+    display: none;
+  }
+  .prizes-text-next {
+    margin: 27vw auto;
+    margin-top: 5.8vw;
+    margin-left: 1.78vw;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Acrom Medium', AutumnSweaterLaimon, sans-serif;
+    color: #EEF3EC;
+    font-size: 10vw;
+    line-height: 9.6vw;
+    width: 88.75vw;
+    height: 8.05vw;
+  }
+  .prizes-content {
+    height: 140.5vw;
+    width: 68vw;
+    margin: 21vw 1.67vw 0 9vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9.43vw;
+  }
+  .images {
+    flex-direction: column;
+    display: flex;
+  }
+  .million {
+    margin: -52.7vw 0vw 0vw 6.9vw;
+    width: 72.88vw;
+    height: auto;
+  }
+  .wrapper-how-prizes {
+    width: 92.6vw;
+    margin-left: 4vw;
+    overflow: hidden;
+  }
+  .right-p-name {
+    margin: 217.55vw 0vw 5vw 1.4vw;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 6.67vw;
+    line-height: 6.57vw;
+    text-transform: uppercase;
+    color: white;
+  }
+  .images img {
+    margin-left: -2vw;
+    margin-right: 0vw;
+    width: 48.75vw;
+    height: 8.75vw;
+    height: auto;
+  }
+  .right-p-name.left-down {
+    margin: 2.55vw 1vw 1vw 7.6vw;
+  }
+  .left-p-name-low {
+    margin: 0.6vw 0vw 18vw 12.1vw;
+    width: 61.97vw;
+    height: 5vw;
+    font-size: 4.27vw;
+    line-height: 4.53vw;
+    color: rgba(255, 255, 255, 1);
+    font-family: Inter;
+    font-weight: 500;
+  }
+
+  .image-container {
+    text-align: center;
+  }
+
+  .new-block {
+    /* стили для блока моментальных призов */
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+  }
+  .right {
+    left: 0;
+    width: 87vw;
+    position: absolute;
+    margin: 107vw 0vw 0vw 6vw;
+}
+
+  .image-container p {
+    margin: 1.19vw -3vw 4vw -6.6vw;
+  }
+  .right-p-prizes {
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 5.87vw;
+    line-height: 6.13vw;
+    color: white;
+  }
+  .right-p-name.down {
+    margin: 16.35vw 0vw 2vw 2vw;
+  }
+  .container-sub {
+    margin-top: 13vw;
+    margin-left: 2vw;
+    width: 84.69vw;
+    height: 37.35vw;
+  }
+  .new-block {
+    background-color: rgba(140, 196, 155, 1);
+    margin: -1vw 0vw 0vw 19.7vw;
+    width: 48.72vw;
+    height: 7vw;
+    border-radius: 23.47vw;
+  }
+  .winners {
+    height: 155.5vw;
+    width: 100%;
+    margin-top: -6.1vw;
+    padding-top: 0.56vw;
+    background-color: rgba(91, 171, 113, 1);
+  }
+  .accordion-example {
+    position: relative;
+    z-index: 0;
+    padding-top: 41vw;
+    padding-bottom: 0vw;
+    /* overflow: hidden; */
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: #a3d441;
+    background-size: cover;
+    width: 100%;
+    font-size: 0.83vw;
+  }
+  .bottle-float-left.left-line-how {
+    display: none;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

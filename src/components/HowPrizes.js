@@ -66,7 +66,7 @@ const HowPrizes = (props) => {
                                 <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р</p>
                             </div>
                         </div>
-                        <p className={'right-p-name down'}>МОМЕНТАЛЬНЫЕ ПРИЗЫ</p>
+                        <p className={'right-p-name down'}>МОМЕНТАЛЬНЫЕ ПРИЗЫ:</p>
                         <div className={'new-block'}>
                         </div>
                     </div>

@@ -22,6 +22,14 @@ export default function Header(props) {
         document.body.style.overflow = showPopup ? 'auto' : 'hidden';
 
     };
+    function toggleMenu() {
+        const navLists = document.querySelector('.header-burger');
+        navLists.classList.toggle('active');
+        const navList = document.querySelector('header .menu');
+        navList.classList.toggle('show');
+        document.documentElement.classList.toggle('menu-open');
+        document.body.classList.toggle('menu-open');
+    }
 
 
     return (
@@ -33,36 +41,39 @@ export default function Header(props) {
                 <div className="logo">
                     <img src={logo2} alt="Logo"/>
                 </div>
-                <div className="menu">
-                    <nav className="main-menu">
-                        <ul>
-                            <li className={'li-rules'}><a href={'#'}> Правила</a></li>
-                            <li className={'li-ont'}><a className="smooth" href={'#how-prizes'} onClick={(event) => {
-                                ScrollPrizes(event);
-                            }}>Призы</a></li>
-                            <li className={'li-ont'}><a className="smooth" href={'#winners'} onClick={(event) => {
-                                ScrollWinners(event);
-                            }}>Победители</a></li>
-                            <li className={'li-ont'}><a className="smooth" href={'#faq'} onClick={(event) => {
-                                ScrollFaq(event);
-                            }}>Вопросы/ответы</a></li>
-                            <li className={'li-lc'}><a href={'profile'}>Личный кабинет</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div className="contact-info">
-                    {/*<p>Адрес: Ваш адрес</p>*/}
-                    {/*<p>Телефон: Ваш номер телефона</p>*/}
-                    {/*<p>Время работы: Ваши рабочие часы</p>*/}
-                </div>
-                {/*<button onClick={togglePopup} className="btn-leave-request">Оставить заявку</button>*/}
+                <div className={'header-burger'} onClick={toggleMenu}>
+                    <span className={'span-burger'}></span>
             </div>
-            <PopupSuccessCode/>
-            <PopupSuccessPassword/>
-            <PopupSuccessEmail/>
-            <PopupPasswordNewStepOne/>
-            <PopupPasswordNewStepTwo/>
-            <PopupLogin/>
+            <div className="menu">
+                <nav className="main-menu">
+                    <ul>
+                        <li className={'li-rules'}><a href={'#'}> Правила</a></li>
+                        <li className={'li-ont'}><a className="smooth" href={'#how-prizes'} onClick={(event) => {
+                            ScrollPrizes(event);
+                        }}>Призы</a></li>
+                        <li className={'li-ont'}><a className="smooth" href={'#winners'} onClick={(event) => {
+                            ScrollWinners(event);
+                        }}>Победители</a></li>
+                        <li className={'li-ont'}><a className="smooth" href={'#faq'} onClick={(event) => {
+                            ScrollFaq(event);
+                        }}>Вопросы/ответы</a></li>
+                        <li className={'li-lc'}><a href={'profile'}>Личный кабинет</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div className="contact-info">
+                {/*<p>Адрес: Ваш адрес</p>*/}
+                {/*<p>Телефон: Ваш номер телефона</p>*/}
+                {/*<p>Время работы: Ваши рабочие часы</p>*/}
+            </div>
+            {/*<button onClick={togglePopup} className="btn-leave-request">Оставить заявку</button>*/}
+        </div>
+    <PopupSuccessCode/>
+    <PopupSuccessPassword/>
+    <PopupSuccessEmail/>
+    <PopupPasswordNewStepOne/>
+    <PopupPasswordNewStepTwo/>
+    <PopupLogin/>
             <PopupSuccessRegister/>
         </header>
     );

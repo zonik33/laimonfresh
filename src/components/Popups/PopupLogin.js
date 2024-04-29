@@ -6,6 +6,19 @@ import React, {useState} from "react";
 import PhoneInput from "../PhoneInput";
 import PopupRegister from "./PopupRegister";
 export default function PopupLogin(props) {
+    const [isPopupOpen, setIsPopupOpen] = useState(null);
+    const openPopup = (popupName) => {
+        if (!isPopupOpen) {
+            closePopup2()
+            setIsPopupOpen(popupName);
+            document.body.classList.add("no-scroll");
+        }
+    };
+
+    const closePopup = () => {
+        setIsPopupOpen(null);  // Add this line to reset isPopupOpen
+        document.body.classList.remove("no-scroll");
+    };
 
     const { showPopup, closeModal } = props;
     const [isPopupRegisterOpen, setIsPopupRegisterOpen] = useState(false);
@@ -68,11 +81,11 @@ export default function PopupLogin(props) {
                     <div className="popup-p-center down-login">
                         <p>
                             Нет аккаунта?{" "}
-                            <a className="text-laimon" onClick={openPopupRegister}>
+                            <a className="text-laimon"  onClick={() => openPopup('Register')}>
                                 Зарегистрируйтесь
                             </a>
-                            {isPopupRegisterOpen && (
-                                <PopupRegister showPopup={true} closeModal={closePopupRegister}/>
+                            {isPopupOpen === 'Register' && (
+                                <PopupRegister showPopup={true} closeModal={closePopup} />
                             )}
                         </p>
                     </div>
