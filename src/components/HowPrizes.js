@@ -7,6 +7,7 @@ import lefttree from "../image/img_4.png";
 import toptreeprod from "../image/img_10.png";
 import leftlinehow from "../image/img_8.png";
 import gps from "../image/img_5.png";
+import prizeLine from "../image/img_37.png";
 import twotree from "../image/img_23.png";
 import {useLocation} from "react-router-dom";
 
@@ -68,6 +69,18 @@ const HowPrizes = (props) => {
                         </div>
                         <p className={'right-p-name down'}>МОМЕНТАЛЬНЫЕ ПРИЗЫ:</p>
                         <div className={'new-block'}>
+                        </div>
+                        <div className={'images-phone'}>
+                            <div className={"image-container-for-phone"}>
+                                <img src={prizesert} alt="Image 3"/>
+                                {/*<p className={'right-p-prizes'}>Сертификат <br></br>на 1000р</p>*/}
+                            </div>
+                        </div>
+                        <div className={'images-phone-line'}>
+                            <div className={"image-container-for-phone line"}>
+                                <img src={prizeLine} alt="Image 3"/>
+                                {/*<p className={'right-p-prizes'}>Сертификат <br></br>на 1000р</p>*/}
+                            </div>
                         </div>
                     </div>
 

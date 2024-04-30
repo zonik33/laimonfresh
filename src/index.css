@@ -2621,8 +2621,8 @@ height: auto;
   color: white !important;
 }
 .heading-name {
-  margin-left: 2vw;
-  margin-top: -0.5vw; /* Добавлено для поднятия текста выше без отступа */
+  margin-left: 9vw;
+  margin-top: -3.5vw;
   font-weight: 500;
   font-family: 'Inter';
   font-size: 2.08vw;
@@ -3006,6 +3006,9 @@ backface-visibility: hidden;
   align-items: center;
   flex-wrap: wrap;
 }
+.images-phone {
+  display: none;
+}
 
 .images img {
   margin-left: 5vw;
@@ -3019,6 +3022,9 @@ backface-visibility: hidden;
   text-align: center;
   margin-right: -0.7vw;
   margin-left: 4.1vw;
+}
+.image-container-for-phone {
+  display: none;
 }
 
 .image-container p {
@@ -3387,6 +3393,9 @@ backface-visibility: hidden;
   min-width: 20.364583vw;
   margin-top: 1.65vw;
   margin-left: auto; /* Чтобы прижать к правому краю */
+}
+.head-colm-date1-phone {
+  display: none;
 }
 .winners-all {
   background-color: rgba(0, 98, 65, 1);
@@ -4610,7 +4619,7 @@ cursor: pointer;
 
   .how-prizes {
     background-size: cover;
-    height: 452vw;
+    height: 470vw;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     min-width: initial;
@@ -4677,6 +4686,17 @@ cursor: pointer;
     flex-direction: column;
     display: flex;
   }
+  .images-phone {
+    flex-direction: column;
+    display: flex;
+  }
+  .images-phone img {
+    margin-left: -3vw;
+    margin-right: 0vw;
+    width: 48.75vw;
+    height: 8.75vw;
+    height: auto;
+  }
   .million {
     margin: -52.7vw 0vw 0vw 6.9vw;
     width: 72.88vw;
@@ -4720,6 +4740,24 @@ cursor: pointer;
   .image-container {
     text-align: center;
   }
+  .image-container-for-phone {
+    position: absolute;
+    display: flex;
+    margin: 5.3vw 0 0 23vw;
+  }
+  .image-container-for-phone.line {
+    position: absolute;
+    display: flex;
+    margin: 63vw 0 0 24vw;
+  }
+  .images-phone-line img {
+    margin-left: 3vw;
+    margin-right: 0vw;
+    width: 34.75vw;
+    height: 8.75vw;
+    height: auto;
+  }
+
 
   .new-block {
     /* стили для блока моментальных призов */
@@ -4761,13 +4799,168 @@ cursor: pointer;
     height: 7vw;
     border-radius: 23.47vw;
   }
+  .new-block {
+    display: none;
+  }
   .winners {
-    height: 155.5vw;
+    height: 192.5vw;
     width: 100%;
     margin-top: -6.1vw;
     padding-top: 0.56vw;
     background-color: rgba(91, 171, 113, 1);
   }
+  .winners-text.winners-main {
+    z-index: 5;
+    width: 79.47vw;
+    margin-top: 5.5vw;
+    margin-left: 10.4vw;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 10.13vw;
+    line-height: 9.60vw;
+    color: #EEF3EC;
+    font-family: 'AutumnSweaterLaimon', Arial, sans-serif;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+  }
+  .winners-text.second {
+    margin: 14vw 0vw 8vw 16vw;
+  }
+  .table {
+    border-radius: 0.520833333333333vw;
+    padding: 1.041666666666667vw 0 1.5625vw;
+    width: 77.8125vw;
+    min-height: 20vw;
+  }
+  .table-body {
+    color: #eef3ec;
+    font: 500 1.041666666666667vw 'Montserrat', sans-serif;
+    line-height: 1.041666666666667vw;
+    margin-left: 2.2vw;
+    margin-top: 6.7vw;
+  }
+  .table-body-winners {
+    position: relative;
+    z-index: 5;
+    background-color: rgba(245, 245, 237, 0.7);
+    border: .07vw solid #ffffff4d;
+    border-radius: 3.04vw 3.04vw 1.35vw 3.04vw;
+    display: flex;
+    flex-flow: row nowrap;
+    font-family: Halvar Mittelschrift Rg, sans-serif;
+    font-size: 1.17vw;
+    font-weight: 400;
+    height: 22.23vw;
+    justify-content: flex-start;
+    margin-top: 0.652083vw;
+    margin-bottom: 4vw;
+    text-align: center;
+    width: 91.35vw;
+  }
+  .head-colm-prize1 {
+    position: absolute;
+    font-size: 6.67vw;
+    line-height: 8vw;
+    font-weight: 600;
+    font-family: Inter;
+    color: rgba(0, 98, 65, 1);
+    width: 15.427083vw;
+    margin-top: 2.7vw;
+    margin-left: -3vw;
+  }
+  .winners-prize-img {
+    margin: 1vw 3vw 0vw 1vw;
+    width: 15.56vw;
+    height: 15.56vw;
+  }
+  .head-colm-name {
+    font-size: 6.67vw;
+    line-height: 8vw;
+    font-weight: 600;
+    font-family: Inter;
+    color: rgba(0, 98, 65, 1);
+    width: 61.427083vw;
+    margin-top: 2.6vw;
+    margin-left: 11vw;
+    text-align: left;
+    letter-spacing: 0.3vw;
+    position: absolute;
+  }
+  .head-colm-phone1 {
+    font-size: 4.27vw;
+    line-height: 5.07vw;
+    letter-spacing: 0.07vw;
+    font-weight: 500;
+    font-family: Inter;
+    color: rgba(0, 98, 65, 1);
+    min-width: 17.364583333333332vw;
+    margin-top: 1.75vw;
+    margin-left: 1.1vw;
+  }
+  .head-colm-phone1 {
+    position: absolute;
+    min-width: 0.364583vw;
+    margin-top: 13.7vw;
+    padding-left: 10vw;
+  }
+  .head-colm-date1-phone {
+    display: flex;
+    min-width: 8.364583vw;
+    margin-top: 1.65vw;
+    margin-left: auto;
+  }
+  .head-colm-date1 {
+    min-width: 8.364583vw;
+    margin-top: 1.65vw;
+    margin-left: auto;
+  }
+  .winners-all-a.winners-test-a {
+    z-index: 2;
+    position: relative;
+    display: block;
+    width: 91.35vw;
+    font-size: 6.27vw;
+    line-height: 6.40vw;
+    font-family: Inter;
+    margin-top: -2vw;
+    font-weight: 600;
+    color: rgba(245, 245, 237, 1);
+    text-decoration: none;
+    margin: 0 auto;
+    background-color: rgba(0, 98, 65, 1);
+    border: .07vw solid #ffffff4d;
+    padding: 4.5vw 26vw 4.5vw 26vw;
+    border-radius: 4.04vw 4.04vw 1.35vw 4.04vw;
+    transition: all 0.3s ease;
+  }
+  .for-faq {
+    width: 80vw;
+    font-family: 'AutumnSweaterLaimon', Arial, sans-serif;
+    margin-top: -25.8vw;
+    margin-left: 9.6vw;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 10.13vw;
+    line-height: 9.6vw;
+    font-weight: 400;
+    text-transform: none;
+    margin-bottom: 4vw;
+    color: rgba(0, 98, 65, 1);
+  }
+  .bottle-float-left.example-tree5.main-down {
+    z-index: 4;
+    margin-top: -50.95vw;
+    margin-left: -47.87vw;
+    width: 21.01vw;
+    height: auto;
+  }
+
+
+
+
+
+
+
   .accordion-example {
     position: relative;
     z-index: 0;
@@ -4782,8 +4975,130 @@ cursor: pointer;
     width: 100%;
     font-size: 0.83vw;
   }
+  .MuiAccordion-rounded {
+    background-color: #fff;
+    border: 1px solid #286043 !important;
+    border-radius: 2.8vw !important;
+    color: #fff !important;
+    margin-bottom: 3vw;
+    transition: background-color .3s !important;
+  }
+  .MuiIconButton-edgeEnd {
+    margin-right: 2.72vw !important;
+    margin-top: 1vw !important;
+  }
+  .MuiSvgIcon-root {
+    font-size: 2.5rem !important;
+  }
   .bottle-float-left.left-line-how {
     display: none;
+  }
+  .heading-id {
+    font-weight: 500;
+    font-family: Inter;
+    margin-left: 2.5vw;
+    font-size: 8.53vw;
+    line-height: 10.40vw;
+  }
+  .heading-name {
+    width: 66vw;
+    margin-left: 3vw;
+    margin-top: -7.5vw;
+    font-weight: 500;
+    font-family: 'Inter';
+    font-size: 5.07vw;
+    line-height: 6.13vw;
+    text-indent: 2.7em;
+  }
+  .MuiTypography-body1 {
+    font-size: 3.47vw !important;
+    font-family: Inter, sans-serif !important;
+    font-weight: 400 !important;
+    line-height: 4.27vw !important;
+    letter-spacing: 0.00938em;
+    text-align: left !important;
+  }
+  .winners-all-a.faq {
+    z-index: 2;
+    position: relative;
+    display: block;
+    font-size: 5.17vw;
+    line-height: 6.40vw;
+    font-family: Inter;
+    font-weight: 600;
+    color: rgba(245, 245, 237, 1);
+    text-decoration: none;
+    margin: 0 auto;
+    background-color: rgba(0, 98, 65, 1);
+    border: .07vw solid #ffffff4d;
+    width: 86.35vw;
+    padding: 4.5vw 26vw 4.5vw 26vw;
+    border-radius: 4.04vw 4.04vw 1.35vw 4.04vw;
+    transition: all 0.3s ease;
+  }
+  .footer {
+    display: none;
+  }
+  .left-footer {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 4.80vw;
+    line-height: 5.87vw;
+    color: rgba(245, 245, 237, 1);
+    width: 94.06vw;
+    text-align: left;
+    margin-right: auto;
+    margin-left: 4vw;
+    margin-top: 8vw;
+  }
+  .right-footer {
+    margin: -5.7vw 23vw 0vw 0vw;
+    font-family: 'Acrom Medium', AutumnSweaterLaimon, sans-serif;
+    font-weight: 400;
+    font-size: 10.13vw;
+    line-height: 9.87vw;
+    color: rgba(245, 245, 237, 1);
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+  }
+  .buttons {
+    margin-top: -8vw;
+    padding-bottom: 5vw;
+  }
+  .footer-left-button {
+    margin: 9vw 0vw 0vw -47vw;
+    position: absolute;
+    font-size: 3.25vw;
+    font-family: Inter;
+    line-height: 4.53vw;
+    font-weight: 400;
+    width: 53.57vw;
+    height: 13.6vw;
+    border-radius: 4.97vw;
+    color: white;
+    background-color: #286043;
+    border: 1px solid white;
+  }
+  .footer-right-button {
+    position: absolute;
+    margin: 9vw 0vw 0vw 10vw;
+    font-size: 3.47vw;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 4.53vw;
+    width: 37.57vw;
+    height: 13.58vw;
+    border-radius: 4.97vw;
+    background-color: rgba(162, 212, 65, 1);
+    border: 1px;
+  }
+  .content-container-footer {
+    background-color: #286043;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 114vw;
   }
 
 

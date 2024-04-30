@@ -65,7 +65,7 @@ export default function ControlledAccordions() {
                     id="panel1-header"
                 >
                     <Typography className={classes.heading}>
-                        <b className={'heading-id'}>01</b> <span className={'heading-name'}>General settings</span>
+                        <b className={'heading-id'}>01</b> <p className={'heading-name'}>General settings</p>
                     </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -94,8 +94,8 @@ export default function ControlledAccordions() {
                     aria-controls="panel2-content"
                     id="panel2-header"
                 >
-                    <Typography className={classes.heading}><b className={'heading-id'}>02</b> <span
-                        className={'heading-name'}>Users</span></Typography>
+                    <Typography className={classes.heading}><b className={'heading-id'}>02</b> <p
+                        className={'heading-name'}>Users</p></Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
@@ -117,9 +117,9 @@ export default function ControlledAccordions() {
                     aria-controls="panel2-content"
                     id="panel2-header"
                 >
-                    <Typography className={classes.heading}><b className={'heading-id'}>03</b> <span
+                    <Typography className={classes.heading}><b className={'heading-id'}>03</b> <p
                         className={'heading-name'}>Advanced
-                        settings</span></Typography>
+                        settings</p></Typography>
                     <Typography className={classes.secondaryHeading}>
                     </Typography>
                 </AccordionSummary>
@@ -143,9 +143,9 @@ export default function ControlledAccordions() {
                     aria-controls="panel2-content"
                     id="panel2-header"
                 >
-                    <Typography className={classes.heading}><b className={'heading-id'}>04</b> <span
+                    <Typography className={classes.heading}><b className={'heading-id'}>04</b> <p
                         className={'heading-name'}>В чем заключается акция и как принять в ней
-                        участие?</span></Typography>
+                        участие?</p></Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
@@ -166,9 +166,9 @@ export default function ControlledAccordions() {
                     aria-controls="panel2-content"
                     id="panel2-header"
                 >
-                    <Typography className={classes.heading}><b className={'heading-id'}>05</b> <span
+                    <Typography className={classes.heading}><b className={'heading-id'}>05</b> <p
                         className={'heading-name'}>Advanced
-                        settings</span></Typography>
+                        settings</p></Typography>
                     <Typography className={classes.secondaryHeading}>
                     </Typography>
                 </AccordionSummary>
@@ -181,7 +181,7 @@ export default function ControlledAccordions() {
                 </AccordionDetails>
             </Accordion>
             <div className={'example-all-test'}>
-            <a className={'winners-all-a faq'} href={'faq'}>Весь список</a>
+            <a className={'winners-all-a faq'} href={'faq'}>Все вопросы</a>
             </div>
         </div>
     );

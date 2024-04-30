@@ -422,16 +422,17 @@ export default function Winners(props) {
                                                 </div>
                                                 <div className={'head-colm-phone1'}>25982628750
                                                 </div>
-                                                {/*<div className={'head-colm-date1'}>*/}
-                                                {/*    <img alt="Приз"/>*/}
-                                                {/*</div>*/}
+                                                <div className={'head-colm-date1-phone'}>
+                                                    <img className={'winners-prize-img'} alt={'Приз'}
+                                                         src={winnersprize}/>
+                                                </div>
                                             </div>
 
                                         </div>
 
                                     </div>
                                     <div className={'winners-videos'}>
-                                    {/*<a href={'#'}>Показать всех</a>*/}
+                                        {/*<a href={'#'}>Показать всех</a>*/}
                                     </div>
 
                                 </div>
