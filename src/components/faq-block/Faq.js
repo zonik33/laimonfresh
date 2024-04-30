@@ -20,6 +20,11 @@ import SouthWestIcon from '@mui/icons-material/SouthWest';
 import NorthEastIcon from '@mui/icons-material/NorthEast';
 import owntreep from "../../image/img_36.png";
 import limeright1 from "../../image/img_35.png";
+import ScrollPrizes from "../../Scroll/ScrollPrizes";
+import ScrollWinners from "../../Scroll/ScrollWinners";
+import ScrollFaq from "../../Scroll/ScrollFaq";
+import inputcode from "../../image/img_2.png";
+import PopupRegister from "../Popups/PopupRegister";
 
 const useStyles = makeStyles((theme) => ({
     circleIcon: {
@@ -87,6 +92,34 @@ export default function Faq(props) {
         navigate("/?section=faq"); // Передаем параметр "section" в URL
     };
 
+    const [isPopupOpen, setIsPopupOpen] = useState(null);
+    const openPopup = (popupName) => {
+        if (!isPopupOpen) {
+            setIsPopupOpen(popupName);
+            document.body.classList.add("no-scroll");
+        }
+    };
+
+    const closePopup = () => {
+        setIsPopupOpen(null);  // Add this line to reset isPopupOpen
+        document.body.classList.remove("no-scroll");
+    };
+    function toggleMenu() {
+        const navLists = document.querySelector('.header-burger');
+        navLists.classList.toggle('active');
+        const navList = document.querySelector('header .menu');
+        navList.classList.toggle('show');
+        document.documentElement.classList.toggle('menu-open');
+        document.body.classList.toggle('menu-open');
+    }
+    function closeMenu() {
+        const navLists = document.querySelector('.header-burger');
+        navLists.classList.remove('active');
+        const navList = document.querySelector('header .menu');
+        navList.classList.remove('show');
+        document.documentElement.classList.remove('menu-open'); // Удаление класса 'menu-open' у элемента <html>
+        document.body.classList.remove('menu-open');
+    }
     return (
         <header>
             <img src={lemondots} alt="Photo" className="left-photo"/>
@@ -100,21 +133,39 @@ export default function Faq(props) {
                     />
                     </Link>
                 </div>
+                <div className={'header-burger'} onClick={toggleMenu}>
+                    <span className={'span-burger'}></span>
+                </div>
                 <div className="menu">
                     <nav className="main-menu">
                         <ul>
                             <li className={'li-rules'}><a href={'#'}> Правила</a></li>
                             <li className={'li-ont'}><a className="smooth" href={'#how-prizes'} onClick={(event) => {
+                                closeMenu();
                                 handleGoToPrizes(event)
                             }}>Призы</a></li>
-                            <li className={'li-ont'}><a className="smooth" href={'#winners'}
-                                                        onClick={(event) => {
-                                                            handleGoToWinners(event)
-                                                        }}>Победители</a></li>
+                            <li className={'li-ont'}><a className="smooth" href={'#winners'} onClick={(event) => {
+                                closeMenu();
+                                handleGoToWinners(event)
+                            }}>Победители</a></li>
                             <li className={'li-ont'}><a className="smooth active-block" href={'#faq'} onClick={(event) => {
+                                closeMenu();
                                 handleGoToFaq(event)
                             }}>Вопросы/ответы</a></li>
-                            <li className={'li-lc'}><a href={'profile'}>Личный кабинет</a>
+                            <li className={'li-lc'}><a href={'profile'}>Личный кабинет</a></li>
+                            <li>
+                                <img className={'bottle-float-left show'} src={inputcode}/>
+                                <input
+                                    type="text"
+                                    className={'shadow-button-animation-text'}
+                                    onClick={() => openPopup('Register')}
+                                    maxLength="20"
+                                    readOnly
+                                    placeholder=""
+                                />
+                                {isPopupOpen === 'Register' && (
+                                    <PopupRegister showPopup={true} closeModal={closePopup}/>
+                                )}
                             </li>
                         </ul>
                     </nav>
@@ -176,8 +227,8 @@ export default function Faq(props) {
                                 id="panel1-header"
                             >
                                 <Typography className={classes.heading}>
-                                    <b className={'heading-id'}>01</b> <span
-                                    className={'heading-name'}>General settings</span>
+                                    <b className={'heading-id'}>01</b> <p
+                                    className={'heading-name'}>General settings</p>
                                 </Typography>
                             </AccordionSummary>
                             <AccordionDetails>
@@ -206,8 +257,8 @@ export default function Faq(props) {
                                 aria-controls="panel2-content"
                                 id="panel2-header"
                             >
-                                <Typography className={classes.heading}><b className={'heading-id'}>02</b> <span
-                                    className={'heading-name'}>Users</span></Typography>
+                                <Typography className={classes.heading}><b className={'heading-id'}>02</b> <p
+                                    className={'heading-name'}>Users</p></Typography>
                             </AccordionSummary>
                             <AccordionDetails>
                                 <Typography>
@@ -230,9 +281,9 @@ export default function Faq(props) {
                                 aria-controls="panel2-content"
                                 id="panel2-header"
                             >
-                                <Typography className={classes.heading}><b className={'heading-id'}>03</b> <span
+                                <Typography className={classes.heading}><b className={'heading-id'}>03</b> <p
                                     className={'heading-name'}>Advanced
-                        settings</span></Typography>
+                        settings</p></Typography>
                                 <Typography className={classes.secondaryHeading}>
                                 </Typography>
                             </AccordionSummary>
@@ -257,9 +308,9 @@ export default function Faq(props) {
                                 aria-controls="panel2-content"
                                 id="panel2-header"
                             >
-                                <Typography className={classes.heading}><b className={'heading-id'}>04</b> <span
+                                <Typography className={classes.heading}><b className={'heading-id'}>04</b> <p
                                     className={'heading-name'}>В чем заключается акция и как принять в ней
-                        участие?</span></Typography>
+                        участие?</p></Typography>
                             </AccordionSummary>
                             <AccordionDetails>
                                 <Typography>
@@ -280,9 +331,9 @@ export default function Faq(props) {
                                 aria-controls="panel2-content"
                                 id="panel2-header"
                             >
-                                <Typography className={classes.heading}><b className={'heading-id'}>06</b> <span
+                                <Typography className={classes.heading}><b className={'heading-id'}>06</b> <p
                                     className={'heading-name'}>Advanced
-                        settings</span></Typography>
+                        settings</p></Typography>
                                 <Typography className={classes.secondaryHeading}>
                                 </Typography>
                             </AccordionSummary>
@@ -307,9 +358,9 @@ export default function Faq(props) {
                                 aria-controls="panel2-content"
                                 id="panel2-header"
                             >
-                                <Typography className={classes.heading}><b className={'heading-id'}>07</b> <span
+                                <Typography className={classes.heading}><b className={'heading-id'}>07</b> <p
                                     className={'heading-name'}>Advanced
-                        settings</span></Typography>
+                        settings</p></Typography>
                                 <Typography className={classes.secondaryHeading}>
                                 </Typography>
                             </AccordionSummary>
@@ -334,9 +385,9 @@ export default function Faq(props) {
                                 aria-controls="panel2-content"
                                 id="panel2-header"
                             >
-                                <Typography className={classes.heading}><b className={'heading-id'}>08</b> <span
+                                <Typography className={classes.heading}><b className={'heading-id'}>08</b> <p
                                     className={'heading-name'}>Advanced
-                        settings</span></Typography>
+                        settings</p></Typography>
                                 <Typography className={classes.secondaryHeading}>
                                 </Typography>
                             </AccordionSummary>
@@ -361,9 +412,9 @@ export default function Faq(props) {
                                 aria-controls="panel2-content"
                                 id="panel2-header"
                             >
-                                <Typography className={classes.heading}><b className={'heading-id'}>09</b> <span
+                                <Typography className={classes.heading}><b className={'heading-id'}>09</b> <p
                                     className={'heading-name'}>Advanced
-                        settings</span></Typography>
+                        settings</p></Typography>
                                 <Typography className={classes.secondaryHeading}>
                                 </Typography>
                             </AccordionSummary>
@@ -388,9 +439,9 @@ export default function Faq(props) {
                                 aria-controls="panel2-content"
                                 id="panel2-header"
                             >
-                                <Typography className={classes.heading}><b className={'heading-id'}>10</b> <span
+                                <Typography className={classes.heading}><b className={'heading-id'}>10</b> <p
                                     className={'heading-name'}>Advanced
-                        settings</span></Typography>
+                        settings</p></Typography>
                                 <Typography className={classes.secondaryHeading}>
                                 </Typography>
                             </AccordionSummary>
@@ -415,9 +466,9 @@ export default function Faq(props) {
                                 aria-controls="panel2-content"
                                 id="panel2-header"
                             >
-                                <Typography className={classes.heading}><b className={'heading-id'}>11</b> <span
+                                <Typography className={classes.heading}><b className={'heading-id'}>11</b> <p
                                     className={'heading-name'}>Advanced
-                        settings</span></Typography>
+                        settings</p></Typography>
                                 <Typography className={classes.secondaryHeading}>
                                 </Typography>
                             </AccordionSummary>
@@ -442,9 +493,9 @@ export default function Faq(props) {
                                 aria-controls="panel2-content"
                                 id="panel2-header"
                             >
-                                <Typography className={classes.heading}><b className={'heading-id'}>12</b> <span
+                                <Typography className={classes.heading}><b className={'heading-id'}>12</b> <p
                                     className={'heading-name'}>Advanced
-                        settings</span></Typography>
+                        settings</p></Typography>
                                 <Typography className={classes.secondaryHeading}>
                                 </Typography>
                             </AccordionSummary>

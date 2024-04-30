@@ -1669,6 +1669,9 @@ height: auto;
   height: 4.24vw;
   z-index: 4;
 }
+.bottle-float-left.show {
+  display: none;
+}
 .bottle-float-left.lefttree {
   position: absolute;
   margin-top: 33.6vw;
@@ -1784,6 +1787,9 @@ height: auto;
   position: relative; /* Устанавливаем родительский контейнер как position: relative; */
   width: 100%;
   height: 100vh;
+}
+.shadow-button-animation-text {
+  display: none;
 }
 
 .absolute-text {
@@ -1972,6 +1978,12 @@ height: auto;
 }
 .MuiAccordion-root.Mui-expanded .jss3 {
   color: white !important; /* Изменение цвета текста при открытии аккордеона */
+}
+.jss5 {
+  width: 77vw !important;
+  margin: 0px 0px 25px 1px !important;
+  border-top: 2px solid #ccc;
+  background-color: #fff;
 }
 .makeStyles-heading-3 {
   flex-basis: 100.33% !important;
@@ -3990,14 +4002,14 @@ cursor: pointer;
       animation: burgerAnimation 0.4s;
 
     }
-    header .menu-content{
+    header .main-menu{
       width: auto;
       position: absolute;
       flex-direction: column;
       row-gap: 7vw;
       margin-top: 6.52vw;
     }
-    header .menu-content a {
+    header .main-menu a {
       font-size: 2vw;
       padding: 0;
     }
@@ -4069,7 +4081,7 @@ cursor: pointer;
       display: flex;
       position: fixed;
       flex-direction: column;
-      height: 100%;
+      height: 200vh;
       width: 100vw;
       right: 0;
       overflow-y: auto;
@@ -4099,22 +4111,16 @@ cursor: pointer;
       display: none;
     }
 
-    header .menu-content {
-      position: absolute;
-      flex-direction: column;
-      row-gap: 8.6vw;
-      margin-top: 32vw;
-      align-items: initial;
-    }
 
-    header .menu-content a {
+
+    header .main-menu a {
       font-size: 5.87vw;
       line-height: 6.40vw;
       padding: 0;
       margin-left:8vw;
     }
 
-    header .menu-content.backFaq a {
+    header .main-menu.backFaq a {
       font-size: 9.87vw;
       line-height: 6.40vw;
       padding: 0;
@@ -4455,7 +4461,7 @@ cursor: pointer;
     position: absolute !important;
     top: 33% !important;
     transform: translateY(-50%);
-    z-index: 55 !important;
+    z-index: 5 !important;
     background-color: #fff;
     padding: 0.26vw !important;
     cursor: pointer;
@@ -4554,9 +4560,9 @@ cursor: pointer;
     height: 8.05vw;
   }
   .center-container {
-    height: 140.5vw;
+    height: 152.5vw;
+    margin: 15vw 1.67vw 0 9vw;
     width: 68vw;
-    margin: 21vw 1.67vw 0 9vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -4579,6 +4585,9 @@ cursor: pointer;
   .vertical-line {
     display: none;
     border-left: 2px solid #000; /* или другой цвет, толщину и стиль линии, как вам нужно */
+  }
+  .for-faq.faq {
+    margin-top: 12.8vw;
   }
 
   .how {
@@ -4787,10 +4796,10 @@ cursor: pointer;
     margin: 16.35vw 0vw 2vw 2vw;
   }
   .container-sub {
-    margin-top: 13vw;
-    margin-left: 2vw;
+    /*margin-top: 13vw;*/
+    /*margin-left: 2vw;*/
     width: 84.69vw;
-    height: 37.35vw;
+    height: 33.35vw;
   }
   .new-block {
     background-color: rgba(140, 196, 155, 1);
@@ -4873,6 +4882,58 @@ cursor: pointer;
     width: 15.56vw;
     height: 15.56vw;
   }
+  header .menu.show {
+    background-image: linear-gradient(#00622a, #009640, #03be53);
+    display: flex;
+    opacity: 1;
+    width: 100vw;
+  }
+  header .main-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    row-gap: 8.6vw;
+    margin: 68vw 0vw 0vw -5vw;
+    height: 111vh;
+  }
+  .jss5 {
+    width: 96% !important;
+    margin: 0px 0px 25px 1px !important;
+    border-top: 2px solid #ccc;
+    background-color: #fff;
+  }
+  .main-menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: block;
+  }
+  .main-menu li {
+    font-family: 'AutumnSweaterLaimon', Arial, sans-serif;
+    line-height: 1.3vw;
+    font-size: 1.11vw;
+    font-weight: 400;
+    margin-right: -3.9vw;
+    margin-top: 9.66vw;
+    padding: 0.5vw 1vw;
+    color: #fff;
+    letter-spacing: 0.2vw;
+  }
+  .main-menu .li-rules {
+    margin-right: -1vw;
+  }
+  .main-menu .li-ont {
+    margin-right: 0vw;
+  }
+  .main-menu .li-lc {
+    margin-left: -1.4vw;
+  }
+
   .head-colm-name {
     font-size: 6.67vw;
     line-height: 8vw;
@@ -5099,6 +5160,31 @@ cursor: pointer;
     flex-direction: column;
     align-items: center;
     height: 114vw;
+  }
+  .bottle-float-left.show {
+    display: flex;
+    position: absolute;
+    margin-top: 0.03vw;
+    margin-left: -14.57vw;
+    width: 48vw;
+    height: 14vw;
+    z-index: 6;
+  }
+  .shadow-button-animation-text {
+    display: flex;
+    font-family: Inter;
+    width: 76.56vw;
+    height: 14.1vw;
+    background-color: white;
+    border: 0.14vw solid red;
+    border-radius: 6.68vw;
+    padding: 0.35vw;
+    font-size: 1.11vw;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    z-index: 5;
+    position: absolute;
   }
 
 

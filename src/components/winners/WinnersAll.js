@@ -18,6 +18,8 @@ import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
 import owntreep from "../../image/img_36.png";
 import limeright1 from "../../image/img_35.png";
+import inputcode from "../../image/img_2.png";
+import PopupRegister from "../Popups/PopupRegister";
 
 export default function WinnersAll(props) {
     const [showPopup, setShowPopup] = useState(false);
@@ -401,6 +403,36 @@ export default function WinnersAll(props) {
         event.preventDefault();
         navigate("/?section=faq"); // Передаем параметр "section" в URL
     };
+    function toggleMenu() {
+        const navLists = document.querySelector('.header-burger');
+        navLists.classList.toggle('active');
+        const navList = document.querySelector('header .menu');
+        navList.classList.toggle('show');
+        document.documentElement.classList.toggle('menu-open');
+        document.body.classList.toggle('menu-open');
+    }
+    function closeMenu() {
+        const navLists = document.querySelector('.header-burger');
+        navLists.classList.remove('active');
+        const navList = document.querySelector('header .menu');
+        navList.classList.remove('show');
+        document.documentElement.classList.remove('menu-open'); // Удаление класса 'menu-open' у элемента <html>
+        document.body.classList.remove('menu-open');
+    }
+    const [isPopupOpen, setIsPopupOpen] = useState(null);
+    const openPopup = (popupName) => {
+        setIsPopupOpen(popupName);
+        document.body.classList.add("no-scroll");
+    };
+    function openPopup3() {
+        document.getElementById("popup-password-step-two").style.display = "block";
+        document.body.classList.add("no-scroll");
+    }
+
+    const closePopup = () => {
+        setIsPopupOpen(false);
+        document.body.classList.remove("no-scroll");
+    };
     return (
         <header>
             <img src={lemondots} alt="Photo" className="left-photo"/>
@@ -414,20 +446,40 @@ export default function WinnersAll(props) {
                         />
                     </Link>
                 </div>
+                <div className={'header-burger'} onClick={toggleMenu}>
+                    <span className={'span-burger'}></span>
+                </div>
                 <div className="menu">
                     <nav className="main-menu">
                         <ul>
                             <li className={'li-rules'}><a href={'#'}> Правила</a></li>
                             <li className={'li-ont'}><a className="smooth" href={'#how-prizes'} onClick={(event) => {
+                                closeMenu();
                                 handleGoToPrizes(event)
                             }}>Призы</a></li>
-                            <li className={'li-ont'}><a className="smooth active-block" href={'#winners'} onClick={(event) => {
+                            <li className={'li-ont'}><a className="smooth" href={'#winners'} onClick={(event) => {
+                                closeMenu();
                                 handleGoToWinners(event)
                             }}>Победители</a></li>
-                            <li className={'li-ont'}><a className="smooth" href={'#faq'} onClick={(event) => {
-                                handleGoToFaq(event)
-                            }}>Вопросы/ответы</a></li>
-                            <li className={'li-lc'}><a href={'profile'}>Личный кабинет</a>
+                            <li className={'li-ont'}><a className="smooth active-block" href={'#faq'}
+                                                        onClick={(event) => {
+                                                            closeMenu();
+                                                            handleGoToFaq(event)
+                                                        }}>Вопросы/ответы</a></li>
+                            <li className={'li-lc'}><a href={'profile'}>Личный кабинет</a></li>
+                            <li>
+                                <img className={'bottle-float-left show'} src={inputcode}/>
+                                <input
+                                    type="text"
+                                    className={'shadow-button-animation-text'}
+                                    onClick={() => openPopup('Register')}
+                                    maxLength="20"
+                                    readOnly
+                                    placeholder=""
+                                />
+                                {isPopupOpen === 'Register' && (
+                                    <PopupRegister showPopup={true} closeModal={closePopup}/>
+                                )}
                             </li>
                         </ul>
                     </nav>

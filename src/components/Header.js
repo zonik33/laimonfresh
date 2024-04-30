@@ -13,9 +13,23 @@ import PopupLogin from "./Popups/PopupLogin";
 import PopupSuccessPassword from "./Popups/PopupSuccessPassword";
 import PopupSuccessEmail from "./Popups/PopupSuccessEmail";
 import PopupSuccessRegister from "./Popups/PopupSuccessRegister";
+import inputcode from "../image/img_2.png";
 
 export default function Header(props) {
     const [showPopup, setShowPopup] = useState(false);
+
+    const [isPopupOpen, setIsPopupOpen] = useState(null);
+    const openPopup = (popupName) => {
+        if (!isPopupOpen) {
+            setIsPopupOpen(popupName);
+            document.body.classList.add("no-scroll");
+        }
+    };
+
+    const closePopup = () => {
+        setIsPopupOpen(null);  // Add this line to reset isPopupOpen
+        document.body.classList.remove("no-scroll");
+    };
 
     const togglePopup = () => {
         setShowPopup(!showPopup);
@@ -30,8 +44,14 @@ export default function Header(props) {
         document.documentElement.classList.toggle('menu-open');
         document.body.classList.toggle('menu-open');
     }
-
-
+    function closeMenu() {
+        const navLists = document.querySelector('.header-burger');
+        navLists.classList.remove('active');
+        const navList = document.querySelector('header .menu');
+        navList.classList.remove('show');
+        document.documentElement.classList.remove('menu-open'); // Удаление класса 'menu-open' у элемента <html>
+        document.body.classList.remove('menu-open');
+    }
     return (
         <header>
             <img src={lemondots} alt="Photo" className="left-photo"/>
@@ -49,24 +69,41 @@ export default function Header(props) {
                     <ul>
                         <li className={'li-rules'}><a href={'#'}> Правила</a></li>
                         <li className={'li-ont'}><a className="smooth" href={'#how-prizes'} onClick={(event) => {
+                            closeMenu();
                             ScrollPrizes(event);
                         }}>Призы</a></li>
                         <li className={'li-ont'}><a className="smooth" href={'#winners'} onClick={(event) => {
+                            closeMenu();
                             ScrollWinners(event);
                         }}>Победители</a></li>
                         <li className={'li-ont'}><a className="smooth" href={'#faq'} onClick={(event) => {
+                            closeMenu();
                             ScrollFaq(event);
                         }}>Вопросы/ответы</a></li>
                         <li className={'li-lc'}><a href={'profile'}>Личный кабинет</a></li>
+                        <li>
+                            <img className={'bottle-float-left show'} src={inputcode}/>
+                            <input
+                                type="text"
+                                className={'shadow-button-animation-text'}
+                                onClick={() => openPopup('Register')}
+                                maxLength="20"
+                                readOnly
+                                placeholder=""
+                            />
+                            {isPopupOpen === 'Register' && (
+                                <PopupRegister showPopup={true} closeModal={closePopup}/>
+                            )}
+                        </li>
                     </ul>
                 </nav>
             </div>
-            <div className="contact-info">
-                {/*<p>Адрес: Ваш адрес</p>*/}
-                {/*<p>Телефон: Ваш номер телефона</p>*/}
-                {/*<p>Время работы: Ваши рабочие часы</p>*/}
-            </div>
-            {/*<button onClick={togglePopup} className="btn-leave-request">Оставить заявку</button>*/}
+                <div className="contact-info">
+                    {/*<p>Адрес: Ваш адрес</p>*/}
+                    {/*<p>Телефон: Ваш номер телефона</p>*/}
+                    {/*<p>Время работы: Ваши рабочие часы</p>*/}
+                </div>
+                {/*<button onClick={togglePopup} className="btn-leave-request">Оставить заявку</button>*/}
         </div>
     <PopupSuccessCode/>
     <PopupSuccessPassword/>
