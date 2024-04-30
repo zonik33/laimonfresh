@@ -4,6 +4,7 @@ import Modal from "react-modal";
 import React, {useState} from "react";
 import PhoneInput from "../PhoneInput";
 import PopupLogin from "./PopupLogin";
+import axios from "axios";
 export default function PopupRegister(props) {
     const {showPopup, closeModal } = props;
     const [registrationError, setRegistrationError] = useState('');
@@ -28,13 +29,106 @@ export default function PopupRegister(props) {
         closeModal();
         document.body.classList.remove("no-scroll");
     }
+    const [email, setEmail] = useState('');
+    const [isValidEmail, setIsValidEmail] = useState(true);
 
-    async function postRegisterPassword(event) {
-        console.log('Ответ есть');
-        openPopup3();
+    const handleChange = (e) => {
+        setEmail(e.target.value);
+    };
+
+    const handleBlur = () => {
+        const isValid = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
+        setIsValidEmail(isValid);
+    };
+    let isRequestPending = false;
+
+    async function postRegister(event) {
         const form = document.getElementById('form-register-password');
         event.preventDefault();
+        const login = document.getElementById('login');
+        const name = document.getElementById('name');
+        const phone = document.getElementById('phone');
+        const city = document.getElementById('city');
+        const pass = document.getElementById('pass');
+        const passR = document.getElementById('passR');
+        const rules1 = document.getElementById('rules1');
+        const rules2 = document.getElementById('rules2');
+
+        if (isRequestPending) {
+            return;
+        }
+        isRequestPending = true;
+        const formData = new FormData(form);
+        // if (promocodeValue) {
+        //     formData.append('promocode', promocodeValue);
+        // }
+        formData.append('login', login.value);
+        formData.append('name', name.value);
+        formData.append('phone', phone.value);
+        formData.append('city', city.value);
+        formData.append('pass', pass.value);
+        formData.append('passR', passR.value);
+        formData.append('rules1', rules1 ? '1' : '0');
+        formData.append('rules2', rules2 ? '1' : '0');
+        try {
+            const response = await axios.post('https://promo.laimonfresh.ch/backend/api/registerByEmail', formData);
+            if (response.data.result === false) {
+                console.log(response.data.result);
+                if (response.data.error.login) {
+                    setRegistrationError(response.data.error.login[0]);
+                } else {
+                    setRegistrationError('');
+                }
+                if (response.data.error.name) {
+                    setRegistrationError(response.data.error.name[0]);
+                } else {
+                    setRegistrationError('');
+                }
+                if (response.data.error.phone) {
+                    setRegistrationError(response.data.error.phone[0]);
+                } else {
+                    setRegistrationError('');
+                }
+                if (response.data.error.pass) {
+                    setRegistrationError(response.data.error.pass[0]);
+                } else {
+                    setRegistrationError('');
+                }
+                if (response.data.error.passR) {
+                    setRegistrationError(response.data.error.passR[0]);
+                } else {
+                    setRegistrationError('');
+                }
+                if (response.data.error.rules1) {
+                    setRegistrationError(response.data.error.rules1[0]);
+                } else {
+                    setRegistrationError('');
+                }
+                if (response.data.error.rules2) {
+                    setRegistrationError(response.data.error.rules2[0]);
+                } else {
+                    setRegistrationError('');
+                }
+            } else {
+                // handleSuccess()
+                console.log(response.data.result);
+                const hash = response.data.data.hash;
+                localStorage.setItem('hash', hash);
+                openPopup3();
+                // openPopup2();
+            }
+        } catch (error) {
+
+            if (axios.isCancel(error)) {
+            } else {
+
+            }
+        } finally {
+            isRequestPending = false;
+        }
+
     }
+
     return (
         <div id="popup-complete" className="popup">
         <Modal closeTimeoutMS={300}
@@ -67,25 +161,34 @@ export default function PopupRegister(props) {
                }}
                contentLabel="Оставить заявку"
         >
-            <form action={'https://nloto-promo.ru/backend/api/signup'}
-                  method={'POST'} onSubmit={postRegisterPassword}
+            <form action={'https://promo.laimonfresh.ch/backend/api/registerByEmail'}
+                  method={'POST'} onSubmit={postRegister}
                   id={'form-register-password'} className={'form-register'}>
                 <div className={'container-register'}>
                     <div><span className={'register-main-text'}>Регистрация</span>
                         <img className={'bottle-float-left exit-register'} onClick={closeModal} src={lcexit}/>
                     </div>
                     <p className={'register-inputs-text login'}>Фио</p>
-                    <input type="text" className={'register-inputs'} placeholder="ФИО"/>
+                    <input type="text" className={'register-inputs'} id={'name'} placeholder="ФИО"/>
                     <p className={'register-inputs-text login'}>E-mail</p>
-                    <input type="email" className={'register-inputs'} placeholder="E-mail"/>
+                    <input
+                        type="email"
+                        id={'login'}
+                        className={`register-inputs ${isValidEmail ? "" : "invalid"}`}
+                        placeholder="E-mail"
+                        value={email}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                    />
+                    {!isValidEmail && <p className="error-message">Пожалуйста, введите корректный email адрес.</p>}
                     <p className={'register-inputs-text login'}>Телефон</p>
-                    <PhoneInput id='login' name='login' className={'register-inputs'}
+                    <PhoneInput id='phone' name='login' className={'register-inputs'}
                                 registrationError={registrationError}/>
                     {registrationError && <div className={'error-block-phone only-for-phone'}
                                                style={{color: '#FFFFFF'}}>{registrationError}</div>}
                     <span id="phoneError" className="error"></span>
                     <p className={'register-inputs-text login'}>Город</p>
-                    <input list="cities" className={'register-inputs'} placeholder="Город"
+                    <input list="cities" id={'city'} className={'register-inputs'} placeholder="Город"
                            onKeyDown={e => e.preventDefault()}
                            onKeyPress={e => e.preventDefault()}
                     />
@@ -98,14 +201,18 @@ export default function PopupRegister(props) {
                     </datalist>
                     <p className={'register-inputs-text login'}>Пароль</p>
                     <input
-                        type="password" className={'register-inputs'} placeholder="Пароль"/>
+                        type="password" className={'register-inputs'}
+                        id={'pass'}
+                        placeholder="Пароль"/>
                     <p className={'register-inputs-text login'}>Подтвердить пароль</p>
-                    <input type="password" className={'register-inputs'} placeholder="Подтвердить пароль"/>
+                    <input type="password"
+                           id={'passR'}
+                           className={'register-inputs'} placeholder="Подтвердить пароль"/>
                     <div>
                         <label className={'popup-p-center'}>
                             <input
                                 type="checkbox"
-                                id="agree_1"
+                                id="rules1"
                                 className={`input-checkbox`}
                             />
                             <span className={`custom-checkbox`}></span>
@@ -119,7 +226,7 @@ export default function PopupRegister(props) {
                         <label className={'popup-p-center'}>
                             <input
                                 type="checkbox"
-                                id="agree_1"
+                                id="rules2"
                                 className={`input-checkbox`}
                             />
                             <span className={`custom-checkbox`}></span>

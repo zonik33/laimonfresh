@@ -52,6 +52,8 @@ export default function Header(props) {
         document.documentElement.classList.remove('menu-open'); // Удаление класса 'menu-open' у элемента <html>
         document.body.classList.remove('menu-open');
     }
+    const auth_key = localStorage.getItem('auth_key');
+    const isAuthenticated = !!auth_key;
     return (
         <header>
             <img src={lemondots} alt="Photo" className="left-photo"/>
@@ -80,8 +82,12 @@ export default function Header(props) {
                             closeMenu();
                             ScrollFaq(event);
                         }}>Вопросы/ответы</a></li>
+                        {isAuthenticated ? (
                         <li className={'li-lc'}><a href={'profile'}>Личный кабинет</a></li>
-                        <li>
+                            ): (
+                            <li className={'li-lc'}><a href={'profile'}>Личный кабинет</a></li>
+                        )}
+                            <li>
                             <img className={'bottle-float-left show'} src={inputcode}/>
                             <input
                                 type="text"

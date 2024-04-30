@@ -1442,6 +1442,12 @@ height: auto;
   animation: sbs-23142-left 15s infinite linear;
   backface-visibility: hidden;
 }
+.error-message {
+  position: absolute;
+  color: #cd0b0b;
+  margin: -0.5vw 1vw 0vw 1vw;
+  font-size: 1vw;
+}
 .bottle-float-left.inputcode {
   position: absolute;
   margin-top: 3.03vw;

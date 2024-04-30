@@ -5,8 +5,12 @@ import ReactDOM from "react-dom";
 import React, {useState} from "react";
 import PhoneInput from "../PhoneInput";
 import PopupRegister from "./PopupRegister";
+import axios from "axios";
+import Api from "../Api/Api";
+import setAuthToken from "../Api/Api";
 export default function PopupLogin(props) {
     const [isPopupOpen, setIsPopupOpen] = useState(null);
+    const [registrationError, setRegistrationError] = useState('');
     const openPopup = (popupName) => {
         if (!isPopupOpen) {
             closePopup2()
@@ -50,30 +54,81 @@ export default function PopupLogin(props) {
         document.getElementById("popup-login").style.display = "none";
         document.body.classList.remove("no-scroll");
     }
+    let isRequestPending = false;
 
-
-    async function postRegisterPassword(event) {
-        console.log('Ответ есть')
-        window.location.href = 'profile';
-        const form = document.getElementById('form-register-password');
+    async function postAuth(event) {
+debugger;
+        const form = document.getElementById('form-login');
         event.preventDefault();
+        const login = document.getElementById('logins');
+        const password = document.getElementById('password')
+
+        if (isRequestPending) {
+            return;
+        }
+        isRequestPending = true;
+        const formData = new FormData(form);
+        // if (promocodeValue) {
+        //     formData.append('promocode', promocodeValue);
+        // }
+        formData.append('login', login.value);
+        formData.append('password', password.value);
+
+        try {
+            const response = await axios.post('https://promo.laimonfresh.ch/backend/api/authenticateByEmail', formData);
+            if (response.data.result === false) {
+                console.log(response.data.result);
+                if (response.data.error.login) {
+                    setRegistrationError(response.data.error.login[0]);
+                } else {
+                    setRegistrationError('');
+                }
+                if (response.data.error.password) {
+                    setRegistrationError(response.data.error.password[0]);
+                } else {
+                    setRegistrationError('');
+                }
+            } else {
+                // handleSuccess()
+                console.log(response.data.result);
+                const login = response.data.data.login;
+                localStorage.setItem('login', login);
+                const auth_key = response.data.data.auth_key;
+                localStorage.setItem('auth_key', auth_key);
+                setAuthToken(auth_key);
+                setTimeout(() => {
+                    window.location.href = '/profile';
+                }, 1000);
+            }
+        } catch (error) {
+
+            if (axios.isCancel(error)) {
+            } else {
+
+            }
+        } finally {
+            isRequestPending = false;
+        }
     }
     return (
         <div id="popup-login" className="popup">
             <div className={"blur-filter"}>
                 <div className="popup-content-code" id={"popup-content"}>
-            <form action={'https://nloto-promo.ru/backend/api/login'}
-                  method={'POST'} onSubmit={postRegisterPassword}
+            <form action={'https://promo.laimonfresh.ch/backend/api/authenticateByEmail'}
+                  method={'POST'} onSubmit={postAuth}
                   id={'form-login'} className={'form-register'}>
                 <div className={'container-register'}>
                     <div><span className={'register-main-text'}>Авторизация</span>
                         <img className={'bottle-float-left exit-register'} onClick={closePopup2} src={lcexit}/>
                     </div>
                     <p className={'register-inputs-text login-next'}>E-mail</p>
-                    <input type="email" className={'register-inputs'} placeholder="E-mail"/>
+                    <input type="email" className={'register-inputs'}
+                           id={'logins'}
+                           placeholder="E-mail"/>
                     <p className={'register-inputs-text login-next'}>Пароль</p>
                     <input
-                        type="password" className={'register-inputs login'} placeholder="Пароль"/>
+                        type="password"
+                        id={'password'} className={'register-inputs login'} placeholder="Пароль"/>
                     <p className={'register-inputs-text login-next'}><a className={"text-laimon"} onClick={openPopup2}>Забыли пароль?</a></p>
                     <div className="register-button-container">
                         <button type={'submit'} id={'submit'} className={'register-button'}>Войти</button>

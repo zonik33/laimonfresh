@@ -9,7 +9,7 @@ class PhoneInput extends React.Component {
                 placeholder="+7 (___) ___-__-__"
                 maskChar="_"
                 className={`register-inputs ${registrationError ? 'error' : ''}`}
-                id='login'
+                id='phone'
             />
 
         );

@@ -457,11 +457,11 @@ export default function WinnersAll(props) {
                                 closeMenu();
                                 handleGoToPrizes(event)
                             }}>Призы</a></li>
-                            <li className={'li-ont'}><a className="smooth" href={'#winners'} onClick={(event) => {
+                            <li className={'li-ont'}><a className="smooth active-block" href={'#winners'} onClick={(event) => {
                                 closeMenu();
                                 handleGoToWinners(event)
                             }}>Победители</a></li>
-                            <li className={'li-ont'}><a className="smooth active-block" href={'#faq'}
+                            <li className={'li-ont'}><a className="smooth" href={'#faq'}
                                                         onClick={(event) => {
                                                             closeMenu();
                                                             handleGoToFaq(event)

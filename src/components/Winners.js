@@ -18,27 +18,27 @@ export default function Winners(props) {
 
     const listRef = useRef(null);
 
-    const handleSearch = () => {
-        const apiUrl = `https://nloto-promo.ru/backend/api/winners?phone=${phoneInput}`;
-
-        // Дополнительная логика для обработки поиска
-        fetch(apiUrl)
-            .then((response) => response.json())
-            .then((data) => {
-                setCurrentPage(data.page);
-                setTotalPages(data.pages);
-
-                const winnersWithMatchingPhone = data.data.items;
-                setWinners(winnersWithMatchingPhone);
-                const totalPages = data.data.pages;
-                setTotalPages(totalPages || 1); // Set totalPages to 1 if it is falsy
-                setCurrentPage(1);
-                console.log("Запустил победителей");
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-    };
+    // const handleSearch = () => {
+    //     const apiUrl = `https://nloto-promo.ru/backend/api/winners?phone=${phoneInput}`;
+    //
+    //     // Дополнительная логика для обработки поиска
+    //     fetch(apiUrl)
+    //         .then((response) => response.json())
+    //         .then((data) => {
+    //             setCurrentPage(data.page);
+    //             setTotalPages(data.pages);
+    //
+    //             const winnersWithMatchingPhone = data.data.items;
+    //             setWinners(winnersWithMatchingPhone);
+    //             const totalPages = data.data.pages;
+    //             setTotalPages(totalPages || 1); // Set totalPages to 1 if it is falsy
+    //             setCurrentPage(1);
+    //             console.log("Запустил победителей");
+    //         })
+    //         .catch((error) => {
+    //             console.log(error);
+    //         });
+    // };
 
 
 
@@ -49,51 +49,51 @@ export default function Winners(props) {
         setIsActive(!isActive);
     };
 
-    const selectChoose = (text) => {
-        const apiUrl = `https://nloto-promo.ru/backend/api/winners?date=${text}`;
+    // const selectChoose = (text) => {
+    //     const apiUrl = `https://nloto-promo.ru/backend/api/winners?date=${text}`;
+    //
+    //     // Сохраняем предыдущее значение выбора
+    //     const previousSelectedItem = selectedItem;
+    //
+    //     // Дополнительная логика для обработки поиска
+    //     fetch(apiUrl)
+    //         .then((response) => response.json())
+    //         .then((data) => {
+    //             setSelectedItem(previousSelectedItem); // Используем сохраненное значение выбора
+    //             setIsActive(false);
+    //             setWinners(data.data.items);
+    //
+    //             const totalPages = data.data.pages;
+    //             setTotalPages(totalPages || 1); // Set totalPages to 1 if it is falsy
+    //             setCurrentPage(1);
+    //             console.log("Выбрали дату");
+    //         })
+    //         .catch((error) => {
+    //             console.log(error);
+    //         });
+    // };
 
-        // Сохраняем предыдущее значение выбора
-        const previousSelectedItem = selectedItem;
-
-        // Дополнительная логика для обработки поиска
-        fetch(apiUrl)
-            .then((response) => response.json())
-            .then((data) => {
-                setSelectedItem(previousSelectedItem); // Используем сохраненное значение выбора
-                setIsActive(false);
-                setWinners(data.data.items);
-
-                const totalPages = data.data.pages;
-                setTotalPages(totalPages || 1); // Set totalPages to 1 if it is falsy
-                setCurrentPage(1);
-                console.log("Выбрали дату");
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-    };
-
-    const fetchWinners = async (page = 1, text) => {
-        try {
-            const response = await axios.get(
-                `https://nloto-promo.ru/backend/api/winners?page=${page}`
-            );
-
-            const totalPages = response.data.data.pages;
-            setTotalPages(totalPages || 1); // Set totalPages to 1 if it is falsy
-            const data = response.data.data.items;
-
-            setWinners(data);
-        } catch (error) {
-            console.log(error);
-        }
-    };
-
-    useEffect(() => {
-        fetchWinners().catch((error) => {
-            console.log(error);
-        });
-    }, []);
+    // const fetchWinners = async (page = 1, text) => {
+    //     try {
+    //         const response = await axios.get(
+    //             `https://nloto-promo.ru/backend/api/winners?page=${page}`
+    //         );
+    //
+    //         const totalPages = response.data.data.pages;
+    //         setTotalPages(totalPages || 1); // Set totalPages to 1 if it is falsy
+    //         const data = response.data.data.items;
+    //
+    //         setWinners(data);
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // };
+    //
+    // useEffect(() => {
+    //     fetchWinners().catch((error) => {
+    //         console.log(error);
+    //     });
+    // }, []);
 
 
 
@@ -153,7 +153,7 @@ export default function Winners(props) {
                 renderPageNumbers();
                 updateButtonStates();
                 moveList(); // Двигаем элементы списка
-                fetchWinners(updatedPageNumber, selectedItem); // Вызов функции fetchWinners с актуальными значениями currentPage и selectedItem
+                // fetchWinners(updatedPageNumber, selectedItem); // Вызов функции fetchWinners с актуальными значениями currentPage и selectedItem
 
             }
         }
@@ -164,7 +164,7 @@ export default function Winners(props) {
                 renderPageNumbers();
                 updateButtonStates();
                 moveList(); // Двигаем элементы списка
-                fetchWinners(currentPage);
+                // fetchWinners(currentPage);
 
             }
         }
@@ -175,7 +175,7 @@ export default function Winners(props) {
                 renderPageNumbers();
                 updateButtonStates();
                 moveList(); // Двигаем элементы списка
-                fetchWinners(currentPage);
+                // fetchWinners(currentPage);
 
 
             }
@@ -268,7 +268,7 @@ export default function Winners(props) {
                 setCurrentPage(totalPages);
                 updateButtonStates(); // Обновить состояние кнопок
                 renderPageNumbers();
-                fetchWinners(totalPages, selectedItem);
+                // fetchWinners(totalPages, selectedItem);
                 moveList();
             });
 

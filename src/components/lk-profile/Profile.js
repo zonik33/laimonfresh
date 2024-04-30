@@ -41,6 +41,13 @@ export default function Profile(props) {
         setIsPopupOpen(false);
         document.body.classList.remove("no-scroll");
     };
+    const selectChoose = (text) => {
+        // Удалить токен из localStorage
+        localStorage.removeItem('auth_key');
+
+        // Перенаправить на главную страницу
+        window.location.href = '/';
+    };
 
 
     const auth_key = localStorage.getItem('auth_key');
@@ -168,7 +175,7 @@ export default function Profile(props) {
             <div className={'accordion-example faq lc'}>
                 <div className={'winners-text for-faq lc'}>Здравствуйте, Александр Ф.
                     <div>
-                        <img className={'bottle-float-left exit-lc'} onClick={handleClick} src={lcexit}/>
+                        <img className={'bottle-float-left exit-lc'} onClick={selectChoose} src={lcexit}/>
                         <p className={'bottle-float-left exit-lc-text'}>выйти</p>
 
                     </div>
