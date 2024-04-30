@@ -41,7 +41,9 @@ function App() {
                 />
                 <Route path="/winners/*" element={<WinnersAll/>}
                 />
-                <Route path="/profile/*" element={<Profile/>}
+                <Route
+                    path="/profile/*"
+                    element={isAuthenticated ? <Profile /> : <Navigate to="/" />}
                 />
             </Routes>
         </BrowserRouter>
