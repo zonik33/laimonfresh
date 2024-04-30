@@ -13,6 +13,7 @@ const isAuthenticated = !!auth_key;
 
 
 if (isAuthenticated) {
+
     try {
         const response = await axios.get('https://promo.laimonfresh.ch/backend/api/getProfile', {
             headers: {
