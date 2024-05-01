@@ -25,6 +25,13 @@ import ScrollWinners from "../../Scroll/ScrollWinners";
 import ScrollFaq from "../../Scroll/ScrollFaq";
 import inputcode from "../../image/img_2.png";
 import PopupRegister from "../Popups/PopupRegister";
+import PopupSuccessCode from "../Popups/PopupSuccessCode";
+import PopupSuccessPassword from "../Popups/PopupSuccessPassword";
+import PopupSuccessEmail from "../Popups/PopupSuccessEmail";
+import PopupPasswordNewStepOne from "../Popups/PopupPasswordNewStepOne";
+import PopupPasswordNewStepTwo from "../Popups/PopupPasswordNewStepTwo";
+import PopupLogin from "../Popups/PopupLogin";
+import PopupSuccessRegister from "../Popups/PopupSuccessRegister";
 
 const useStyles = makeStyles((theme) => ({
     circleIcon: {
@@ -120,6 +127,12 @@ export default function Faq(props) {
         document.documentElement.classList.remove('menu-open'); // Удаление класса 'menu-open' у элемента <html>
         document.body.classList.remove('menu-open');
     }
+    const auth_key = localStorage.getItem('auth_key');
+    const isAuthenticated = !!auth_key;
+    const openPopupLogin = () => {
+        document.getElementById("popup-login").style.display = "block";
+        document.body.classList.add("no-scroll");
+    };
     return (
         <header>
             <img src={lemondots} alt="Photo" className="left-photo"/>
@@ -152,8 +165,12 @@ export default function Faq(props) {
                                 closeMenu();
                                 handleGoToFaq(event)
                             }}>Вопросы/ответы</a></li>
-                            <li className={'li-lc'}><a href={'profile'}>Личный кабинет</a></li>
-                            <li>
+                            {isAuthenticated ? (
+                                <li className={'li-lc'}><a href={'profile'}>Личный кабинет</a></li>
+                            ): (
+                                <li className={'li-lc'}><a onClick={openPopupLogin}>Войти</a></li>
+                            )}
+                            <li className={'shadow-dont'}>
                                 <img className={'bottle-float-left show'} src={inputcode}/>
                                 <input
                                     type="text"
@@ -522,6 +539,13 @@ export default function Faq(props) {
                     </div>
                 </div>
             </div>
+            <PopupSuccessCode/>
+            <PopupSuccessPassword/>
+            <PopupSuccessEmail/>
+            <PopupPasswordNewStepOne/>
+            <PopupPasswordNewStepTwo/>
+            <PopupLogin/>
+            <PopupSuccessRegister/>
             <Footer/>
         </header>
 
