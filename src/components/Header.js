@@ -14,6 +14,7 @@ import PopupSuccessPassword from "./Popups/PopupSuccessPassword";
 import PopupSuccessEmail from "./Popups/PopupSuccessEmail";
 import PopupSuccessRegister from "./Popups/PopupSuccessRegister";
 import inputcode from "../image/img_2.png";
+import PopupAddCode from "./Popups/PopupAddCode";
 
 export default function Header(props) {
     const [showPopup, setShowPopup] = useState(false);
@@ -52,6 +53,10 @@ export default function Header(props) {
         document.documentElement.classList.remove('menu-open'); // Удаление класса 'menu-open' у элемента <html>
         document.body.classList.remove('menu-open');
     }
+    const openPopupLogin = () => {
+        document.getElementById("popup-login").style.display = "block";
+        document.body.classList.add("no-scroll");
+    };
     const auth_key = localStorage.getItem('auth_key');
     const isAuthenticated = !!auth_key;
     return (
@@ -85,21 +90,19 @@ export default function Header(props) {
                         {isAuthenticated ? (
                         <li className={'li-lc'}><a href={'profile'}>Личный кабинет</a></li>
                             ): (
-                            <li className={'li-lc'}><a href={'profile'}>Личный кабинет</a></li>
+                            <li className={'li-lc'}><a onClick={openPopupLogin}>Войти</a></li>
                         )}
-                            <li>
+                            <li className={'shadow-dont'}>
                             <img className={'bottle-float-left show'} src={inputcode}/>
                             <input
                                 type="text"
                                 className={'shadow-button-animation-text'}
-                                onClick={() => openPopup('Register')}
+                                onClick={() => openPopup(isAuthenticated ? 'AddCode' : openPopupLogin)}
                                 maxLength="20"
                                 readOnly
                                 placeholder=""
                             />
-                            {isPopupOpen === 'Register' && (
-                                <PopupRegister showPopup={true} closeModal={closePopup}/>
-                            )}
+                                {isPopupOpen === 'AddCode' && isAuthenticated && <PopupAddCode showPopup={true} closeModal={closePopup}/>}
                         </li>
                     </ul>
                 </nav>

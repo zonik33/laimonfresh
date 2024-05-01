@@ -748,6 +748,12 @@ body {
 .main-menu .li-lc{
   margin-left: 1.6vw;
 }
+.main-menu .li-lc:hover {
+  cursor: pointer;
+}
+.shadow-dont {
+  display: none;
+}
 .main-menu {
   margin-left: 3vw;
 }
@@ -1235,6 +1241,7 @@ body {
   align-items: center; /* Центрирование по вертикали */
   height: 100%; /* Для центрирования по вертикали */
   margin-bottom: 3.5vw;
+  margin-left: 0vw;
 }
 .register-inputs-text.new-password {
   color: rgba(0, 98, 65, 1);
@@ -1243,6 +1250,7 @@ body {
   align-items: center; /* Центрирование по вертикали */
   height: 100%; /* Для центрирования по вертикали */
   margin-bottom: 2.5vw;
+  margin-left: 0vw;
 }
 .register-inputs-text.new-reg {
   color: rgba(0, 98, 65, 1);
@@ -1446,6 +1454,12 @@ height: auto;
   position: absolute;
   color: #cd0b0b;
   margin: -0.5vw 1vw 0vw 1vw;
+  font-size: 1vw;
+}
+.error-message.password-one {
+  position: absolute;
+  color: #cd0b0b;
+  margin: 0.5vw 1vw 0vw 2vw;
   font-size: 1vw;
 }
 .bottle-float-left.inputcode {
@@ -5192,7 +5206,9 @@ cursor: pointer;
     z-index: 5;
     position: absolute;
   }
-
+  .shadow-dont {
+    display: flex;
+  }
 
 
 

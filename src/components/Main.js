@@ -78,7 +78,12 @@ export default function Main(props) {
         autoplaySpeed: 5000,
         pauseOnHover: true
     };
-
+    const auth_key = localStorage.getItem('auth_key');
+    const isAuthenticated = !!auth_key;
+    const openPopupLogin = () => {
+        document.getElementById("popup-login").style.display = "block";
+        document.body.classList.add("no-scroll");
+    };
     return (
         <main>
             <div className={'main'} id={'main'}>
@@ -87,14 +92,12 @@ export default function Main(props) {
                         <input
                             type="text"
                             className={'new-code'}
-                            onClick={() => openPopup('Register')}
+                            onClick={() => openPopup(isAuthenticated ? 'AddCode' : openPopupLogin)}
                             maxLength="20"
                             readOnly
                             placeholder=""
                         />
-                        {isPopupOpen === 'Register' && (
-                            <PopupRegister showPopup={true} closeModal={closePopup} />
-                        )}
+                        {isPopupOpen === 'AddCode' && isAuthenticated && <PopupAddCode showPopup={true} closeModal={closePopup}/>}
                         <img className={'bottle-float-left inputcode'} src={inputcode}/>
                         <div className={'winners-text-inputcode'}>
                             <span className={'text-inputcode'}>*найди код под крышкой/ключиком и введи промокод</span>

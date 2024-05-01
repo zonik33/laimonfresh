@@ -16,10 +16,8 @@ export default function PopupAddCode(props) {
         document.body.classList.add("no-scroll");
     }
 
-    async function postRegisterPassword(event) {
-        debugger;
-        console.log('Ответ есть')
-        console.log('Ответ есть')
+    async function postAddCode(event) {
+
         openPopup2();
         const form = document.getElementById('form-register-password');
         event.preventDefault();
@@ -58,7 +56,7 @@ export default function PopupAddCode(props) {
         >
             <form action={'https://nloto-promo.ru/backend/api/login'}
                   ref={popupRef}
-                  method={'POST'} onSubmit={postRegisterPassword}
+                  method={'POST'} onSubmit={postAddCode}
                   id={'form-login'} className={'form-register'}>
                 <div className={'container-register'}>
                     <div><span className={'register-main-text'}>Загрузка кода</span>

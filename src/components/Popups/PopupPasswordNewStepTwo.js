@@ -16,7 +16,7 @@ export default function PopupPasswordNewStepTwo(props) {
     async function postRegisterPassword(event) {
         console.log('Ответ есть')
         openPopup3();
-        const form = document.getElementById('form-register-password');
+        const form = document.getElementById('form-resend-password2');
         event.preventDefault();
     }
     function closePopup2() {
@@ -29,7 +29,7 @@ export default function PopupPasswordNewStepTwo(props) {
                 <div className="popup-content-code" id={"popup-content"}>
             <form action={'https://nloto-promo.ru/backend/api/login'}
                   method={'POST'} onSubmit={postRegisterPassword}
-                  id={'form-login'} className={'form-register'}>
+                  id={'form-resend-password2'} className={'form-register'}>
                 <div className={'container-register'}>
                     <div><span className={'register-main-text'}>Смена пароля</span>
                         <img className={'bottle-float-left exit-register'} onClick={closePopup2} src={lcexit}/>
