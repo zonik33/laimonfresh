@@ -6,12 +6,15 @@ import lfmintfull from "../../image/img_31.png";
 export default function SliderCards() {
     const [isFullImageOpen, setIsFullImageOpen] = useState(false);
     const [numToShow, setNumToShow] = useState(4); // Количество карточек для отображения
-    const [openCardsCount, setOpenCardsCount] = useState(1); // Количество открытых карточек
     const [selectedImage, setSelectedImage] = useState(null); // Состояние выбранного изображения
 
+    const [profile, setProfile] = useState(null);
+    let displayCodes;
+
     useEffect(() => {
-        setOpenCardsCount(Math.min(numToShow, 10)); // Ограничиваем количество открытых карточек числом 10
-    }, [numToShow]);
+        const storedProfile = JSON.parse(localStorage.getItem('profile'));
+        setProfile(storedProfile);
+    }, []);
 
     const handleImageClick = (index) => {
         if (!isFullImageOpen) {
@@ -37,7 +40,10 @@ export default function SliderCards() {
     };
 
     const renderCard = (index) => {
-        const isBlurred = index >= numToShow;
+        const countCodes = (profile && profile.countCodes) || 0;
+        displayCodes = Math.min(countCodes, 10);
+
+        const isBlurred = index >= displayCodes;
         const isEnlarged = selectedImage === index;
 
         return (
@@ -71,7 +77,7 @@ export default function SliderCards() {
             )}
             <div className={'text-block-inputcode'}>
                 <span className={'text-inputcode'}>всего собрано карточек</span>
-                <p className={'text-inputcode cards-prize'}>{openCardsCount} из 10</p>
+                <p className={'text-inputcode cards-prize'}>{displayCodes} из 10</p>
             </div>
         </div>
     );

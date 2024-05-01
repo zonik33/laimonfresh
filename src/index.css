@@ -1213,6 +1213,8 @@ body {
   text-align: center;
   color: rgba(227, 29, 26, 1);
 }
+.simplebar-scrollbar.simplebar-visible {
+}
 .register-inputs-text {
   text-align: left;
   color: rgba(58, 58, 58, 1);
@@ -1373,6 +1375,13 @@ body {
   width: 17.01vw;
   height: auto;
 }
+.bottle-float-left.example-tree5.faq-down-down {
+  z-index: 4;
+  margin-top: -15.95vw;
+  margin-left: -42.87vw;
+  width: 17.01vw;
+  height: auto;
+}
 .bottle-float-left.example-tree5.main-down {
 z-index: 4;
 margin-top: -40.95vw;
@@ -1382,7 +1391,7 @@ height: auto;
 }
 .bottle-float-left.lime-winners {
   position: absolute;
-  margin-top: -51.17vw;
+  margin-top: -38.17vw;
   margin-left: -2.97vw;
   right: 0;
   width: 8vw;
@@ -1442,7 +1451,7 @@ height: auto;
 }
 .bottle-float-left.berry-winners {
   position: absolute;
-  margin-top: -16.75vw;
+  margin-top: -38.75vw;
   margin-left: 16.93vw;
   width: 8.06vw;
   height: 8.26vw;
@@ -2190,13 +2199,15 @@ height: auto;
   position: relative;
   overflow: hidden;
   width: 79.24vw;
-  height: 60.5vw;
+  height: 20vw;
 }
 .simplebar-wrapper {
   height: auto !important;
 }
 
 .scroll-content {
+  z-index: 1;
+  background: rgba(91, 171, 113, 1);
   position: relative;
   height: 100%;
   width: 100%;
@@ -2291,14 +2302,22 @@ height: auto;
   overflow: visible; /* Разрешаем элементам выходить за пределы блока */
 }
 .custom-simple-bar2 .simplebar-scrollbar::before {
-  display: block; /* Изменим значение display на block */
+  display: block;
   position: absolute;
-  z-index: 9999; /* Поднимаем ползунок на самый верх */
-  width: 2.08vw !important;
-  height: 2.08vw;
-  margin-left: -0.9vw;
+  z-index: 9999;
+  width: 0.28vw !important;
+  height: auto;
+  margin-left: -0.01vw;
   background-color: rgba(0, 98, 65, 1) !important;
-  border-radius: 50%; /* Преобразовать в круг */
+}
+
+.simplebar-scrollbar {
+  /* стили скроллбара */
+  display: block;
+}
+.simplebar-scrollbar {
+  /* стили скроллбара */
+  transform: translate3d(0px, 0px, 0px); /* или любой другой подходящий translation */
 }
 
 .custom-simple-bar2 .simplebar-scrollbar.simplebar-visible:before {
@@ -3301,6 +3320,9 @@ backface-visibility: hidden;
   text-align: center;
   width: 71.35vw;
 }
+.table-body-winners.down {
+  margin-bottom: 22vw;
+}
 .table-body-winners.mill {
   margin-bottom: 19vw;
 }
@@ -3325,7 +3347,8 @@ backface-visibility: hidden;
   width: 23.4375vw;
 }
 .winners-tabs-content {
-  padding-top: 1.56vw;
+  /*margin-bottom: 18vw;*/
+  /*padding-top: 1.56vw;*/
 }
 .winners-tabs-content-ticket {
   margin-left: 3.2vw;

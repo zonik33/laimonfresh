@@ -169,7 +169,9 @@ export default function PopupRegister(props) {
                         <img className={'bottle-float-left exit-register'} onClick={closeModal} src={lcexit}/>
                     </div>
                     <p className={'register-inputs-text login'}>Фио</p>
-                    <input type="text" className={'register-inputs'} id={'name'} placeholder="ФИО"/>
+                    <input type="text" className={'register-inputs'} id={'name'} placeholder="ФИО"
+                           required
+                    />
                     <p className={'register-inputs-text login'}>E-mail</p>
                     <input
                         type="email"
@@ -177,18 +179,20 @@ export default function PopupRegister(props) {
                         className={`register-inputs ${isValidEmail ? "" : "invalid"}`}
                         placeholder="E-mail"
                         value={email}
+                        required
                         onChange={handleChange}
                         onBlur={handleBlur}
                     />
                     {!isValidEmail && <p className="error-message">Пожалуйста, введите корректный email адрес.</p>}
                     <p className={'register-inputs-text login'}>Телефон</p>
                     <PhoneInput id='phone' name='login' className={'register-inputs'}
-                                registrationError={registrationError}/>
+                                registrationError={registrationError} required/>
                     {registrationError && <div className={'error-block-phone only-for-phone'}
                                                style={{color: '#FFFFFF'}}>{registrationError}</div>}
                     <span id="phoneError" className="error"></span>
                     <p className={'register-inputs-text login'}>Город</p>
                     <input list="cities" id={'city'} className={'register-inputs'} placeholder="Город"
+                           required
                            onKeyDown={e => e.preventDefault()}
                            onKeyPress={e => e.preventDefault()}
                     />
@@ -203,17 +207,21 @@ export default function PopupRegister(props) {
                     <input
                         type="password" className={'register-inputs'}
                         id={'pass'}
-                        placeholder="Пароль"/>
+                        placeholder="Пароль"
+                        required/>
+
                     <p className={'register-inputs-text login'}>Подтвердить пароль</p>
                     <input type="password"
                            id={'passR'}
-                           className={'register-inputs'} placeholder="Подтвердить пароль"/>
+                           className={'register-inputs'} placeholder="Подтвердить пароль"
+                           required/>
                     <div>
                         <label className={'popup-p-center'}>
                             <input
                                 type="checkbox"
                                 id="rules1"
                                 className={`input-checkbox`}
+                                required
                             />
                             <span className={`custom-checkbox`}></span>
                             <p>Я согласен с <a href={'#'} className={"text-laimon"} target="_blank">Правилами акции</a>

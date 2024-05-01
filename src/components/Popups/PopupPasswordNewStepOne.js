@@ -11,7 +11,7 @@ export default function PopupPasswordNewStepOne(props) {
     const [registrationError, setRegistrationError] = useState('');
     function openPopup3() {
         closePopup2()
-        document.getElementById("popup-password-step-two").style.display = "block";
+        document.getElementById("popup-email-success").style.display = "block";
         document.body.classList.add("no-scroll");
     }
     const [email, setEmail] = useState('');

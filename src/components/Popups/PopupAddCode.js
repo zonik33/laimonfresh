@@ -4,6 +4,8 @@ import Modal from "react-modal";
 import React, {useRef, useState} from "react";
 import PhoneInput from "../PhoneInput";
 import PopupRegister from "./PopupRegister";
+import axios from "axios";
+import setAuthToken from "../Api/Api";
 export default function PopupAddCode(props) {
     const { showPopup, closeModal } = props;
     const [showSuccessPopup, setShowSuccessPopup] = useState(false);
@@ -15,12 +17,52 @@ export default function PopupAddCode(props) {
         document.getElementById("popup-complete").style.display = "block";
         document.body.classList.add("no-scroll");
     }
+    let isRequestPending = false;
 
     async function postAddCode(event) {
-
-        openPopup2();
-        const form = document.getElementById('form-register-password');
+        const form = document.getElementById('form-add-code');
         event.preventDefault();
+        const code = document.getElementById('addCode');
+
+        if (isRequestPending) {
+            return;
+        }
+        isRequestPending = true;
+        const formData = new FormData(form);
+        // if (promocodeValue) {
+        //     formData.append('promocode', promocodeValue);
+        // }
+        formData.append('code', code.value);
+
+
+        try {
+            const response = await axios.post('https://promo.laimonfresh.ch/backend/api/registerCode', formData, {
+                headers: {
+                    'X-Auth-Token': localStorage.getItem('auth_key')
+                }
+            });
+            if (response.data.result === false) {
+                console.log(response.data.result);
+                console.log(response.data.error.code);
+                console.log(response.data.result.code);
+                console.log(response.data.result.error.code[0]);
+                if (response.data.result.error.code) {
+                    setRegistrationError(response.data.result.error.code[0]);
+                } else {
+                    setRegistrationError('');
+                }
+            } else {
+                openPopup2()
+            }
+        } catch (error) {
+
+            if (axios.isCancel(error)) {
+            } else {
+
+            }
+        } finally {
+            isRequestPending = false;
+        }
     }
     return (
         <Modal closeTimeoutMS={300}
@@ -54,16 +96,16 @@ export default function PopupAddCode(props) {
                }}
                contentLabel="Оставить заявку"
         >
-            <form action={'https://nloto-promo.ru/backend/api/login'}
+            <form action={'https://promo.laimonfresh.ch/backend/api/registerCode'}
                   ref={popupRef}
                   method={'POST'} onSubmit={postAddCode}
-                  id={'form-login'} className={'form-register'}>
+                  id={'form-add-code'} className={'form-register'}>
                 <div className={'container-register'}>
                     <div><span className={'register-main-text'}>Загрузка кода</span>
                         <img className={'bottle-float-left exit-register'} onClick={closeModal} src={lcexit}/>
                     </div>
                     <p className={'register-inputs-text code-left'}>Введите промокод:</p>
-                    <input type="text" className={'register-inputs code-bottom'} maxLength={20} placeholder="Ваш код"/>
+                    <input type="text" id={'addCode'} className={'register-inputs code-bottom'} maxLength={20} placeholder="Ваш код"/>
                     <div className="register-button-container">
                         <button type={'submit'} id={'submit'} className={'register-button code-down'}>Отправить</button>
                     </div>

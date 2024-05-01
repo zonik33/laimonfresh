@@ -73,29 +73,23 @@ export default function Winners(props) {
     //         });
     // };
 
-    // const fetchWinners = async (page = 1, text) => {
-    //     try {
-    //         const response = await axios.get(
-    //             `https://nloto-promo.ru/backend/api/winners?page=${page}`
-    //         );
-    //
-    //         const totalPages = response.data.data.pages;
-    //         setTotalPages(totalPages || 1); // Set totalPages to 1 if it is falsy
-    //         const data = response.data.data.items;
-    //
-    //         setWinners(data);
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // };
-    //
-    // useEffect(() => {
-    //     fetchWinners().catch((error) => {
-    //         console.log(error);
-    //     });
-    // }, []);
+    const getWinners = async () => {
+        try {
+            const response = await axios.get(
+                `https://promo.laimonfresh.ch/backend/api/getWinners`
+            );
+            const data = response.data.data.items;
+            setWinners(data);
 
-
+        } catch (error) {
+            console.log(error);
+        }
+    };
+    useEffect(() => {
+        getWinners().catch((error) => {
+            console.log(error);
+        });
+    }, []);
 
 
     function toggleDropdown() {

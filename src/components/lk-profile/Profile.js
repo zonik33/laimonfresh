@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import lemondots from "../../image/lemon.png";
 import dotslemon from "../../image/Dots.svg";
 import logo2 from "../../image/logo2.png";
@@ -114,6 +114,13 @@ export default function Profile(props) {
         document.documentElement.classList.remove('menu-open'); // Удаление класса 'menu-open' у элемента <html>
         document.body.classList.remove('menu-open');
     }
+    const [profile, setProfile] = useState(null);
+
+    useEffect(() => {
+        const storedProfile = JSON.parse(localStorage.getItem('profile'));
+        setProfile(storedProfile);
+    }, []);
+
     return (
         <header>
             <img src={lemondots} alt="Photo" className="left-photo"/>
@@ -173,7 +180,7 @@ export default function Profile(props) {
 
             </div>
             <div className={'accordion-example faq lc'}>
-                <div className={'winners-text for-faq lc'}>Здравствуйте, Александр Ф.
+                <div className={'winners-text for-faq lc'}>Здравствуйте, {profile && profile.profile && profile.profile.name}
                     <div>
                         <img className={'bottle-float-left exit-lc'} onClick={selectChoose} src={lcexit}/>
                         <p className={'bottle-float-left exit-lc-text'}>выйти</p>
