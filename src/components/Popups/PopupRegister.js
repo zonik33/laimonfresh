@@ -164,7 +164,7 @@ export default function PopupRegister(props) {
             <form action={'https://promo.laimonfresh.ch/backend/api/registerByEmail'}
                   method={'POST'} onSubmit={postRegister}
                   id={'form-register-password'} className={'form-register'}>
-                <div className={'container-register'}>
+                <div className={'container-register-modal'}>
                     <div><span className={'register-main-text'}>Регистрация</span>
                         <img className={'bottle-float-left exit-register'} onClick={closeModal} src={lcexit}/>
                     </div>
@@ -216,7 +216,7 @@ export default function PopupRegister(props) {
                            className={'register-inputs'} placeholder="Подтвердить пароль"
                            required/>
                     <div>
-                        <label className={'popup-p-center'}>
+                        <label className={'popup-p-center p-span-1'}>
                             <input
                                 type="checkbox"
                                 id="rules1"
@@ -231,7 +231,7 @@ export default function PopupRegister(props) {
 
                     </div>
                     <div>
-                        <label className={'popup-p-center'}>
+                        <label className={'popup-p-center p-span'}>
                             <input
                                 type="checkbox"
                                 id="rules2"

@@ -527,6 +527,7 @@ export default function Faq(props) {
                         </Accordion>
 
                         <div className={'faq-question'}>
+                            <p className={'faq-question-p'}>если у вас остались вопросы, напишите нам.</p>
                             <a>info@promo.laimonfresh.ch</a>
                         </div>
                         <img className={'bottle-float-left example-tree5 faq-down'} src={owntreep}/>

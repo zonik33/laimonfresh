@@ -6,15 +6,48 @@ import gps from "../image/img_5.png";
 import berry from "../image/img_22.png";
 import leftlinehow from "../image/img_8.png";
 import lastone from "../image/img_24.png";
+import prizeImage1 from "../image/img_21.png";
+import prizeImage2 from "../image/img_21.png";
+import prizeImage3 from "../image/img_21.png";
+import prizeImage4 from "../image/img_21.png";
 
 
 export default function Winners(props) {
     const [phoneInput, setPhoneInput] = useState('');
     const [registrationError, setRegistrationError] = useState('');
-    const [winners, setWinners] = useState([]);
     const [totalPages, setTotalPages] = useState(null); // Используем useState для хранения значения totalPages
     let [currentPage, setCurrentPage] = useState(1); // Используем useState для хранения значения currentPage
     const [selectedPage, setSelectedPage] = useState(currentPage);
+    const [winnersMain, setWinnersMain] = useState([]);
+    const [winners, setWinners] = useState([]);
+
+    useEffect(() => {
+        const fetchWinners = async () => {
+            try {
+                const response = await axios.get('https://promo.laimonfresh.ch/backend/api/getWinners?type=main');
+                const winnersData = response.data.data.rows || [];
+                setWinners(winnersData);
+            } catch (error) {
+                console.error('Error fetching winners data:', error);
+            }
+        };
+
+        fetchWinners();
+    }, []);
+
+    useEffect(() => {
+        const fetchWinners = async () => {
+            try {
+                const response = await axios.get('https://promo.laimonfresh.ch/backend/api/getWinners?type=main');
+                const winnersData = response.data.data.rows || [];
+                setWinnersMain(winnersData);
+            } catch (error) {
+                console.error('Error fetching winners data:', error);
+            }
+        };
+
+        fetchWinners();
+    }, []);
 
     const listRef = useRef(null);
 
@@ -44,6 +77,27 @@ export default function Winners(props) {
 
     const [isActive, setIsActive] = useState(false);
     const [selectedItem, setSelectedItem] = useState('');
+    const [currentWeekWinners, setCurrentWeekWinners] = useState([]);
+    const [weekWinners, setWeekWinners] = useState([]);
+    useEffect(() => {
+        const fetchWeekWinners = async () => {
+            try {
+                const response = await axios.get('https://promo.laimonfresh.ch/backend/api/getWinners?type=week');
+                const data = response.data.data.rows || [];
+                setWeekWinners(data);
+
+                // Устанавливаем данные weekWinners в currentWeekWinners
+                if (data.length > 0) {
+                    setCurrentWeekWinners(data);
+                }
+            } catch (error) {
+                console.error('Error fetching week winners:', error);
+            }
+        };
+
+        fetchWeekWinners();
+
+    }, []);
 
     const selectToggle = () => {
         setIsActive(!isActive);
@@ -271,6 +325,8 @@ export default function Winners(props) {
         }
 
 
+
+
         function moveList() {
             const activeElement = listElement.querySelector(`#page-${currentPage}`);
             if (activeElement) {
@@ -346,6 +402,12 @@ export default function Winners(props) {
             }, 0);
         }
     }, [activeSection]);
+    const prizeImages = {
+        1: prizeImage1,
+        2: prizeImage2,
+        3: prizeImage3,
+        4: prizeImage4,
+    };
 
     return (
         <div className={'winners'} id={'winners'} ref={winnersRef}>
@@ -358,44 +420,22 @@ export default function Winners(props) {
                                 <div className={'table'}>
                                     <div className={'table-body'}>
                                         <div className={'table-body'}>
-                                            <div className={'table-body-winners'}>
-                                                <div className={'head-colm-prize1'}>1
-                                                </div>
-                                                <div className={'head-colm-name'}>Анастасия А.
-                                                </div>
-                                                <div className={'head-colm-phone1'}>25982628750
-                                                </div>
-                                                <div className={'head-colm-date1'}>
-                                                    <img className={'winners-prize-img'} alt={'Приз'}
-                                                         src={winnersprize}/>
-                                                </div>
-                                            </div>
-                                            <div className={'table-body-winners'}>
-                                                <div className={'head-colm-prize1'}>2
-                                                </div>
-                                                <div className={'head-colm-name'}>Антон Г.
-                                                </div>
-                                                <div className={'head-colm-phone1'}>25982628750
-                                                </div>
-                                                <div className={'head-colm-date1'}>
-                                                    <img className={'winners-prize-img'} alt={'Приз'}
-                                                         src={winnersprize}/>
-                                                </div>
-                                            </div>
-                                            <div className={'table-body-winners'}>
-                                                <div className={'head-colm-prize1'}>3
-                                                </div>
-                                                <div className={'head-colm-name'}>Светлана С.
-                                                </div>
-                                                <div className={'head-colm-phone1'}>25982628750
-                                                </div>
-                                                <div className={'head-colm-date1'}>
-                                                    <img className={'winners-prize-img'} alt={'Приз'}
-                                                         src={winnersprize}/>
-                                                </div>
+                                            <div className={'winners-tabs-content'}>
+                                                {currentWeekWinners.slice(0, 3).map((winner, index) => (
+                                                    <div key={index} className={'table-body-winners'}>
+                                                        <div className={'head-colm-prize1'}>{index + 1}</div>
+                                                        <div className={'head-colm-name'}>{winner.name}</div>
+                                                        <div className={'head-colm-phone1'}>{winner.code}</div>
+                                                        <div className={'head-colm-date1'}>
+                                                            <img className={'winners-prize-img'} alt={'Приз'}
+                                                                 src={prizeImages[winner.prize_id]}/>
+                                                        </div>
+                                                    </div>
+                                                ))}
                                             </div>
                                             <div className={'example-all-test winners-test'}>
-                                                <a className={'winners-all-a winners-test-a'} href={'winners'}>Весь список</a>
+                                                <a className={'winners-all-a winners-test-a'} href={'winners'}>Весь
+                                                    список</a>
                                             </div>
                                             <img className={'bottle-float-left gps-kalin'} src={gps}/>
                                             <img className={'bottle-float-left berry-prizes'} src={berry}/>
@@ -409,18 +449,18 @@ export default function Winners(props) {
                                             <img className={'bottle-float-left gps-eka'} src={gps}/>
                                             <img className={'bottle-float-left gps-novo'} src={gps}/>
                                             <img className={'bottle-float-left gps-vlad'} src={gps}/>
-                                            <div className={'table-body-winners'}>
-                                                <div className={'head-colm-prize1'}>1
-                                                </div>
-                                                <div className={'head-colm-name'}>Галина Г.
-                                                </div>
-                                                <div className={'head-colm-phone1'}>25982628750
-                                                </div>
-                                                <div className={'head-colm-date1-phone'}>
-                                                    <img className={'winners-prize-img'} alt={'Приз'}
-                                                         src={winnersprize}/>
-                                                </div>
-                                            </div>
+
+                                                {winnersMain && winnersMain.map((winner, index) => (
+                                                    <div key={index} className={'table-body-winners down'}>
+                                                        <div className={'head-colm-prize1'}>{index + 1}</div>
+                                                        <div className={'head-colm-name'}>{winner.name}</div>
+                                                        <div className={'head-colm-phone1'}>{winner.code}</div>
+                                                        <div className={'head-colm-date1'}>
+                                                            <img className={'winners-prize-img'} alt={'Приз'} src={prizeImages[winner.prize_id]}/>
+                                                        </div>
+                                                    </div>
+                                                ))}
+
 
                                         </div>
 

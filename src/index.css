@@ -1683,11 +1683,11 @@ height: auto;
   z-index: 4;
 }
 .bottle-float-left.gps-vlad {
-  position: absolute;
-  margin-top: 32.33vw;
-  margin-left: -21.97vw;
-  width: 3.47vw;
   height: 4.24vw;
+  margin-left: -20.2vw;
+  margin-top: 32.93vw;
+  position: absolute;
+  width: 3.47vw;
   z-index: 4;
 }
 .bottle-float-left.gps-chel {
@@ -1864,7 +1864,7 @@ height: auto;
   font-weight: 700;
   line-height: 2.08vw;
   position: absolute;
-  margin: 35.2vw 23vw 5vw 67.6vw;
+  margin: 35.7vw 23vw 5vw 66.6vw;
   z-index: 1;
 }
 .absolute-text.vlad {
@@ -1874,7 +1874,7 @@ height: auto;
   font-weight: 700;
   line-height: 2.08vw;
   position: absolute;
-  margin: 36.5vw 21vw 5vw 6.6vw;
+  margin: 37.8vw 21vw 5vw 7.6vw;
   z-index: 1;
 }
 .absolute-text.nv{
@@ -1966,6 +1966,10 @@ height: auto;
   font-size: 1.74vw;
   line-height: 1.67vw;
   margin-bottom: 21vw;
+}
+.faq-question-p {
+  margin-top: 5vw;
+
 }
 .faq-question a:hover{
 }
@@ -2199,7 +2203,7 @@ height: auto;
   position: relative;
   overflow: hidden;
   width: 79.24vw;
-  height: 20vw;
+  height: 60vw;
 }
 .simplebar-wrapper {
   height: auto !important;
@@ -3183,6 +3187,7 @@ backface-visibility: hidden;
   margin-left: 14.4vw;
 }
 .winners-main.center {
+
   margin-top: 10vw;
   margin-left: 41.8vw;
   margin-bottom: 9.9vw;
@@ -3811,7 +3816,8 @@ input.new-code:hover {
   height: 4.17vw;
   border-radius: 1.04vw;
   background-color: rgba(255, 255, 255, 1);
-  padding-left: 1.5vw; /* Пример отступа в 1.5vw с левой стороны */
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;/* Пример отступа в 1.5vw с левой стороны */
 }
 .register-inputs:focus {
   outline: none;
@@ -5232,9 +5238,337 @@ cursor: pointer;
   .shadow-dont {
     display: flex;
   }
+  .faq-question {
+    margin-left: 1vw;
+    /*text-decoration: underline;*/
+    color: rgba(0, 98, 65, 1);
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 4.80vw;
+    line-height: 4.60vw;
+    margin-bottom: 21vw;
+  }
+  .faq-question-p {
+    font-size: 4.80vw;
+    line-height: 5.6vw;
+    margin-top: 5vw;
+
+  }
+  .winners-main.center {
+    text-align: center;
+    margin-top: 20vw;
+    margin-left: 9.8vw;
+    margin-bottom: 9.9vw;
+  }
+  .winners-main.left {
+    margin-left: 10.4vw;
+  }
+  .slick-slider.winnersSearch {
+    width: 45.57vw;
+    height: 10.17vw;
+    margin-left: 24.5vw;
+    margin-top: 7vw;
+  }
+  .slick-prev.winnersSearch {
+    margin-left: 55vw !important;
+  }
+  .slick-slider.winnersSearchCodes {
+    width: 22.57vw;
+    height: 4.17vw;
+    margin-left: 0.5vw;
+    margin-top: 3vw;
+  }
+  .winnersSearch .slick-list {
+    margin-left: 7vw !important;
+  }
 
 
+  .winnersSearch .slick-prev::before
+  {
+    margin-left: -13vw !important;
+    margin-top: 3vw !important;
+  }
+  .winnersSearch .slick-next::before
+  {
+    margin-left: 1vw !important;
+    margin-top: 3vw !important;
+  }
+  .slider-search-winnersall {
+    padding: 0.89vw 0.6vw 0.89vw 0.6vw;
+    margin: 3vw 0vw 0vw 0vw;
+    border-radius: 1.04vw;
+    color: white;
+    font-family: 'Acrom Medium', AutumnSweaterLaimon, sans-serif;
+    font-weight: 400;
+    font-size: 5.15vw;
+    line-height: 9.71vw;
+    background-color: rgba(0, 98, 65, 1);
+  }
+  .scroll-container {
+    position: relative;
+    overflow: hidden;
+    width: 94.24vw;
+    height: 80vw;
+  }
+  .custom-simple-bar2 .simplebar-track.simplebar-vertical {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.7);
+    left: 0;
+    margin-left: 92.6vw;
+    margin-top: 0.75vw;
+    width: 0.44vw !important;
+    height: auto;
+    opacity: 1 !important;
+    border-radius: 50px;
+    z-index: 2;
+    overflow: visible;
+  }
+  .bottle-float-left.example-tree6.winners {
+    position: absolute;
+    margin-top: 11.05vw;
+    margin-left: -46.67vw;
+    width: 12vw;
+    height: auto;
+    z-index: 1;
+    animation: sbs-231425214 15s infinite linear;
+    backface-visibility: hidden;
+  }
+  .winners-text.second-second {
+    text-align: center;
+    margin: 6vw 0 2.2vw 6.1vw;
+  }
+  .bottle-float-left.example-tree5.faq-down-down {
+    z-index: 4;
+    margin-top: -17.95vw;
+    margin-left: -38.87vw;
+    width: 25.01vw;
+    height: auto;
+  }
+  .bottle-float-left.lime-winners {
+    position: absolute;
+    margin-top: -59.17vw;
+    margin-left: -2.97vw;
+    right: 0;
+    width: 8vw;
+    height: 17vw;
+    z-index: 4;
+  }
+  .bottle-float-left.berry-winners {
+    position: absolute;
+    margin-top: -17.75vw;
+    margin-left: 32.93vw;
+    width: 12.06vw;
+    height: 12.26vw;
+    transform: scaleX(-1);
+    animation: sbs-23142-left 15s infinite linear;
+    backface-visibility: hidden;
+  }
+  .bottle-float-left.example-tree5.winners {
+    width: 10vw;
+    margin-top: -13.95vw;
+    margin-left: 26.33vw;
+    transform: rotate(-104deg);
+    height: auto;
+    animation: sbs-231425214-52151 15s infinite linear;
+    backface-visibility: hidden;
+  }
+  .bottle-float-left.example-tree5 {
+    position: absolute;
+    margin-top: -13.95vw;
+    margin-left: 27.33vw;
+    width: 9.53vw;
+    height: auto;
+    z-index: 4;
+    animation: sbs-231425214-52151 15s infinite linear;
+    backface-visibility: hidden;
+  }
+  .bottle-float-left.example-tree6 {
+    position: absolute;
+    margin-top: 18.05vw;
+    margin-left: -48.67vw;
+    width: 9.47vw;
+    height: auto;
+    z-index: 0;
+    animation: sbs-231425214 15s infinite linear;
+    backface-visibility: hidden;
+  }
+  .bottle-float-left.example-tree5.faq-down {
+    z-index: 4;
+    margin-top: -19.95vw;
+    margin-left: -45.87vw;
+    width: 25.01vw;
+    height: auto;
+  }
+  .bottle-float-left.lime-faq {
+    position: absolute;
+    margin-top: -46.47vw;
+    margin-left: -2.97vw;
+    right: 0;
+    width: 9vw;
+    height: auto;
+    z-index: 4;
+  }
+  .popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+  }
 
+  #popup-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+  }
+
+  #popup-content {
+    /*background-color: #FFFFFF4D;*/
+    width: 73.69vw;
+    height: auto;
+    padding: 2.6vw 6.94vw;
+    border-radius: 1.83vw;
+    margin-top: 1vw;
+    /*scrollbar-width: thin;*/
+    /*scrollbar-color: gray lightgray;*/
+  }
+  .register-inputs {
+    border: 1px white solid;
+    color: rgba(0, 98, 65, 1);
+    font-family: Inter;
+    font-size: 4.18vw;
+    line-height: 4.46vw;
+    width: 58.31vw;
+    height: 9.17vw;
+    border-radius: 3.04vw;
+    background-color: rgba(255, 255, 255, 1);
+    padding-left: 4.5vw;
+    padding-right: 4.5vw;
+  }
+  .register-inputs-text {
+    text-align: left;
+    color: rgba(58, 58, 58, 1);
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 3.18vw;
+    line-height: 3.46vw;
+    margin-bottom: 0.5vw;
+    margin-left: 2vw;
+  }
+  .register-main-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: rgba(0, 98, 65, 1);
+    font-family: 'AutumnSweaterLaimon', Arial, sans-serif;
+    font-size: 6.78vw;
+    font-weight: 400;
+    margin-top: 4vw;
+    margin-left: -3vw;
+    line-height: 6.61vw;
+  }
+  .bottle-float-left.exit-register {
+    right: 0;
+    padding-right: 1.7vw;
+    margin: -9.2vw 0vw 0vw 35vw;
+    position: absolute;
+    width: 10.4vw;
+    height: auto;
+    z-index: 5;
+    transition: opacity 0.3s ease;
+  }
+  .register-button {
+    font-size: 4.74vw;
+    font-family: Inter;
+    line-height: 4.67vw;
+    font-weight: 600;
+    width: 56.08vw;
+    height: 11.07vw;
+    border-radius: 3.68vw;
+    color: white;
+    background: linear-gradient(to right, rgba(255, 200, 40, 1), rgba(227, 29, 26, 1) 40%);
+    border: 1px solid white;
+  }
+  .popup-p-center p {
+    font-family: Inter;
+    font-size: 3.18vw;
+    font-weight: 400;
+    line-height: 3.46vw;
+    width: 44.65vw;
+    height: 18.27vw;
+    margin: -1.5vw 0 -9vw 2.1vw;
+    color: rgba(0, 98, 65, 1);
+  }
+  .register-inputs-text.login {
+    text-align: left;
+    color: rgba(58, 58, 58, 1);
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 4.18vw;
+    line-height: 4.46vw;
+    margin-bottom: 0.5vw;
+    margin-left: 1.5vw;
+  }
+  .Modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: #FFFFFF4D;
+    width: 73.69vw !important;
+    height: auto;
+    min-height: 89vw;
+    padding: 2.46vw 6vw;
+    border-radius: 1.83vw;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  .content-container-modal {
+    margin-left: 5vw;
+  }
+  .container-register-modal {
+    padding: 0vw 5.5vw;
+  }
+  .custom-checkbox {
+    position: relative;
+    display: inline-block;
+    width: 6.2vw;
+    height: 6.2vw;
+    background-color: #FFFFFF;
+    border-radius: 3.44vw;
+    margin-left: -3vw;
+    margin-top: 3.65vw;
+    margin-bottom: 1.3vw;
+  }
+  .custom-checkbox:before {
+    margin-top: 0.5vw;
+    margin-left: 0.1vw;
+    content: '';
+    display: inline-block;
+    width: 3.46vw;
+    height: 3.135vw;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAbCAYAAAAULC3gAAABDUlEQVR4Xu3VvQ2CUBDAcUZgBMMCMgIjWLqFbiAb2IsNMziAjXYkVNraamLyRjjvKRfNceID3kfjP7nEROD94iUSRf9Ym0kaFUn9HP05aC+MwoFmFL/EX21MOFC2m2cCBmey4tc6CwBinPxwq+q4nDKIJ0yDmOHscaC+nyAIBs/OcNY4SkOCYJpfI9dnE4LyhgG2EikvGBBWIuUUAx0rkXKCAYOVSI3DCO8SMFyJ1DiMbptcPm5Ux2tltBKp8Rgd+wuPyxQffOZn/cwORlckS/6Qvih7GErfOBBlH0MNQLnDUD1Q7jGUAcofhupA+cdQX1BhMJSAao8vDNWJ8o2hRFQoDPVGKXwJL/jXtnoAhFi9qWoMdaEAAAAASUVORK5CYII=);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.1s ease-in;
+  }
+  .p-span-1 p {
+    margin: -8vw 0vw -11vw 9vw;
+  }
+  .p-span p {
+    margin: -8vw 0vw -5vw 9vw;
+  }
 
 
 
