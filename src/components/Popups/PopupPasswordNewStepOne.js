@@ -16,6 +16,7 @@ export default function PopupPasswordNewStepOne(props) {
     }
     const [email, setEmail] = useState('');
     const [isValidEmail, setIsValidEmail] = useState(true);
+    const [registrationErrorEm, setRegistrationErrorEm] = useState('');
 
     const handleChange = (e) => {
         setEmail(e.target.value);
@@ -47,9 +48,9 @@ export default function PopupPasswordNewStepOne(props) {
             if (response.data.result === false) {
                 console.log(response.data.result);
                 if (response.data.error.email) {
-                    setRegistrationError(response.data.error.email[0]);
+                    setRegistrationErrorEm(response.data.error.email[0]);
                 } else {
-                    setRegistrationError('');
+                    setRegistrationErrorEm('');
                 }
             } else {
                 openPopup3();
@@ -70,6 +71,10 @@ export default function PopupPasswordNewStepOne(props) {
     function closePopup2() {
         document.getElementById("popup-password-step-one").style.display = "none";
         document.body.classList.remove("no-scroll");
+        document.getElementById('emailResend').value = '';
+        setRegistrationErrorEm('');
+        document.getElementById('emailResend').classList.remove('error');
+
     }
     return (
         <div id="popup-password-step-one" className="popup">
@@ -80,7 +85,7 @@ export default function PopupPasswordNewStepOne(props) {
                   id={'form-resend-password'} className={'form-register'}>
                 <div className={'container-register'}>
                     <div><span className={'register-main-text'}>Восстановление пароля</span>
-                        <img className={'bottle-float-left exit-register'} onClick={closePopup2} src={lcexit}/>
+                        <img className={'bottle-float-left exit-register email-remember'} onClick={closePopup2} src={lcexit}/>
                     </div>
                     <p className={'register-inputs-text new-password'}>Введите Е-mail, указанный при регистрации. <br></br>Мы
                         вышлем туда ссылку для смены пароля.</p>
@@ -88,13 +93,16 @@ export default function PopupPasswordNewStepOne(props) {
                     <input
                         type="email"
                         id={'emailResend'}
-                        className={`register-inputs ${isValidEmail ? "" : "invalid"}`}
+                        className={`register-inputs ${registrationErrorEm ? 'error' : ''}`}
                         placeholder="E-mail"
                         value={email}
                         onChange={handleChange}
                         onBlur={handleBlur}
+                        required
+
                     />
-                    {!isValidEmail && <p className="error-message password-one">Пожалуйста, введите корректный email адрес.</p>}
+                    {registrationErrorEm &&  <div className={'error-block-phone only-for-phone'} style={{color: '#FFFFFF'}}>{registrationErrorEm}</div>}
+                    <span id="phoneError" className="error"></span>
                     <div className="register-button-container">
                         <button type={'submit'} id={'submit'} className={'register-button code-down'}>Отправить</button>
                     </div>

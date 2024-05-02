@@ -7,8 +7,45 @@ import PopupLogin from "./PopupLogin";
 import axios from "axios";
 export default function PopupRegister(props) {
     const {showPopup, closeModal } = props;
+    const [registrationError1, setRegistrationError1] = useState('');
+    const [registrationError2, setRegistrationError2] = useState('');
     const [registrationError, setRegistrationError] = useState('');
+    const [registrationError4, setRegistrationError4] = useState('');
+    const [registrationError5, setRegistrationError5] = useState('');
+    const [registrationError6, setRegistrationError6] = useState('');
+    const [registrationError7, setRegistrationError7] = useState('');
+    const [registrationError8, setRegistrationError8] = useState('');
+    const [agree4Error, setAgree4Error] = useState(false);
+    const [agree5Error, setAgree5Error] = useState(false);
+    const [agree4Checked, setAgree4Checked] = useState(false);
+    const [agree5Checked, setAgree5Checked] = useState(false);
+    const [nameError, setNameError] = useState('');
+    const [emailError, setEmailError] = useState('');
+    const [text1Error, setText1Error] = useState('');
     const [isPopupLoginOpen, setIsPopupLoginOpen] = useState(false);
+    const [allCheckboxesChecked, setAllCheckboxesChecked] = useState(false);
+
+    const handleAgree4Change = () => {
+        setAgree4Checked(agree4Checked => {
+            checkAllCheckboxes(!agree4Checked, agree5Checked);
+            return !agree4Checked;
+        });
+    }
+
+    const handleAgree5Change = () => {
+        setAgree5Checked(agree5Checked => {
+            checkAllCheckboxes(agree4Checked, !agree5Checked);
+            return !agree5Checked;
+        });
+    }
+
+    const checkAllCheckboxes = (agree4, agree5) => {
+        if (agree4 && agree5) {
+            setAllCheckboxesChecked(true);
+        } else {
+            setAllCheckboxesChecked(false);
+        }
+    };
 
     const openPopupLogin = () => {
         closeModal();
@@ -51,8 +88,10 @@ export default function PopupRegister(props) {
         const city = document.getElementById('city');
         const pass = document.getElementById('pass');
         const passR = document.getElementById('passR');
-        const rules1 = document.getElementById('rules1');
-        const rules2 = document.getElementById('rules2');
+        const rules1Checkbox1 = document.getElementById('rules1');
+        const rules1 = rules1Checkbox1.checked;
+        const rules2Checkbox2 = document.getElementById('rules2');
+        const rules2 = rules2Checkbox2.checked;
 
         if (isRequestPending) {
             return;
@@ -71,18 +110,19 @@ export default function PopupRegister(props) {
         formData.append('rules1', rules1 ? '1' : '0');
         formData.append('rules2', rules2 ? '1' : '0');
         try {
+
             const response = await axios.post('https://promo.laimonfresh.ch/backend/api/registerByEmail', formData);
             if (response.data.result === false) {
                 console.log(response.data.result);
                 if (response.data.error.login) {
-                    setRegistrationError(response.data.error.login[0]);
+                    setRegistrationError1(response.data.error.login[0]);
                 } else {
-                    setRegistrationError('');
+                    setRegistrationError1('');
                 }
                 if (response.data.error.name) {
-                    setRegistrationError(response.data.error.name[0]);
+                    setRegistrationError2(response.data.error.name[0]);
                 } else {
-                    setRegistrationError('');
+                    setRegistrationError2('');
                 }
                 if (response.data.error.phone) {
                     setRegistrationError(response.data.error.phone[0]);
@@ -90,24 +130,24 @@ export default function PopupRegister(props) {
                     setRegistrationError('');
                 }
                 if (response.data.error.pass) {
-                    setRegistrationError(response.data.error.pass[0]);
+                    setRegistrationError4(response.data.error.pass[0]);
                 } else {
-                    setRegistrationError('');
+                    setRegistrationError4('');
                 }
                 if (response.data.error.passR) {
-                    setRegistrationError(response.data.error.passR[0]);
+                    setRegistrationError5(response.data.error.passR[0]);
                 } else {
-                    setRegistrationError('');
+                    setRegistrationError5('');
                 }
                 if (response.data.error.rules1) {
-                    setRegistrationError(response.data.error.rules1[0]);
+                    setAgree4Error(response.data.error.rules1[0]);
                 } else {
-                    setRegistrationError('');
+                    setAgree4Error('');
                 }
                 if (response.data.error.rules2) {
-                    setRegistrationError(response.data.error.rules2[0]);
+                    setAgree5Error(response.data.error.rules2[0]);
                 } else {
-                    setRegistrationError('');
+                    setAgree5Error('');
                 }
             } else {
                 // handleSuccess()
@@ -169,30 +209,35 @@ export default function PopupRegister(props) {
                         <img className={'bottle-float-left exit-register'} onClick={closeModal} src={lcexit}/>
                     </div>
                     <p className={'register-inputs-text login'}>Фио</p>
-                    <input type="text" className={'register-inputs'} id={'name'} placeholder="ФИО"
+                    <input type="text" className={`register-inputs ${registrationError2 ? 'error' : ''}`} id={'name'}
                            required
+                           placeholder="ФИО"
+
                     />
+                    {registrationError2 &&  <div className={'error-block-phone test-register'} style={{color: '#FFFFFF'}}>{registrationError2}</div>}
+                    <span id="phoneError" className="error"></span>
                     <p className={'register-inputs-text login'}>E-mail</p>
                     <input
                         type="email"
                         id={'login'}
-                        className={`register-inputs ${isValidEmail ? "" : "invalid"}`}
+                        className={`register-inputs ${registrationError1 ? 'error' : ''}`}
                         placeholder="E-mail"
                         value={email}
-                        required
                         onChange={handleChange}
                         onBlur={handleBlur}
+                        required
                     />
-                    {!isValidEmail && <p className="error-message">Пожалуйста, введите корректный email адрес.</p>}
+                    {registrationError1 &&  <div className={'error-block-phone test-register'} style={{color: '#FFFFFF'}}>{registrationError1}</div>}
+                    <span id="phoneError" className="error"></span>
                     <p className={'register-inputs-text login'}>Телефон</p>
                     <PhoneInput id='phone' name='login' className={'register-inputs'}
-                                registrationError={registrationError} required/>
-                    {registrationError && <div className={'error-block-phone only-for-phone'}
+                                registrationError={registrationError} />
+                    {registrationError && <div className={'error-block-phone test-register'}
                                                style={{color: '#FFFFFF'}}>{registrationError}</div>}
                     <span id="phoneError" className="error"></span>
                     <p className={'register-inputs-text login'}>Город</p>
                     <input list="cities" id={'city'} className={'register-inputs'} placeholder="Город"
-                           required
+                        required
                            onKeyDown={e => e.preventDefault()}
                            onKeyPress={e => e.preventDefault()}
                     />
@@ -205,25 +250,31 @@ export default function PopupRegister(props) {
                     </datalist>
                     <p className={'register-inputs-text login'}>Пароль</p>
                     <input
-                        type="password" className={'register-inputs'}
+                        type="password" className={`register-inputs ${registrationError4 ? 'error' : ''}`}
                         id={'pass'}
                         placeholder="Пароль"
-                        required/>
-
+                        required
+                        />
+                    {registrationError4 &&  <div className={'error-block-phone test-register'} style={{color: '#FFFFFF'}}>{registrationError4}</div>}
+                    <span id="phoneError" className="error"></span>
                     <p className={'register-inputs-text login'}>Подтвердить пароль</p>
                     <input type="password"
+                           required
                            id={'passR'}
-                           className={'register-inputs'} placeholder="Подтвердить пароль"
-                           required/>
+                           className={`register-inputs ${registrationError5 ? 'error' : ''}`} placeholder="Подтвердить пароль"
+                           />
+                    {registrationError5 &&  <div className={'error-block-phone test-register'} style={{color: '#FFFFFF'}}>{registrationError5}</div>}
+                    <span id="phoneError" className="error"></span>
                     <div>
                         <label className={'popup-p-center p-span-1'}>
                             <input
                                 type="checkbox"
                                 id="rules1"
-                                className={`input-checkbox`}
-                                required
+                                className={`input-checkbox ${!agree4Checked ? 'error' : ''}`}
+                                onChange={handleAgree4Change}
+
                             />
-                            <span className={`custom-checkbox`}></span>
+                            <span className={`custom-checkbox ${!agree4Checked ? 'error' : ''}`}></span>
                             <p>Я согласен с <a href={'#'} className={"text-laimon"} target="_blank">Правилами акции</a>
                             </p>
                             <span id="phoneError" className="error"></span>
@@ -235,9 +286,11 @@ export default function PopupRegister(props) {
                             <input
                                 type="checkbox"
                                 id="rules2"
-                                className={`input-checkbox`}
+                                className={`input-checkbox ${!agree5Checked ? 'error' : ''}`}
+                                onChange={handleAgree5Change}
+
                             />
-                            <span className={`custom-checkbox`}></span>
+                            <span className={`custom-checkbox ${!agree5Checked ? 'error' : ''}`}></span>
                             <p>Я согласен на обработку <br></br>моих персональных данных</p>
                             <span id="phoneError" className="error"></span>
                         </label>

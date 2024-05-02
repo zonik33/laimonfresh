@@ -593,6 +593,16 @@ body {
   justify-content: space-between;
 
 }
+
+
+.error-message {
+  color: red; /* Цвет текста ошибки */
+  /* Дополнительные стили по необходимости */
+}
+.custom-checkbox.error {
+  border: 0.07vw solid red;
+}
+
 .MuiAccordion-rounded:last-child {
   margin-bottom: 25vw;
 }
@@ -1223,7 +1233,31 @@ body {
   font-size: 1.18vw;
   line-height: 1.46vw;
   margin-bottom: 0.5vw;
-  margin-left: 2vw;
+  margin-left: 1vw;
+}
+.error-block-phone {
+  position: absolute;
+  color: #cd0b0b !important;
+  margin: 0.1vw 1vw 0vw 1vw;
+  font-size: 1vw;
+}
+.error-block-phone.test-register {
+  position: absolute;
+  color: #cd0b0b !important;
+  margin: -0.7vw 1vw 0vw 1vw;
+  font-size: 1vw;
+}
+.error-block-phone.test-code-add {
+  position: absolute;
+  color: #cd0b0b !important;
+  margin: 1.2vw 1vw 0vw 1vw;
+  font-size: 1vw;
+}
+.error-block-phone.code-bottom {
+  position: absolute;
+  color: #cd0b0b !important;
+  margin: -0.7vw 1vw 0vw 1vw;
+  font-size: 1vw;
 }
 .register-inputs-text.login {
   text-align: left;
@@ -3838,6 +3872,28 @@ input.new-code:hover {
   align-items: center;
   margin: 3vw;
 }
+.custom-checkbox.error {
+  border: 0.07vw solid red;
+}
+.register-inputs.error {
+  border: 1px solid red;
+}
+.input-checkbox.error {
+  border: 1px solid red;
+}
+
+.register-inputs-text.error {
+  border: 1px solid red;
+}
+.form-input-email.error {
+  border: 1px solid red;
+}
+.form-textarea-message.error {
+  border: 1px solid red;
+}
+.popupPassword-input.error {
+  border: 1px solid red;
+}
 
 .register-button {
   font-size: 1.74vw;
@@ -3917,6 +3973,7 @@ cursor: pointer;
 .custom-checkbox.error {
   border: 0.07vw solid red;
 }
+
 .input-checkbox:checked + .custom-checkbox:before {
   transform: translate(-50%, -50%) scale(1);
 }
@@ -5484,6 +5541,12 @@ cursor: pointer;
     z-index: 5;
     transition: opacity 0.3s ease;
   }
+  .bottle-float-left.email-remember {
+    margin: -15.2vw 0vw 0vw 35vw;
+  }
+  .bottle-float-left.success-email {
+    margin: -20.2vw 0vw 0vw 35vw;
+  }
   .register-button {
     font-size: 4.74vw;
     font-family: Inter;
@@ -5495,6 +5558,18 @@ cursor: pointer;
     color: white;
     background: linear-gradient(to right, rgba(255, 200, 40, 1), rgba(227, 29, 26, 1) 40%);
     border: 1px solid white;
+  }
+  .bottle-float-left.success-image {
+    padding-right: 0.7vw;
+    margin: -14.2vw 0vw 0vw -7.6vw;
+    position: absolute;
+    width: 13.81vw;
+    height: 12.39vw;
+    z-index: 5;
+    transition: opacity 0.3s ease;
+  }
+  .register-main-text.top-margin {
+    margin-top: 19.5vw;
   }
   .popup-p-center p {
     font-family: Inter;
@@ -5567,9 +5642,43 @@ cursor: pointer;
     margin: -8vw 0vw -11vw 9vw;
   }
   .p-span p {
-    margin: -8vw 0vw -5vw 9vw;
+    margin: -8vw 0vw -9vw 9vw;
+  }
+  .error-block-phone {
+    position: absolute;
+    color: #cd0b0b !important;
+    margin: 0.5vw 1vw 0vw 2vw;
+    font-size: 2.1vw;
+  }
+  .error-block-phone.test-register {
+    position: absolute;
+    color: #cd0b0b !important;
+    margin: -0.7vw 1vw 0vw 2vw;
+    font-size: 2.5vw;
   }
 
+  .register-inputs-text.code-left {
+    text-align: center;
+    color: rgba(0, 98, 65, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-bottom: 5vw;
+    margin-left: 0vw;
+  }
+  .register-inputs.code-bottom {
+    margin-bottom: 2.8vw;
+  }
+  .register-button.code-down {
+    margin-bottom: -1.7vw;
+  }
+  .error-block-phone.test-code-add {
+    position: absolute;
+    color: #cd0b0b !important;
+    margin: -1.8vw 1vw 0vw 3vw;
+    font-size: 2vw;
+  }
 
 
 

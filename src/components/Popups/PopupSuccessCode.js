@@ -17,6 +17,10 @@ export default function PopupSuccessCode(props) {
     function closePopup2() {
         document.getElementById("popup-complete").style.display = "none";
         document.body.classList.remove("no-scroll");
+        reloadPage1()
+    }
+    function reloadPage1() {
+        window.location.href = window.location.href;
     }
     return (
         <div id="popup-complete" className="popup">

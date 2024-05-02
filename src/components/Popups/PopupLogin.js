@@ -10,7 +10,8 @@ import Api from "../Api/Api";
 import setAuthToken from "../Api/Api";
 export default function PopupLogin(props) {
     const [isPopupOpen, setIsPopupOpen] = useState(null);
-    const [registrationError, setRegistrationError] = useState('');
+    const [registrationErrorEm, setRegistrationErrorEm] = useState('');
+    const [registrationErrorPas, setRegistrationErrorPas] = useState('');
     const openPopup = (popupName) => {
         if (!isPopupOpen) {
             closePopup2()
@@ -53,6 +54,12 @@ export default function PopupLogin(props) {
     function closePopup2() {
         document.getElementById("popup-login").style.display = "none";
         document.body.classList.remove("no-scroll");
+        document.getElementById('logins').value = '';
+        document.getElementById('password').value = '';
+        setRegistrationErrorEm('');
+        setRegistrationErrorPas('');
+        document.getElementById('logins').classList.remove('error');
+        document.getElementById('password').classList.remove('error');
     }
     let isRequestPending = false;
 
@@ -79,14 +86,14 @@ debugger;
             if (response.data.result === false) {
                 console.log(response.data.result);
                 if (response.data.error.login) {
-                    setRegistrationError(response.data.error.login[0]);
+                    setRegistrationErrorEm(response.data.error.login[0]);
                 } else {
-                    setRegistrationError('');
+                    setRegistrationErrorEm('');
                 }
                 if (response.data.error.password) {
-                    setRegistrationError(response.data.error.password[0]);
+                    setRegistrationErrorPas(response.data.error.password[0]);
                 } else {
-                    setRegistrationError('');
+                    setRegistrationErrorPas('');
                 }
             } else {
                 // handleSuccess()
@@ -122,31 +129,39 @@ debugger;
                         <img className={'bottle-float-left exit-register'} onClick={closePopup2} src={lcexit}/>
                     </div>
                     <p className={'register-inputs-text login-next'}>E-mail</p>
-                    <input type="email" className={'register-inputs'}
+                    <input type="email" className={`register-inputs ${registrationErrorEm ? 'error' : ''}`}
                            id={'logins'}
                            placeholder="E-mail"/>
+                    {registrationErrorEm && <div className={'error-block-phone only-for-phone'}
+                                                 style={{color: '#FFFFFF'}}>{registrationErrorEm}</div>}
+                    <span id="phoneError" className="error"></span>
                     <p className={'register-inputs-text login-next'}>Пароль</p>
                     <input
                         type="password"
-                        id={'password'} className={'register-inputs login'} placeholder="Пароль"/>
-                    <p className={'register-inputs-text login-next'}><a className={"text-laimon"} onClick={openPopup2}>Забыли пароль?</a></p>
+                        id={'password'} className={`register-inputs login ${registrationErrorPas ? 'error' : ''}`}
+                        placeholder="Пароль"/>
+                    {registrationErrorPas && <div className={'error-block-phone only-for-phone'}
+                                                  style={{color: '#FFFFFF'}}>{registrationErrorPas}</div>}
+                    <span id="phoneError" className="error"></span>
+                    <p className={'register-inputs-text login-next'}><a className={"text-laimon"} onClick={openPopup2}>Забыли
+                        пароль?</a></p>
                     <div className="register-button-container">
                         <button type={'submit'} id={'submit'} className={'register-button'}>Войти</button>
                     </div>
                     <div className="popup-p-center down-login">
                         <p>
                             Нет аккаунта?{" "}
-                            <a className="text-laimon"  onClick={() => openPopup('Register')}>
+                            <a className="text-laimon" onClick={() => openPopup('Register')}>
                                 Зарегистрируйтесь
                             </a>
                             {isPopupOpen === 'Register' && (
-                                <PopupRegister showPopup={true} closeModal={closePopup} />
+                                <PopupRegister showPopup={true} closeModal={closePopup}/>
                             )}
                         </p>
                     </div>
                 </div>
             </form>
-            {/*<button onClick={togglePopup}>Закрыть</button>*/}
+                    {/*<button onClick={togglePopup}>Закрыть</button>*/}
                 </div>
             </div>
         </div>

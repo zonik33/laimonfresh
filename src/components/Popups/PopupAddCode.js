@@ -10,6 +10,7 @@ export default function PopupAddCode(props) {
     const { showPopup, closeModal } = props;
     const [showSuccessPopup, setShowSuccessPopup] = useState(false);
     const [registrationError, setRegistrationError] = useState('');
+    const [registrationErrorEm, setRegistrationErrorEm] = useState('');
     const popupRef = useRef(null);
 
     function openPopup2() {
@@ -33,7 +34,7 @@ export default function PopupAddCode(props) {
         //     formData.append('promocode', promocodeValue);
         // }
         formData.append('code', code.value);
-
+debugger
 
         try {
             const response = await axios.post('https://promo.laimonfresh.ch/backend/api/registerCode', formData, {
@@ -42,14 +43,10 @@ export default function PopupAddCode(props) {
                 }
             });
             if (response.data.result === false) {
-                console.log(response.data.result);
-                console.log(response.data.error.code);
-                console.log(response.data.result.code);
-                console.log(response.data.result.error.code[0]);
-                if (response.data.result.error.code) {
-                    setRegistrationError(response.data.result.error.code[0]);
+                if (response.data.error.code) {
+                    setRegistrationErrorEm(response.data.error.code[0]);
                 } else {
-                    setRegistrationError('');
+                    setRegistrationErrorEm('');
                 }
             } else {
                 openPopup2()
@@ -68,7 +65,7 @@ export default function PopupAddCode(props) {
         <Modal closeTimeoutMS={300}
                ref={popupRef}
                className={{
-                   base: 'Modal',
+                   base: 'Modal-add',
                    afterOpen: showPopup ? 'ReactModal__Overlay--after-open' : '',
                    beforeClose: showPopup ? 'ReactModal__Overlay--before-close' : '',
                }}
@@ -100,12 +97,19 @@ export default function PopupAddCode(props) {
                   ref={popupRef}
                   method={'POST'} onSubmit={postAddCode}
                   id={'form-add-code'} className={'form-register'}>
-                <div className={'container-register'}>
+                <div className={'container-register-modal'}>
                     <div><span className={'register-main-text'}>Загрузка кода</span>
                         <img className={'bottle-float-left exit-register'} onClick={closeModal} src={lcexit}/>
                     </div>
                     <p className={'register-inputs-text code-left'}>Введите промокод:</p>
-                    <input type="text" id={'addCode'} className={'register-inputs code-bottom'} maxLength={20} placeholder="Ваш код"/>
+                    <input type="text" id={'addCode'}
+                           required
+                           className={`register-inputs code-bottom ${registrationErrorEm ? 'error' : ''}`}
+                           maxLength={11}
+                           placeholder="Ваш код"/>
+                    {registrationErrorEm && <div className={'error-block-phone test-code-add'}
+                                                 style={{color: '#FFFFFF'}}>{registrationErrorEm}</div>}
+                    <span id="phoneError" className="error"></span>
                     <div className="register-button-container">
                         <button type={'submit'} id={'submit'} className={'register-button code-down'}>Отправить</button>
                     </div>

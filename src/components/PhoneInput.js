@@ -10,7 +10,6 @@ class PhoneInput extends React.Component {
                 maskChar="_"
                 className={`register-inputs ${registrationError ? 'error' : ''}`}
                 id='phone'
-                required
             />
 
         );
