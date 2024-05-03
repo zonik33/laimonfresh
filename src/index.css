@@ -1076,7 +1076,7 @@ body {
   width: 100%;
   height: 5.21vw;
   overflow: hidden;
-  background: #286043;
+  background: rgba(0, 98, 65, 1)
 }
 #wave-test-44 {
   display: block;
@@ -1091,7 +1091,7 @@ body {
   border-radius: 100%;
   width: 100%;
   height: 15.63vw;
-  background: #286043;
+  background: rgba(0, 98, 65, 1);
   right: -25%;
   top: 1.04vw;
 }
@@ -2021,9 +2021,21 @@ height: auto;
 }
 .faq-question-p {
   margin-top: 5vw;
+  margin-bottom: 2vw;
+  font-size: 1.39vw;
+  line-height: 1.67vw;
+  font-family: Inter;
+  font-weight: 400;
 
 }
 .faq-question a:hover{
+}
+.faq-question-p-a {
+  font-size: 1.74vw;
+  line-height: 2.08vw;
+  font-family: Inter;
+  font-weight: 400;
+  text-decoration: underline;
 }
 .MuiAccordion-root:first-child {
   background-color: white; /* Цвет фона для закрытого аккордеона */
@@ -2828,7 +2840,7 @@ display: none !important;
   height: 4.58vw;
   border-radius: 0.97vw;
   color: white;
-  background-color: #286043;
+  background-color: rgba(0, 98, 65, 1);
   border: 1px solid white;
 }
 .footer-right-button {
@@ -5383,7 +5395,7 @@ cursor: pointer;
     height: 13.6vw;
     border-radius: 4.97vw;
     color: white;
-    background-color: #286043;
+    background-color: rgba(0, 98, 65, 1);
     border: 1px solid white;
   }
   .footer-right-button {
@@ -5578,6 +5590,16 @@ cursor: pointer;
     animation: sbs-231425214 25s infinite linear;
     backface-visibility: hidden;
   }
+  .bottle-float-left.example-tree5-5 {
+    position: absolute;
+    margin-top: -13.95vw;
+    margin-left: 24.33vw;
+    width: 11.53vw;
+    height: auto;
+    z-index: 4;
+    animation: sbs-231425214 25s infinite linear;
+    backface-visibility: hidden;
+  }
   .bottle-float-left.example-tree6 {
     position: absolute;
     margin-top: 18.05vw;
@@ -5589,10 +5611,10 @@ cursor: pointer;
     backface-visibility: hidden;
   }
   .bottle-float-left.example-tree5.faq-down {
-    z-index: 4;
-    margin-top: -19.95vw;
+    z-index: 5;
+    margin-top: -20.95vw;
     margin-left: -45.87vw;
-    width: 25.01vw;
+    width: 24.01vw;
     height: auto;
   }
   .bottle-float-left.lime-faq {
@@ -6011,7 +6033,24 @@ cursor: pointer;
     display: flex !important;
     margin: 13vw 0vw -3vw -16.5vw;
   }
+  .faq-question-p {
+    margin-top: 5vw;
+    margin-bottom: 2vw;
+    font-size: 5.33vw;
+    line-height: 6.40vw;
+    font-family: Inter;
+    font-weight: 400;
 
+  }
+  .faq-question a:hover{
+  }
+  .faq-question-p-a {
+    font-size: 6.67vw;
+    line-height: 8vw;
+    font-family: Inter;
+    font-weight: 400;
+    text-decoration: underline;
+  }
 
 
 

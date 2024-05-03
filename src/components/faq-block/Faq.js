@@ -230,7 +230,7 @@ export default function Faq(props) {
             <div className={'accordion-example faq'}>
                 <div className={'winners-text for-faq faq'}>Часто задаваемые вопросы
                 </div>
-                <img className={'bottle-float-left example-tree5'} src={tree5555}/>
+                <img className={'bottle-float-left example-tree5-5'} src={tree5555}/>
                 <img className={'bottle-float-left example-tree6'} src={tree6666}/>
                 <div className={'mega-test'}>
                     <div className={`centered-container ${classes.root}`}>
@@ -527,8 +527,8 @@ export default function Faq(props) {
                         </Accordion>
 
                         <div className={'faq-question'}>
-                            <p className={'faq-question-p'}>если у вас остались вопросы, напишите нам.</p>
-                            <a>info@promo.laimonfresh.ch</a>
+                            <p className={'faq-question-p'}>если у вас остались вопросы, напишите нам</p>
+                            <a className={'faq-question-p-a'}>info@promo.laimonfresh.ch</a>
                         </div>
                         <img className={'bottle-float-left example-tree5 faq-down'} src={owntreep}/>
                         <img className={'bottle-float-left lime-faq'} src={limeright1}/>
