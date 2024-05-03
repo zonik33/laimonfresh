@@ -441,7 +441,7 @@ export default function Winners(props) {
                                             <img className={'bottle-float-left berry-prizes'} src={berry}/>
                                             <img className={'bottle-float-left down-line-winners'} src={lastone}/>
                                             <p className="absolute-text kalin">Калининград</p>
-                                            <div className={'winners-text winners-main second'}>Главный приз
+                                            <div className={'winners-text winners-main second'}>Главный призер
                                             </div>
                                             <p className="absolute-text eka">Екатеринбург</p>
                                             <p className="absolute-text novo">Новосибирск</p>

@@ -861,7 +861,7 @@ body {
   width: 95vw;
 }
 .content-container-footer {
-  background-color: #286043;
+  background-color: rgba(0, 98, 65, 1);
   display: flex;
   flex-direction: column;
   align-items: center; /* Чтобы разместить по центру по вертикали */
@@ -1042,7 +1042,7 @@ body {
   width: 100%;
   height: 5.21vw;
   overflow: hidden;
-  background: #286043;
+  background: rgba(0, 98, 65, 1);
 }
 #wave-test-4 {
   display: block;
@@ -1057,7 +1057,7 @@ body {
   border-radius: 100%;
   width: 100%;
   height: 15.63vw;
-  background: #286043;
+  background: rgba(0, 98, 65, 1);
   right: -25%;
   top: 1.04vw;
 }
@@ -1132,6 +1132,9 @@ body {
   height: 100%;
   z-index: 5;
 }
+.bottle-float-left-mobile {
+  display: none;
+}
 .mega-test {
   position: relative;
   z-index: 5;
@@ -1205,7 +1208,7 @@ body {
   justify-content: center; /* Центрирование по горизонтали */
   align-items: center; /* Центрирование по вертикали */
   height: 100%; /* Для центрирования по вертикали */
-  color: rgba(0, 98, 65, 1);
+  color: rgba(163, 212, 65, 1);
   font-family: 'AutumnSweaterLaimon', Arial, sans-serif;
   font-size: 2.78vw;
   font-weight: 400;
@@ -1227,7 +1230,7 @@ body {
 }
 .register-inputs-text {
   text-align: left;
-  color: rgba(58, 58, 58, 1);
+  color: rgba(255, 255, 255, 1);
   font-family: Inter;
   font-weight: 400;
   font-size: 1.18vw;
@@ -1237,31 +1240,31 @@ body {
 }
 .error-block-phone {
   position: absolute;
-  color: #cd0b0b !important;
+  color: #ef7b7b !important;
   margin: 0.1vw 1vw 0vw 1vw;
   font-size: 1vw;
 }
 .error-block-phone.test-register {
   position: absolute;
-  color: #cd0b0b !important;
+  color: #ef7b7b !important;
   margin: -0.7vw 1vw 0vw 1vw;
   font-size: 1vw;
 }
 .error-block-phone.test-code-add {
   position: absolute;
-  color: #cd0b0b !important;
+  color: #ef7b7b !important;
   margin: 1.2vw 1vw 0vw 1vw;
   font-size: 1vw;
 }
 .error-block-phone.code-bottom {
   position: absolute;
-  color: #cd0b0b !important;
+  color: #ef7b7b !important;
   margin: -0.7vw 1vw 0vw 1vw;
   font-size: 1vw;
 }
 .register-inputs-text.login {
   text-align: left;
-  color: rgba(58, 58, 58, 1);
+  color: rgba(255, 255, 255, 1);
   font-family: Inter;
   font-weight: 400;
   font-size: 1.18vw;
@@ -1280,7 +1283,7 @@ body {
   margin-left: 0vw;
 }
 .register-inputs-text.new-password {
-  color: rgba(0, 98, 65, 1);
+  color: rgba(163, 212, 65, 1);
   display: flex; /* Используем Flexbox */
   justify-content: center; /* Центрирование по горизонтали */
   align-items: center; /* Центрирование по вертикали */
@@ -1309,6 +1312,9 @@ body {
   flex: 0;
   padding: 0 0 0 0;
   position: relative;
+}
+.bigline-container-mobile {
+  display: none;
 }
 
 .bottle-float-left.two {
@@ -1495,13 +1501,13 @@ height: auto;
 }
 .error-message {
   position: absolute;
-  color: #cd0b0b;
+  color: #ef7b7b;
   margin: -0.5vw 1vw 0vw 1vw;
   font-size: 1vw;
 }
 .error-message.password-one {
   position: absolute;
-  color: #cd0b0b;
+  color: #ef7b7b;
   margin: 0.5vw 1vw 0vw 2vw;
   font-size: 1vw;
 }
@@ -1576,13 +1582,11 @@ height: auto;
   height: 4.24vw;
   z-index: 4;
 }
+.bootle-float-left-mobile-gps {
+  display: none;
+}
 .bottle-float-left.nv {
-  position: absolute;
-  margin-top: -4.3vw;
-  margin-left: 27.83vw;
-  width: 3.4%;
-  height: 1.1%;
-  z-index: 4;
+  display: none;
 }
 .bottle-float-left.gps-down-product {
   position: absolute;
@@ -1619,6 +1623,7 @@ height: auto;
   width: 97vw;
   height: 198vw;
   z-index: 1;
+  pointer-events: none;
 }
 .bottle-float-left.down-line-winners {
   position: absolute;
@@ -1732,6 +1737,9 @@ height: auto;
   height: 4.24vw;
   z-index: 4;
 }
+.bottle-float-left-mobile-gps {
+  display: none;
+}
 .bottle-float-left.show {
   display: none;
 }
@@ -1744,6 +1752,9 @@ height: auto;
   z-index: 4;
   animation: sbs-23142 15s infinite linear; /* Применяем анимацию petal-animation на протяжении 5 секунд бесконечно */
   backface-visibility: hidden;
+}
+.bottle-float-left.lefttree-mobile {
+  display: none;
 }
 .bottle-float-left.lefttree-how {
   position: absolute;
@@ -1838,6 +1849,7 @@ height: auto;
 }
 
 .bottle-float-left.bigline {
+  pointer-events: none;
   position: absolute;
   margin-top: 44.73vw;
   margin-left: 66.03vw;
@@ -1845,6 +1857,9 @@ height: auto;
   height: 226vw;
   z-index: 1;
   right: 0;
+}
+.bottle-float-left.bigline-mobile {
+  display: none;
 }
 .container-absolute {
   position: relative; /* Устанавливаем родительский контейнер как position: relative; */
@@ -1863,6 +1878,9 @@ height: auto;
   line-height: 2.08vw;
   position: absolute;
   margin: 44vw 21vw 5vw 12vw;
+}
+.absolute-text-mobile {
+  display: none;
 }
 .absolute-text.sochi {
   color: rgba(255, 255, 255, 0.5);
@@ -2188,6 +2206,20 @@ height: auto;
   margin-left: 61.5vw;
   margin-top: -5vw;
 }
+.slick-slider.prizesShow {
+  width: 47.57vw;
+  height: 16.17vw;
+  margin-left: 8.5vw;
+  margin-top: -1vw;
+  margin-bottom: -3vw;
+}
+.slick-slider.prizesShowMoment {
+  width: 47.57vw;
+  height: 16.17vw;
+  margin-left: 8.5vw;
+  margin-top: -1vw;
+  margin-bottom: -3vw;
+}
 .winnersSearch .slick-list {
   margin-left: 7vw !important;
 }
@@ -2212,6 +2244,22 @@ height: auto;
   margin-top: 7vw;
   border-radius: 2.43vw;
 }
+.prizesShow .slick-prev {
+  margin-left: 2.3vw !important;
+  margin-top: 0vw;
+}
+.prizesShow .slick-next {
+  margin-right: 1vw !important;
+  margin-top: 0vw !important;
+}
+.prizesShowMoment .slick-prev {
+display: none !important;
+}
+.prizesShowMoment .slick-next {
+  display: none !important;
+}
+
+
 .center .slick-list {
   margin-left: 0vw !important;
 }
@@ -2898,7 +2946,7 @@ backface-visibility: hidden;
 }
 .prizes-text-next {
   margin: 3vw auto;
-  margin-top: 7vw;
+  margin-top: 3vw;
   margin-left: -7.8vw;
   text-transform: uppercase;
   text-align: center;
@@ -3010,7 +3058,7 @@ backface-visibility: hidden;
   margin: 4.5vw 0vw 0vw 5.5vw;
 }
 .million {
-  margin: -6.7vw 0vw 0vw 1.9vw;
+  margin: -3vw 0vw 0vw 1.9vw;
   width: 26.88vw;
   height: 26.88vw;
 }
@@ -3040,7 +3088,7 @@ backface-visibility: hidden;
   flex-direction: column;
 }
 .right-p-name {
-  margin: -0.65vw 0vw 2vw 4vw;
+  margin: -1.15vw 0vw 2vw 4vw;
   font-family: Inter;
   font-weight: 700;
   font-size: 1.74vw;
@@ -3088,15 +3136,37 @@ backface-visibility: hidden;
   line-height: 1.60vw;
   color: white;
 }
-
+.right-p-prizes-moment {
+  margin-top: -0.5vw;
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 1.53vw;
+  line-height: 1.60vw;
+  color: white;
+}
 .images {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
+.images-moment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: -1.2vw;
+  margin-top: 1vw;
+}
 .images-phone {
   display: none;
+}
+.images-moment img {
+  width: 8.75vw;
+  height: auto;
+  margin: 1.15vw;
+  margin-top: 0vw;
+  margin-left: 1vw;
 }
 
 .images img {
@@ -3111,6 +3181,13 @@ backface-visibility: hidden;
   text-align: center;
   margin-right: -0.7vw;
   margin-left: 4.1vw;
+}
+.image-container-moment {
+  text-align: center;
+  margin-right: -0.7vw;
+  margin-left: 4.1vw;
+  margin-top: -1vw;
+  margin-bottom: -1vw;
 }
 .image-container-for-phone {
   display: none;
@@ -3915,7 +3992,7 @@ input.new-code:hover {
 }
 .text-laimon {
   text-decoration: underline;
-  color: rgba(219, 2, 72, 1) !important;
+  color: rgba(163, 212, 65, 1) !important;
 }
 .text-laimon:hover {
 cursor: pointer;
@@ -3939,7 +4016,7 @@ cursor: pointer;
   width: 23.65vw;
   height: 2.27vw;
   margin: -3.5vw 0 1vw 3.1vw;
-  color: rgba(0, 98, 65, 1);
+  color: rgba(255, 255, 255, 1);
 
 }
 .popup-p-center{
@@ -4002,7 +4079,7 @@ cursor: pointer;
   transform: translate(-50%, -50%);
 }
 .popup-content-code {
-  background-color: rgba(162, 212, 65, 1);
+  background-color: rgba(0, 98, 65, 1);
   border-radius: 1.83vw;
   margin-top: 0;
   padding: 2.6vw 6.94vw;
@@ -4404,6 +4481,28 @@ cursor: pointer;
     animation: sbs-23142 25s infinite linear;
     backface-visibility: hidden;
   }
+  .bottle-float-left.lefttree-mobile {
+    display: flex;
+    position: absolute;
+    margin-top: -25.4vw;
+    margin-left: 12.53vw;
+    width: 31vw;
+    height: auto;
+    z-index: 6;
+    animation: sbs-23142 25s infinite linear;
+    backface-visibility: hidden;
+  }
+  .bottle-float-left.lefttree-mobile.bon1 {
+    display: flex;
+    position: absolute;
+    margin-top: 6.6vw;
+    margin-left: 0.53vw;
+    width: 29vw;
+    height: auto;
+    z-index: 10;
+    animation: sbs-231425214 25s infinite linear;
+    backface-visibility: hidden;
+  }
   .bottle-float-left.two {
     position: absolute;
     margin-top: 11.75vw;
@@ -4734,7 +4833,7 @@ cursor: pointer;
 
   .how-prizes {
     background-size: cover;
-    height: 470vw;
+    height: 339vw;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     min-width: initial;
@@ -4775,8 +4874,8 @@ cursor: pointer;
   }
   .prizes-text-next {
     margin: 27vw auto;
-    margin-top: 5.8vw;
-    margin-left: 1.78vw;
+    margin-top: 10.8vw;
+    margin-left: 4.78vw;
     text-transform: uppercase;
     text-align: center;
     font-weight: 400;
@@ -4784,7 +4883,7 @@ cursor: pointer;
     color: #EEF3EC;
     font-size: 10vw;
     line-height: 9.6vw;
-    width: 88.75vw;
+    width: 82.75vw;
     height: 8.05vw;
   }
   .prizes-content {
@@ -4823,7 +4922,7 @@ cursor: pointer;
     overflow: hidden;
   }
   .right-p-name {
-    margin: 217.55vw 0vw 5vw 1.4vw;
+    margin: 80.55vw 0vw 5vw 1.4vw;
     font-family: Inter;
     font-weight: 700;
     font-size: 6.67vw;
@@ -4832,7 +4931,7 @@ cursor: pointer;
     color: white;
   }
   .images img {
-    margin-left: -2vw;
+    margin-left: 3vw;
     margin-right: 0vw;
     width: 48.75vw;
     height: 8.75vw;
@@ -4854,6 +4953,9 @@ cursor: pointer;
 
   .image-container {
     text-align: center;
+  }
+  .image-container.enable {
+    display: none;
   }
   .image-container-for-phone {
     position: absolute;
@@ -4889,7 +4991,7 @@ cursor: pointer;
 }
 
   .image-container p {
-    margin: 1.19vw -3vw 4vw -6.6vw;
+    margin: 1.19vw -3vw 4vw -9.6vw;
   }
   .right-p-prizes {
     font-family: Inter;
@@ -4899,13 +5001,28 @@ cursor: pointer;
     color: white;
   }
   .right-p-name.down {
-    margin: 16.35vw 0vw 2vw 2vw;
+    margin: 64vw 0vw 5vw 4vw;
   }
   .container-sub {
     /*margin-top: 13vw;*/
     /*margin-left: 2vw;*/
     width: 84.69vw;
     height: 33.35vw;
+  }
+  .slick-slider.prizesShow {
+    width: 70.57vw;
+    height: 15.17vw;
+    margin-left: 8.5vw;
+    margin-top: -1vw;
+    margin-bottom: -3vw;
+  }
+  .prizesShow .slick-prev {
+    margin-left: -10.3vw !important;
+    margin-top: 10vw;
+  }
+  .prizesShow .slick-next {
+    margin-right: 0vw !important;
+    margin-top: 11vw !important;
   }
   .new-block {
     background-color: rgba(140, 196, 155, 1);
@@ -4939,7 +5056,20 @@ cursor: pointer;
     color: rgba(255, 255, 255, 1);
   }
   .winners-text.second {
+    position: relative;
+    z-index: 2;
     margin: 14vw 0vw 8vw 16vw;
+  }
+  .bottle-float-left.berry-prizes {
+    z-index: 1;
+    position: absolute;
+    margin-top: -292.05vw;
+    margin-left: -31.07vw;
+    width: 18.06vw;
+    height: auto;
+    transform: scaleX(-1);
+    animation: sbs-23142-left 15s infinite linear;
+    backface-visibility: hidden;
   }
   .table {
     border-radius: 0.520833333333333vw;
@@ -4989,10 +5119,17 @@ cursor: pointer;
     height: 15.56vw;
   }
   header .menu.show {
-    background-image: linear-gradient(#00622a, #009640, #03be53);
+    background-image: linear-gradient(#284031, #266a41, #03be53);
     display: flex;
     opacity: 1;
     width: 100vw;
+  }
+  img.bigline-mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999; /* число можно выбрать любое большое */
   }
   header .main-menu {
     display: flex;
@@ -5116,10 +5253,12 @@ cursor: pointer;
   }
   .bottle-float-left.example-tree5.main-down {
     z-index: 4;
-    margin-top: -50.95vw;
-    margin-left: -47.87vw;
-    width: 21.01vw;
+    margin-top: -54.95vw;
+    margin-left: -45.87vw;
+    width: 26.01vw;
     height: auto;
+    animation: sbs-231425214-52151 25s infinite linear;
+    backface-visibility: hidden;
   }
 
 
@@ -5130,7 +5269,7 @@ cursor: pointer;
 
   .accordion-example {
     position: relative;
-    z-index: 0;
+    z-index: 1;
     padding-top: 41vw;
     padding-bottom: 0vw;
     /* overflow: hidden; */
@@ -5261,7 +5400,7 @@ cursor: pointer;
     border: 1px;
   }
   .content-container-footer {
-    background-color: #286043;
+    background-color: rgba(0, 98, 65, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -5431,12 +5570,12 @@ cursor: pointer;
   }
   .bottle-float-left.example-tree5 {
     position: absolute;
-    margin-top: -13.95vw;
-    margin-left: 27.33vw;
-    width: 9.53vw;
+    margin-top: -56.95vw;
+    margin-left: 16.33vw;
+    width: 22.53vw;
     height: auto;
     z-index: 4;
-    animation: sbs-231425214-52151 15s infinite linear;
+    animation: sbs-231425214 25s infinite linear;
     backface-visibility: hidden;
   }
   .bottle-float-left.example-tree6 {
@@ -5510,7 +5649,7 @@ cursor: pointer;
   }
   .register-inputs-text {
     text-align: left;
-    color: rgba(58, 58, 58, 1);
+    color: rgba(255, 255, 255, 1);
     font-family: Inter;
     font-weight: 400;
     font-size: 3.18vw;
@@ -5523,7 +5662,7 @@ cursor: pointer;
     justify-content: center;
     align-items: center;
     height: 100%;
-    color: rgba(0, 98, 65, 1);
+    color: rgba(163, 212, 65, 1);
     font-family: 'AutumnSweaterLaimon', Arial, sans-serif;
     font-size: 6.78vw;
     font-weight: 400;
@@ -5579,11 +5718,11 @@ cursor: pointer;
     width: 44.65vw;
     height: 18.27vw;
     margin: -1.5vw 0 -9vw 2.1vw;
-    color: rgba(0, 98, 65, 1);
+    color: rgba(255, 255, 255, 1);
   }
   .register-inputs-text.login {
     text-align: left;
-    color: rgba(58, 58, 58, 1);
+    color: rgba(255, 255, 255, 1);
     font-family: Inter;
     font-weight: 400;
     font-size: 4.18vw;
@@ -5646,13 +5785,13 @@ cursor: pointer;
   }
   .error-block-phone {
     position: absolute;
-    color: #cd0b0b !important;
+    color: #ef7b7b !important;
     margin: 0.5vw 1vw 0vw 2vw;
     font-size: 2.1vw;
   }
   .error-block-phone.test-register {
     position: absolute;
-    color: #cd0b0b !important;
+    color: #ef7b7b !important;
     margin: -0.7vw 1vw 0vw 2vw;
     font-size: 2.5vw;
   }
@@ -5671,19 +5810,207 @@ cursor: pointer;
     margin-bottom: 2.8vw;
   }
   .register-button.code-down {
-    margin-bottom: -1.7vw;
+    margin-top: 3vw;
+    margin-bottom: -0.7vw;
   }
   .error-block-phone.test-code-add {
     position: absolute;
-    color: #cd0b0b !important;
+    color: #ef7b7b !important;
     margin: -1.8vw 1vw 0vw 3vw;
     font-size: 2vw;
   }
+  .bottle-float-left.bigline-mobile {
+    display: block;
+    position: absolute;
+    margin-top: -34.65vw;
+    margin-left: -78.17vw;
+    width: 80.5%;
+    height: auto;
+    z-index: 5;
+  }
+  .bottle-float-left-mobile {
+    display: flex;
+    position: absolute !important;
+    margin-top: 86.35vw;
+    right: 0;
+    /* margin-left: -1.17vw; */
+    width: 99.27vw !important;
+    height: 1250.47vw !important;
+    z-index: 3 !important;
+    pointer-events: none;
+  }
+  .bottle-float-left.bigline {
+    display: none;
+  }
+  .bigline-container-mobile {
+    display: block;
+    padding: 0 0 0 0;
+    position: relative;
+  }
+  .bottle-float-left.down-line-winners {
+   display: none;
+  }
+  .bottle-float-left.gps-kalin {
+    display: none;
+  }
+  .bottle-float-left.gps-vlad {
+    display: none;
+  }
+  .bottle-float-left.gps-novo {
+    display: none;
+  }
+  .bottle-float-left.gps-eka {
+    display: none;
+  }
+  .example-all-test {
+    margin-bottom: 32vw;
+    margin-top: 2.652083vw;
+  }
 
+  .bottle-float-left-mobile-gps {
+    display: flex;
+    position: absolute;
+    margin-top: -73.3vw;
+    margin-left: 85.83vw;
+    width: 5.47vw;
+    height: auto;
+    z-index: 5 !important;
 
+  }
+  .bottle-float-left-mobile-gps.bon1 {
+    display: flex;
+    position: absolute;
+    margin-top: -10.3vw;
+    margin-left: 54.83vw;
+    width: 5.47vw;
+    height: auto;
+    z-index: 5 !important;
 
+  }
+  .bottle-float-left-mobile-gps.bon2 {
+    display: flex;
+    position: absolute;
+    margin-top: 150.7vw;
+    margin-left: 16.83vw;
+    width: 5.47vw;
+    height: auto;
+    z-index: 5 !important;
 
+  }
+  .bottle-float-left-mobile-gps.bon3 {
+    display: flex;
+    position: absolute;
+    margin-top: 153.4vw;
+    margin-left: 80.53vw;
+    width: 5.47vw;
+    height: auto;
+    z-index: 5 !important;
 
+  }
+  .bottle-float-left-mobile-gps.bon4 {
+    display: flex;
+    position: absolute;
+    margin-top: 170.9vw;
+    margin-left: 1.23vw;
+    width: 5.47vw;
+    height: auto;
+    z-index: 5 !important;
+
+  }
+  .absolute-text-mobile {
+    z-index: 5;
+    display: flex;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Inter";
+    font-size: 2.13vw;
+    font-weight: 700;
+    line-height: 2.08vw;
+    position: absolute;
+    margin: -64vw 21vw 5vw 85vw;
+  }
+  .absolute-text-mobile.bon1 {
+    z-index: 5;
+    display: flex;
+    color: rgba(0, 98, 65, 0.5);
+    font-family: "Inter";
+    font-size: 2.13vw;
+    font-weight: 700;
+    line-height: 2.08vw;
+    position: absolute;
+    margin: -1vw 21vw 5vw 43vw;
+  }
+  .absolute-text-mobile.bon2 {
+    z-index: 5;
+    display: flex;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Inter";
+    font-size: 2.13vw;
+    font-weight: 700;
+    line-height: 2.08vw;
+    position: absolute;
+    margin: 160vw 21vw 5vw 16vw;
+  }
+  .absolute-text-mobile.bon3 {
+    z-index: 5;
+    display: flex;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Inter";
+    font-size: 2.13vw;
+    font-weight: 700;
+    line-height: 2.08vw;
+    position: absolute;
+    margin-top: 163.4vw;
+    margin-left: 80.53vw;
+  }
+  .absolute-text-mobile.bon4 {
+    z-index: 5;
+    display: flex;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Inter";
+    font-size: 2.13vw;
+    font-weight: 700;
+    line-height: 2.08vw;
+    position: absolute;
+    margin-top: 180.9vw;
+    margin-left: 0.23vw;
+  }
+  bottle-left {
+    flex: 1;
+    padding: 0 0 0 0;
+  }
+
+  .images-moment img {
+    margin-left: 3vw;
+    margin-right: 0vw;
+    width: 48.75vw;
+    height: 8.75vw;
+    height: auto;
+  }
+  .slick-slider.prizesShowMoment {
+    width: 70.57vw;
+    height: 15.17vw;
+    margin-left: 8.5vw;
+    margin-top: -1vw;
+    margin-bottom: -3vw;
+  }
+  .right-p-prizes-moment {
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 5.87vw;
+    line-height: 6.13vw;
+    color: white;
+  }
+  .image-container-moment p {
+    margin: 1.19vw -3vw 4vw -9.6vw;
+  }
+  .prizesShowMoment .slick-prev {
+    display: flex !important;
+    margin: 13vw 0vw 0vw -10.5vw;
+  }
+  .prizesShowMoment .slick-next {
+    display: flex !important;
+    margin: 13vw 0vw -3vw -16.5vw;
+  }
 
 
 

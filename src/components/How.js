@@ -1,12 +1,14 @@
 import React, {useState} from "react";
-import how1 from '../image/img_14.png'
+import how1 from '../image/img_39.png'
 import how2 from '../image/img_15.png'
 import how3 from '../image/img_16.png'
+import lefttreebon1 from "../image/img_40.png";
 import lefttree from "../image/img_4.png";
 import toptreeprod from "../image/img_10.png";
 import leftlinehow from "../image/img_8.png";
 import berry from "../image/img_22.png";
 import gps from "../image/img_5.png";
+import gpsmobile from "../image/gps-mobile.png";
 export default function How (props) {
 
         return (
@@ -21,6 +23,11 @@ export default function How (props) {
                     <img className={'bottle-float-left gps-sochi'} src={gps}/>
                     <img className={'bottle-float-left berry'} src={berry}/>
                     <img className={'bottle-float-left gps-chel'} src={gps}/>
+                    <img className={'bottle-float-left-mobile-gps bon3'} src={gpsmobile}/>
+                    <img className={'bottle-float-left-mobile-gps bon4'} src={gpsmobile}/>
+                    <img className={'bottle-float-left lefttree-mobile bon1'} src={lefttreebon1}/>
+                    <p className="absolute-text-mobile bon3">Сочи</p>
+                    <p className="absolute-text-mobile bon4">Челябинск</p>
                     <div className={'center-container'}>
                         <div className="container-sub">
                             <div className="main-div">

@@ -9,7 +9,7 @@ import inputcode from "../../image/img_2.png";
 import prizevk from "../../image/img_18.png";
 import prizeyandex from "../../image/img_19.png";
 import prizesert from "../../image/img_20.png";
-import lcexit from "../../image/img_30.png";
+import lcexit from "../../image/img_52.png";
 import SliderCodes from "./SliderCodes";
 import SliderCards from "./SliderCards";
 import PopupRegister from "../Popups/PopupRegister";
@@ -25,6 +25,18 @@ import berry from "../../image/img_22.png";
 import tree5555 from "../../image/img_25.png";
 import owntree from "../../image/img_34.png";
 import limeright from "../../image/img_12.png";
+import Slider from "react-slick";
+import prizeozon from "../../image/img_41.png";
+import prizekass from "../../image/img_42.png";
+import prizesm from "../../image/img_43.png";
+import prizega from "../../image/img_44.png";
+import prizemv from "../../image/img_45.png";
+import prizemoc from "../../image/img_46.png";
+import prizevkcp from "../../image/img_47.png";
+import prizefit from "../../image/img_48.png";
+import prizewink from "../../image/img_49.png";
+import prizelit from "../../image/img_50.png";
+import {debounce} from "lodash";
 
 export default function Profile(props) {
     const [isPopupOpen, setIsPopupOpen] = useState(null);
@@ -121,6 +133,68 @@ export default function Profile(props) {
         setProfile(storedProfile);
     }, []);
 
+    let settingsMoment = {
+        className: 'prizesShowMoment',
+        dots: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+
+    };
+    const settingsMobileMoment = {
+        className: 'prizesShowMoment',
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    };
+    let settings = {
+        className: 'prizesShow',
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+    };
+    const settingsMobile = {
+        className: 'prizesShow',
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    };
+
+    const [sliderSettingsMoment, setSliderSettingsMoment] = useState(settingsMoment);
+    const handleResizeMoment = debounce(() => {
+        if (window.innerWidth <= 767) {
+            setSliderSettingsMoment(settingsMobileMoment);
+        } else {
+            setSliderSettingsMoment(settingsMoment);
+        }
+    }, 200); // Debounce time in milliseconds
+    useEffect(() => {
+        window.addEventListener("resize", handleResizeMoment);
+        return () => window.removeEventListener("resize", handleResizeMoment);
+    }, [settingsMobileMoment, settingsMoment, handleResizeMoment]);
+
+
+    const [sliderSettings, setSliderSettings] = useState(settings);
+    const handleResize = debounce(() => {
+        if (window.innerWidth <= 767) {
+            setSliderSettings(settingsMobile);
+        } else {
+            setSliderSettings(settings);
+        }
+    }, 200); // Debounce time in milliseconds
+
+    useEffect(() => {
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, [settingsMobile, settings, handleResize]);
+
     return (
         <header>
             <img src={lemondots} alt="Photo" className="left-photo"/>
@@ -154,7 +228,8 @@ export default function Profile(props) {
                                                             closeMenu();
                                                             handleGoToFaq(event)
                                                         }}>Вопросы/ответы</a></li>
-                            <li className={'li-lc'}><a className={'active-block'} href={'profile'}>Личный кабинет</a></li>
+                            <li className={'li-lc'}><a className={'active-block'} href={'profile'}>Личный кабинет</a>
+                            </li>
                             <li>
                                 <img className={'bottle-float-left show'} src={inputcode}/>
                                 <input
@@ -180,7 +255,8 @@ export default function Profile(props) {
 
             </div>
             <div className={'accordion-example faq lc'}>
-                <div className={'winners-text for-faq lc'}>Здравствуйте, {profile && profile.profile && profile.profile.name}
+                <div
+                    className={'winners-text for-faq lc'}>Здравствуйте, {profile && profile.profile && profile.profile.name}
                     <div>
                         <img className={'bottle-float-left exit-lc'} onClick={selectChoose} src={lcexit}/>
                         <p className={'bottle-float-left exit-lc-text'}>выйти</p>
@@ -238,7 +314,7 @@ export default function Profile(props) {
             <img className={'bottle-float-left lime-profile'} src={limeright}/>
             <div className={'how-prizes'} id={'how-prizes'}>
                 <div className={'wrapper-how-prizes'}>
-                    <div className={'prizes-text-next'}>Какие призы возможно выиграть?</div>
+                    <div className={'prizes-text-next'}>Какие призы можно выиграть?</div>
                     <div className={'prizes-content'}>
                         <div className={'left'}>
                             <img className={'million'} src={million} alt="Million"/>
@@ -248,43 +324,110 @@ export default function Profile(props) {
                         </div>
                         <div className={'right'}>
                             <p className={'right-p-name'}>еженедельные призы:</p>
-                            <div className={'images'}>
-                                <div className="image-container">
-                                    <img src={prizevk} alt="Image"/>
-                                    <p className={'right-p-prizes'}>Подписка <br></br>VK Music</p>
+                            <Slider {...sliderSettings}>
+                                <div className={'images'}>
+                                    <div className="image-container">
+                                        <img src={prizevk} alt="Image"/>
+                                        <p className={'right-p-prizes'}>Подписка <br></br>VK Music</p>
+                                    </div>
                                 </div>
-                                <div className="image-container">
-                                    <img src={prizeyandex} alt="Image 2"/>
-                                    <p className={'right-p-prizes'}>Подписка <br></br>Яндекс Плюс</p>
+                                <div className={'images'}>
+                                    <div className="image-container">
+                                        <img src={prizeyandex} alt="Image 2"/>
+                                        <p className={'right-p-prizes'}>Подписка <br></br>Яндекс Плюс</p>
+                                    </div>
                                 </div>
-                                <div className="image-container">
-                                    <img src={prizesert} alt="Image 3"/>
-                                    <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р</p>
+                                <div className={'images'}>
+                                    <div className="image-container">
+                                        <img src={prizeozon} alt="Image 3"/>
+                                        <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>ОЗОН</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <p className={'right-p-name down'}>МОМЕНТАЛЬНЫЕ ПРИЗЫ</p>
-                            <div className={'new-block'}>
-                            </div>
+                                <div className={'images'}>
+                                    <div className="image-container">
+                                        <img src={prizekass} alt="Image 4"/>
+                                        <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>Кассир</p>
+                                    </div>
+                                </div>
+                                <div className={'images'}>
+                                    <div className="image-container">
+                                        <img src={prizesm} alt="Image 5"/>
+                                        <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>Спортмастер
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className={'images'}>
+                                    <div className="image-container">
+                                        <img src={prizega} alt="Image 6"/>
+                                        <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>Золотое
+                                            Яблоко</p>
+                                    </div>
+                                </div>
+                                <div className={'images'}>
+                                    <div className="image-container">
+                                        <img src={prizemv} alt="Image 7"/>
+                                        <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>М видео
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className={'images'}>
+                                    <div className="image-container">
+                                        <img src={prizemoc} alt="Image 8"/>
+                                        <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>Мосигра
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className={'images'}>
+                                    <div className="image-container">
+                                        <img src={prizevkcp} alt="Image 9"/>
+                                        <p className={'right-p-prizes'}>ВК <br></br>капсула нео</p>
+                                    </div>
+                                </div>
+                            </Slider>
+                            <p className={'right-p-name down'}>МОМЕНТАЛЬНЫЕ ПРИЗЫ:</p>
+                            <Slider {...sliderSettingsMoment}>
+                                <div className={'images-moment'}>
+                                    <div className="image-container-moment">
+                                        <img src={prizefit} alt="Image"/>
+                                        <p className={'right-p-prizes-moment'}>Подписка <br></br>Fitmost</p>
+                                    </div>
+                                </div>
+                                <div className={'images-moment'}>
+                                    <div className="image-container-moment">
+                                        <img src={prizewink} alt="Image 2"/>
+                                        <p className={'right-p-prizes-moment'}>Подписка <br></br>Wink+more.tv</p>
+                                    </div>
+                                </div>
+                                <div className={'images-moment'}>
+                                    <div className="image-container-moment">
+                                        <img src={prizelit} alt="Image 3"/>
+                                        <p className={'right-p-prizes-moment'}>Подписка <br></br>Литрес</p>
+                                    </div>
+                                </div>
+                            </Slider>
+                            {/*<div className={'new-block'}>*/}
+                            {/*</div>*/}
+
+
                         </div>
 
                     </div>
-                    <p className="absolute-text nv">Нижний новгород</p>
+                </div>
+            </div>
 
-                </div>
-            </div>
-            <div id="wave-container-test-44">
-                <div id="wave-test-44">
-                </div>
-            </div>
-            <PopupSuccessCode/>
-            <PopupSuccessPassword/>
-            <PopupSuccessEmail/>
-            <PopupPasswordNewStepOne/>
-            <PopupPasswordNewStepTwo/>
-            <PopupLogin/>
-            <Footer/>
+                    <div id="wave-container-test-44">
+                        <div id="wave-test-44">
+                        </div>
+                    </div>
+                    <PopupSuccessCode/>
+                    <PopupSuccessPassword/>
+                    <PopupSuccessEmail/>
+                    <PopupPasswordNewStepOne/>
+                    <PopupPasswordNewStepTwo/>
+                    <PopupLogin/>
+                    <Footer/>
         </header>
 
 
-    );
+);
 }

@@ -61,7 +61,7 @@ export default function Products(props) {
     return (
         <div className={'products'}>
             <div className={'content-container'}>
-                <div className={'winners-text for-slider'}>Продукты, учавствующие в акции
+                <div className={'winners-text for-slider'}>Продукты, участвующие в акции
                 </div>
                 <div className="slider-container">
 

@@ -14,11 +14,13 @@ import inputcode from '../image/img_2.png'
 import uptree from '../image/img_3.png'
 import lefttree from '../image/img_4.png'
 import gps from '../image/img_5.png'
+import gpsmobile from '../image/gps-mobile.png'
 import nature from '../image/img_6.png'
 import tree5555 from '../image/img_25.png'
 import tree6666 from '../image/img_26.png'
 import fruit from '../image/img_28.png'
 import bigline from '../image/img_7.png'
+import biglinemobile from '../image/img_38.png'
 import wintohealth2 from '../image/img_1.png'
 import HowPrizes from "./HowPrizes";
 import {useLocation} from "react-router-dom";
@@ -86,6 +88,7 @@ export default function Main(props) {
     };
     return (
         <main>
+            <img className={'bottle-float-left-mobile bigline-mobile'} src={biglinemobile}/>
             <div className={'main'} id={'main'}>
                 <div className={'main-items'}>
                     <div className={'winners-text for-main'}>Летопутешествие с laimon fresh
@@ -97,7 +100,8 @@ export default function Main(props) {
                             readOnly
                             placeholder=""
                         />
-                        {isPopupOpen === 'AddCode' && isAuthenticated && <PopupAddCode showPopup={true} closeModal={closePopup}/>}
+                        {isPopupOpen === 'AddCode' && isAuthenticated &&
+                            <PopupAddCode showPopup={true} closeModal={closePopup}/>}
                         <img className={'bottle-float-left inputcode'} src={inputcode}/>
                         <div className={'winners-text-inputcode'}>
                             <span className={'text-inputcode'}>*найди код под крышкой/ключиком и введи промокод</span>
@@ -108,12 +112,14 @@ export default function Main(props) {
                         <img className={'bottle-float-left'} src={wintohealth}/>
                         <img className={'bottle-float-left two'} src={wintohealth2}/>
                         <img className={'bottle-float-left gps'} src={gps}/>
+
                         <img className={'bottle-float-left lefttree'} src={lefttree}/>
                         <img className={'bottle-float-left nature'} src={nature}/>
                     </div>
                     <div className={'bigline-container'}>
-                    <img className={'bottle-float-left bigline'} src={bigline}/>
+                        <img className={'bottle-float-left bigline'} src={bigline}/>
                     </div>
+
                     <p className="absolute-text">Москва</p>
                     <div className={'main-text-text'}>
 
@@ -130,6 +136,13 @@ export default function Main(props) {
                 <div id="wave-test">
                 </div>
             </div>
+            <img className={'bottle-float-left-mobile-gps'} src={gpsmobile}/>
+            <img className={'bottle-float-left-mobile-gps bon1'} src={gpsmobile}/>
+            <img className={'bottle-float-left-mobile-gps bon2'} src={gpsmobile}/>
+            <img className={'bottle-float-left lefttree-mobile'} src={lefttree}/>
+            <p className="absolute-text-mobile">Москва</p>
+            <p className="absolute-text-mobile bon1">Санкт-Петербург</p>
+            <p className="absolute-text-mobile bon2">Казань</p>
             <Products/>
             <div id="wave-container-test-2">
                 <div id="wave-test-2">
@@ -143,7 +156,7 @@ export default function Main(props) {
                 </div>
             </div>
             <div className={'accordion-example'}>
-                <div className={'winners-text for-faq' } id={'faq'} ref={faqRef}>Часто задаваемые вопросы
+                <div className={'winners-text for-faq'} id={'faq'} ref={faqRef}>Часто задаваемые вопросы
                 </div>
                 <img className={'bottle-float-left example-tree5 main-down'} src={owntreep}/>
                 <img className={'bottle-float-left example-tree5'} src={tree5555}/>

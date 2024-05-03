@@ -1,8 +1,18 @@
 import React, {useEffect, useRef, useState} from "react";
-import million from '../image/img_17.png'
+import million from '../image/img_51.png'
 import prizevk from '../image/img_18.png'
 import prizeyandex from '../image/img_19.png'
 import prizesert from '../image/img_20.png'
+import prizeozon from '../image/img_41.png'
+import prizekass from '../image/img_42.png'
+import prizesm from '../image/img_43.png'
+import prizega from '../image/img_44.png'
+import prizemv from '../image/img_45.png'
+import prizemoc from '../image/img_46.png'
+import prizevkcp from '../image/img_47.png'
+import prizefit from '../image/img_48.png'
+import prizewink from '../image/img_49.png'
+import prizelit from '../image/img_50.png'
 import lefttree from "../image/img_4.png";
 import toptreeprod from "../image/img_10.png";
 import leftlinehow from "../image/img_8.png";
@@ -10,6 +20,8 @@ import gps from "../image/img_5.png";
 import prizeLine from "../image/img_37.png";
 import twotree from "../image/img_23.png";
 import {useLocation} from "react-router-dom";
+import Slider from "react-slick";
+import {debounce} from "lodash";
 
 const HowPrizes = (props) => {
     const prizesRef = useRef(null);
@@ -40,10 +52,71 @@ const HowPrizes = (props) => {
             }, 0);
         }
     }, [activeSection]);
+    let settingsMoment = {
+        className: 'prizesShowMoment',
+        dots: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+
+    };
+    const settingsMobileMoment = {
+        className: 'prizesShowMoment',
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    };
+    let settings = {
+        className: 'prizesShow',
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+    };
+    const settingsMobile = {
+        className: 'prizesShow',
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    };
+
+    const [sliderSettingsMoment, setSliderSettingsMoment] = useState(settingsMoment);
+    const handleResizeMoment = debounce(() => {
+        if (window.innerWidth <= 767) {
+            setSliderSettingsMoment(settingsMobileMoment);
+        } else {
+            setSliderSettingsMoment(settingsMoment);
+        }
+    }, 200); // Debounce time in milliseconds
+    useEffect(() => {
+        window.addEventListener("resize", handleResizeMoment);
+        return () => window.removeEventListener("resize", handleResizeMoment);
+    }, [settingsMobileMoment, settingsMoment, handleResizeMoment]);
+
+
+    const [sliderSettings, setSliderSettings] = useState(settings);
+    const handleResize = debounce(() => {
+        if (window.innerWidth <= 767) {
+            setSliderSettings(settingsMobile);
+        } else {
+            setSliderSettings(settings);
+        }
+    }, 200); // Debounce time in milliseconds
+
+    useEffect(() => {
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, [settingsMobile, settings, handleResize]);
     return (
         <div className={'how-prizes'} id={'how-prizes'} ref={prizesRef}>
             <div className={'wrapper-how-prizes'}>
-                <div className={'prizes-text-next'}>Какие призы возможно выиграть?</div>
+                <div className={'prizes-text-next'}>Какие призы можно выиграть?</div>
                 <div className={'prizes-content'}>
                     <div className={'left'}>
                         <img className={'million'} src={million} alt="Million"/>
@@ -53,35 +126,87 @@ const HowPrizes = (props) => {
                     </div>
                     <div className={'right'}>
                         <p className={'right-p-name'}>еженедельные призы:</p>
-                        <div className={'images'}>
-                            <div className="image-container">
-                                <img src={prizevk} alt="Image"/>
-                                <p className={'right-p-prizes'}>Подписка <br></br>VK Music</p>
+                        <Slider {...sliderSettings}>
+                            <div className={'images'}>
+                                <div className="image-container">
+                                    <img src={prizevk} alt="Image"/>
+                                    <p className={'right-p-prizes'}>Подписка <br></br>VK Music</p>
+                                </div>
                             </div>
-                            <div className="image-container">
-                                <img src={prizeyandex} alt="Image 2"/>
-                                <p className={'right-p-prizes'}>Подписка <br></br>Яндекс Плюс</p>
+                            <div className={'images'}>
+                                <div className="image-container">
+                                    <img src={prizeyandex} alt="Image 2"/>
+                                    <p className={'right-p-prizes'}>Подписка <br></br>Яндекс Плюс</p>
+                                </div>
                             </div>
-                            <div className="image-container">
-                                <img src={prizesert} alt="Image 3"/>
-                                <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р</p>
+                            <div className={'images'}>
+                                <div className="image-container">
+                                    <img src={prizeozon} alt="Image 3"/>
+                                    <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>ОЗОН</p>
+                                </div>
                             </div>
-                        </div>
+                            <div className={'images'}>
+                                <div className="image-container">
+                                    <img src={prizekass} alt="Image 4"/>
+                                    <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>Кассир</p>
+                                </div>
+                            </div>
+                            <div className={'images'}>
+                                <div className="image-container">
+                                    <img src={prizesm} alt="Image 5"/>
+                                    <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>Спортмастер</p>
+                                </div>
+                            </div>
+                            <div className={'images'}>
+                                <div className="image-container">
+                                    <img src={prizega} alt="Image 6"/>
+                                    <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>Золотое Яблоко</p>
+                                </div>
+                            </div>
+                            <div className={'images'}>
+                                <div className="image-container">
+                                    <img src={prizemv} alt="Image 7"/>
+                                    <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>М видео</p>
+                                </div>
+                            </div>
+                            <div className={'images'}>
+                                <div className="image-container">
+                                    <img src={prizemoc} alt="Image 8"/>
+                                    <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>Мосигра</p>
+                                </div>
+                            </div>
+                            <div className={'images'}>
+                                <div className="image-container">
+                                    <img src={prizevkcp} alt="Image 9"/>
+                                    <p className={'right-p-prizes'}>ВК <br></br>капсула нео</p>
+                                </div>
+                            </div>
+                        </Slider>
                         <p className={'right-p-name down'}>МОМЕНТАЛЬНЫЕ ПРИЗЫ:</p>
-                        <div className={'new-block'}>
-                        </div>
-                        <div className={'images-phone'}>
-                            <div className={"image-container-for-phone"}>
-                                <img src={prizesert} alt="Image 3"/>
-                                {/*<p className={'right-p-prizes'}>Сертификат <br></br>на 1000р</p>*/}
+                        <Slider {...sliderSettingsMoment}>
+                        <div className={'images-moment'}>
+                            <div className="image-container-moment">
+                                <img src={prizefit} alt="Image"/>
+                                <p className={'right-p-prizes-moment'}>Подписка <br></br>Fitmost</p>
                             </div>
                         </div>
-                        <div className={'images-phone-line'}>
-                            <div className={"image-container-for-phone line"}>
-                                <img src={prizeLine} alt="Image 3"/>
-                                {/*<p className={'right-p-prizes'}>Сертификат <br></br>на 1000р</p>*/}
+                            <div className={'images-moment'}>
+                            <div className="image-container-moment">
+                                <img src={prizewink} alt="Image 2"/>
+                                <p className={'right-p-prizes-moment'}>Подписка <br></br>Wink+more.tv</p>
+                            </div>
+                            </div>
+                            <div className={'images-moment'}>
+                            <div className="image-container-moment">
+                                <img src={prizelit} alt="Image 3"/>
+                                <p className={'right-p-prizes-moment'}>Подписка <br></br>Литрес</p>
                             </div>
                         </div>
+                        </Slider>
+                        {/*<div className={'new-block'}>*/}
+                        {/*</div>*/}
+
+
                     </div>
 
                 </div>
