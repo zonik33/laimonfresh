@@ -1250,25 +1250,25 @@ body {
 }
 .error-block-phone {
   position: absolute;
-  color: #ef7b7b !important;
+  color: #ffaeae !important;
   margin: 0.1vw 1vw 0vw 1vw;
   font-size: 1vw;
 }
 .error-block-phone.test-register {
   position: absolute;
-  color: #ef7b7b !important;
+  color: #ffaeae !important;
   margin: -0.7vw 1vw 0vw 1vw;
   font-size: 1vw;
 }
 .error-block-phone.test-code-add {
   position: absolute;
-  color: #ef7b7b !important;
+  color: #ffaeae !important;
   margin: 1.2vw 1vw 0vw 1vw;
   font-size: 1vw;
 }
 .error-block-phone.code-bottom {
   position: absolute;
-  color: #ef7b7b !important;
+  color: #ffaeae !important;
   margin: -0.7vw 1vw 0vw 1vw;
   font-size: 1vw;
 }
@@ -1511,13 +1511,13 @@ height: auto;
 }
 .error-message {
   position: absolute;
-  color: #ef7b7b;
+  color: #ffaeae;
   margin: -0.5vw 1vw 0vw 1vw;
   font-size: 1vw;
 }
 .error-message.password-one {
   position: absolute;
-  color: #ef7b7b;
+  color: #ffaeae;
   margin: 0.5vw 1vw 0vw 2vw;
   font-size: 1vw;
 }
@@ -5057,7 +5057,7 @@ cursor: pointer;
     display: none;
   }
   .winners {
-    height: 192.5vw;
+    height: 222.5vw;
     width: 100%;
     margin-top: -6.1vw;
     padding-top: 0.56vw;
@@ -5262,7 +5262,7 @@ cursor: pointer;
   .for-faq {
     width: 80vw;
     font-family: 'AutumnSweaterLaimon', Arial, sans-serif;
-    margin-top: -25.8vw;
+    margin-top: -31.8vw;
     margin-left: 9.6vw;
     text-transform: uppercase;
     font-weight: 400;
@@ -5274,10 +5274,13 @@ cursor: pointer;
     color: rgba(0, 98, 65, 1);
   }
   .bottle-float-left.example-tree5.main-down {
+    display: none;
+  }
+  .bottle-float-left.example-tree5.main-down-town {
     z-index: 4;
-    margin-top: -54.95vw;
-    margin-left: -45.87vw;
-    width: 26.01vw;
+    margin-top: -16.95vw;
+    margin-left: -26.87vw;
+    width: 28.01vw;
     height: auto;
     animation: sbs-231425214-52151 25s infinite linear;
     backface-visibility: hidden;
@@ -5817,13 +5820,13 @@ cursor: pointer;
   }
   .error-block-phone {
     position: absolute;
-    color: #ef7b7b !important;
+    color: #ffaeae !important;
     margin: 0.5vw 1vw 0vw 2vw;
     font-size: 2.1vw;
   }
   .error-block-phone.test-register {
     position: absolute;
-    color: #ef7b7b !important;
+    color: #ffaeae !important;
     margin: -0.7vw 1vw 0vw 2vw;
     font-size: 2.5vw;
   }
@@ -5847,7 +5850,7 @@ cursor: pointer;
   }
   .error-block-phone.test-code-add {
     position: absolute;
-    color: #ef7b7b !important;
+    color: #ffaeae !important;
     margin: -1.8vw 1vw 0vw 3vw;
     font-size: 2vw;
   }
@@ -5863,12 +5866,12 @@ cursor: pointer;
   .bottle-float-left-mobile {
     display: flex;
     position: absolute !important;
-    margin-top: 86.35vw;
+    margin-top: -1018.65vw;
     right: 0;
     /* margin-left: -1.17vw; */
     width: 99.27vw !important;
     height: 1250.47vw !important;
-    z-index: 3 !important;
+    z-index: 0 !important;
     pointer-events: none;
   }
   .bottle-float-left.bigline {

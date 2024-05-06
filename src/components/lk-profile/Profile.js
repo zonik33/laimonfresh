@@ -271,7 +271,7 @@ export default function Profile(props) {
                         <p className={'left-p-name left-down lc checks'}>Мои коды</p>
                         <SliderCodes/>
                     </div>
-                    <img className={'bottle-float-left berry-profile'} src={berry}/>
+                    {/*<img className={'bottle-float-left berry-profile'} src={berry}/>*/}
                     <img className={'bottle-float-left example-tree5 profile'} src={tree5555}/>
                     <div className={'right lc'}>
                         <div className={'winners-text for-main lc'}>
@@ -299,7 +299,7 @@ export default function Profile(props) {
                 <div className={'winners-text lc-text-profile'}>
                     <p className={'lc-text-profile-d'}>Твоё летопутешествие с Laimon Fresh</p>
                     <p
-                        className={'lc-text-profile-d-down'}>Соберите все 10 карточек городов, что бы принять участие
+                        className={'lc-text-profile-d-down'}>Соберите все 10 карточек городов, чтобы принять участие
                         в розыгрыше главного приза. <br></br>1 код = 1 карточка</p>
 
                     <SliderCards/>

@@ -408,7 +408,7 @@ export default function Winners(props) {
         3: prizeImage3,
         4: prizeImage4,
     };
-
+    const isMobileView = window.innerWidth <= 768;
     return (
         <div className={'winners'} id={'winners'} ref={winnersRef}>
             <div className={'wrapper'}>
@@ -420,8 +420,9 @@ export default function Winners(props) {
                                 <div className={'table'}>
                                     <div className={'table-body'}>
                                         <div className={'table-body'}>
-                                            <div className={'winners-tabs-content'}>
-                                                {currentWeekWinners.slice(0, 3).map((winner, index) => (
+                                            <div
+                                                className={`winners-tabs-content ${isMobileView ? 'mobile-view' : ''}`}>
+                                                {currentWeekWinners.slice(0, isMobileView ? 4 : 3).map((winner, index) => (
                                                     <div key={index} className={'table-body-winners'}>
                                                         <div className={'head-colm-prize1'}>{index + 1}</div>
                                                         <div className={'head-colm-name'}>{winner.name}</div>

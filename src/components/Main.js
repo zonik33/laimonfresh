@@ -88,7 +88,6 @@ export default function Main(props) {
     };
     return (
         <main>
-            <img className={'bottle-float-left-mobile bigline-mobile'} src={biglinemobile}/>
             <div className={'main'} id={'main'}>
                 <div className={'main-items'}>
                     <div className={'winners-text for-main'}>Летопутешествие с laimon fresh
@@ -162,6 +161,7 @@ export default function Main(props) {
                 <img className={'bottle-float-left example-tree5'} src={tree5555}/>
                 <img className={'bottle-float-left example-tree6'} src={tree6666}/>
                 <Example/>
+                <img className={'bottle-float-left example-tree5 main-down-town'} src={owntreep}/>
                 <div id="wave-container-test-4">
                     <div id="wave-test-4">
                     </div>

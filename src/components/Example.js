@@ -9,6 +9,8 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import AddIcon from '@material-ui/icons/Add';
 import SouthWestIcon from '@mui/icons-material/SouthWest';
 import NorthEastIcon from '@mui/icons-material/NorthEast';
+import biglinemobile from "../image/img_38.png";
+import owntreep from "../image/img_36.png";
 
 const useStyles = makeStyles((theme) => ({
     circleIcon: {
@@ -55,6 +57,8 @@ export default function ControlledAccordions() {
 
     return (
         <div className={`centered-container ${classes.root}`}>
+
+            <img className={'bottle-float-left-mobile bigline-mobile'} src={biglinemobile}/>
             <Accordion
                 expanded={expanded === 'panel1'}
                 onChange={handleChange('panel1')}
@@ -154,34 +158,8 @@ export default function ControlledAccordions() {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-            <Accordion
-                expanded={expanded === 'panel5'}
-                onChange={handleChange('panel5')}
-                className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
-            >
-                <AccordionSummary
-                    expandIcon={
-                        expanded === 'panel5' ? <NorthEastIcon/> : <NorthEastIcon/>
-                    }
-                    aria-controls="panel2-content"
-                    id="panel2-header"
-                >
-                    <Typography className={classes.heading}><b className={'heading-id'}>05</b> <p
-                        className={'heading-name'}>Advanced
-                        settings</p></Typography>
-                    <Typography className={classes.secondaryHeading}>
-                    </Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>
-                        {expanded === 'panel5' && <div className={classes.line}></div>}
-                        Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas eros,
-                        vitae egestas augue. Duis vel est augue.
-                    </Typography>
-                </AccordionDetails>
-            </Accordion>
             <div className={'example-all-test'}>
-            <a className={'winners-all-a faq'} href={'faq'}>Все вопросы</a>
+                <a className={'winners-all-a faq'} href={'faq'}>Все вопросы</a>
             </div>
         </div>
     );
