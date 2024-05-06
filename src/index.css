@@ -913,6 +913,9 @@ body {
   right: -25%;
   top: 1.04vw;
 }
+.bottle-float-left.example-tree5.main-down-town {
+  display: none;
+}
 
 #wave-test:after {
   content: "";
@@ -5277,9 +5280,10 @@ cursor: pointer;
     display: none;
   }
   .bottle-float-left.example-tree5.main-down-town {
+    display: flex;
     z-index: 4;
-    margin-top: -16.95vw;
-    margin-left: -26.87vw;
+    margin-top: -15.95vw;
+    margin-left: 23.13vw;
     width: 28.01vw;
     height: auto;
     animation: sbs-231425214-52151 25s infinite linear;

@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import how1 from '../image/img_39.png'
+import how1 from '../image/img_57.png'
 import how2 from '../image/img_15.png'
 import how3 from '../image/img_16.png'
 import lefttreebon1 from "../image/img_40.png";
