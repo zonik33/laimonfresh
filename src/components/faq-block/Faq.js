@@ -32,6 +32,7 @@ import PopupPasswordNewStepOne from "../Popups/PopupPasswordNewStepOne";
 import PopupPasswordNewStepTwo from "../Popups/PopupPasswordNewStepTwo";
 import PopupLogin from "../Popups/PopupLogin";
 import PopupSuccessRegister from "../Popups/PopupSuccessRegister";
+import PopupAddCode from "../Popups/PopupAddCode";
 
 const useStyles = makeStyles((theme) => ({
     circleIcon: {
@@ -175,14 +176,13 @@ export default function Faq(props) {
                                 <input
                                     type="text"
                                     className={'shadow-button-animation-text'}
-                                    onClick={() => openPopup('Register')}
+                                    onClick={() => openPopup(isAuthenticated ? 'AddCode' : openPopupLogin)}
                                     maxLength="20"
                                     readOnly
                                     placeholder=""
                                 />
-                                {isPopupOpen === 'Register' && (
-                                    <PopupRegister showPopup={true} closeModal={closePopup}/>
-                                )}
+                                {isPopupOpen === 'AddCode' && isAuthenticated &&
+                                    <PopupAddCode showPopup={true} closeModal={closePopup}/>}
                             </li>
                         </ul>
                     </nav>

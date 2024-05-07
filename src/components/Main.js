@@ -16,7 +16,8 @@ import lefttree from '../image/img_4.png'
 import gps from '../image/img_5.png'
 import gpsmobile from '../image/gps-mobile.png'
 import nature from '../image/img_6.png'
-import tree5555 from '../image/img_25.png'
+import tree5555 from '../image/img_64.png'
+import tree12345 from '../image/img_65.png'
 import tree6666 from '../image/img_26.png'
 import fruit from '../image/img_28.png'
 import bigline from '../image/img_7.png'
@@ -159,8 +160,12 @@ export default function Main(props) {
                 </div>
                 <img className={'bottle-float-left example-tree5 main-down'} src={owntreep}/>
                 <img className={'bottle-float-left example-tree5'} src={tree5555}/>
+
                 <img className={'bottle-float-left example-tree6'} src={tree6666}/>
+                <img className={'bottle-float-left-mobile-gps bon9'} src={gpsmobile}/>
+                <p className="absolute-text-mobile bon9">Владивосток</p>
                 <Example/>
+                <img className={'bottle-float-left example-tree5 faq-down-leetree'} src={tree12345}/>
                 <img className={'bottle-float-left example-tree5 main-down-town'} src={owntreep}/>
                 <div id="wave-container-test-4">
                     <div id="wave-test-4">

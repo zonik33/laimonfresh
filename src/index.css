@@ -1039,6 +1039,9 @@ body {
   right: -25%;
   top: 1.04vw;
 }
+.bottle-float-left.example-tree5.faq-down-leetree {
+ display: none;
+}
 
 #wave-test-3:after {
   content: "";
@@ -1200,10 +1203,10 @@ body {
 }
 .bottle-float-left.success-image {
   padding-right: 0.7vw;
-  margin: -7.2vw 0vw 0vw -3.6vw;
+  margin: -10.5vw 0vw 0vw -4.5vw;
   position: absolute;
-  width: 6.81vw;
-  height: 6.39vw;
+  width: 8.81vw;
+  height: auto;
   z-index: 5;
   transition: opacity 0.3s ease;
 }
@@ -1305,7 +1308,7 @@ body {
   margin-left: 0vw;
 }
 .register-inputs-text.new-reg {
-  color: rgba(0, 98, 65, 1);
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2554,6 +2557,16 @@ display: none !important;
   margin-right: 2vw;
   width: 100%;
 }
+/*.slick-prev,.slick-prev:hover,.slick-prev:focus {*/
+
+/*  background: url("./image/img_63.png") no-repeat!important;*/
+/*}*/
+/*.slick-next,.slick-next:hover,.slick-next:focus {*/
+/*  background: url("./image/img_63.png") no-repeat!important;*/
+/*}*/
+/*.slick-prev:before:hover {*/
+/*  background-color: black !important;*/
+/*}*/
 .lf-text {
   margin: 3.5vw 0vw 0vw 3.3vw;
   display: block;
@@ -3155,10 +3168,21 @@ backface-visibility: hidden;
   border-radius: 3.47vw;
 }
 .right-p-prizes {
+  width: 12vw;
+  margin-left: 2vw;
   font-family: Inter;
   font-weight: 600;
   font-size: 1.53vw;
   line-height: 1.60vw;
+  color: white;
+}
+.right-p-prizes-little {
+  width: 11vw;
+  margin-left: 0.5vw !important;
+  font-family: Inter;
+  font-weight: 300;
+  font-size: 1.18vw;
+  line-height: 1.25vw;
   color: white;
 }
 .right-p-prizes-moment {
@@ -3219,8 +3243,11 @@ backface-visibility: hidden;
 }
 
 .image-container p {
-  margin: 0.19vw 0vw 0vw -0.6vw;
+  margin: 0.19vw -6vw 2vw -1.6vw;
 }
+/*.slick-slider.prizesShow.slick-list {*/
+/*  margin-left: 10vw !important;*/
+/*}*/
 
 
 
@@ -5016,13 +5043,23 @@ cursor: pointer;
 }
 
   .image-container p {
-    margin: 1.19vw -3vw 4vw -9.6vw;
+    margin: 1.19vw -3vw 4vw 0.4vw;
   }
   .right-p-prizes {
+    width: 54vw;
     font-family: Inter;
     font-weight: 600;
     font-size: 5.87vw;
     line-height: 6.13vw;
+    color: white;
+  }
+  .right-p-prizes-little {
+    width: 54vw;
+    margin-left: 0.5vw !important;
+    font-family: Inter;
+    font-weight: 300;
+    font-size: 4.18vw;
+    line-height: 4.65vw;
     color: white;
   }
   .right-p-name.down {
@@ -5060,7 +5097,7 @@ cursor: pointer;
     display: none;
   }
   .winners {
-    height: 222.5vw;
+    height: 214.5vw;
     width: 100%;
     margin-top: -6.1vw;
     padding-top: 0.56vw;
@@ -5634,6 +5671,14 @@ cursor: pointer;
     width: 24.01vw;
     height: auto;
   }
+  .bottle-float-left.example-tree5.faq-down-leetree {
+    display: flex;
+    z-index: 5;
+    margin-top: -20.95vw;
+    margin-left: 0.13vw;
+    width: 19.01vw;
+    height: auto;
+  }
   .bottle-float-left.lime-faq {
     position: absolute;
     margin-top: -46.47vw;
@@ -5739,10 +5784,10 @@ cursor: pointer;
   }
   .bottle-float-left.success-image {
     padding-right: 0.7vw;
-    margin: -14.2vw 0vw 0vw -7.6vw;
+    margin: -18.2vw 0vw 0vw -8.6vw;
     position: absolute;
-    width: 13.81vw;
-    height: 12.39vw;
+    width: 15.81vw;
+    height: auto;
     z-index: 5;
     transition: opacity 0.3s ease;
   }
@@ -5870,12 +5915,12 @@ cursor: pointer;
   .bottle-float-left-mobile {
     display: flex;
     position: absolute !important;
-    margin-top: -1018.65vw;
+    margin-top: -1010.65vw;
     right: 0;
     /* margin-left: -1.17vw; */
     width: 99.27vw !important;
     height: 1250.47vw !important;
-    z-index: 0 !important;
+    z-index: -1 !important;
     pointer-events: none;
   }
   .bottle-float-left.bigline {
@@ -5956,6 +6001,52 @@ cursor: pointer;
     z-index: 5 !important;
 
   }
+  .bottle-float-left-mobile-gps.bon5 {
+    display: flex;
+    position: absolute;
+    margin-top: 48.9vw;
+    margin-left: 77.43vw;
+    width: 5.47vw;
+    height: auto;
+    z-index: 5 !important;
+
+  }
+  .bottle-float-left-mobile-gps.bon6 {
+    display: flex;
+    position: absolute;
+    margin-top: 233.9vw;
+    margin-left: 9.43vw;
+    width: 5.47vw;
+    height: auto;
+    z-index: 5 !important;
+  }
+  .bottle-float-left-mobile-gps.bon7 {
+    display: flex;
+    position: absolute;
+    margin-top: 243.9vw;
+    margin-left: 77.43vw;
+    width: 5.47vw;
+    height: auto;
+    z-index: 5 !important;
+  }
+  .bottle-float-left-mobile-gps.bon8 {
+    display: flex;
+    position: absolute;
+    margin-top: 37.9vw;
+    margin-left: 16.43vw;
+    width: 5.47vw;
+    height: auto;
+    z-index: 5 !important;
+  }
+  .bottle-float-left-mobile-gps.bon9 {
+    display: flex;
+    position: absolute;
+    margin-top: 149.9vw;
+    margin-left: 86.43vw;
+    width: 5.47vw;
+    height: auto;
+    z-index: 0 !important;
+  }
   .absolute-text-mobile {
     z-index: 5;
     display: flex;
@@ -6000,6 +6091,68 @@ cursor: pointer;
     position: absolute;
     margin-top: 163.4vw;
     margin-left: 80.53vw;
+  }
+  .absolute-text-mobile.bon5 {
+    z-index: 5;
+    width: 25vw;
+    display: flex;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Inter";
+    font-size: 2.13vw;
+    font-weight: 700;
+    line-height: 2.08vw;
+    position: absolute;
+    margin-top: 65.4vw;
+    margin-left: 92.53vw;
+  }
+  .absolute-text-mobile.bon6 {
+    z-index: 5;
+    width: 25vw;
+    display: flex;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Inter";
+    font-size: 2.13vw;
+    font-weight: 700;
+    line-height: 2.08vw;
+    position: absolute;
+    margin-top: 245.4vw;
+    margin-left: 4.53vw;
+  }
+  .absolute-text-mobile.bon7 {
+    z-index: 5;
+    display: flex;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Inter";
+    font-size: 2.13vw;
+    font-weight: 700;
+    line-height: 2.08vw;
+    position: absolute;
+    margin-top: 253.4vw;
+    margin-left: 74.63vw;
+  }
+  .absolute-text-mobile.bon8 {
+    z-index: 5;
+    display: flex;
+    color: rgba(0, 98, 65, 0.5);
+    font-family: "Inter";
+    font-size: 2.13vw;
+    font-weight: 700;
+    line-height: 2.08vw;
+    position: absolute;
+    margin-top: 47.9vw;
+    margin-left: 14.43vw;
+  }
+  .absolute-text-mobile.bon9 {
+    z-index: 0;
+    display: flex;
+    color: rgba(0, 98, 65, 0.5);
+    font-family: "Inter";
+    font-size: 2.13vw;
+    font-weight: 700;
+    line-height: 2.08vw;
+    position: absolute;
+    margin-top: 159.9vw;
+    margin-left: 81.43vw;
   }
   .absolute-text-mobile.bon4 {
     z-index: 5;
@@ -6068,7 +6221,17 @@ cursor: pointer;
     font-weight: 400;
     text-decoration: underline;
   }
-
+  .register-inputs-text.new-reg {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    margin-bottom: 2.5vw;
+    margin-top: -1vw;
+    margin-left: 0vw;
+  }
 
 
 

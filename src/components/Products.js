@@ -7,7 +7,7 @@ import "react-accessible-accordion/dist/fancy-example.css";
 import Footer from "./Footer";
 import Winners from "./Winners";
 import lfmint from '../image/lf-mint.png';
-import lfmango from '../image/lf-mango.png';
+import lfmango from '../image/img_58.png';
 import lfberries from '../image/lf-berries.png';
 import lfpear from '../image/lf-pear.png';
 import How from "./How";
@@ -17,6 +17,8 @@ import wintohealth2 from "../image/img_1.png";
 import gps from "../image/img_5.png";
 import toptreeprod from "../image/img_10.png";
 import downtreeprod from "../image/img_11.png";
+import leftarrow from "../image/img_62.png";
+import rightarrow from "../image/img_63.png";
 import lefttree from "../image/img_4.png";
 import nature from "../image/img_6.png";
 import bigline from "../image/img_7.png";
@@ -31,7 +33,7 @@ export default function Products(props) {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 5555,
-        pauseOnHover: true
+        pauseOnHover: true,
     };
     const settingsMobile = {
         className: 'mobileProducts',
@@ -85,16 +87,6 @@ export default function Products(props) {
                             <a><img
                                 src={lfpear}/></a>
                             <span className={'lf-text'}> Laimon Fresh Pear </span>
-                        </div>
-                        <div className="how-full44-img">
-                            <a><img
-                                src={lfmint}/></a>
-                            <span className={'lf-text'}> Laimon Fresh Mint </span>
-                        </div>
-                        <div className="how-full44-img">
-                            <a><img
-                                src={lfmango}/></a>
-                            <span className={'lf-text'}> Laimon Fresh Mango </span>
                         </div>
                     </Slider>
                 </div>

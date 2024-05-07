@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from "react";
-import million from '../image/img_51.png'
+import million from '../image/img_59.png'
 import prizevk from '../image/img_18.png'
 import prizeyandex from '../image/img_19.png'
 import prizesert from '../image/img_20.png'
@@ -9,7 +9,9 @@ import prizesm from '../image/img_43.png'
 import prizega from '../image/img_44.png'
 import prizemv from '../image/img_45.png'
 import prizemoc from '../image/img_46.png'
-import prizevkcp from '../image/img_47.png'
+import prizevkcp from '../image/img_66.png'
+import prizemerch from '../image/img_67.png'
+import prizetreav from '../image/img_68.png'
 import prizefit from '../image/img_48.png'
 import prizewink from '../image/img_49.png'
 import prizelit from '../image/img_50.png'
@@ -22,6 +24,8 @@ import twotree from "../image/img_23.png";
 import {useLocation} from "react-router-dom";
 import Slider from "react-slick";
 import {debounce} from "lodash";
+import gpsmobile from "../image/gps-mobile.png";
+import lefttreebon1 from "../image/img_40.png";
 
 const HowPrizes = (props) => {
     const prizesRef = useRef(null);
@@ -118,6 +122,8 @@ const HowPrizes = (props) => {
             <div className={'wrapper-how-prizes'}>
                 <div className={'prizes-text-next'}>Какие призы можно выиграть?</div>
                 <div className={'prizes-content'}>
+                    <img className={'bottle-float-left-mobile-gps bon5'} src={gpsmobile}/>
+                    <p className="absolute-text-mobile bon5">Нижний Новгород</p>
                     <div className={'left'}>
                         <img className={'million'} src={million} alt="Million"/>
                         <p className={'right-p-name left-down'}>Главный приз</p>
@@ -147,62 +153,85 @@ const HowPrizes = (props) => {
                             </div>
                             <div className={'images'}>
                                 <div className="image-container">
-                                    <img src={prizekass} alt="Image 4"/>
-                                    <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>Кассир</p>
+                                    <img src={prizemerch} alt="Image 4"/>
+                                    <p className={'right-p-prizes'}>Мерч <br></br>от Laimon Fresh <br></br><p className={'right-p-prizes-little'}>От 5-ти набранных карточек городов</p></p>
                                 </div>
                             </div>
-                            <div className={'images'}>
-                                <div className="image-container">
-                                    <img src={prizesm} alt="Image 5"/>
-                                    <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>Спортмастер</p>
+                                <div className={'images'}>
+                                    <div className="image-container">
+                                        <img src={prizetreav} alt="Image 4"/>
+                                        <p className={'right-p-prizes'}>Сертификат <br></br>на путешествие <br></br><p className={'right-p-prizes-little'}>Приз конкурса <br></br>от блогеров</p></p>
                                 </div>
-                            </div>
-                            <div className={'images'}>
-                                <div className="image-container">
-                                    <img src={prizega} alt="Image 6"/>
-                                    <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>Золотое Яблоко</p>
                                 </div>
-                            </div>
-                            <div className={'images'}>
-                                <div className="image-container">
-                                    <img src={prizemv} alt="Image 7"/>
-                                    <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>М видео</p>
-                                </div>
-                            </div>
-                            <div className={'images'}>
-                                <div className="image-container">
-                                    <img src={prizemoc} alt="Image 8"/>
-                                    <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>Мосигра</p>
-                                </div>
-                            </div>
-                            <div className={'images'}>
-                                <div className="image-container">
-                                    <img src={prizevkcp} alt="Image 9"/>
-                                    <p className={'right-p-prizes'}>ВК <br></br>капсула нео</p>
-                                </div>
-                            </div>
+                                    <div className={'images'}>
+                                        <div className="image-container">
+                                            <img src={prizekass} alt="Image 4"/>
+                                            <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>Кассир
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className={'images'}>
+                                        <div className="image-container">
+                                            <img src={prizesm} alt="Image 5"/>
+                                            <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>Спортмастер
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className={'images'}>
+                                        <div className="image-container">
+                                            <img src={prizega} alt="Image 6"/>
+                                            <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>Золотое
+                                                Яблоко
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className={'images'}>
+                                        <div className="image-container">
+                                            <img src={prizemv} alt="Image 7"/>
+                                            <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>М
+                                                видео
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className={'images'}>
+                                        <div className="image-container">
+                                            <img src={prizemoc} alt="Image 8"/>
+                                            <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>Мосигра
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className={'images'}>
+                                        <div className="image-container">
+                                            <img src={prizevkcp} alt="Image 9"/>
+                                            <p className={'right-p-prizes'}>VK капсула <br></br>нео</p>
+                                        </div>
+                                    </div>
                         </Slider>
                         <p className={'right-p-name down'}>МОМЕНТАЛЬНЫЕ ПРИЗЫ:</p>
                         <Slider {...sliderSettingsMoment}>
-                        <div className={'images-moment'}>
-                            <div className="image-container-moment">
+                            <div className={'images-moment'}>
+                                <div className="image-container-moment">
                                 <img src={prizefit} alt="Image"/>
-                                <p className={'right-p-prizes-moment'}>Подписка <br></br>Fitmost</p>
-                            </div>
-                        </div>
-                            <div className={'images-moment'}>
-                            <div className="image-container-moment">
-                                <img src={prizewink} alt="Image 2"/>
-                                <p className={'right-p-prizes-moment'}>Подписка <br></br>Wink+more.tv</p>
-                            </div>
+                                    <p className={'right-p-prizes-moment'}>Подписка <br></br>Fitmost</p>
+                                </div>
                             </div>
                             <div className={'images-moment'}>
-                            <div className="image-container-moment">
-                                <img src={prizelit} alt="Image 3"/>
-                                <p className={'right-p-prizes-moment'}>Подписка <br></br>Литрес</p>
+                                <div className="image-container-moment">
+                                    <img src={prizewink} alt="Image 2"/>
+                                    <p className={'right-p-prizes-moment'}>Подписка <br></br>Wink+more.tv</p>
+                                </div>
                             </div>
-                        </div>
+                            <div className={'images-moment'}>
+                                <div className="image-container-moment">
+                                    <img src={prizelit} alt="Image 3"/>
+                                    <p className={'right-p-prizes-moment'}>Подписка <br></br>Литрес</p>
+                                </div>
+                            </div>
                         </Slider>
+                        <img className={'bottle-float-left-mobile-gps bon6'} src={gpsmobile}/>
+                        <p className="absolute-text-mobile bon6">Калининград</p>
+                        <img className={'bottle-float-left-mobile-gps bon7'} src={gpsmobile}/>
+                        <p className="absolute-text-mobile bon7">Екатеринбург</p>
                         {/*<div className={'new-block'}>*/}
                         {/*</div>*/}
 

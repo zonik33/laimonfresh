@@ -1,5 +1,5 @@
 import lcexit from "../../image/img_30.png";
-import success from "../../image/img_32.png";
+import success from "../../image/img_60.png";
 import {Checkbox} from "@mui/material";
 import Modal from "react-modal";
 import React, {useState} from "react";

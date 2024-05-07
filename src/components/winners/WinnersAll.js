@@ -29,6 +29,7 @@ import PopupPasswordNewStepOne from "../Popups/PopupPasswordNewStepOne";
 import PopupPasswordNewStepTwo from "../Popups/PopupPasswordNewStepTwo";
 import PopupLogin from "../Popups/PopupLogin";
 import PopupSuccessRegister from "../Popups/PopupSuccessRegister";
+import PopupAddCode from "../Popups/PopupAddCode";
 
 export default function WinnersAll(props) {
     const [showPopup, setShowPopup] = useState(false);
@@ -270,14 +271,13 @@ export default function WinnersAll(props) {
                                 <input
                                     type="text"
                                     className={'shadow-button-animation-text'}
-                                    onClick={() => openPopup('Register')}
+                                    onClick={() => openPopup(isAuthenticated ? 'AddCode' : openPopupLogin)}
                                     maxLength="20"
                                     readOnly
                                     placeholder=""
                                 />
-                                {isPopupOpen === 'Register' && (
-                                    <PopupRegister showPopup={true} closeModal={closePopup}/>
-                                )}
+                                {isPopupOpen === 'AddCode' && isAuthenticated &&
+                                    <PopupAddCode showPopup={true} closeModal={closePopup}/>}
                             </li>
                         </ul>
                     </nav>
@@ -342,7 +342,7 @@ export default function WinnersAll(props) {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className={'winners-text winners-main second-second'}>Главный приз
+                                            <div className={'winners-text winners-main second-second'}>Главный призер
                                             </div>
                                             {winners.map((winner, index) => (
                                                 <div key={index} className={'table-body-winners down'}>

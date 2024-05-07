@@ -10,6 +10,7 @@ import prizeImage1 from "../image/img_21.png";
 import prizeImage2 from "../image/img_21.png";
 import prizeImage3 from "../image/img_21.png";
 import prizeImage4 from "../image/img_21.png";
+import gpsmobile from "../image/gps-mobile.png";
 
 
 export default function Winners(props) {
@@ -444,6 +445,8 @@ export default function Winners(props) {
                                             <p className="absolute-text kalin">Калининград</p>
                                             <div className={'winners-text winners-main second'}>Главный призер
                                             </div>
+                                            <img className={'bottle-float-left-mobile-gps bon8'} src={gpsmobile}/>
+                                            <p className="absolute-text-mobile bon8">Новосибирск</p>
                                             <p className="absolute-text eka">Екатеринбург</p>
                                             <p className="absolute-text novo">Новосибирск</p>
                                             <p className="absolute-text vlad">Владивосток</p>
@@ -451,23 +454,24 @@ export default function Winners(props) {
                                             <img className={'bottle-float-left gps-novo'} src={gps}/>
                                             <img className={'bottle-float-left gps-vlad'} src={gps}/>
 
-                                                {winnersMain && winnersMain.map((winner, index) => (
-                                                    <div key={index} className={'table-body-winners down'}>
-                                                        <div className={'head-colm-prize1'}>{index + 1}</div>
-                                                        <div className={'head-colm-name'}>{winner.name}</div>
-                                                        <div className={'head-colm-phone1'}>{winner.code}</div>
-                                                        <div className={'head-colm-date1'}>
-                                                            <img className={'winners-prize-img'} alt={'Приз'} src={prizeImages[winner.prize_id]}/>
-                                                        </div>
+                                            {winnersMain && winnersMain.map((winner, index) => (
+                                                <div key={index} className={'table-body-winners down'}>
+                                                    <div className={'head-colm-prize1'}>{index + 1}</div>
+                                                    <div className={'head-colm-name'}>{winner.name}</div>
+                                                    <div className={'head-colm-phone1'}>{winner.code}</div>
+                                                    <div className={'head-colm-date1'}>
+                                                        <img className={'winners-prize-img'} alt={'Приз'}
+                                                             src={prizeImages[winner.prize_id]}/>
                                                     </div>
-                                                ))}
+                                                </div>
+                                            ))}
 
 
                                         </div>
 
                                     </div>
                                     <div className={'winners-videos'}>
-                                        {/*<a href={'#'}>Показать всех</a>*/}
+                                    {/*<a href={'#'}>Показать всех</a>*/}
                                     </div>
 
                                 </div>
