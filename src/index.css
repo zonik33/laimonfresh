@@ -1417,7 +1417,7 @@ body {
   height: 8.89vw;
 }
 .bottle-float-left.example-tree5.profile-down {
-  z-index: 4;
+  z-index: 0;
   margin-top: -8.95vw;
   margin-left: -42.87vw;
   width: 12.01vw;
@@ -1686,7 +1686,7 @@ height: auto;
   right: 0;
   width: 13.60vw;
   height: 15.60vw;
-  z-index: 4;
+  z-index: 0;
 }
 .bottle-float-left.lime-faq {
   position: absolute;
@@ -6092,6 +6092,10 @@ cursor: pointer;
     margin-top: 163.4vw;
     margin-left: 80.53vw;
   }
+  .text-block-inputcode {
+    display: block;
+    margin: 67vw 0vw 0vw -55vw;
+  }
   .absolute-text-mobile.bon5 {
     z-index: 5;
     width: 25vw;
@@ -6141,6 +6145,14 @@ cursor: pointer;
     position: absolute;
     margin-top: 47.9vw;
     margin-left: 14.43vw;
+  }
+  .full-image {
+    left: 50%;
+    height: auto;
+    width: 90vw;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
   .absolute-text-mobile.bon9 {
     z-index: 0;
@@ -6232,7 +6244,44 @@ cursor: pointer;
     margin-top: -1vw;
     margin-left: 0vw;
   }
-
+  .slick-slider.center {
+    z-index: 2;
+    background-color: rgba(245, 245, 237, 0.7);
+    width: 43.87vw;
+    height: 50.17vw;
+    margin-left: 11.5vw;
+    margin-top: 15vw;
+    border-radius: 6.43vw;
+    margin-bottom: 10vw;
+  }
+  .text-inputcode.cards-prize {
+    font-size: 3.47vw;
+    margin-top: 1vw;
+    margin-left: 2vw;
+    margin-bottom: 5vw;
+    font-family: AutumnSweaterLaimon;
+  }
+  .center .slick-prev {
+    margin-left: -23.3vw !important;
+    margin-top: 5vw;
+  }
+  .center .slick-next {
+    margin-left: -13vw !important;
+    margin-right: -11vw;
+    margin-top: 5vw !important;
+  }
+  .slider-cards-winnersall-img {
+    width: 18.75vw;
+    height: 47.31vw;
+    margin: 2vw;
+  }
+  .cards-img {
+    margin-left: 0vw;
+    position: relative;
+    z-index: 1;
+    width: 39.75vw;
+    height: auto;
+  }
 
 
 
