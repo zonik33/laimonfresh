@@ -34,7 +34,7 @@ export default function PopupAddCode(props) {
         //     formData.append('promocode', promocodeValue);
         // }
         formData.append('code', code.value);
-debugger
+
 
         try {
             const response = await axios.post('https://promo.laimonfresh.ch/backend/api/registerCode', formData, {

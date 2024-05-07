@@ -64,7 +64,6 @@ export default function PopupLogin(props) {
     let isRequestPending = false;
 
     async function postAuth(event) {
-debugger;
         const form = document.getElementById('form-login');
         event.preventDefault();
         const login = document.getElementById('logins');
