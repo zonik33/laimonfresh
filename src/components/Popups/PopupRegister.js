@@ -1,7 +1,7 @@
 import lcexit from "../../image/img_30.png";
 import {Checkbox} from "@mui/material";
 import Modal from "react-modal";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import PhoneInput from "../PhoneInput";
 import PopupLogin from "./PopupLogin";
 import axios from "axios";
@@ -168,6 +168,35 @@ export default function PopupRegister(props) {
         }
 
     }
+    const [inputValue, setInputValue] = useState('');
+    const [allCities, setAllCities] = useState([]);
+    const [filteredCities, setFilteredCities] = useState([]);
+
+    useEffect(() => {
+        const url = 'https://api.hh.ru/areas/113';
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const hhCities = data.areas.map(area => area.name); // Предположим, что данные содержат имена городов
+                setAllCities(hhCities);
+                setFilteredCities(hhCities); // Инициализируем фильтрованные города
+            })
+            .catch(error => {
+                console.error('Ошибка при запросе данных у API HeadHunter', error);
+            });
+    }, []); // Пустой массив зависимостей означает, что это будет выполнено только один раз после монтирования
+
+    const handleInputChange = (e) => {
+        const inputValue = e.target.value;
+        setInputValue(inputValue);
+
+        // Фильтрация городов по введенному тексту
+        const filteredCities = allCities.filter(city =>
+            city.toLowerCase().includes(inputValue.toLowerCase())
+        );
+        setFilteredCities(filteredCities);
+    };
 
     return (
         <div id="popup-complete" className="popup">
@@ -236,17 +265,19 @@ export default function PopupRegister(props) {
                                                style={{color: '#FFFFFF'}}>{registrationError}</div>}
                     <span id="phoneError" className="error"></span>
                     <p className={'register-inputs-text login'}>Город</p>
-                    <input list="cities" id={'city'} className={'register-inputs'} placeholder="Город"
+                    <input
+                        list="cities"
+                        id={'city'}
+                        className={'register-inputs'}
+                        placeholder="Город"
+                        value={inputValue}
+                        onChange={handleInputChange}
                         required
-                           onKeyDown={e => e.preventDefault()}
-                           onKeyPress={e => e.preventDefault()}
                     />
                     <datalist id="cities">
-                        <option value="City 1"/>
-                        <option value="City 2"/>
-                        <option value="City 3"/>
-                        <option value="City 1"/>
-                        <option value="City 2"/>
+                        {filteredCities.map((city, index) => (
+                            <option key={index} value={city}/>
+                        ))}
                     </datalist>
                     <p className={'register-inputs-text login'}>Пароль</p>
                     <input
