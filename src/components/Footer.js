@@ -1,7 +1,7 @@
 import logo2 from "../image/logo2.png";
 import treepape from "../image/img_27.png";
 import React, {useRef, useState} from "react";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 export default function Footer (props) {
     const navigate = useNavigate();
@@ -24,12 +24,19 @@ export default function Footer (props) {
     const winnersRef = useRef(null);
     const faqRef = useRef(null);
     const supportRef = useRef(null);
+    const handleImageClick = () => {
+        window.location.href = '/'
+    };
     return (
         <footer>
             <div className={'content-container-footer'}>
                 <div className={'footer'} id={'footer'}>
                     <div className="logo logo-footer">
-                        <img src={logo2} alt="Logo"/>
+                        <Link to="">
+                            <img src={logo2} alt="Logo" onMouseOver={() => { /* Обработчик наведения на картинку */
+                            }} onClick={handleImageClick}
+                            />
+                        </Link>
                         <img className={'bottle-float-left treepape-footer'} src={treepape} alt="Logo"/>
                     </div>
                     <div className="menu">

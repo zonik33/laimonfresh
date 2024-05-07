@@ -4,7 +4,7 @@ import dotslemon from "../../image/Dots.svg";
 import logo2 from "../../image/logo2.png";
 import Footer from "../Footer";
 import {Link, useNavigate} from "react-router-dom";
-import million from "../../image/img_17.png";
+import million from '../../image/img_59.png'
 import inputcode from "../../image/img_2.png";
 import prizevk from "../../image/img_18.png";
 import prizeyandex from "../../image/img_19.png";
@@ -37,11 +37,17 @@ import prizefit from "../../image/img_48.png";
 import prizewink from "../../image/img_49.png";
 import prizelit from "../../image/img_50.png";
 import {debounce} from "lodash";
+import prizemerch from "../../image/img_67.png";
+import prizetreav from "../../image/img_68.png";
 
 export default function Profile(props) {
     const [isPopupOpen, setIsPopupOpen] = useState(null);
     const openPopup = (popupName) => {
         setIsPopupOpen(popupName);
+        document.body.classList.add("no-scroll");
+    };
+    const openPopupLogin = () => {
+        document.getElementById("popup-login").style.display = "block";
         document.body.classList.add("no-scroll");
     };
     function openPopup3() {
@@ -235,14 +241,13 @@ export default function Profile(props) {
                                 <input
                                     type="text"
                                     className={'shadow-button-animation-text'}
-                                    onClick={() => openPopup('Register')}
+                                    onClick={() => openPopup(isAuthenticated ? 'AddCode' : openPopupLogin)}
                                     maxLength="20"
                                     readOnly
                                     placeholder=""
                                 />
-                                {isPopupOpen === 'Register' && (
-                                    <PopupRegister showPopup={true} closeModal={closePopup}/>
-                                )}
+                                {isPopupOpen === 'AddCode' && isAuthenticated &&
+                                    <PopupAddCode showPopup={true} closeModal={closePopup}/>}
                             </li>
                         </ul>
                     </nav>
@@ -263,9 +268,9 @@ export default function Profile(props) {
 
                     </div>
                 </div>
-                <div className={'lc-text lc-settings'}>
-                    <a onClick={openPopup3}>изменить свои данные</a>
-                </div>
+                {/*<div className={'lc-text lc-settings'}>*/}
+                {/*    <a onClick={openPopup3}>изменить свои данные</a>*/}
+                {/*</div>*/}
                 <div className={'prizes-content lc'}>
                     <div className={'left lc'}>
                         <p className={'left-p-name left-down lc checks'}>Мои коды</p>
@@ -345,8 +350,25 @@ export default function Profile(props) {
                                 </div>
                                 <div className={'images'}>
                                     <div className="image-container">
+                                        <img src={prizemerch} alt="Image 4"/>
+                                        <p className={'right-p-prizes'}>Мерч <br></br>от Laimon Fresh <br></br><p
+                                            className={'right-p-prizes-little'}>От 5-ти набранных карточек городов</p>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className={'images'}>
+                                    <div className="image-container">
+                                        <img src={prizetreav} alt="Image 4"/>
+                                        <p className={'right-p-prizes'}>Сертификат <br></br>на путешествие <br></br><p
+                                            className={'right-p-prizes-little'}>Приз конкурса <br></br>от блогеров</p>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className={'images'}>
+                                    <div className="image-container">
                                         <img src={prizekass} alt="Image 4"/>
-                                        <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>Кассир</p>
+                                        <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>Кассир
+                                        </p>
                                     </div>
                                 </div>
                                 <div className={'images'}>
@@ -360,13 +382,15 @@ export default function Profile(props) {
                                     <div className="image-container">
                                         <img src={prizega} alt="Image 6"/>
                                         <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>Золотое
-                                            Яблоко</p>
+                                            Яблоко
+                                        </p>
                                     </div>
                                 </div>
                                 <div className={'images'}>
                                     <div className="image-container">
                                         <img src={prizemv} alt="Image 7"/>
-                                        <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>М видео
+                                        <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>М
+                                            видео
                                         </p>
                                     </div>
                                 </div>
@@ -380,7 +404,7 @@ export default function Profile(props) {
                                 <div className={'images'}>
                                     <div className="image-container">
                                         <img src={prizevkcp} alt="Image 9"/>
-                                        <p className={'right-p-prizes'}>ВК <br></br>капсула нео</p>
+                                        <p className={'right-p-prizes'}>VK капсула <br></br>нео</p>
                                     </div>
                                 </div>
                             </Slider>
@@ -415,19 +439,19 @@ export default function Profile(props) {
                 </div>
             </div>
 
-                    <div id="wave-container-test-44">
-                        <div id="wave-test-44">
-                        </div>
-                    </div>
-                    <PopupSuccessCode/>
-                    <PopupSuccessPassword/>
-                    <PopupSuccessEmail/>
-                    <PopupPasswordNewStepOne/>
-                    <PopupPasswordNewStepTwo/>
-                    <PopupLogin/>
-                    <Footer/>
+            <div id="wave-container-test-44">
+                <div id="wave-test-44">
+                </div>
+            </div>
+            <PopupSuccessCode/>
+            <PopupSuccessPassword/>
+            <PopupSuccessEmail/>
+            <PopupPasswordNewStepOne/>
+            <PopupPasswordNewStepTwo/>
+            <PopupLogin/>
+            <Footer/>
         </header>
 
 
-);
+    );
 }

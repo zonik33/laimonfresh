@@ -15,6 +15,7 @@ import PopupSuccessEmail from "./Popups/PopupSuccessEmail";
 import PopupSuccessRegister from "./Popups/PopupSuccessRegister";
 import inputcode from "../image/img_2.png";
 import PopupAddCode from "./Popups/PopupAddCode";
+import {Link} from "react-router-dom";
 
 export default function Header(props) {
     const [showPopup, setShowPopup] = useState(false);
@@ -57,6 +58,9 @@ export default function Header(props) {
         document.getElementById("popup-login").style.display = "block";
         document.body.classList.add("no-scroll");
     };
+    const handleImageClick = () => {
+        window.location.href = '/'
+    };
     const auth_key = localStorage.getItem('auth_key');
     const isAuthenticated = !!auth_key;
     return (
@@ -66,7 +70,11 @@ export default function Header(props) {
             <div className="header" id="header">
 
                 <div className="logo">
-                    <img src={logo2} alt="Logo"/>
+                    <Link to="">
+                        <img src={logo2} alt="Logo" onMouseOver={() => { /* Обработчик наведения на картинку */
+                        }} onClick={handleImageClick}
+                        />
+                    </Link>
                 </div>
                 <div className={'header-burger'} onClick={toggleMenu}>
                     <span className={'span-burger'}></span>

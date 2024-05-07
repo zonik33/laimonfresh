@@ -5125,12 +5125,12 @@ cursor: pointer;
   .bottle-float-left.berry-prizes {
     z-index: 1;
     position: absolute;
-    margin-top: -292.05vw;
-    margin-left: -31.07vw;
-    width: 18.06vw;
+    margin-top: -264.05vw;
+    margin-left: -29.07vw;
+    width: 15.06vw;
     height: auto;
     transform: scaleX(-1);
-    animation: sbs-23142-left 15s infinite linear;
+    animation: sbs-23142-left 25s infinite linear;
     backface-visibility: hidden;
   }
   .table {
