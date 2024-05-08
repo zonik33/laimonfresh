@@ -1,7 +1,19 @@
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
-import lfmint from "../../image/img_29.png";
-import lfmintfull from "../../image/img_31.png";
+import lfmint from "../../image/img_69.png";
+import lfmint2 from "../../image/img_70.png";
+import lfmint3 from "../../image/img_71.png";
+import lfmint4 from "../../image/img_72.png";
+import lfmint5 from "../../image/img_73.png";
+import lfmint6 from "../../image/img_74.png";
+import lfmint7 from "../../image/img_75.png";
+import lfmint8 from "../../image/img_76.png";
+import lfmint9 from "../../image/img_77.png";
+import lfmint10 from "../../image/img_78.png";
+import lfmintfull from "../../image/img_79.png";
+// import lfmintfull2 from "../../image/img_80.png";
+// import lfmintfull3 from "../../image/img_81.png";
+// import lfmintfull4 from "../../image/img_82.png";
 import {debounce} from "lodash";
 
 export default function SliderCards() {
@@ -10,6 +22,7 @@ export default function SliderCards() {
     const [selectedImage, setSelectedImage] = useState(null); // Состояние выбранного изображения
 
     const [profile, setProfile] = useState(null);
+    const imageFiles = [lfmint, lfmint2, lfmint3, lfmint4, lfmint5, lfmint6, lfmint7, lfmint8, lfmint9, lfmint10];
     let displayCodes;
 
     useEffect(() => {
@@ -70,12 +83,14 @@ export default function SliderCards() {
         const isBlurred = index >= displayCodes;
         const isEnlarged = selectedImage === index;
 
+        const imageIndex = index % imageFiles.length;
+
         return (
             <div className={`slider-cards-winnersall-img ${isBlurred ? 'blurred' : ''}`} key={index}>
                 <a onClick={!isBlurred ? () => handleImageClick(index) : null}>
                     <img
                         className={`cards-img ${isEnlarged ? 'enlarge' : ''} ${!isBlurred ? 'cursor-pointer' : ''}`}
-                        src={lfmint}
+                        src={imageFiles[imageIndex]}
                         alt={`Card ${index + 1}`}
                     />
                 </a>
