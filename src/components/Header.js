@@ -16,6 +16,7 @@ import PopupSuccessRegister from "./Popups/PopupSuccessRegister";
 import inputcode from "../image/img_2.png";
 import PopupAddCode from "./Popups/PopupAddCode";
 import {Link} from "react-router-dom";
+import PopupSoon from "./Popups/PopupSoon";
 
 export default function Header(props) {
     const [showPopup, setShowPopup] = useState(false);
@@ -128,6 +129,7 @@ export default function Header(props) {
     <PopupPasswordNewStepOne/>
     <PopupPasswordNewStepTwo/>
     <PopupLogin/>
+            <PopupSoon/>
             <PopupSuccessRegister/>
         </header>
     );
