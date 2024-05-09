@@ -23,6 +23,7 @@ export default function SliderCards() {
 
     const [profile, setProfile] = useState(null);
     const imageFiles = [lfmint, lfmint2, lfmint3, lfmint4, lfmint5, lfmint6, lfmint7, lfmint8, lfmint9, lfmint10];
+    const fullSizedImages = [lfmint, lfmint2, lfmint3, lfmint4, lfmint5, lfmint6, lfmint7, lfmint8, lfmint9, lfmint10];
     let displayCodes;
 
     useEffect(() => {
@@ -109,13 +110,13 @@ export default function SliderCards() {
                          onClick={handleFullImageClose}></div>
                     <img
                         className="full-image"
-                        src={lfmintfull}
+                        src={fullSizedImages[selectedImage]}
                         alt="Full Sized Image"
                     />
                 </div>
             )}
             <div className={'text-block-inputcode'}>
-                <span className={'text-inputcode'}>всего собрано карточек</span>
+                <span className={'text-inputcode profile-mobile'}>всего собрано карточек</span>
                 <p className={'text-inputcode cards-prize'}>{displayCodes} из 10</p>
             </div>
         </div>

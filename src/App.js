@@ -42,7 +42,7 @@ function App() {
             setIsContentLoaded(true);
         };
         document.addEventListener('DOMContentLoaded', handleContentLoaded);
-        openPopup3()
+        // openPopup3()
         // openPopup3()
         return () => {
             document.removeEventListener('DOMContentLoaded', handleContentLoaded);

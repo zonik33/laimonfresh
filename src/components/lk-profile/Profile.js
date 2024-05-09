@@ -283,7 +283,7 @@ export default function Profile(props) {
                             <p className={'right-p-name left-down lc'}>Зарегистрировать новый код</p>
                             <input
                                 type="text"
-                                className={'new-code'}
+                                className={'new-code profile-mobile'}
                                 onClick={() => openPopup('AddCode')}
                                 maxLength="20"
                                 readOnly
@@ -293,7 +293,7 @@ export default function Profile(props) {
                                 <PopupAddCode showPopup={true} closeModal={closePopup}/>
                             )}
 
-                            <img className={'bottle-float-left inputcode'} src={inputcode}/>
+                            <img className={'bottle-float-left inputcode profile-mobile'} src={inputcode}/>
                             <div className={'winners-text-inputcode lc'}>
                                 <span
                                     className={'text-inputcode lc'}>*найди код под крышкой/ключиком и введи промокод</span>
