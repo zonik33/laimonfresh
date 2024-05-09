@@ -6405,7 +6405,7 @@ cursor: pointer;
     margin-left: 32.4vw;
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 6.47vw;
+    font-size: 7.47vw;
     line-height: 6.31vw;
     color: #EEF3EC;
     font-family: 'AutumnSweaterLaimon', Arial, sans-serif;
@@ -6469,14 +6469,14 @@ cursor: pointer;
     margin-right: -8.1vw;
   }
   .right-p-name.lc {
-    width: 64vw;
-    margin: -56.65vw 0vw -3vw -0.8vw;
-    font-family: 'AutumnSweaterLaimon', Arial, sans-serif;
+    color: #006241;
+    font-family: AutumnSweaterLaimon, Arial, sans-serif;
+    font-size: 6vw;
     font-weight: 400;
-    font-size: 5vw;
     line-height: 6vw;
+    margin: -56.65vw 0 -3vw -3.8vw;
     text-transform: uppercase;
-    color: rgba(0, 98, 65, 1);
+    width: 73vw;
   }
   input.profile-mobile {
     font-family: Inter;
@@ -6515,27 +6515,28 @@ cursor: pointer;
     margin-top: -85.8vw;
   }
   .lc-text-profile-d {
-    margin: -1.2vw 0vw 0vw 6.5vw;
-    width: 64.76vw;
-    height: 4.31vw;
-    text-transform: uppercase;
+    color: #006241;
+    font-family: AutumnSweaterLaimon, Arial, sans-serif;
+    font-size: 7.47vw;
     font-weight: 400;
-    font-size: 6.47vw;
+    height: 4.31vw;
     line-height: 6.31vw;
-    font-family: 'AutumnSweaterLaimon', Arial, sans-serif;
-    color: rgba(0, 98, 65, 1);
+    margin: -1.2vw 0 0 0.5vw;
+    text-transform: uppercase;
+    width: 74.76vw;
   }
   .lc-text-profile-d-down {
-    margin: 12.8vw 0vw 6vw 12.6vw;
-    width: 55.49vw;
-    height: 7.50vw;
-    text-transform: none;
-    text-align: center;
-    font-weight: 400;
-    font-size: 3.08vw;
-    line-height: 3.5vw;
+    color: #006241;
     font-family: Inter;
-    color: rgba(0, 98, 65, 1);
+    width: 89vw;
+    font-size: 4.08vw;
+    font-weight: 400;
+    height: 7.5vw;
+    line-height: 4.5vw;
+    margin: 11.8vw 0 10vw 4.6vw;
+    text-align: center;
+    text-transform: none;
+    width: 68.49vw;
   }
   .bottle-float-left.example-tree5.profile {
     z-index: -1;
