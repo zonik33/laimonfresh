@@ -9,6 +9,7 @@ import WinnersAll from "./components/winners/WinnersAll";
 import Modal from "react-modal";
 import axios from "axios";
 import PopupSoon from "./components/Popups/PopupSoon";
+import Error from "./components/Error/Error";
 const auth_key = localStorage.getItem('auth_key');
 const isAuthenticated = !!auth_key;
 
@@ -57,6 +58,9 @@ function App() {
         document.getElementById("popup-soon").style.display = "block";
         document.body.classList.add("no-scroll");
     }
+    function ErrorPage() {
+        return <div>404 - Page Not Found</div>;
+    }
     return (
     <div className="App">
         <BrowserRouter>
@@ -70,6 +74,7 @@ function App() {
                     path="/profile/*"
                     element={isAuthenticated ? <Profile /> : <Navigate to="/" />}
                 />
+                <Route path="*" element={<Error/>} />
             </Routes>
         </BrowserRouter>
         <PopupSoon/>

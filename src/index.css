@@ -1210,6 +1210,43 @@ body {
   z-index: 5;
   transition: opacity 0.3s ease;
 }
+.error {
+  width: 100%;
+  height: auto;
+  z-index: 5;
+  position: relative;
+}
+.error-clear {
+  text-decoration: none;
+  color: white;
+}
+.error-text {
+  color: rgba(0, 98, 65, 1);
+  font-family: 'AutumnSweaterLaimon', Arial, sans-serif;
+  font-size: 6.32vw;
+  font-weight: 400;
+  line-height: 6.04vw;
+}
+.error-text.first {
+  margin-top: 4vw;
+  margin-bottom: -1vw;
+}
+.error-text.second{
+
+  font-size: 26.67vw;
+  font-weight: 400;
+  line-height: 25.56vw;
+}
+.error-text.third{
+  width: 55.49vw;
+  height: 10vw;
+  font-family: Inter;
+  text-align: center;
+  font-size: 1.39vw;
+  font-weight: 400;
+  line-height: 1.67vw;
+  margin: 0 auto;
+}
 .bottle-float-left.fail-image {
   padding-right: 0.7vw;
   margin: 6.8vw 0vw 2vw 15vw;
@@ -6580,6 +6617,44 @@ cursor: pointer;
     background-color: inherit;
     width: 100%;
     font-size: 0.83vw;
+  }
+  .error {
+    width: 100%;
+    height: auto;
+    z-index: 5;
+    position: relative;
+  }
+  .error-clear {
+    text-decoration: none;
+    color: white;
+  }
+  .error-text {
+    color: rgba(0, 98, 65, 1);
+    font-family: 'AutumnSweaterLaimon', Arial, sans-serif;
+    font-size: 9.32vw;
+    font-weight: 400;
+    line-height: 9.04vw;
+  }
+  .error-text.first {
+    margin-top: 25vw;
+    margin-bottom: 5vw;
+  }
+  .error-text.second{
+
+    font-size: 38.67vw;
+    font-weight: 400;
+    line-height: 25.56vw;
+  }
+  .error-text.third{
+    width: 77.49vw;
+    height: 35vw;
+    font-family: Inter;
+    text-align: center;
+    font-size: 4.39vw;
+    font-weight: 400;
+    line-height: 4.67vw;
+    margin: 0 auto;
+    margin-top: 9vw;
   }
 
 
