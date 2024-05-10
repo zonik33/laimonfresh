@@ -7,6 +7,11 @@ import PopupAddCode from "../Popups/PopupAddCode";
 import tree5555 from "../../image/img_80.png";
 import tree6666 from "../../image/img_81.png";
 import React from "react";
+
+function clickOnButton() {
+    window.location.href = "/";
+}
+
 export default function Error(props) {
 
 return(
@@ -25,7 +30,7 @@ return(
                 не существует. Возможно
                 она устарела,<br></br>была удалена, или был введен неверный адрес в адресной строке
             </div>
-            <button type={'submit'} id={'submit'} className={'register-button code-down'}><a className={'error-clear'} href={'/'}> Перейти на главную </a>  </button>
+            <button type={'submit'} onClick={clickOnButton} id={'submit'} className={'register-button code-down'}><a className={'error-clear'} href={'/'}> Перейти на главную </a>  </button>
         </div>
     </div>
 </header>
