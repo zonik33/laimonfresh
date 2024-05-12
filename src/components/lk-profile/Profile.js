@@ -235,7 +235,7 @@ export default function Profile(props) {
                                                         }}>Вопросы/ответы</a></li>
                             <li className={'li-lc'}><a className={'active-block'} href={'profile'}>Личный кабинет</a>
                             </li>
-                            <li className={'li-lc'} onClick={selectChoose}><a className={'smooth'}>Выйти</a>
+                            <li className={'li-lc shadows-li'} onClick={selectChoose}><a className={'smooth'}>Выйти</a>
                             </li>
                         </ul>
                     </nav>

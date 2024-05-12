@@ -768,6 +768,9 @@ body {
 .main-menu .li-lc{
   margin-left: 1.6vw;
 }
+.shadows-li.shadows-li {
+  display: none;
+}
 .main-menu .li-lc:hover {
   cursor: pointer;
 }
@@ -6523,6 +6526,9 @@ cursor: pointer;
     line-height: 6.13vw;
     text-transform: uppercase;
     color: rgba(0, 98, 65, 1);
+  }
+  .shadows-li.shadows-li {
+    display: inherit;
   }
   .slider-codes-winnersall {
     padding: 4.8vw 5.5vw 4.79vw 5.8vw;
