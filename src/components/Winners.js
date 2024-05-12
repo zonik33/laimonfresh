@@ -434,6 +434,8 @@ export default function Winners(props) {
                                                         </div>
                                                     </div>
                                                 ))}
+
+
                                             </div>
                                             <div className={'example-all-test winners-test'}>
                                                 <a className={'winners-all-a winners-test-a'} href={'winners'}>Весь
@@ -467,11 +469,19 @@ export default function Winners(props) {
                                             ))}
 
 
+                                            {/*<div className={'table-body-winners down'}>*/}
+                                            {/*    <div className={'head-colm-prize1'}></div>*/}
+                                            {/*    <div className={'head-colm-name'}></div>*/}
+                                            {/*    <div className={'head-colm-phone1'}></div>*/}
+                                            {/*    <div className={'head-colm-date1'}>*/}
+                                            {/*    </div>*/}
+                                            {/*</div>*/}
+
                                         </div>
 
                                     </div>
                                     <div className={'winners-videos'}>
-                                    {/*<a href={'#'}>Показать всех</a>*/}
+                                        {/*<a href={'#'}>Показать всех</a>*/}
                                     </div>
 
                                 </div>

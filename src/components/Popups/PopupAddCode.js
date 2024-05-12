@@ -24,7 +24,7 @@ export default function PopupAddCode(props) {
         const form = document.getElementById('form-add-code');
         event.preventDefault();
         const code = document.getElementById('addCode');
-
+debugger;
         if (isRequestPending) {
             return;
         }

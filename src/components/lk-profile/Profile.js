@@ -32,7 +32,7 @@ import prizesm from "../../image/img_43.png";
 import prizega from "../../image/img_44.png";
 import prizemv from "../../image/img_45.png";
 import prizemoc from "../../image/img_46.png";
-import prizevkcp from "../../image/img_47.png";
+import prizevkcp from "../../image/img_66.png";
 import prizefit from "../../image/img_48.png";
 import prizewink from "../../image/img_49.png";
 import prizelit from "../../image/img_50.png";
@@ -42,6 +42,8 @@ import prizetreav from "../../image/img_68.png";
 
 export default function Profile(props) {
     const [isPopupOpen, setIsPopupOpen] = useState(null);
+    const auth_key = localStorage.getItem('auth_key');
+    const isAuthenticated = !!auth_key;
     const openPopup = (popupName) => {
         setIsPopupOpen(popupName);
         document.body.classList.add("no-scroll");
@@ -67,9 +69,6 @@ export default function Profile(props) {
         window.location.href = '/';
     };
 
-
-    const auth_key = localStorage.getItem('auth_key');
-    const isAuthenticated = !!auth_key;
     const handleOnClick = () => {
 
             document.body.classList.add("no-scroll");
@@ -236,18 +235,7 @@ export default function Profile(props) {
                                                         }}>Вопросы/ответы</a></li>
                             <li className={'li-lc'}><a className={'active-block'} href={'profile'}>Личный кабинет</a>
                             </li>
-                            <li>
-                                <img className={'bottle-float-left show'} src={inputcode}/>
-                                <input
-                                    type="text"
-                                    className={'shadow-button-animation-text'}
-                                    onClick={() => openPopup(isAuthenticated ? 'AddCode' : openPopupLogin)}
-                                    maxLength="20"
-                                    readOnly
-                                    placeholder=""
-                                />
-                                {isPopupOpen === 'AddCode' && isAuthenticated &&
-                                    <PopupAddCode showPopup={true} closeModal={closePopup}/>}
+                            <li className={'li-lc'} onClick={selectChoose}><a className={'smooth'}>Выйти</a>
                             </li>
                         </ul>
                     </nav>
@@ -283,15 +271,14 @@ export default function Profile(props) {
                             <p className={'right-p-name left-down lc'}>Зарегистрировать новый код</p>
                             <input
                                 type="text"
-                                className={'new-code profile-mobile'}
-                                onClick={() => openPopup('AddCode')}
+                                className={'new-code-profile profile-mobile'}
+                                onClick={() => openPopup(isAuthenticated ? 'AddCode' : openPopupLogin)}
                                 maxLength="20"
                                 readOnly
                                 placeholder=""
                             />
-                            {isPopupOpen === 'AddCode' && (
-                                <PopupAddCode showPopup={true} closeModal={closePopup}/>
-                            )}
+                            {isPopupOpen === 'AddCode' && isAuthenticated &&
+                                <PopupAddCode showPopup={true} closeModal={closePopup}/>}
 
                             <img className={'bottle-float-left inputcode profile-mobile'} src={inputcode}/>
                             <div className={'winners-text-inputcode lc'}>
@@ -450,6 +437,7 @@ export default function Profile(props) {
             <PopupPasswordNewStepTwo/>
             <PopupLogin/>
             <Footer/>
+            <PopupAddCode/>
         </header>
 
 

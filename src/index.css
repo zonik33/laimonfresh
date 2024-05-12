@@ -4039,6 +4039,27 @@ input.new-code:hover {
   box-shadow: 0 0 0.5vw rgba(0, 98, 65, 1); /* Add a box shadow for visual indication */
   cursor: pointer;
 }
+input.new-code-profile {
+  font-family: Inter;
+  width: 28.56vw;
+  height: 4.1vw;
+  border: 0.14vw solid red;
+  border-radius: 3.68vw;
+  padding: 0.35vw;
+  font-size: 1.11vw;
+  margin-top: 3.1vw;
+  margin-left: 16.8vw;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  z-index: 5;
+  position: relative;
+}
+input.new-code-profile:hover {
+  border-color: rgba(0, 98, 65, 1); /* Change the border color when input is focused */
+  box-shadow: 0 0 0.5vw rgba(0, 98, 65, 1); /* Add a box shadow for visual indication */
+  cursor: pointer;
+}
 .container-register {
   padding: 0vw 1vw;
 }
@@ -4683,6 +4704,22 @@ cursor: pointer;
     z-index: 6;
   }
   input.new-code {
+    font-family: Inter;
+    width: 57.56vw;
+    height: 14.1vw;
+    border: 0.14vw solid red;
+    border-radius: 6.68vw;
+    padding: 0.35vw;
+    font-size: 1.11vw;
+    margin-top: 111.1vw;
+    margin-left: -40.2vw;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    z-index: 5;
+    position: absolute;
+  }
+  input.new-code-profile {
     font-family: Inter;
     width: 57.56vw;
     height: 14.1vw;
@@ -6620,7 +6657,7 @@ cursor: pointer;
   }
   .error {
     width: 100%;
-    height: auto;
+    /*height: auto;*/
     z-index: 5;
     position: relative;
   }

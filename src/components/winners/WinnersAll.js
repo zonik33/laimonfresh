@@ -74,18 +74,30 @@ export default function WinnersAll(props) {
     const [weekWinners, setWeekWinners] = useState([]);
     const [week1Winners, setWeek1Winners] = useState([]);
     const [week2Winners, setWeek2Winners] = useState([]);
+    const [week3Winners, setWeek3Winners] = useState([]);
+    const [week4Winners, setWeek4Winners] = useState([]);
+    const [week5Winners, setWeek5Winners] = useState([]);
+    const [week6Winners, setWeek6Winners] = useState([]);
+
     const [currentWeekWinners, setCurrentWeekWinners] = useState([]);
     const handleSliderChange = (currentSlide) => {
         if (currentSlide === 0) {
-            console.log('что то изменилось')
             setCurrentWeekWinners(weekWinners);
         } else if (currentSlide === 1) {
-            console.log('что то изменилось')
             setCurrentWeekWinners(week1Winners);
         } else if (currentSlide === 2) {
-            console.log('что то изменилось')
             setCurrentWeekWinners(week2Winners);
         }
+        else if (currentSlide === 3) {
+            setCurrentWeekWinners(week3Winners);
+        }
+        else if (currentSlide === 4) {
+            setCurrentWeekWinners(week4Winners);
+        }
+        else if (currentSlide === 5) {
+            setCurrentWeekWinners(week5Winners);
+        }
+
     };
     useEffect(() => {
         const fetchWeekWinners = async () => {
@@ -107,7 +119,7 @@ export default function WinnersAll(props) {
 
         const fetchWeek1Winners = async () => {
             try {
-                const response = await axios.get('https://promo.laimonfresh.ch/backend/api/getWinners?type=week&week=1');
+                const response = await axios.get('https://promo.laimonfresh.ch/backend/api/getWinners?type=week&week=2');
                 const data = response.data.data.rows || [];
                 setWeek1Winners(data);
             } catch (error) {
@@ -118,7 +130,7 @@ export default function WinnersAll(props) {
 
         const fetchWeek2Winners = async () => {
             try {
-                const response = await axios.get('https://promo.laimonfresh.ch/backend/api/getWinners?type=week&week=2');
+                const response = await axios.get('https://promo.laimonfresh.ch/backend/api/getWinners?type=week&week=3');
                 const data = response.data.data.rows || [];
                 setWeek2Winners(data);
             } catch (error) {
@@ -126,7 +138,52 @@ export default function WinnersAll(props) {
             }
         };
         fetchWeek2Winners();
+
+        const fetchWeek3Winners = async () => {
+            try {
+                const response = await axios.get('https://promo.laimonfresh.ch/backend/api/getWinners?type=week&week=4');
+                const data = response.data.data.rows || [];
+                setWeek3Winners(data);
+            } catch (error) {
+                console.error('Error fetching week 2 winners:', error);
+            }
+        };
+        fetchWeek3Winners();
+
+        const fetchWeek4Winners = async () => {
+            try {
+                const response = await axios.get('https://promo.laimonfresh.ch/backend/api/getWinners?type=week&week=5');
+                const data = response.data.data.rows || [];
+                setWeek4Winners(data);
+            } catch (error) {
+                console.error('Error fetching week 2 winners:', error);
+            }
+        };
+        fetchWeek4Winners();
+
+        const fetchWeek5Winners = async () => {
+            try {
+                const response = await axios.get('https://promo.laimonfresh.ch/backend/api/getWinners?type=week&week=6');
+                const data = response.data.data.rows || [];
+                setWeek5Winners(data);
+            } catch (error) {
+                console.error('Error fetching week 2 winners:', error);
+            }
+        };
+        fetchWeek5Winners();
+
+        const fetchWeek6Winners = async () => {
+            try {
+                const response = await axios.get('https://promo.laimonfresh.ch/backend/api/getWinners?type=week&week=7');
+                const data = response.data.data.rows || [];
+                setWeek6Winners(data);
+            } catch (error) {
+                console.error('Error fetching week 2 winners:', error);
+            }
+        };
+        fetchWeek6Winners();
     }, []);
+
 
     useEffect(() => {
         if (activeSection === "how-prizes" && prizesRef.current) {
@@ -307,11 +364,20 @@ export default function WinnersAll(props) {
                         <div>
                             <p className={'slider-search-winnersall'}>с 03.01 по 03.01</p>
                         </div>
+                        <div>
+                            <p className={'slider-search-winnersall'}>с 04.01 по 04.01</p>
+                        </div>
+                        <div>
+                            <p className={'slider-search-winnersall'}>с 05.01 по 05.01</p>
+                        </div>
+                        <div>
+                            <p className={'slider-search-winnersall'}>с 06.01 по 06.01</p>
+                        </div>
                         {/* Добавьте больше слайдов с датами, если нужно */}
                     </Slider>
                     <div className={'winners-tabs-content'}>
                         <div className={'tab'}>
-                            <div className={'tab-inner'}>
+                        <div className={'tab-inner'}>
                                 <div className={'table'}>
                                     <div className={'table-body'}>
                                         <div className={'table-body'}>
