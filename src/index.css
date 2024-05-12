@@ -6657,9 +6657,19 @@ cursor: pointer;
   }
   .error {
     width: 100%;
-    /*height: auto;*/
     z-index: 5;
     position: relative;
+  }
+  .custom-checkbox.error {
+    position: relative;
+    display: inline-block;
+    width: 6.2vw;
+    height: 6.2vw;
+    background-color: #FFFFFF;
+    border-radius: 3.44vw;
+    margin-left: 0vw;
+    margin-top: 0.0vw;
+    margin-bottom: 1.3vw;
   }
   .error-clear {
     text-decoration: none;
