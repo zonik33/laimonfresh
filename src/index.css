@@ -3862,10 +3862,18 @@ backface-visibility: hidden;
   margin-top: 1.65vw;
   margin-left: auto; /* Чтобы прижать к правому краю */
 }
-.winners-prize-img {
-  margin: -1vw 0vw 0vw 3vw;
+.winners-block-img {
+  display: inline-block;
+  background-color: rgba(245, 245, 237, 1);
   width: 3.96vw;
   height: 3.96vw;
+  margin: -1vw 0vw 0vw 2vw;
+  border-radius: 0.69vw;
+}
+.winners-prize-img {
+  margin: 0.8vw 0vw 0vw 0vw;
+  width: 2.46vw;
+  height: 2.46vw;
 }
 .colm-text {
   text-transform: uppercase;
@@ -5314,10 +5322,18 @@ cursor: pointer;
     margin-top: 2.7vw;
     margin-left: -3vw;
   }
+  .winners-block-img {
+    display: inline-block;
+    background-color: rgba(245, 245, 237, 1);
+    width: 16.56vw;
+    height: 16.56vw;
+    margin: 1vw 4vw 0vw -6vw;
+    border-radius: 3.69vw;
+  }
   .winners-prize-img {
-    margin: 1vw 3vw 0vw 1vw;
-    width: 15.56vw;
-    height: 15.56vw;
+    margin: 3vw 3vw 0vw 3vw;
+    width: 10.56vw;
+    height: 10.56vw;
   }
   header .menu.show {
     background-image: linear-gradient(#284031, #266a41, #03be53);

@@ -15,10 +15,10 @@ import 'simplebar-react/dist/simplebar.min.css';
 import owntreep from "../../image/img_36.png";
 import limeright1 from "../../image/img_35.png";
 import inputcode from "../../image/img_2.png";
-import prizeImage1 from '../../image/img_21.png';
-import prizeImage2 from '../../image/img_21.png';
-import prizeImage3 from '../../image/img_21.png';
-import prizeImage4 from '../../image/img_21.png';
+import prizeImage1 from '../../image/img_82.png';
+import prizeImage2 from '../../image/img_83.png';
+import prizeImage3 from '../../image/img_84.png';
+import prizeImage4 from '../../image/img_85.png';
 
 import PopupRegister from "../Popups/PopupRegister";
 import Slider from "react-slick";
@@ -399,7 +399,10 @@ export default function WinnersAll(props) {
                                                                         <div className={'head-colm-name'}>{winner.name}</div>
                                                                         <div className={'head-colm-phone1'}>{winner.code}</div>
                                                                         <div className={'head-colm-date1'}>
-                                                                            <img className={'winners-prize-img'} alt={'Приз'} src={prizeImages[winner.prize_id]}/>
+                                                                            <div className={'winners-block-img'}>
+                                                                                <img className={'winners-prize-img'} alt={'Приз'}
+                                                                                     src={prizeImages[winner.prize_id]}/>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 ))}
@@ -416,7 +419,7 @@ export default function WinnersAll(props) {
                                                     <div className={'head-colm-name'}>{winner.name}</div>
                                                     <div className={'head-colm-phone1'}>{winner.code}</div>
                                                     <div className={'head-colm-date1'}>
-                                                    <img className={'winners-prize-img'} alt={'Приз'} src={prizeImages[winner.prize_id]}/>
+                                                    {/*<img className={'winners-prize-img'} alt={'Приз'} src={prizeImages[winner.prize_id]}/>*/}
                                                     </div>
                                                 </div>
                                             ))}
