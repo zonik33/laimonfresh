@@ -15,10 +15,7 @@ import 'simplebar-react/dist/simplebar.min.css';
 import owntreep from "../../image/img_36.png";
 import limeright1 from "../../image/img_35.png";
 import inputcode from "../../image/img_2.png";
-import prizeImage1 from '../../image/img_82.png';
-import prizeImage2 from '../../image/img_83.png';
-import prizeImage3 from '../../image/img_84.png';
-import prizeImage4 from '../../image/img_85.png';
+
 
 import PopupRegister from "../Popups/PopupRegister";
 import Slider from "react-slick";
@@ -30,6 +27,10 @@ import PopupPasswordNewStepTwo from "../Popups/PopupPasswordNewStepTwo";
 import PopupLogin from "../Popups/PopupLogin";
 import PopupSuccessRegister from "../Popups/PopupSuccessRegister";
 import PopupAddCode from "../Popups/PopupAddCode";
+import prizeImage1 from "../../image/img_82.png";
+import prizeImage2 from "../../image/img_83.png";
+import prizeImage3 from "../../image/img_84.png";
+import prizeImage4 from "../../image/img_87.png";
 import prizeImage5 from "../../image/img_88.png";
 import prizeImage6 from "../../image/img_89.png";
 import prizeImage7 from "../../image/img_90.png";
@@ -37,6 +38,7 @@ import prizeImage8 from "../../image/img_91.png";
 import prizeImage9 from "../../image/img_92.png";
 import prizeImage10 from "../../image/img_85.png";
 import prizeImage11 from "../../image/img_86.png";
+
 
 export default function WinnersAll(props) {
     const [showPopup, setShowPopup] = useState(false);
