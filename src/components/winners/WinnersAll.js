@@ -30,6 +30,13 @@ import PopupPasswordNewStepTwo from "../Popups/PopupPasswordNewStepTwo";
 import PopupLogin from "../Popups/PopupLogin";
 import PopupSuccessRegister from "../Popups/PopupSuccessRegister";
 import PopupAddCode from "../Popups/PopupAddCode";
+import prizeImage5 from "../../image/img_88.png";
+import prizeImage6 from "../../image/img_89.png";
+import prizeImage7 from "../../image/img_90.png";
+import prizeImage8 from "../../image/img_91.png";
+import prizeImage9 from "../../image/img_92.png";
+import prizeImage10 from "../../image/img_85.png";
+import prizeImage11 from "../../image/img_86.png";
 
 export default function WinnersAll(props) {
     const [showPopup, setShowPopup] = useState(false);
@@ -277,6 +284,13 @@ export default function WinnersAll(props) {
         2: prizeImage2,
         3: prizeImage3,
         4: prizeImage4,
+        5: prizeImage5,
+        6: prizeImage6,
+        7: prizeImage7,
+        8: prizeImage8,
+        9: prizeImage9,
+        10: prizeImage10,
+        11: prizeImage11,
     };
     const auth_key = localStorage.getItem('auth_key');
     const isAuthenticated = !!auth_key;
