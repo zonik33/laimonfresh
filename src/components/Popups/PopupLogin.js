@@ -104,7 +104,7 @@ export default function PopupLogin(props) {
                 setAuthToken(auth_key);
                 setTimeout(() => {
                     window.location.href = '/profile';
-                }, 1000);
+                }, 500);
             }
         } catch (error) {
 

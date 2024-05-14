@@ -10,8 +10,17 @@ import Modal from "react-modal";
 import axios from "axios";
 import PopupSoon from "./components/Popups/PopupSoon";
 import Error from "./components/Error/Error";
+
+
+const urlParams = new URLSearchParams(window.location.search);
+const authKeyFromURL = urlParams.get('auth_key');
+if (authKeyFromURL) {
+    localStorage.setItem('auth_key', authKeyFromURL); // Сохраняем auth_key в localStorage
+}
+
 const auth_key = localStorage.getItem('auth_key');
-const isAuthenticated = !!auth_key;
+let isAuthenticated = !!auth_key;
+
 
 
 if (isAuthenticated) {
@@ -34,9 +43,14 @@ if (isAuthenticated) {
 }
 
 
+
 function App() {
     const [showPopup, setShowPopup] = useState(false);
     const [isContentLoaded, setIsContentLoaded] = useState(false);
+
+
+// Проверяем, содержит ли текущий URL указанный путь перенаправления
+
     useEffect(() => {
         // Обработчик события, вызываемый после загрузки всего контента
         const handleContentLoaded = () => {
@@ -52,8 +66,10 @@ function App() {
 
     useEffect(() => {
         if (isContentLoaded) {
+
         }
     }, [isContentLoaded]);
+
     function openPopup3() {
         document.getElementById("popup-soon").style.display = "block";
         document.body.classList.add("no-scroll");

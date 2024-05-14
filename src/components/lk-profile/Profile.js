@@ -199,6 +199,7 @@ export default function Profile(props) {
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, [settingsMobile, settings, handleResize]);
+    const currentDomain = window.location.origin;
 
     return (
         <header>
@@ -219,7 +220,8 @@ export default function Profile(props) {
                 <div className="menu">
                     <nav className="main-menu">
                         <ul>
-                            <li className={'li-rules'}><a href={'#'}> Правила</a></li>
+                            <li className={'li-rules'}><a href={`${currentDomain}/rules.pdf`}
+                                                          target="_blank"> Правила</a></li>
                             <li className={'li-ont'}><a className="smooth" href={'#how-prizes'} onClick={(event) => {
                                 closeMenu();
                                 handleGoToPrizes(event)

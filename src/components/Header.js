@@ -62,6 +62,7 @@ export default function Header(props) {
     const handleImageClick = () => {
         window.location.href = '/'
     };
+    const currentDomain = window.location.origin;
     const auth_key = localStorage.getItem('auth_key');
     const isAuthenticated = !!auth_key;
     return (
@@ -83,7 +84,7 @@ export default function Header(props) {
             <div className="menu">
                 <nav className="main-menu">
                     <ul>
-                        <li className={'li-rules'}><a href={'#'}> Правила</a></li>
+                        <li className={'li-rules'}><a href={`${currentDomain}/rules.pdf`} target="_blank"> Правила</a></li>
                         <li className={'li-ont'}><a className="smooth" href={'#how-prizes'} onClick={(event) => {
                             closeMenu();
                             ScrollPrizes(event);

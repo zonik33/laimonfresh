@@ -27,6 +27,14 @@ export default function Footer (props) {
     const handleImageClick = () => {
         window.location.href = '/'
     };
+    const currentDomain = window.location.origin;
+    const handleRulesClick = () => {
+        window.open(`${currentDomain}/rules.pdf`, '_blank');
+    };
+    const handlePolicyClick = () => {
+        window.open(`${currentDomain}/politika_pd_omi.pdf`, '_blank');
+    };
+
     return (
         <footer>
             <div className={'content-container-footer'}>
@@ -42,7 +50,8 @@ export default function Footer (props) {
                     <div className="menu">
                         <nav className="main-menu">
                             <ul>
-                                <li className={'li-rules'}><a href={'#'}> Правила</a></li>
+                                <li className={'li-rules'}><a href={`${currentDomain}/rules.pdf`}
+                                                              target="_blank"> Правила</a></li>
                                 <li className={'li-ont'}><a className="smooth" href={'#how-prizes'}
                                                             onClick={(event) => {
                                                                 handleGoToPrizes(event)
@@ -67,8 +76,8 @@ export default function Footer (props) {
                 <div className="right-footer">
                     <p>Документы об акции</p>
                     <div className="buttons">
-                        <button className={'footer-left-button'}>Политика персональных данных</button>
-                        <button className={'footer-right-button'}>Правила акции</button>
+                        <button className={'footer-left-button'} onClick={handlePolicyClick}>Политика персональных данных</button>
+                        <button className={'footer-right-button'} onClick={handleRulesClick}>Правила акции</button>
                     </div>
                 </div>
             </div>

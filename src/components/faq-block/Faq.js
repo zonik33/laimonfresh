@@ -134,6 +134,7 @@ export default function Faq(props) {
         document.getElementById("popup-login").style.display = "block";
         document.body.classList.add("no-scroll");
     };
+    const currentDomain = window.location.origin;
     return (
         <header>
             <img src={lemondots} alt="Photo" className="left-photo"/>
@@ -153,7 +154,8 @@ export default function Faq(props) {
                 <div className="menu">
                     <nav className="main-menu">
                         <ul>
-                            <li className={'li-rules'}><a href={'#'}> Правила</a></li>
+                            <li className={'li-rules'}><a href={`${currentDomain}/rules.pdf`}
+                                                          target="_blank"> Правила</a></li>
                             <li className={'li-ont'}><a className="smooth" href={'#how-prizes'} onClick={(event) => {
                                 closeMenu();
                                 handleGoToPrizes(event)
