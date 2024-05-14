@@ -946,6 +946,18 @@ body {
   height: 2.08vw;
   background: rgba(248, 214, 72, 1);
 }
+.scroll-container-winners-block {
+  position: relative;
+  overflow: hidden;
+  width: 76vw;
+  height: 18vw;
+}
+.block-winners-wrapper {
+  position: relative;
+  /* overflow: hidden; */
+  width: 76vw;
+  height: 27.25vw;
+}
 
 #wave-test-2:before {
   content: "";
@@ -6433,6 +6445,13 @@ cursor: pointer;
 
   }
   .faq-question a:hover{
+  }
+
+  .scroll-container-winners-block {
+    position: relative;
+    overflow: hidden;
+    width: 94.24vw;
+    height: 104vw;
   }
   .faq-question-p-a {
     font-size: 6.67vw;

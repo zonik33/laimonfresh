@@ -303,6 +303,7 @@ export default function PopupRegister(props) {
                                 id="rules1"
                                 className={`input-checkbox ${!agree4Checked ? 'error' : ''}`}
                                 onChange={handleAgree4Change}
+                                required
 
                             />
                             <span className={`custom-checkbox ${!agree4Checked ? 'error' : ''}`}></span>
@@ -319,6 +320,7 @@ export default function PopupRegister(props) {
                                 id="rules2"
                                 className={`input-checkbox ${!agree5Checked ? 'error' : ''}`}
                                 onChange={handleAgree5Change}
+                                required
 
                             />
                             <span className={`custom-checkbox ${!agree5Checked ? 'error' : ''}`}></span>
