@@ -374,23 +374,54 @@ export default function WinnersAll(props) {
                     </div>
                     <Slider {...settings} onChange={handleSliderChange}>
                         <div>
-                            <p className={'slider-search-winnersall'}>с 01.01 по 01.01</p>
+                            <p className={'slider-search-winnersall'}>с 15.05 по 21.05</p>
                         </div>
                         <div>
-                            <p className={'slider-search-winnersall'}>с 02.01 по 02.01</p>
+                            <p className={'slider-search-winnersall'}>с 22.05 по 28.05</p>
                         </div>
                         <div>
-                            <p className={'slider-search-winnersall'}>с 03.01 по 03.01</p>
+                            <p className={'slider-search-winnersall'}>с 29.05 по 04.06</p>
                         </div>
                         <div>
-                            <p className={'slider-search-winnersall'}>с 04.01 по 04.01</p>
+                            <p className={'slider-search-winnersall'}>с 05.06 по 11.06</p>
                         </div>
                         <div>
-                            <p className={'slider-search-winnersall'}>с 05.01 по 05.01</p>
+                            <p className={'slider-search-winnersall'}>с 12.06 по 18.06</p>
                         </div>
                         <div>
-                            <p className={'slider-search-winnersall'}>с 06.01 по 06.01</p>
+                            <p className={'slider-search-winnersall'}>с 19.06 по 25.06</p>
                         </div>
+                        <div>
+                            <p className={'slider-search-winnersall'}>с 26.06 по 02.07</p>
+                        </div>
+                        <div>
+                            <p className={'slider-search-winnersall'}>с 03.07 по 09.07</p>
+                        </div>
+                        <div>
+                            <p className={'slider-search-winnersall'}>с 10.07 по 16.07</p>
+                        </div>
+                        <div>
+                            <p className={'slider-search-winnersall'}>с 17.07 по 23.07</p>
+                        </div>
+                        <div>
+                            <p className={'slider-search-winnersall'}>с 24.07 по 30.07</p>
+                        </div>
+                        <div>
+                            <p className={'slider-search-winnersall'}>с 31.07 по 06.08</p>
+                        </div>
+                        <div>
+                            <p className={'slider-search-winnersall'}>с 07.08 по 13.08</p>
+                        </div>
+                        <div>
+                            <p className={'slider-search-winnersall'}>с 14.08 по 20.08</p>
+                        </div>
+                        <div>
+                            <p className={'slider-search-winnersall'}>с 21.08 по 27.08</p>
+                        </div>
+                        <div>
+                            <p className={'slider-search-winnersall'}>с 28.08 по 31.08</p>
+                        </div>
+
                         {/* Добавьте больше слайдов с датами, если нужно */}
                     </Slider>
                     <div className={'winners-tabs-content'}>

@@ -69,13 +69,30 @@ export default function ControlledAccordions() {
                     id="panel1-header"
                 >
                     <Typography className={classes.heading}>
-                        <b className={'heading-id'}>01</b> <p className={'heading-name'}>Рыбий текст</p>
+                        <b className={'heading-id'}>01</b> <p className={'heading-name'}>Кто является организатором Акции?</p>
                     </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
                         {expanded === 'panel1' && <div className={classes.line}></div>}
-                        А также некоторые особенности внутренней политики формируют глобальную экономическую сеть и при этом — указаны как претенденты на роль ключевых.
+                        <b className={'black-b'}>Заказчиком Акции</b> является юридическое лицо, созданное в соответствии с
+                        законодательством Российской Федерации ООО "ТД "МЕГАПАК" ОГРН 1035000900593, ИНН
+                        5003028050, адрес местонахождения: 142704 Московская область, Ленинский г. о., г.
+                        Видное, территория промзона, ВЗ ГИАП, корпус 453 (далее – Заказчик).
+                        <br></br>
+                        <br></br>
+                        <b className={'black-b'}>Организатор Акции</b> является юридическое лицо, созданное в соответствии с
+                        законодательством Российской Федерации, а именно, Общество с ограниченной
+                        ответственностью «Резонанс Фэмили» ОГРН: 1047855156854, ИНН: 7840309005, адрес
+                        местонахождения: 101000 г. Москва, ул. Мясницкая, д. 38, стр. 1, этаж 4,
+                        помещение 1/4 (далее - Организатор).
+                        <br></br>
+                        <br></br>
+                        <b className={'black-b'}>Оператором Акции</b> является юридическое лицо, созданное в соответствии с
+                        законодательством Российской Федерации, а именно Общество с ограниченной
+                        ответственностью «Аутдор Медиа Интернэшнл», ОГРН 1027700335717, ИНН 7731177750,
+                        адрес местонахождения: 119435, г. Москва, Большой Саввинский пер.9, стр.3 (далее
+                        - Оператор).
 
                     </Typography>
                 </AccordionDetails>
@@ -93,13 +110,15 @@ export default function ControlledAccordions() {
                     aria-controls="panel2-content"
                     id="panel2-header"
                 >
-                    <Typography className={classes.heading}><b className={'heading-id'}>02</b> <p
-                        className={'heading-name'}>Рыбий текст</p></Typography>
+                    <Typography className={classes.heading}>
+                        <b className={'heading-id'}>02</b> <p className={'heading-name'}>Где я могу прочесть правила Акции?</p>
+                    </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
                         {expanded === 'panel2' && <div className={classes.line}></div>}
-                        А также некоторые особенности внутренней политики формируют глобальную экономическую сеть и при этом — указаны как претенденты на роль ключевых.
+                        Всю информацию об Акции, а также правилах её проведения можно найти на Официальном сайте Акции  <a className={'black-b'} href={'https://promo.laimonfresh.ch/'}>promo.laimonfresh.ch.</a>
+
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -115,15 +134,33 @@ export default function ControlledAccordions() {
                     aria-controls="panel2-content"
                     id="panel2-header"
                 >
-                    <Typography className={classes.heading}><b className={'heading-id'}>03</b> <p
-                        className={'heading-name'}>Рыбий текст</p></Typography>
-                    <Typography className={classes.secondaryHeading}>
+                    <Typography className={classes.heading}>
+                        <b className={'heading-id'}>03</b> <p className={'heading-name'}>Какая продукция участвует в Акции?</p>
                     </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
                         {expanded === 'panel3' && <div className={classes.line}></div>}
-                        А также некоторые особенности внутренней политики формируют глобальную экономическую сеть и при этом — указаны как претенденты на роль ключевых.
+
+                        Акция проводится в целях прямого стимулирования сбыта продукции - безалкогольные
+                        газированные напитки, реализуемой Заказчиком Акции, а именно (далее - «Продукты»):
+                        <br></br>
+                        <br></br>
+                        • Laimon Fresh в банке объемом 0.33л, в бутылках объемом 0.5 л, 1 л и 1.5 л
+                        <br></br>
+                        <br></br>
+
+                        • Laimon Fresh Манго в банке объемом 0.33л, в бутылках объемом 0.5 л, 1 л и 1.5 л
+                        <br></br>
+                        <br></br>
+
+                        • Laimon Fresh Ягоды в банке объемом 0.33л, в бутылках объемом 0.5 л, 1 л и 1.5 л
+                        <br></br>
+                        <br></br>
+
+                        • Laimon Fresh Груша в банке объемом 0.33л, в бутылках объемом 0.5 л, 1 л и 1.5 л
+
+
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -139,13 +176,20 @@ export default function ControlledAccordions() {
                     aria-controls="panel2-content"
                     id="panel2-header"
                 >
-                    <Typography className={classes.heading}><b className={'heading-id'}>04</b> <p
-                        className={'heading-name'}>Рыбий текст</p></Typography>
+                    <Typography className={classes.heading}>
+                        <b className={'heading-id'}>04</b> <p className={'heading-name'}>Сроки проведения Акции?</p>
+                    </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
                         {expanded === 'panel4' && <div className={classes.line}></div>}
-                        А также некоторые особенности внутренней политики формируют глобальную экономическую сеть и при этом — указаны как претенденты на роль ключевых.
+                        Общий срок проведения Акции, включая срок выдачи призов: с «15» мая 2024 г. по «30»
+                        сентября 2024 г. (включительно).
+                        <br></br>
+                        Срок совершения необходимой для участия в Акции покупки Продуктов на территории РФ:
+                        с «15» мая 2024 г. по «31» августа 2024 г. (включительно).
+                        <br></br>
+                        Период регистрации Кодов: с «15» мая 2024 г. по «31» августа 2024 г. (включительно).
                     </Typography>
                 </AccordionDetails>
             </Accordion>

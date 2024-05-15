@@ -241,7 +241,7 @@ const HowPrizes = (props) => {
                 </div>
                 <img className={'bottle-float-left twotree'} src={twotree}/>
                 <img className={'bottle-float-left nv'} src={gps}/>
-                <p className="absolute-text nv">Нижний новгород</p>
+                <p className="absolute-text nv">Нижний Новгород</p>
 
             </div>
         </div>
