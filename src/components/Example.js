@@ -69,18 +69,13 @@ export default function ControlledAccordions() {
                     id="panel1-header"
                 >
                     <Typography className={classes.heading}>
-                        <b className={'heading-id'}>01</b> <p className={'heading-name'}>General settings</p>
+                        <b className={'heading-id'}>01</b> <p className={'heading-name'}>Рыбий текст</p>
                     </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
                         {expanded === 'panel1' && <div className={classes.line}></div>}
-                        Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
-                        maximus est, id dignissim quam.
-                        Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
-                        maximus est, id dignissim quam.
-                        Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
-                        maximus est, id dignissim quam.
+                        А также некоторые особенности внутренней политики формируют глобальную экономическую сеть и при этом — указаны как претенденты на роль ключевых.
 
                     </Typography>
                 </AccordionDetails>
@@ -99,13 +94,12 @@ export default function ControlledAccordions() {
                     id="panel2-header"
                 >
                     <Typography className={classes.heading}><b className={'heading-id'}>02</b> <p
-                        className={'heading-name'}>Users</p></Typography>
+                        className={'heading-name'}>Рыбий текст</p></Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
                         {expanded === 'panel2' && <div className={classes.line}></div>}
-                        Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus, varius pulvinar
-                        diam eros in elit. Pellentesque convallis laoreet laoreet.
+                        А также некоторые особенности внутренней политики формируют глобальную экономическую сеть и при этом — указаны как претенденты на роль ключевых.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -122,16 +116,14 @@ export default function ControlledAccordions() {
                     id="panel2-header"
                 >
                     <Typography className={classes.heading}><b className={'heading-id'}>03</b> <p
-                        className={'heading-name'}>Advanced
-                        settings</p></Typography>
+                        className={'heading-name'}>Рыбий текст</p></Typography>
                     <Typography className={classes.secondaryHeading}>
                     </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
                         {expanded === 'panel3' && <div className={classes.line}></div>}
-                        Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas eros,
-                        vitae egestas augue. Duis vel est augue.
+                        А также некоторые особенности внутренней политики формируют глобальную экономическую сеть и при этом — указаны как претенденты на роль ключевых.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -148,13 +140,12 @@ export default function ControlledAccordions() {
                     id="panel2-header"
                 >
                     <Typography className={classes.heading}><b className={'heading-id'}>04</b> <p
-                        className={'heading-name'}>В чем заключается акция и как принять в ней
-                        участие?</p></Typography>
+                        className={'heading-name'}>Рыбий текст</p></Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
                         {expanded === 'panel4' && <div className={classes.line}></div>}
-                        Далее получайте призы в рамках проводимой акции!
+                        А также некоторые особенности внутренней политики формируют глобальную экономическую сеть и при этом — указаны как претенденты на роль ключевых.
                     </Typography>
                 </AccordionDetails>
             </Accordion>

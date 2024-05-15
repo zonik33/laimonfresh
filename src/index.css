@@ -5486,12 +5486,13 @@ cursor: pointer;
   .bottle-float-left.example-tree5.main-down-town {
     display: flex;
     z-index: 4;
-    margin-top: -15.95vw;
-    margin-left: 23.13vw;
-    width: 28.01vw;
+    margin-top: -13.95vw;
+    margin-left: 20.13vw;
+    width: 31.01vw;
     height: auto;
     animation: sbs-231425214-52151 25s infinite linear;
     backface-visibility: hidden;
+
   }
 
 
@@ -6380,7 +6381,7 @@ cursor: pointer;
     margin-left: 81.43vw;
   }
   #wave-container-test-4 {
-    margin-top: 34vw;
+    margin-top: 44vw;
     width: 100%;
     height: 5.21vw;
     overflow: hidden;

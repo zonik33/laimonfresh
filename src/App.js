@@ -34,6 +34,9 @@ if (isAuthenticated) {
 
         if (response.data.result) {
             localStorage.setItem('profile', JSON.stringify(response.data.data));
+            if (authKeyFromURL){
+                window.location.href = '/profile';
+            }
         }
     } catch (error) {
 

@@ -197,6 +197,7 @@ export default function PopupRegister(props) {
         );
         setFilteredCities(filteredCities);
     };
+    const currentDomain = window.location.origin;
 
     return (
         <div id="popup-complete" className="popup">
@@ -307,7 +308,7 @@ export default function PopupRegister(props) {
 
                             />
                             <span className={`custom-checkbox ${!agree4Checked ? 'error' : ''}`}></span>
-                            <p>Я согласен с <a href={'#'} className={"text-laimon"} target="_blank">Правилами акции</a>
+                            <p>Я согласен с <a href={`${currentDomain}/rules.pdf`} className={"text-laimon"} target="_blank">Правилами акции</a>
                             </p>
                             <span id="phoneError" className="error"></span>
                         </label>

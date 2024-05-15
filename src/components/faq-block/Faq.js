@@ -246,19 +246,13 @@ export default function Faq(props) {
                                 id="panel1-header"
                             >
                                 <Typography className={classes.heading}>
-                                    <b className={'heading-id'}>01</b> <p
-                                    className={'heading-name'}>General settings</p>
+                                    <b className={'heading-id'}>01</b> <p className={'heading-name'}>Рыбий текст</p>
                                 </Typography>
                             </AccordionSummary>
                             <AccordionDetails>
                                 <Typography>
                                     {expanded === 'panel1' && <div className={classes.line}></div>}
-                                    Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
-                                    maximus est, id dignissim quam.
-                                    Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
-                                    maximus est, id dignissim quam.
-                                    Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
-                                    maximus est, id dignissim quam.
+                                    А также некоторые особенности внутренней политики формируют глобальную экономическую сеть и при этом — указаны как претенденты на роль ключевых.
 
                                 </Typography>
                             </AccordionDetails>
@@ -276,15 +270,15 @@ export default function Faq(props) {
                                 aria-controls="panel2-content"
                                 id="panel2-header"
                             >
-                                <Typography className={classes.heading}><b className={'heading-id'}>02</b> <p
-                                    className={'heading-name'}>Users</p></Typography>
+                                <Typography className={classes.heading}>
+                                    <b className={'heading-id'}>02</b> <p className={'heading-name'}>Рыбий текст</p>
+                                </Typography>
                             </AccordionSummary>
                             <AccordionDetails>
                                 <Typography>
                                     {expanded === 'panel2' && <div className={classes.line}></div>}
-                                    Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus, varius
-                                    pulvinar
-                                    diam eros in elit. Pellentesque convallis laoreet laoreet.
+                                    А также некоторые особенности внутренней политики формируют глобальную экономическую сеть и при этом — указаны как претенденты на роль ключевых.
+
                                 </Typography>
                             </AccordionDetails>
                         </Accordion>
@@ -300,18 +294,15 @@ export default function Faq(props) {
                                 aria-controls="panel2-content"
                                 id="panel2-header"
                             >
-                                <Typography className={classes.heading}><b className={'heading-id'}>03</b> <p
-                                    className={'heading-name'}>Advanced
-                        settings</p></Typography>
-                                <Typography className={classes.secondaryHeading}>
+                                <Typography className={classes.heading}>
+                                    <b className={'heading-id'}>03</b> <p className={'heading-name'}>Рыбий текст</p>
                                 </Typography>
                             </AccordionSummary>
                             <AccordionDetails>
                                 <Typography>
                                     {expanded === 'panel3' && <div className={classes.line}></div>}
-                                    Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas
-                                    eros,
-                                    vitae egestas augue. Duis vel est augue.
+                                    А также некоторые особенности внутренней политики формируют глобальную экономическую сеть и при этом — указаны как претенденты на роль ключевых.
+
                                 </Typography>
                             </AccordionDetails>
                         </Accordion>
@@ -327,14 +318,39 @@ export default function Faq(props) {
                                 aria-controls="panel2-content"
                                 id="panel2-header"
                             >
-                                <Typography className={classes.heading}><b className={'heading-id'}>04</b> <p
-                                    className={'heading-name'}>В чем заключается акция и как принять в ней
-                        участие?</p></Typography>
+                                <Typography className={classes.heading}>
+                                    <b className={'heading-id'}>04</b> <p className={'heading-name'}>Рыбий текст</p>
+                                </Typography>
                             </AccordionSummary>
                             <AccordionDetails>
                                 <Typography>
                                     {expanded === 'panel4' && <div className={classes.line}></div>}
-                                    Далее получайте призы в рамках проводимой акции!
+                                    А также некоторые особенности внутренней политики формируют глобальную экономическую сеть и при этом — указаны как претенденты на роль ключевых.
+
+                                </Typography>
+                            </AccordionDetails>
+                        </Accordion>
+                        <Accordion
+                            expanded={expanded === 'panel5'}
+                            onChange={handleChange('panel5')}
+                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                        >
+                            <AccordionSummary
+                                expandIcon={
+                                    expanded === 'panel5' ? <NorthEastIcon/> : <NorthEastIcon/>
+                                }
+                                aria-controls="panel2-content"
+                                id="panel2-header"
+                            >
+                                <Typography className={classes.heading}>
+                                    <b className={'heading-id'}>05</b> <p className={'heading-name'}>Рыбий текст</p>
+                                </Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <Typography>
+                                    {expanded === 'panel5' && <div className={classes.line}></div>}
+                                    А также некоторые особенности внутренней политики формируют глобальную экономическую сеть и при этом — указаны как претенденты на роль ключевых.
+
                                 </Typography>
                             </AccordionDetails>
                         </Accordion>
@@ -345,23 +361,20 @@ export default function Faq(props) {
                         >
                             <AccordionSummary
                                 expandIcon={
-                                    expanded === 'panel5' ? <NorthEastIcon/> : <NorthEastIcon/>
+                                    expanded === 'panel6' ? <NorthEastIcon/> : <NorthEastIcon/>
                                 }
                                 aria-controls="panel2-content"
                                 id="panel2-header"
                             >
-                                <Typography className={classes.heading}><b className={'heading-id'}>06</b> <p
-                                    className={'heading-name'}>Advanced
-                        settings</p></Typography>
-                                <Typography className={classes.secondaryHeading}>
+                                <Typography className={classes.heading}>
+                                    <b className={'heading-id'}>06</b> <p className={'heading-name'}>Рыбий текст</p>
                                 </Typography>
                             </AccordionSummary>
                             <AccordionDetails>
                                 <Typography>
-                                    {expanded === 'panel5' && <div className={classes.line}></div>}
-                                    Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas
-                                    eros,
-                                    vitae egestas augue. Duis vel est augue.
+                                    {expanded === 'panel6' && <div className={classes.line}></div>}
+                                    А также некоторые особенности внутренней политики формируют глобальную экономическую сеть и при этом — указаны как претенденты на роль ключевых.
+
                                 </Typography>
                             </AccordionDetails>
                         </Accordion>
@@ -372,23 +385,20 @@ export default function Faq(props) {
                         >
                             <AccordionSummary
                                 expandIcon={
-                                    expanded === 'panel5' ? <NorthEastIcon/> : <NorthEastIcon/>
+                                    expanded === 'panel7' ? <NorthEastIcon/> : <NorthEastIcon/>
                                 }
                                 aria-controls="panel2-content"
                                 id="panel2-header"
                             >
-                                <Typography className={classes.heading}><b className={'heading-id'}>07</b> <p
-                                    className={'heading-name'}>Advanced
-                        settings</p></Typography>
-                                <Typography className={classes.secondaryHeading}>
+                                <Typography className={classes.heading}>
+                                    <b className={'heading-id'}>07</b> <p className={'heading-name'}>Рыбий текст</p>
                                 </Typography>
                             </AccordionSummary>
                             <AccordionDetails>
                                 <Typography>
-                                    {expanded === 'panel5' && <div className={classes.line}></div>}
-                                    Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas
-                                    eros,
-                                    vitae egestas augue. Duis vel est augue.
+                                    {expanded === 'panel7' && <div className={classes.line}></div>}
+                                    А также некоторые особенности внутренней политики формируют глобальную экономическую сеть и при этом — указаны как претенденты на роль ключевых.
+
                                 </Typography>
                             </AccordionDetails>
                         </Accordion>
@@ -399,135 +409,23 @@ export default function Faq(props) {
                         >
                             <AccordionSummary
                                 expandIcon={
-                                    expanded === 'panel5' ? <NorthEastIcon/> : <NorthEastIcon/>
+                                    expanded === 'panel8' ? <NorthEastIcon/> : <NorthEastIcon/>
                                 }
                                 aria-controls="panel2-content"
                                 id="panel2-header"
                             >
                                 <Typography className={classes.heading}><b className={'heading-id'}>08</b> <p
-                                    className={'heading-name'}>Advanced
-                        settings</p></Typography>
+                                    className={'heading-name'}>Рыбий текст</p></Typography>
                                 <Typography className={classes.secondaryHeading}>
                                 </Typography>
                             </AccordionSummary>
                             <AccordionDetails>
                                 <Typography>
-                                    {expanded === 'panel5' && <div className={classes.line}></div>}
-                                    Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas
-                                    eros,
-                                    vitae egestas augue. Duis vel est augue.
+                                    {expanded === 'panel8' && <div className={classes.line}></div>}
+                                    А также некоторые особенности внутренней политики формируют глобальную экономическую сеть и при этом — указаны как претенденты на роль ключевых.
                                 </Typography>
                             </AccordionDetails>
                         </Accordion>
-                        <Accordion
-                            expanded={expanded === 'panel9'}
-                            onChange={handleChange('panel9')}
-                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
-                        >
-                            <AccordionSummary
-                                expandIcon={
-                                    expanded === 'panel5' ? <NorthEastIcon/> : <NorthEastIcon/>
-                                }
-                                aria-controls="panel2-content"
-                                id="panel2-header"
-                            >
-                                <Typography className={classes.heading}><b className={'heading-id'}>09</b> <p
-                                    className={'heading-name'}>Advanced
-                        settings</p></Typography>
-                                <Typography className={classes.secondaryHeading}>
-                                </Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography>
-                                    {expanded === 'panel5' && <div className={classes.line}></div>}
-                                    Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas
-                                    eros,
-                                    vitae egestas augue. Duis vel est augue.
-                                </Typography>
-                            </AccordionDetails>
-                        </Accordion>
-                        <Accordion
-                            expanded={expanded === 'panel10'}
-                            onChange={handleChange('panel10')}
-                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
-                        >
-                            <AccordionSummary
-                                expandIcon={
-                                    expanded === 'panel5' ? <NorthEastIcon/> : <NorthEastIcon/>
-                                }
-                                aria-controls="panel2-content"
-                                id="panel2-header"
-                            >
-                                <Typography className={classes.heading}><b className={'heading-id'}>10</b> <p
-                                    className={'heading-name'}>Advanced
-                        settings</p></Typography>
-                                <Typography className={classes.secondaryHeading}>
-                                </Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography>
-                                    {expanded === 'panel5' && <div className={classes.line}></div>}
-                                    Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas
-                                    eros,
-                                    vitae egestas augue. Duis vel est augue.
-                                </Typography>
-                            </AccordionDetails>
-                        </Accordion>
-                        <Accordion
-                            expanded={expanded === 'panel11'}
-                            onChange={handleChange('panel11')}
-                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
-                        >
-                            <AccordionSummary
-                                expandIcon={
-                                    expanded === 'panel5' ? <NorthEastIcon/> : <NorthEastIcon/>
-                                }
-                                aria-controls="panel2-content"
-                                id="panel2-header"
-                            >
-                                <Typography className={classes.heading}><b className={'heading-id'}>11</b> <p
-                                    className={'heading-name'}>Advanced
-                        settings</p></Typography>
-                                <Typography className={classes.secondaryHeading}>
-                                </Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography>
-                                    {expanded === 'panel5' && <div className={classes.line}></div>}
-                                    Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas
-                                    eros,
-                                    vitae egestas augue. Duis vel est augue.
-                                </Typography>
-                            </AccordionDetails>
-                        </Accordion>
-                        <Accordion
-                            expanded={expanded === 'panel12'}
-                            onChange={handleChange('panel12')}
-                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
-                        >
-                            <AccordionSummary
-                                expandIcon={
-                                    expanded === 'panel5' ? <NorthEastIcon/> : <NorthEastIcon/>
-                                }
-                                aria-controls="panel2-content"
-                                id="panel2-header"
-                            >
-                                <Typography className={classes.heading}><b className={'heading-id'}>12</b> <p
-                                    className={'heading-name'}>Advanced
-                        settings</p></Typography>
-                                <Typography className={classes.secondaryHeading}>
-                                </Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography>
-                                    {expanded === 'panel5' && <div className={classes.line}></div>}
-                                    Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas
-                                    eros,
-                                    vitae egestas augue. Duis vel est augue.
-                                </Typography>
-                            </AccordionDetails>
-                        </Accordion>
-
                         <div className={'faq-question'}>
                             <p className={'faq-question-p'}>если у вас остались вопросы, напишите нам</p>
                             <a className={'faq-question-p-a'}>info@promo.laimonfresh.ch</a>
