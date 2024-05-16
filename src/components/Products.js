@@ -9,6 +9,19 @@ import Winners from "./Winners";
 import lfmint from '../image/lf-mint.png';
 import lfmango from '../image/img_58.png';
 import lfberries from '../image/lf-berries.png';
+import lfberries10 from '../image/LF_Berry_10.png';
+import lfberries15 from '../image/LF_Berry_15.png';
+import lfmango10 from '../image/LF_Mango_10.png';
+import lfmango15 from '../image/LF_Mango_15.png';
+import lfpear10 from '../image/LF_Pear_10.png';
+import lfpear15 from '../image/LF_Pear_15.png';
+import lfmint10 from '../image/LF_Mint_10.png';
+import lfmint15 from '../image/LF_Mint_15.png';
+import lfmint33 from '../image/LP-mint-33.png';
+import lfpear33 from '../image/LP-pear-33.png';
+import lfmango33 from '../image/LP-mango-33.png';
+import lfberr33 from '../image/LP-berr-33..png';
+import lfberriesback from '../image/img_114.png';
 import lfpear from '../image/lf-pear.png';
 import How from "./How";
 import uptree from "../image/img_3.png";
@@ -69,24 +82,108 @@ export default function Products(props) {
 
                     <Slider {...sliderSettings}>
                         <div className="how-full44-img">
+                            <a><img className={'back-img'}
+                                    src={lfberriesback}/></a>
+                            <a><img className={'test-img img33'}
+                                    src={lfmint33}/></a>
+                            <span className={'lf-text'}> Laimon Fresh 0.33 л </span>
+                        </div>
+                        <div className="how-full44-img">
+                            <a><img className={'back-img'}
+                                    src={lfberriesback}/></a>
+                            <a><img className={'test-img img33'}
+                                    src={lfmango33}/></a>
+                            <span className={'lf-text'}> Laimon Fresh Манго 0.33 л </span>
+                        </div>
+                        <div className="how-full44-img">
+                            <a><img className={'back-img'}
+                                    src={lfberriesback}/></a>
+                            <a><img className={'test-img img33'}
+                                    src={lfberr33}/></a>
+                            <span className={'lf-text'}> Laimon Fresh Ягоды 0.33 л </span>
+                        </div>
+                        <div className="how-full44-img">
+                            <a><img className={'back-img'}
+                                    src={lfberriesback}/></a>
+                            <a><img className={'test-img img33'}
+                                    src={lfpear33}/></a>
+                            <span className={'lf-text'}> Laimon Fresh Груша 0.33 л </span>
+                        </div>
+                        <div className="how-full44-img">
                             <a><img
                                 src={lfmint}/></a>
-                            <span className={'lf-text'}> Laimon Fresh Mint </span>
+                            <span className={'lf-text'}> Laimon Fresh 0.5 л </span>
                         </div>
                         <div className="how-full44-img">
                             <a><img
                                 src={lfmango}/></a>
-                            <span className={'lf-text'}> Laimon Fresh Mango </span>
+                            <span className={'lf-text'}> Laimon Fresh Манго 0.5 л </span>
                         </div>
                         <div className="how-full44-img">
                             <a><img
                                 src={lfberries}/></a>
-                            <span className={'lf-text'}> Laimon Fresh Berries </span>
+                            <span className={'lf-text'}> Laimon Fresh Ягоды 0.5 л </span>
                         </div>
                         <div className="how-full44-img">
                             <a><img
                                 src={lfpear}/></a>
-                            <span className={'lf-text'}> Laimon Fresh Pear </span>
+                            <span className={'lf-text'}> Laimon Fresh Груша 0.5 л </span>
+                        </div>
+                        <div className="how-full44-img">
+                            <a><img className={'back-img'}
+                                    src={lfberriesback}/></a>
+                            <a><img className={'test-img'}
+                                    src={lfmint10}/></a>
+                            <span className={'lf-text'}> Laimon Fresh <br></br>1 л </span>
+                        </div>
+                        <div className="how-full44-img">
+                            <a><img className={'back-img'}
+                                    src={lfberriesback}/></a>
+                            <a><img className={'test-img'}
+                                    src={lfmango10}/></a>
+                            <span className={'lf-text'}> Laimon Fresh Манго 1 л </span>
+                        </div>
+                        <div className="how-full44-img">
+                            <a><img className={'back-img'}
+                                    src={lfberriesback}/></a>
+                            <a><img className={'test-img'}
+                                    src={lfberries10}/></a>
+                            <span className={'lf-text'}> Laimon Fresh Ягоды 1 л </span>
+                        </div>
+                        <div className="how-full44-img">
+                            <a><img className={'back-img'}
+                                    src={lfberriesback}/></a>
+                            <a><img className={'test-img'}
+                                    src={lfpear10}/></a>
+                            <span className={'lf-text'}> Laimon Fresh Груша 1 л </span>
+                        </div>
+                        <div className="how-full44-img">
+                            <a><img className={'back-img'}
+                                    src={lfberriesback}/></a>
+                            <a><img className={'test-img'}
+                                    src={lfmint15}/></a>
+                            <span className={'lf-text'}> Laimon Fresh 1.5 л </span>
+                        </div>
+                        <div className="how-full44-img">
+                            <a><img className={'back-img'}
+                                    src={lfberriesback}/></a>
+                            <a><img className={'test-img'}
+                                    src={lfmango15}/></a>
+                            <span className={'lf-text'}> Laimon Fresh Манго 1.5 л </span>
+                        </div>
+                        <div className="how-full44-img">
+                            <a><img className={'back-img'}
+                                    src={lfberriesback}/></a>
+                            <a><img className={'test-img'}
+                                    src={lfberries15}/></a>
+                            <span className={'lf-text'}> Laimon Fresh Ягоды 1.5 л </span>
+                        </div>
+                        <div className="how-full44-img">
+                            <a><img className={'back-img'}
+                                    src={lfberriesback}/></a>
+                            <a><img className={'test-img'}
+                                    src={lfpear15}/></a>
+                            <span className={'lf-text'}> Laimon Fresh Груша 1.5 л </span>
                         </div>
                     </Slider>
                 </div>
