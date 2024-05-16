@@ -2351,6 +2351,7 @@ height: auto;
   height: 4.17vw;
   margin-left: 0.5vw;
   margin-top: 3vw;
+  z-index: 5 !important;
 }
 .winnersSearchCodes .slick-list {
   margin-left: 3vw !important;
