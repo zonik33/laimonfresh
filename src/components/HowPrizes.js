@@ -12,9 +12,11 @@ import prizemoc from '../image/img_46.png'
 import prizevkcp from '../image/img_66.png'
 import prizemerch from '../image/img_67.png'
 import prizetreav from '../image/img_68.png'
+import prizetreavnew from '../image/cuva.png'
 import prizefit from '../image/img_48.png'
 import prizewink from '../image/img_49.png'
 import prizelit from '../image/img_50.png'
+import prizewinknew from '../image/logo-wink.png'
 import lefttree from "../image/img_4.png";
 import toptreeprod from "../image/img_10.png";
 import leftlinehow from "../image/img_8.png";
@@ -26,6 +28,7 @@ import Slider from "react-slick";
 import {debounce} from "lodash";
 import gpsmobile from "../image/gps-mobile.png";
 import lefttreebon1 from "../image/img_40.png";
+import lfberriesback from "../image/img_115.png";
 
 const HowPrizes = (props) => {
     const prizesRef = useRef(null);
@@ -159,12 +162,16 @@ const HowPrizes = (props) => {
                             </div>
                                 <div className={'images'}>
                                     <div className="image-container">
-                                        <img src={prizetreav} alt="Image 4"/>
-                                        <p className={'right-p-prizes'}>Сертификат <br></br>на путешествие <br></br><p className={'right-p-prizes-little'}>Приз конкурса <br></br>от блогеров</p></p>
+                                        <a><img className={'back-img how-prizes-new'}
+                                                src={lfberriesback}/></a>
+                                        <img  className={'img-bonus-cuva'} src={prizetreavnew} alt="Image 4"/>
+                                        <p className={'right-p-prizes'}>Сертификат <br></br>на путешествие <br></br><p
+                                            className={'right-p-prizes-little'}>Приз конкурса <br></br>от блогеров</p>
+                                        </p>
+                                    </div>
                                 </div>
-                                </div>
-                                    <div className={'images'}>
-                                        <div className="image-container">
+                            <div className={'images'}>
+                            <div className="image-container">
                                             <img src={prizekass} alt="Image 4"/>
                                             <p className={'right-p-prizes'}>Сертификат <br></br>на 1000р <br></br>Кассир
                                             </p>
@@ -217,12 +224,15 @@ const HowPrizes = (props) => {
                             </div>
                             <div className={'images-moment'}>
                                 <div className="image-container-moment">
-                                    <img src={prizewink} alt="Image 2"/>
-                                    <p className={'right-p-prizes-moment'}>Подписка <br></br>Wink+more.tv</p>
+                                    <a><img className={'back-img how-prizes'}
+                                            src={lfberriesback}/></a>
+                                    <img className={'img-bonus'} src={prizewinknew} alt="Image 2"/>
+                                    <p className={'right-p-prizes-moment'}>Подписка <br></br>WINK</p>
                                 </div>
                             </div>
                             <div className={'images-moment'}>
                                 <div className="image-container-moment">
+
                                     <img src={prizelit} alt="Image 3"/>
                                     <p className={'right-p-prizes-moment'}>Подписка <br></br>Литрес</p>
                                 </div>

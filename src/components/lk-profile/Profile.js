@@ -39,6 +39,9 @@ import prizelit from "../../image/img_50.png";
 import {debounce} from "lodash";
 import prizemerch from "../../image/img_67.png";
 import prizetreav from "../../image/img_68.png";
+import lfberriesback from "../../image/img_115.png";
+import prizewinknew from "../../image/logo-wink.png";
+import prizetreavnew from "../../image/cuva.png";
 
 export default function Profile(props) {
     const [isPopupOpen, setIsPopupOpen] = useState(null);
@@ -347,7 +350,9 @@ export default function Profile(props) {
                                 </div>
                                 <div className={'images'}>
                                     <div className="image-container">
-                                        <img src={prizetreav} alt="Image 4"/>
+                                        <a><img className={'back-img how-prizes-new'}
+                                                src={lfberriesback}/></a>
+                                        <img className={'img-bonus-cuva'} src={prizetreavnew} alt="Image 4"/>
                                         <p className={'right-p-prizes'}>Сертификат <br></br>на путешествие <br></br><p
                                             className={'right-p-prizes-little'}>Приз конкурса <br></br>от блогеров</p>
                                         </p>
@@ -407,12 +412,15 @@ export default function Profile(props) {
                                 </div>
                                 <div className={'images-moment'}>
                                     <div className="image-container-moment">
-                                        <img src={prizewink} alt="Image 2"/>
-                                        <p className={'right-p-prizes-moment'}>Подписка <br></br>Wink+more.tv</p>
+                                        <a><img className={'back-img how-prizes'}
+                                                src={lfberriesback}/></a>
+                                        <img className={'img-bonus'} src={prizewinknew} alt="Image 2"/>
+                                        <p className={'right-p-prizes-moment'}>Подписка <br></br>WINK</p>
                                     </div>
                                 </div>
                                 <div className={'images-moment'}>
                                     <div className="image-container-moment">
+
                                         <img src={prizelit} alt="Image 3"/>
                                         <p className={'right-p-prizes-moment'}>Подписка <br></br>Литрес</p>
                                     </div>

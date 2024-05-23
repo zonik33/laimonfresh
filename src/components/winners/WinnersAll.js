@@ -444,12 +444,16 @@ export default function WinnersAll(props) {
                                                             <div className={'winners-tabs-content'}>
                                                                 {currentWeekWinners.map((winner, index) => (
                                                                     <div key={index} className={'table-body-winners'}>
-                                                                        <div className={'head-colm-prize1'}>{index + 1}</div>
-                                                                        <div className={'head-colm-name'}>{winner.name}</div>
-                                                                        <div className={'head-colm-phone1'}>{winner.code}</div>
+                                                                        <div
+                                                                            className={'head-colm-prize1'}>{index + 1}</div>
+                                                                        <div
+                                                                            className={'head-colm-name'}>{winner.name}</div>
+                                                                        <div
+                                                                            className={'head-colm-phone1'}>{winner.code}</div>
                                                                         <div className={'head-colm-date1'}>
                                                                             <div className={'winners-block-img'}>
-                                                                                <img className={'winners-prize-img'} alt={'Приз'}
+                                                                                <img className={'winners-prize-img'}
+                                                                                     alt={'Приз'}
                                                                                      src={prizeImages[winner.prize_id]}/>
                                                                             </div>
                                                                         </div>
@@ -462,26 +466,33 @@ export default function WinnersAll(props) {
                                             </div>
                                             <div className={'winners-text winners-main second-second'}>Главный призер
                                             </div>
-                                                {winners && winners.length > 0 ? (
-                                                    winners.map((winner, index) => (
-                                                        <div key={index} className={'table-body-winners down'}>
-                                                            <div className={'head-colm-prize1'}>{index + 1}</div>
-                                                            <div className={'head-colm-name'}>{winner.name}</div>
-                                                            <div className={'head-colm-phone1'}>{winner.code}</div>
-                                                            <div className={'head-colm-date1'}>
-                                                                {/*<img className={'winners-prize-img'} alt={'Приз'} src={prizeImages[winner.prize_id]}/>*/}
-                                                            </div>
-                                                        </div>
-                                                    ))
-                                                ) : (
-                                                    <div className="table-body-winners down">
-                                                        <div className={'head-colm-prize1'}>&nbsp;</div>
-                                                        <div className={'head-colm-name'}>&nbsp;</div>
-                                                        <div className={'head-colm-phone1'}>&nbsp;</div>
-                                                        <div className={'head-colm-date1'}>&nbsp;</div>
-                                                    </div>
-                                                )}
-                                            <img className={'bottle-float-left example-tree5 faq-down-down'} src={owntreep}/>
+                                            {/*{winners && winners.length > 0 ? (*/}
+                                            {/*    winners.map((winner, index) => (*/}
+                                            {/*        <div key={index} className={'table-body-winners down'}>*/}
+                                            {/*            <div className={'head-colm-prize1'}>{index + 1}</div>*/}
+                                            {/*            <div className={'head-colm-name'}>{winner.name}</div>*/}
+                                            {/*            <div className={'head-colm-phone1'}>{winner.code}</div>*/}
+                                            {/*            <div className={'head-colm-date1'}>*/}
+                                            {/*                /!*<img className={'winners-prize-img'} alt={'Приз'} src={prizeImages[winner.prize_id]}/>*!/*/}
+                                            {/*            </div>*/}
+                                            {/*        </div>*/}
+                                            {/*    ))*/}
+                                            {/*) : (*/}
+                                            {/*    <div className="table-body-winners down">*/}
+                                            {/*        <div className={'head-colm-prize1'}>&nbsp;</div>*/}
+                                            {/*        <div className={'head-colm-name'}>&nbsp;</div>*/}
+                                            {/*        <div className={'head-colm-phone1'}>&nbsp;</div>*/}
+                                            {/*        <div className={'head-colm-date1'}>&nbsp;</div>*/}
+                                            {/*    </div>*/}
+                                            {/*)}*/}
+                                            <div className="table-body-winners down">
+                                                <div className={'head-colm-prize1'}>&nbsp;</div>
+                                                <div className={'head-colm-name'}>&nbsp;</div>
+                                                <div className={'head-colm-phone1'}>&nbsp;</div>
+                                                <div className={'head-colm-date1'}>&nbsp;</div>
+                                            </div>
+                                            <img className={'bottle-float-left example-tree5 faq-down-down'}
+                                                 src={owntreep}/>
                                             <img className={'bottle-float-left berry-winners'} src={berry}/>
                                             <img className={'bottle-float-left lime-winners'} src={limeright1}/>
 
@@ -494,7 +505,7 @@ export default function WinnersAll(props) {
                                     </div>
 
                                 </div>
-                            </div>
+                        </div>
                         </div>
 
                     </div>

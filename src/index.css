@@ -2768,6 +2768,26 @@ display: none !important;
   margin: 3vw 0vw 0vw 3vw !important;
   width: 50% !important;
 }
+.back-img.how-prizes {
+  opacity: 0.75;
+  margin: -2.4vw 1vw 1.2vw 1vw !important;
+  width: 81% !important;
+}
+.back-img.how-prizes-new {
+  opacity: 0.75;
+  margin: 0vw 3vw 0.2vw 0.35vw !important;
+  width: 84% !important;
+}
+.img-bonus {
+  width: 7vw !important;
+  margin: -6.4vw 0vw 0vw 2.1vw !important;
+  position: absolute;
+}
+.img-bonus-cuva {
+  width: 7vw !important;
+  margin: -6.1vw 0vw 0vw 1.45vw !important;
+  position: absolute;
+}
 .test-img {
   margin: -18vw 0vw -0.4vw 7.25vw !important;
   position: relative !important;
@@ -5457,14 +5477,14 @@ cursor: pointer;
   }
   .head-colm-prize1 {
     position: absolute;
-    font-size: 6.67vw;
+    font-size: 5.27vw;
     line-height: 8vw;
     font-weight: 600;
     font-family: Inter;
     color: rgba(0, 98, 65, 1);
     width: 15.427083vw;
     margin-top: 2.7vw;
-    margin-left: -3vw;
+    margin-left: -2vw;
   }
   .winners-block-img {
     display: inline-block;
@@ -5539,7 +5559,7 @@ cursor: pointer;
   }
 
   .head-colm-name {
-    font-size: 6.67vw;
+    font-size: 5.27vw;
     line-height: 8vw;
     font-weight: 600;
     font-family: Inter;
@@ -6575,6 +6595,11 @@ cursor: pointer;
     color: white;
     white-space: normal;
   }
+  .img-bonus-cuva {
+    width: 40vw !important;
+    margin: -35.1vw 0vw 0vw 7.2vw !important;
+    position: absolute;
+  }
   .absolute-text-mobile.bon9 {
     z-index: 0;
     display: flex;
@@ -6633,7 +6658,7 @@ cursor: pointer;
     color: white;
   }
   .image-container-moment p {
-    margin: 1.19vw -3vw 4vw -9.6vw;
+    margin: 0.19vw 0vw 4vw -9.6vw;
   }
   .prizesShowMoment .slick-prev {
     display: flex !important;
@@ -6781,6 +6806,16 @@ cursor: pointer;
     color: rgba(0, 98, 65, 1);
     margin-left: 22.5vw;
     margin-top: 6.4vw;
+  }
+  .img-bonus {
+    width: 43vw !important;
+    margin: -32.4vw 0vw 0vw 6.1vw !important;
+    position: absolute;
+  }
+  .back-img.how-prizes-new {
+    opacity: 0.75;
+    margin: 0vw 3vw 0.2vw 1.35vw !important;
+    width: 81% !important;
   }
   .bottle-float-left.exit-lc-text {
     margin: -7vw 0vw 0vw 60vw;
