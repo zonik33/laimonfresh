@@ -3078,7 +3078,7 @@ display: none !important;
   text-align: left;
   margin-right: auto;
   margin-left: 11vw;
-  margin-top: 9.2vw;
+  margin-top: 4.2vw;
 }
 
 .right-footer {
@@ -5745,8 +5745,9 @@ cursor: pointer;
     width: 94.06vw;
     text-align: left;
     margin-right: auto;
-    margin-left: 4vw;
-    margin-top: 13vw;
+    margin-left: 6vw;
+    margin-top: 5vw;
+    margin-bottom: 2vw;
   }
   .right-footer {
     margin: -12.7vw 23vw 0vw 0vw;
