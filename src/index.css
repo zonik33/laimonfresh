@@ -2793,6 +2793,11 @@ display: none !important;
   position: relative !important;
   width: 21% !important;
 }
+.test-img.for-05 {
+  margin: -19vw 0vw -0.8vw 6.95vw !important;
+  position: relative !important;
+  width: 23.8% !important;
+}
 .test-img.img33 {
   margin: -22vw 0vw -2.2vw -3.3vw !important;
   position: relative !important;
@@ -3073,7 +3078,7 @@ display: none !important;
   text-align: left;
   margin-right: auto;
   margin-left: 11vw;
-  margin-top: -3vw;
+  margin-top: 9.2vw;
 }
 
 .right-footer {
@@ -4035,9 +4040,9 @@ backface-visibility: hidden;
   border-radius: 0.69vw;
 }
 .winners-prize-img {
-  margin: 0.8vw 0vw 0vw 0vw;
-  width: 2.46vw;
-  height: 2.46vw;
+  height: auto;
+  margin: 1vw 0 0;
+  width: 2.06vw;
 }
 .colm-text {
   text-transform: uppercase;
@@ -5495,9 +5500,9 @@ cursor: pointer;
     border-radius: 3.69vw;
   }
   .winners-prize-img {
-    margin: 3vw 3vw 0vw 3vw;
+    height: auto;
+    margin: 3vw 3vw 0;
     width: 10.56vw;
-    height: 10.56vw;
   }
   header .menu.show {
     background-image: linear-gradient(#284031, #266a41, #03be53);
@@ -5741,10 +5746,10 @@ cursor: pointer;
     text-align: left;
     margin-right: auto;
     margin-left: 4vw;
-    margin-top: 8vw;
+    margin-top: 13vw;
   }
   .right-footer {
-    margin: -5.7vw 23vw 0vw 0vw;
+    margin: -12.7vw 23vw 0vw 0vw;
     font-family: 'Acrom Medium', AutumnSweaterLaimon, sans-serif;
     font-weight: 400;
     font-size: 10.13vw;
@@ -5790,7 +5795,7 @@ cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 114vw;
+    height: 60vw;
   }
   .bottle-float-left.show {
     display: flex;
@@ -7052,6 +7057,11 @@ cursor: pointer;
     margin: -66vw 0vw -0.4vw 30.25vw !important;
     position: relative !important;
     width: 76% !important;
+  }
+  .test-img.for-05 {
+    margin: -71vw 0vw -3.4vw 28.65vw !important;
+    position: relative !important;
+    width: 90% !important;
   }
   .test-img.img33 {
     margin: -80vw 0vw -4.2vw -6.75vw !important;

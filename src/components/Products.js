@@ -18,6 +18,8 @@ import lfpear15 from '../image/LF_Pear_15.png';
 import lfmint10 from '../image/LF_Mint_10.png';
 import lfmint15 from '../image/LF_Mint_15.png';
 import lfmint33 from '../image/LP-mint-33.png';
+import lfberr05 from '../image/LF_Berry_05.png';
+import lfpear05 from '../image/LF_Pear_05.png';
 import lfpear33 from '../image/LP-pear-33.png';
 import lfmango33 from '../image/LP-mango-33.png';
 import lfberr33 from '../image/LP-berr-33..png';
@@ -120,13 +122,17 @@ export default function Products(props) {
                             <span className={'lf-text'}> Laimon Fresh Манго 0.5 л </span>
                         </div>
                         <div className="how-full44-img">
-                            <a><img
-                                src={lfberries}/></a>
+                            <a><img className={'back-img'}
+                                    src={lfberriesback}/></a>
+                            <a><img className={'test-img for-05'}
+                                    src={lfberr05}/></a>
                             <span className={'lf-text'}> Laimon Fresh Ягоды 0.5 л </span>
                         </div>
                         <div className="how-full44-img">
-                            <a><img
-                                src={lfpear}/></a>
+                            <a><img className={'back-img'}
+                                    src={lfberriesback}/></a>
+                            <a><img className={'test-img for-05'}
+                                    src={lfpear05}/></a>
                             <span className={'lf-text'}> Laimon Fresh Груша 0.5 л </span>
                         </div>
                         <div className="how-full44-img">

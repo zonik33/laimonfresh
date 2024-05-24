@@ -69,9 +69,9 @@ export default function Footer (props) {
                     </div>
                 </div>
                 <div className="left-footer">
-                    <p>А также некоторые особенности внутренней политики формируют глобальную экономическую сеть и при
-                        этом — указаны как претенденты на роль ключевых.</p>
-                    <p className={'footer-padding-text'}>info@promo.laimonfresh.ch</p>
+                    {/*<p>А также некоторые особенности внутренней политики формируют глобальную экономическую сеть и при*/}
+                    {/*    этом — указаны как претенденты на роль ключевых.</p>*/}
+                    {/*<p className={'footer-padding-text'}>info@promo.laimonfresh.ch</p>*/}
                 </div>
                 <div className="right-footer">
                     <p>Документы об акции</p>
