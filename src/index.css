@@ -795,6 +795,16 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
 }
+.main-promo {
+  position: absolute;
+  margin: 6.5vw 0vw 0vw 10.7vw;
+  font-family: 'AutumnSweaterLaimon', Arial, sans-serif;
+  font-size: 2.15vw;
+  font-weight: 400;
+  line-height: 2.08vw;
+  color: rgba(227, 29, 26, 1);
+  z-index: 5;
+}
 
 .Modal {
   display: flex;
@@ -1157,9 +1167,9 @@ body {
 
 .bottle-float-left {
   position: relative;
-  margin-top: -6.65vw;
+  margin-top: 2.35vw;
   margin-left: -8.17vw;
-  width: 93.5%;
+  width: 90.5%;
   height: 100%;
   z-index: 5;
 }
@@ -1747,7 +1757,7 @@ height: auto;
 .bottle-float-left.nature {
   position: absolute;
   margin-top: 7.53vw;
-  margin-left: -12.97vw;
+  margin-left: -11.97vw;
   width: 7.9%;
   height: 2.1%;
   z-index: 4;
@@ -1784,7 +1794,7 @@ height: auto;
 .bottle-float-left.gps {
   position: absolute;
   margin-top: 39.13vw;
-  margin-left: -81.07vw;
+  margin-left: -80.47vw;
   width: 3.47vw;
   height: 4.24vw;
   z-index: 4;
@@ -4807,11 +4817,11 @@ cursor: pointer;
   }
   .bottle-float-left {
     position: absolute;
-    margin-top: -34.65vw;
+    margin-top: -18.65vw;
     margin-left: -78.17vw;
     width: 80.5%;
     height: auto;
-    z-index: 5;
+    z-index: 39;
   }
   .bottle-float-left.nature {
     position: absolute;
@@ -7068,6 +7078,9 @@ cursor: pointer;
     margin: -80vw 0vw -4.2vw -6.75vw !important;
     position: relative !important;
     width: 321% !important;
+  }
+  .main-promo {
+   display: none;
   }
 
 

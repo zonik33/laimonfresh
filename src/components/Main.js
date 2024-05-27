@@ -9,7 +9,7 @@ import Winners from "./Winners";
 import howFull5 from '../image/img_36.png';
 import How from "./How";
 import Products from "./Products";
-import wintohealth from '../image/img.png'
+import wintohealth from '../image/img_116.png'
 import inputcode from '../image/img_2.png'
 import uptree from '../image/img_3.png'
 import lefttree from '../image/img_4.png'
@@ -91,6 +91,7 @@ export default function Main(props) {
         <main>
             <div className={'main'} id={'main'}>
                 <div className={'main-items'}>
+                    <div className={'main-promo'}>Промоакция</div>
                     <div className={'winners-text for-main'}>Летопутешествие с laimon fresh
                         <input
                             type="text"
