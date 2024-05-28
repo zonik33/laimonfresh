@@ -13,7 +13,7 @@ import PopupLogin from "./Popups/PopupLogin";
 import PopupSuccessPassword from "./Popups/PopupSuccessPassword";
 import PopupSuccessEmail from "./Popups/PopupSuccessEmail";
 import PopupSuccessRegister from "./Popups/PopupSuccessRegister";
-import inputcode from "../image/img_2.png";
+import inputcode from "../image/img_118.png";
 import PopupAddCode from "./Popups/PopupAddCode";
 import {Link} from "react-router-dom";
 import PopupSoon from "./Popups/PopupSoon";
@@ -102,8 +102,9 @@ export default function Header(props) {
                             ): (
                             <li className={'li-lc'}><a onClick={openPopupLogin}>Войти</a></li>
                         )}
-                            <li className={'shadow-dont'}>
+                        <li className={'shadow-dont'}>
                             <img className={'bottle-float-left show'} src={inputcode}/>
+                            <div className="main-promo-text-input-new">ввести промокод*</div>
                             <input
                                 type="text"
                                 className={'shadow-button-animation-text'}
@@ -112,7 +113,8 @@ export default function Header(props) {
                                 readOnly
                                 placeholder=""
                             />
-                                {isPopupOpen === 'AddCode' && isAuthenticated && <PopupAddCode showPopup={true} closeModal={closePopup}/>}
+                            {isPopupOpen === 'AddCode' && isAuthenticated &&
+                                <PopupAddCode showPopup={true} closeModal={closePopup}/>}
                         </li>
                     </ul>
                 </nav>

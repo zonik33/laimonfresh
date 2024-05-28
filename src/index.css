@@ -797,13 +797,35 @@ body {
 }
 .main-promo {
   position: absolute;
-  margin: 6.5vw 0vw 0vw 10.7vw;
+  margin: 5.5vw 0vw 0vw 10.7vw;
   font-family: 'AutumnSweaterLaimon', Arial, sans-serif;
-  font-size: 2.15vw;
+  font-size: 3.125vw;
   font-weight: 400;
-  line-height: 2.08vw;
+  line-height: 3.000vw;
   color: rgba(227, 29, 26, 1);
   z-index: 5;
+}
+.main-promo-text-input {
+  position: absolute;
+  margin: -3.43vw 0vw 0vw 2.6vw;
+  text-transform: none;
+  color: white;
+  font-family: Inter, sans-serif;
+  font-size: 1.736vw;
+  line-height: 1.667vw;
+  font-weight: 600;
+  z-index: 10;
+}
+.main-promo-text-input-new-mobile {
+  position: absolute;
+  margin: -3.43vw 0vw 0vw 4.6vw;
+  text-transform: none;
+  color: white;
+  font-family: Inter, sans-serif;
+  font-size: 1.736vw;
+  line-height: 1.667vw;
+  font-weight: 600;
+  z-index: 10;
 }
 
 .Modal {
@@ -1203,7 +1225,7 @@ body {
 }
 .exit-lc-text {
   position: absolute;
-  margin: 0vw 0vw 0vw 15.4vw;
+  margin: 0 0 0 16.75vw;
   position: absolute;
   z-index: 5;
   font-size: 1.39vw;
@@ -1623,10 +1645,10 @@ height: auto;
 }
 .bottle-float-left.inputcode {
   position: absolute;
-  margin-top: 3.03vw;
+  margin-top: 3.1vw;
   margin-left: -46.57vw;
-  width: 21.81vw;
-  height: 5.07vw;
+  width: 21.7vw;
+  height: 5vw;
   z-index: 6;
 
 }
@@ -5290,7 +5312,7 @@ cursor: pointer;
     height: auto;
   }
   .million {
-    margin: -52.7vw 0vw 0vw 6.9vw;
+    margin: -52.7vw 0vw 3vw 6.9vw;
     width: 72.88vw;
     height: auto;
   }
@@ -7082,6 +7104,38 @@ cursor: pointer;
   .main-promo {
    display: none;
   }
-
+  .main-promo-text-input {
+    position: absolute;
+    margin: 106.97vw 0vw 0vw -1.4vw;
+    text-transform: none;
+    color: white;
+    font-family: Inter, sans-serif;
+    font-size: 3.467vw;
+    line-height: 3.328vw;
+    font-weight: 600;
+    z-index: 10;
+  }
+  .main-promo-text-input-new {
+    position: absolute;
+    margin: 5.37vw 0vw 0vw -7.7vw;
+    text-transform: none;
+    color: white;
+    font-family: Inter, sans-serif;
+    font-size: 3.467vw;
+    line-height: 3.328vw;
+    font-weight: 600;
+    z-index: 142;
+  }
+  .main-promo-text-input-new-mobile {
+    position: absolute;
+    margin: 10.65vw 0vw 0vw -3.7vw;
+    text-transform: none;
+    color: white;
+    font-family: Inter, sans-serif;
+    font-size: 3.467vw;
+    line-height: 3.328vw;
+    font-weight: 600;
+    z-index: 142;
+  }
 
 }

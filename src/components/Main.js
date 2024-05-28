@@ -10,7 +10,7 @@ import howFull5 from '../image/img_36.png';
 import How from "./How";
 import Products from "./Products";
 import wintohealth from '../image/img_116.png'
-import inputcode from '../image/img_2.png'
+import inputcode from '../image/img_118.png'
 import uptree from '../image/img_3.png'
 import lefttree from '../image/img_4.png'
 import gps from '../image/img_5.png'
@@ -104,6 +104,7 @@ export default function Main(props) {
                         {isPopupOpen === 'AddCode' && isAuthenticated &&
                             <PopupAddCode showPopup={true} closeModal={closePopup}/>}
                         <img className={'bottle-float-left inputcode'} src={inputcode}/>
+                        <div className="main-promo-text-input">ввести промокод*</div>
                         <div className={'winners-text-inputcode'}>
                             <span className={'text-inputcode'}>*найди код под крышкой/ключиком и введи промокод</span>
                         </div>

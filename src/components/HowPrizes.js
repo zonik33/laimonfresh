@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from "react";
-import million from '../image/img_59.png'
+import million from '../image/img_117.png'
 import prizevk from '../image/img_18.png'
 import prizeyandex from '../image/img_19.png'
 import prizesert from '../image/img_20.png'

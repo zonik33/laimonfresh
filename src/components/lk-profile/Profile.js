@@ -4,8 +4,8 @@ import dotslemon from "../../image/Dots.svg";
 import logo2 from "../../image/logo2.png";
 import Footer from "../Footer";
 import {Link, useNavigate} from "react-router-dom";
-import million from '../../image/img_59.png'
-import inputcode from "../../image/img_2.png";
+import million from '../../image/img_117.png'
+import inputcode from "../../image/img_118.png";
 import prizevk from "../../image/img_18.png";
 import prizeyandex from "../../image/img_19.png";
 import prizesert from "../../image/img_20.png";
@@ -286,6 +286,7 @@ export default function Profile(props) {
                                 <PopupAddCode showPopup={true} closeModal={closePopup}/>}
 
                             <img className={'bottle-float-left inputcode profile-mobile'} src={inputcode}/>
+                            <div className="main-promo-text-input-new-mobile">ввести промокод*</div>
                             <div className={'winners-text-inputcode lc'}>
                                 <span
                                     className={'text-inputcode lc'}>*найди код под крышкой/ключиком и введи промокод</span>
