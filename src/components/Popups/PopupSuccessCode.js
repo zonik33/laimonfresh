@@ -34,8 +34,7 @@ export default function PopupSuccessCode(props) {
             <div><span className={'register-main-text top-margin'}>Спасибо</span>
 
 
-                <p className={'register-inputs-text code-left'}>Ваш код успешно загружен и отправлен <br></br>на
-                    модерацию</p>
+                <p className={'register-inputs-text code-left'}>Ваш код успешно прошёл модерацию.</p>
             </div>
         </form>
                 </div>
