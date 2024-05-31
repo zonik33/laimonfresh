@@ -23,7 +23,7 @@ import limeright1 from "../../image/img_35.png";
 import ScrollPrizes from "../../Scroll/ScrollPrizes";
 import ScrollWinners from "../../Scroll/ScrollWinners";
 import ScrollFaq from "../../Scroll/ScrollFaq";
-import inputcode from "../../image/img_2.png";
+import inputcode from "../../image/img_118.png";
 import PopupRegister from "../Popups/PopupRegister";
 import PopupSuccessCode from "../Popups/PopupSuccessCode";
 import PopupSuccessPassword from "../Popups/PopupSuccessPassword";
@@ -175,6 +175,7 @@ export default function Faq(props) {
                             )}
                             <li className={'shadow-dont'}>
                                 <img className={'bottle-float-left show'} src={inputcode}/>
+                                <div className="main-promo-text-input-new">ввести промокод*</div>
                                 <input
                                     type="text"
                                     className={'shadow-button-animation-text'}

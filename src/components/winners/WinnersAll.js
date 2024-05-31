@@ -14,7 +14,7 @@ import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
 import owntreep from "../../image/img_36.png";
 import limeright1 from "../../image/img_35.png";
-import inputcode from "../../image/img_2.png";
+import inputcode from "../../image/img_118.png";
 
 
 import PopupRegister from "../Popups/PopupRegister";
@@ -343,6 +343,7 @@ export default function WinnersAll(props) {
                             )}
                             <li className={'shadow-dont'}>
                                 <img className={'bottle-float-left show'} src={inputcode}/>
+                                <div className="main-promo-text-input-new">ввести промокод*</div>
                                 <input
                                     type="text"
                                     className={'shadow-button-animation-text'}

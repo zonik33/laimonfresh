@@ -78,6 +78,11 @@ export default function Products(props) {
     return (
         <div className={'products'}>
             <div className={'content-container'}>
+                <div className={'main-promo-block-test'}>Соберите все 10 карточек городов,
+                    <br/>чтобы принять участие
+                    <br/>в розыгрыше главного приза!
+                    <br/>1 код = 1 карточка
+                </div>
                 <div className={'winners-text for-slider'}>Продукты, участвующие в акции
                 </div>
                 <div className="slider-container">

@@ -325,7 +325,7 @@ export default function PopupRegister(props) {
 
                             />
                             <span className={`custom-checkbox ${!agree5Checked ? 'error' : ''}`}></span>
-                            <p>Я согласен на обработку <br></br>моих персональных данных</p>
+                            <p>Я согласен на обработку <br></br>моих <a href={`${currentDomain}/politika_pd_omi.pdf`} className={"text-laimon"} target="_blank">Персональных данных</a></p>
                             <span id="phoneError" className="error"></span>
                         </label>
                     </div>

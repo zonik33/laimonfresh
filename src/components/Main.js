@@ -10,6 +10,8 @@ import howFull5 from '../image/img_36.png';
 import How from "./How";
 import Products from "./Products";
 import wintohealth from '../image/img_116.png'
+import wintohealth119 from '../image/img_119.png'
+import wintohealth120 from '../image/img_120.png'
 import inputcode from '../image/img_118.png'
 import uptree from '../image/img_3.png'
 import lefttree from '../image/img_4.png'
@@ -108,10 +110,17 @@ export default function Main(props) {
                         <div className={'winners-text-inputcode'}>
                             <span className={'text-inputcode'}>*найди код под крышкой/ключиком и введи промокод</span>
                         </div>
+                        <div className={'main-promo block'}>Соберите все 10 карточек городов,
+                            <br/>чтобы принять участие
+                            <br/>в розыгрыше главного приза!
+                            <br/>1 код = 1 карточка
+                        </div>
                     </div>
                     <div className={'bottle-left'}>
                         <img className={'bottle-float-left uptree'} src={uptree}/>
                         <img className={'bottle-float-left'} src={wintohealth}/>
+                        <img className={'bottle-float-left air-bonus'} src={wintohealth119}/>
+                        <img className={'bottle-float-left air'} src={wintohealth120}/>
                         <img className={'bottle-float-left two'} src={wintohealth2}/>
                         <img className={'bottle-float-left gps'} src={gps}/>
 

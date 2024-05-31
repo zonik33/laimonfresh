@@ -805,6 +805,23 @@ body {
   color: rgba(227, 29, 26, 1);
   z-index: 5;
 }
+.main-promo.block {
+  border-radius: 0.903vw;
+  border: 1px;
+  background: rgba(255, 255, 255, 0.31);
+  color: rgba(0, 98, 65, 1);
+  width: 24.722vw;
+  height: 6.564vw;
+  font-size: 1.250vw;
+  border-color: rgba(0, 98, 65, 1);
+  border-style: solid;
+  line-height: 1.400vw;
+  padding-top: 1vw;
+  text-transform: none;
+  text-align: center;
+  margin: 2vw 0vw 0vw 10vw;
+  font-family: Inter, sans-serif;
+}
 .main-promo-text-input {
   position: absolute;
   margin: -3.43vw 0vw 0vw 2.6vw;
@@ -1158,6 +1175,9 @@ body {
   right: -25%;
   top: 1.04vw;
 }
+.main-promo-block-test {
+  display: none;
+}
 #wave-test-44:after {
   content: "";
   display: block;
@@ -1190,7 +1210,7 @@ body {
 .bottle-float-left {
   position: relative;
   margin-top: 2.35vw;
-  margin-left: -8.17vw;
+  margin-left: 1.83vw;
   width: 90.5%;
   height: 100%;
   z-index: 5;
@@ -1449,9 +1469,24 @@ body {
   margin-left: -47.17vw;
   width: 51.5%;
   height: auto;
-  z-index: 4;
+  z-index: 3;
   right: 0;
-
+}
+.bottle-float-left.air {
+  position: absolute;
+  margin-top: 4.75vw;
+  margin-left: -36.17vw;
+  width: 10.642vw;
+  height: auto;
+  z-index: 4;
+}
+.bottle-float-left.air-bonus {
+  position: absolute;
+  margin-top: 12.65vw;
+  margin-left: -43.17vw;
+  width: 29.659vw;
+  height: auto;
+  z-index: 4;
 }
 .full-image-container {
   position: fixed;
@@ -1816,7 +1851,7 @@ height: auto;
 .bottle-float-left.gps {
   position: absolute;
   margin-top: 39.13vw;
-  margin-left: -80.47vw;
+  margin-left: -86.47vw;
   width: 3.47vw;
   height: 4.24vw;
   z-index: 4;
@@ -1877,12 +1912,12 @@ height: auto;
 }
 .bottle-float-left.lefttree {
   position: absolute;
-  margin-top: 33.6vw;
-  margin-left: -60.47vw;
+  margin-top: 45.6vw;
+  margin-left: -88.47vw;
   width: 12%;
   height: 3.4%;
   z-index: 4;
-  animation: sbs-23142 15s infinite linear; /* Применяем анимацию petal-animation на протяжении 5 секунд бесконечно */
+  animation: sbs-23142 15s infinite linear;
   backface-visibility: hidden;
 }
 .bottle-float-left.lefttree-mobile {
@@ -2020,7 +2055,7 @@ height: auto;
   font-weight: 700;
   line-height: 2.08vw;
   position: absolute;
-  margin: 44vw 21vw 5vw 12vw;
+  margin: 44vw 21vw 5vw 10vw;
 }
 .absolute-text-mobile {
   display: none;
@@ -3374,7 +3409,7 @@ backface-visibility: hidden;
   margin: 4.5vw 0vw 0vw 5.5vw;
 }
 .million {
-  margin: -3vw 0vw 0vw 1.9vw;
+  margin: -4vw 0vw 1vw 1.9vw;
   width: 26.88vw;
   height: auto;
 }
@@ -4806,13 +4841,12 @@ cursor: pointer;
       background-color: rgba(162, 212, 65, 1);
       background-size: cover;
       width: 100%;
-      height: 169vw;
+      height: 182vw;
       font-family: 'Circe', sans-serif;
       font-weight: 700;
       scroll-behavior: smooth;
       font-size: 0.83vw;
       line-height: 1.5;
-      clip-path: polygon(0 0, 100% 0, 100% 95.3%, 0 100%);
     }
 
 
@@ -4843,7 +4877,7 @@ cursor: pointer;
     margin-left: -78.17vw;
     width: 80.5%;
     height: auto;
-    z-index: 39;
+    z-index: 9;
   }
   .bottle-float-left.nature {
     position: absolute;
@@ -4866,15 +4900,7 @@ cursor: pointer;
     backface-visibility: hidden;
   }
   .bottle-float-left.lefttree-mobile {
-    display: flex;
-    position: absolute;
-    margin-top: -25.4vw;
-    margin-left: 12.53vw;
-    width: 31vw;
-    height: auto;
-    z-index: 6;
-    animation: sbs-23142 25s infinite linear;
-    backface-visibility: hidden;
+    display: none;
   }
   .bottle-float-left.lefttree-mobile.bon1 {
     display: flex;
@@ -7103,7 +7129,14 @@ cursor: pointer;
     width: 321% !important;
   }
   .main-promo {
-   display: none;
+    position: absolute;
+    margin: -48vw 0vw 0vw 34.4vw;
+    font-family: 'AutumnSweaterLaimon', Arial, sans-serif;
+    font-size: 5.825vw;
+    font-weight: 400;
+    line-height: 5vw;
+    color: rgba(227, 29, 26, 1);
+    z-index: 5;
   }
   .main-promo-text-input {
     position: absolute;
@@ -7137,6 +7170,44 @@ cursor: pointer;
     line-height: 3.328vw;
     font-weight: 600;
     z-index: 142;
+  }
+  .main-promo.block {
+    display: none;
+  }
+  .main-promo-block-test {
+    display: block;
+    position: absolute;
+    border-radius: 2.903vw;
+    border: 1px;
+    background: rgba(255, 255, 255, 0.31);
+    color: rgba(0, 98, 65, 1);
+    width: 64.722vw;
+    height: 18.564vw;
+    font-size: 3.45vw;
+    border-color: rgba(0, 98, 65, 1);
+    border-style: solid;
+    line-height: 3.4vw;
+    padding-top: 2.2vw;
+    text-transform: none;
+    text-align: center;
+    margin: -31vw 0vw 0vw 3vw;
+    font-family: Inter, sans-serif;
+  }
+  .bottle-float-left.air {
+    position: absolute;
+    margin-top: -13.25vw;
+    margin-left: -75.17vw;
+    width: 21.642vw;
+    height: auto;
+    z-index: 5;
+  }
+  .bottle-float-left.air-bonus {
+    position: absolute;
+    margin-top: 9.65vw;
+    margin-left: -88.17vw;
+    width: 53.659vw;
+    height: auto;
+    z-index: 5;
   }
 
 }
