@@ -219,7 +219,7 @@ const HowPrizes = (props) => {
                             <div className={'images-moment'}>
                                 <div className="image-container-moment">
                                 <img src={prizefit} alt="Image"/>
-                                    <p className={'right-p-prizes-moment'}>Подписка <br></br>Fitmost</p>
+                                    <p className={'right-p-prizes-moment'}>Подписка <br></br>Фитмост</p>
                                 </div>
                             </div>
                             <div className={'images-moment'}>
