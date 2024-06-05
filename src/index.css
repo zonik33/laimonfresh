@@ -4072,8 +4072,9 @@ backface-visibility: hidden;
   font-weight: 600;
   font-family: Inter;
   color: rgba(0, 98, 65, 1);
-  width: 20.427083vw;
-  margin-top: 1.6vw;
+  width: auto;
+  min-width: 21vw;
+  margin-top: 1.75vw;
   margin-left: 2.2vw;
   text-align: left;
   letter-spacing: 0.1vw;
@@ -5540,7 +5541,7 @@ cursor: pointer;
   }
   .head-colm-prize1 {
     position: absolute;
-    font-size: 5.27vw;
+    font-size: 5.07vw;
     line-height: 8vw;
     font-weight: 600;
     font-family: Inter;
@@ -5622,17 +5623,17 @@ cursor: pointer;
   }
 
   .head-colm-name {
-    font-size: 5.27vw;
-    line-height: 8vw;
-    font-weight: 600;
+    color: #006241;
     font-family: Inter;
-    color: rgba(0, 98, 65, 1);
-    width: 61.427083vw;
-    margin-top: 2.6vw;
+    font-size: 4.57vw;
+    font-weight: 600;
+    letter-spacing: .3vw;
+    line-height: 8vw;
     margin-left: 11vw;
-    text-align: left;
-    letter-spacing: 0.3vw;
+    margin-top: 2.8vw;
     position: absolute;
+    text-align: left;
+    width: 61.427083vw;
   }
   .head-colm-phone1 {
     font-size: 4.27vw;
