@@ -93,7 +93,7 @@ export default function Products(props) {
                                     src={lfberriesback}/></a>
                             <a><img className={'test-img img33'}
                                     src={lfmint33}/></a>
-                            <span className={'lf-text'}> Laimon Fresh 0.33 л </span>
+                            <span className={'lf-text'}> Laimon Fresh Мята 0.33 л </span>
                         </div>
                         <div className="how-full44-img">
                             <a><img className={'back-img'}
@@ -119,7 +119,7 @@ export default function Products(props) {
                         <div className="how-full44-img">
                             <a><img
                                 src={lfmint}/></a>
-                            <span className={'lf-text'}> Laimon Fresh 0.5 л </span>
+                            <span className={'lf-text'}> Laimon Fresh Мята 0.5 л </span>
                         </div>
                         <div className="how-full44-img">
                             <a><img
@@ -143,56 +143,56 @@ export default function Products(props) {
                         <div className="how-full44-img">
                             <a><img className={'back-img'}
                                     src={lfberriesback}/></a>
-                            <a><img className={'test-img'}
+                            <a><img className={'test-img pol10'}
                                     src={lfmint10}/></a>
-                            <span className={'lf-text'}> Laimon Fresh <br></br>1 л </span>
+                            <span className={'lf-text'}> Laimon Fresh Мята 1 л </span>
                         </div>
                         <div className="how-full44-img">
                             <a><img className={'back-img'}
                                     src={lfberriesback}/></a>
-                            <a><img className={'test-img'}
+                            <a><img className={'test-img pol10'}
                                     src={lfmango10}/></a>
                             <span className={'lf-text'}> Laimon Fresh Манго 1 л </span>
                         </div>
                         <div className="how-full44-img">
                             <a><img className={'back-img'}
                                     src={lfberriesback}/></a>
-                            <a><img className={'test-img'}
+                            <a><img className={'test-img pol10'}
                                     src={lfberries10}/></a>
                             <span className={'lf-text'}> Laimon Fresh Ягоды 1 л </span>
                         </div>
                         <div className="how-full44-img">
                             <a><img className={'back-img'}
                                     src={lfberriesback}/></a>
-                            <a><img className={'test-img'}
+                            <a><img className={'test-img pol10'}
                                     src={lfpear10}/></a>
                             <span className={'lf-text'}> Laimon Fresh Груша 1 л </span>
                         </div>
                         <div className="how-full44-img">
                             <a><img className={'back-img'}
                                     src={lfberriesback}/></a>
-                            <a><img className={'test-img'}
+                            <a><img className={'test-img pol15'}
                                     src={lfmint15}/></a>
-                            <span className={'lf-text'}> Laimon Fresh 1.5 л </span>
+                            <span className={'lf-text'}> Laimon Fresh Мята 1.5 л </span>
                         </div>
                         <div className="how-full44-img">
                             <a><img className={'back-img'}
                                     src={lfberriesback}/></a>
-                            <a><img className={'test-img'}
+                            <a><img className={'test-img pol15'}
                                     src={lfmango15}/></a>
                             <span className={'lf-text'}> Laimon Fresh Манго 1.5 л </span>
                         </div>
                         <div className="how-full44-img">
                             <a><img className={'back-img'}
                                     src={lfberriesback}/></a>
-                            <a><img className={'test-img'}
+                            <a><img className={'test-img pol15'}
                                     src={lfberries15}/></a>
                             <span className={'lf-text'}> Laimon Fresh Ягоды 1.5 л </span>
                         </div>
                         <div className="how-full44-img">
                             <a><img className={'back-img'}
                                     src={lfberriesback}/></a>
-                            <a><img className={'test-img'}
+                            <a><img className={'test-img pol15'}
                                     src={lfpear15}/></a>
                             <span className={'lf-text'}> Laimon Fresh Груша 1.5 л </span>
                         </div>

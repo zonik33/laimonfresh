@@ -9,7 +9,7 @@ import Winners from "./Winners";
 import howFull5 from '../image/img_36.png';
 import How from "./How";
 import Products from "./Products";
-import wintohealth from '../image/img_116.png'
+import wintohealth from '../image/img_121.png'
 import wintohealth119 from '../image/img_119.png'
 import wintohealth120 from '../image/img_120.png'
 import inputcode from '../image/img_118.png'

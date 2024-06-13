@@ -2860,6 +2860,16 @@ display: none !important;
   position: relative !important;
   width: 21% !important;
 }
+.test-img.pol10 {
+  margin: -18.7vw 0vw -0.97vw 7.05vw !important;
+  position: relative !important;
+  width: 22.5% !important;
+}
+.test-img.pol15 {
+  margin: -18.9vw 0vw -1.2vw 7.05vw !important;
+  position: relative !important;
+  width: 23% !important;
+}
 .test-img.for-05 {
   margin: -19vw 0vw -0.8vw 6.95vw !important;
   position: relative !important;
@@ -7118,6 +7128,16 @@ cursor: pointer;
     margin: -66vw 0vw -0.4vw 30.25vw !important;
     position: relative !important;
     width: 76% !important;
+  }
+  .test-img.pol15 {
+    position: relative !important;
+    margin: -70vw 0 -2.4vw 29.25vw !important;
+    width: 83% !important;
+  }
+  .test-img.pol10 {
+    margin: -67vw 0 -2.4vw 29.25vw !important;
+    position: relative !important;
+    width: 80% !important;
   }
   .test-img.for-05 {
     margin: -71vw 0vw -3.4vw 28.65vw !important;
