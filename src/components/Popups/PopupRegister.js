@@ -330,7 +330,7 @@ export default function PopupRegister(props) {
                         </label>
                     </div>
                     <div className="register-button-container">
-                        <button type={'submit'} id={'submit'} className={'register-button'}>Зарегистрироваться</button>
+                        <button type={'submit'} id={'submit-r'} className={'register-button'}>Зарегистрироваться</button>
                     </div>
                     <div className="popup-p-center down">
                         <p>Уже есть аккаунт? <a onClick={openPopupLogin} className="text-laimon">Войти</a></p>

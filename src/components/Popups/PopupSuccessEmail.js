@@ -24,7 +24,7 @@ export default function PopupSuccessEmail(props) {
                 <div className="popup-content-code" id={"popup-content"}>
             <form action={''}
                   method={'POST'} onSubmit={postRegisterPassword}
-                  id={'form-login'} className={'form-register'}>
+                   className={'form-register'}>
                 <img className={'bottle-float-left exit-register success-email'} onClick={closePopup2} src={lcexit}/>
                 <img className={'bottle-float-left success-image'}  src={success}/>
                 <div><span className={'register-main-text top-margin'}>Спасибо</span>

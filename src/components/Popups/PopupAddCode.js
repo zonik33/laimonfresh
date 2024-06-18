@@ -111,7 +111,7 @@ debugger;
                                                  style={{color: '#FFFFFF'}}>{registrationErrorEm}</div>}
                     <span id="phoneError" className="error"></span>
                     <div className="register-button-container">
-                        <button type={'submit'} id={'submit'} className={'register-button code-down'}>Отправить</button>
+                        <button type={'submit'} id={'submit-add'} className={'register-button code-down'}>Отправить</button>
                     </div>
                 </div>
             </form>

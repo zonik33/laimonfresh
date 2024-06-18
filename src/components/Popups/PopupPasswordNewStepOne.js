@@ -104,7 +104,7 @@ export default function PopupPasswordNewStepOne(props) {
                     {registrationErrorEm &&  <div className={'error-block-phone only-for-phone'} style={{color: '#FFFFFF'}}>{registrationErrorEm}</div>}
                     <span id="phoneError" className="error"></span>
                     <div className="register-button-container">
-                        <button type={'submit'} id={'submit'} className={'register-button code-down'}>Отправить</button>
+                        <button type={'submit'} id={'submit-f'} className={'register-button code-down'}>Отправить</button>
                     </div>
                 </div>
             </form>

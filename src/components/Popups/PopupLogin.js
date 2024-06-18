@@ -64,7 +64,7 @@ export default function PopupLogin(props) {
     let isRequestPending = false;
 
     async function postAuth(event) {
-        const form = document.getElementById('form-login');
+        const form = document.getElementById('form-logins');
         event.preventDefault();
         const login = document.getElementById('logins');
         const password = document.getElementById('password')
@@ -122,7 +122,7 @@ export default function PopupLogin(props) {
                 <div className="popup-content-code" id={"popup-content"}>
             <form action={'https://promo.laimonfresh.ch/backend/api/authenticateByEmail'}
                   method={'POST'} onSubmit={postAuth}
-                  id={'form-login'} className={'form-register'}>
+                  id={'form-logins'} className={'form-register'}>
                 <div className={'container-register'}>
                     <div><span className={'register-main-text'}>Авторизация</span>
                         <img className={'bottle-float-left exit-register'} onClick={closePopup2} src={lcexit}/>
@@ -145,7 +145,7 @@ export default function PopupLogin(props) {
                     <p className={'register-inputs-text login-next'}><a className={"text-laimon"} onClick={openPopup2}>Забыли
                         пароль?</a></p>
                     <div className="register-button-container">
-                        <button type={'submit'} id={'submit'} className={'register-button'}>Войти</button>
+                        <button type={'submit'} id={'submit-l'} className={'register-button'}>Войти</button>
                     </div>
                     <div className="popup-p-center down-login">
                         <p>

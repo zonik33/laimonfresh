@@ -87,6 +87,15 @@ export default function WinnersAll(props) {
     const [week4Winners, setWeek4Winners] = useState([]);
     const [week5Winners, setWeek5Winners] = useState([]);
     const [week6Winners, setWeek6Winners] = useState([]);
+    const [week7Winners, setWeek7Winners] = useState([]);
+    const [week8Winners, setWeek8Winners] = useState([]);
+    const [week9Winners, setWeek9Winners] = useState([]);
+    const [week10Winners, setWeek10Winners] = useState([]);
+    const [week11Winners, setWeek11Winners] = useState([]);
+    const [week12Winners, setWeek12Winners] = useState([]);
+    const [week13Winners, setWeek13Winners] = useState([]);
+    const [week14Winners, setWeek14Winners] = useState([]);
+    const [week15Winners, setWeek15Winners] = useState([]);
 
     const [currentWeekWinners, setCurrentWeekWinners] = useState([]);
     const handleSliderChange = (currentSlide) => {
@@ -105,6 +114,36 @@ export default function WinnersAll(props) {
         }
         else if (currentSlide === 5) {
             setCurrentWeekWinners(week5Winners);
+        }
+        else if (currentSlide === 6) {
+            setCurrentWeekWinners(week6Winners);
+        }
+        else if (currentSlide === 7) {
+            setCurrentWeekWinners(week7Winners);
+        }
+        else if (currentSlide === 8) {
+            setCurrentWeekWinners(week8Winners);
+        }
+        else if (currentSlide === 9) {
+            setCurrentWeekWinners(week9Winners);
+        }
+        else if (currentSlide === 10) {
+            setCurrentWeekWinners(week10Winners);
+        }
+        else if (currentSlide === 11) {
+            setCurrentWeekWinners(week11Winners);
+        }
+        else if (currentSlide === 12) {
+            setCurrentWeekWinners(week12Winners);
+        }
+        else if (currentSlide === 13) {
+            setCurrentWeekWinners(week13Winners);
+        }
+        else if (currentSlide === 14) {
+            setCurrentWeekWinners(week14Winners);
+        }
+        else if (currentSlide === 15) {
+            setCurrentWeekWinners(week15Winners);
         }
 
     };
@@ -191,7 +230,105 @@ export default function WinnersAll(props) {
             }
         };
         fetchWeek6Winners();
+
+        const fetchWeek7Winners = async () => {
+            try {
+                const response = await axios.get('https://promo.laimonfresh.ch/backend/api/getWinners?type=week&week=8');
+                const data = response.data.data.rows || [];
+                setWeek7Winners(data);
+            } catch (error) {
+                console.error('Error fetching week 2 winners:', error);
+            }
+        };
+        fetchWeek7Winners();
+        const fetchWeek8Winners = async () => {
+            try {
+                const response = await axios.get('https://promo.laimonfresh.ch/backend/api/getWinners?type=week&week=9');
+                const data = response.data.data.rows || [];
+                setWeek8Winners(data);
+            } catch (error) {
+                console.error('Error fetching week 2 winners:', error);
+            }
+        };
+        fetchWeek8Winners();
+
+        const fetchWeek9Winners = async () => {
+            try {
+                const response = await axios.get('https://promo.laimonfresh.ch/backend/api/getWinners?type=week&week=10');
+                const data = response.data.data.rows || [];
+                setWeek9Winners(data);
+            } catch (error) {
+                console.error('Error fetching week 2 winners:', error);
+            }
+        };
+        fetchWeek9Winners();
+
+        const fetchWeek10Winners = async () => {
+            try {
+                const response = await axios.get('https://promo.laimonfresh.ch/backend/api/getWinners?type=week&week=11');
+                const data = response.data.data.rows || [];
+                setWeek10Winners(data);
+            } catch (error) {
+                console.error('Error fetching week 2 winners:', error);
+            }
+        };
+        fetchWeek10Winners();
+        const fetchWeek11Winners = async () => {
+            try {
+                const response = await axios.get('https://promo.laimonfresh.ch/backend/api/getWinners?type=week&week=12');
+                const data = response.data.data.rows || [];
+                setWeek11Winners(data);
+            } catch (error) {
+                console.error('Error fetching week 2 winners:', error);
+            }
+        };
+        fetchWeek11Winners();
+
+        const fetchWeek12Winners = async () => {
+            try {
+                const response = await axios.get('https://promo.laimonfresh.ch/backend/api/getWinners?type=week&week=13');
+                const data = response.data.data.rows || [];
+                setWeek12Winners(data);
+            } catch (error) {
+                console.error('Error fetching week 2 winners:', error);
+            }
+        };
+        fetchWeek12Winners();
+
+        const fetchWeek13Winners = async () => {
+            try {
+                const response = await axios.get('https://promo.laimonfresh.ch/backend/api/getWinners?type=week&week=14');
+                const data = response.data.data.rows || [];
+                setWeek13Winners(data);
+            } catch (error) {
+                console.error('Error fetching week 2 winners:', error);
+            }
+        };
+        fetchWeek13Winners();
+        const fetchWeek14Winners = async () => {
+            try {
+                const response = await axios.get('https://promo.laimonfresh.ch/backend/api/getWinners?type=week&week=15');
+                const data = response.data.data.rows || [];
+                setWeek14Winners(data);
+            } catch (error) {
+                console.error('Error fetching week 2 winners:', error);
+            }
+        };
+        fetchWeek14Winners();
+
+        const fetchWeek15Winners = async () => {
+            try {
+                const response = await axios.get('https://promo.laimonfresh.ch/backend/api/getWinners?type=week&week=16');
+                const data = response.data.data.rows || [];
+                setWeek15Winners(data);
+            } catch (error) {
+                console.error('Error fetching week 2 winners:', error);
+            }
+        };
+        fetchWeek15Winners();
+
     }, []);
+
 
 
     useEffect(() => {

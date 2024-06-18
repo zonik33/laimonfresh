@@ -28,7 +28,7 @@ export default function PopupSuccessCode(props) {
                 <div className="popup-content-code" id={"popup-content"}>
         <form action={'https://nloto-promo.ru/backend/api/login'}
               method={'POST'} onSubmit={postRegisterPassword}
-              id={'form-login'} className={'form-register'}>
+               className={'form-register'}>
             <img className={'bottle-float-left exit-register success-email'} onClick={closePopup2} src={lcexit}/>
             <img className={'bottle-float-left success-image'} onClick={closeModal} src={success}/>
             <div><span className={'register-main-text top-margin'}>Спасибо</span>

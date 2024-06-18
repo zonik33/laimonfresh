@@ -515,7 +515,7 @@ export default function Winners(props) {
                                             <img className={'bottle-float-left gps-novo'} src={gps}/>
                                             <img className={'bottle-float-left gps-vlad'} src={gps}/>
 
-                                            {/*{winnersMain && winnersMain.length > 0 ? (*/}
+                                            {/*/!*{winnersMain && winnersMain.length > 0 ? (*!/*/}
                                             {/*    winnersMain.map((winner, index) => (*/}
                                             {/*        <div key={index} className={'table-body-winners down'}>*/}
                                             {/*            <div className={'head-colm-prize1'}>{index + 1}</div>*/}
@@ -525,7 +525,7 @@ export default function Winners(props) {
                                             {/*                /!*<img className={'winners-prize-img'} alt={'Приз'} src={prizeImages[winner.prize_id]}/>*!/*/}
                                             {/*            </div>*/}
                                             {/*        </div>*/}
-                                            {/*    ))*/}
+                                            {/*/!*    ))*!/*/}
                                             {/*) : (*/}
                                             {/*    <div className="table-body-winners down">*/}
                                             {/*        <div className={'head-colm-prize1'}>&nbsp;</div>*/}
