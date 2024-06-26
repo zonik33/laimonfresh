@@ -74,7 +74,7 @@ function App() {
     }, [isContentLoaded]);
 
     function openPopup3() {
-        document.getElementById("popup-soon").style.display = "block";
+        document.getElementById("popup-register-success").style.display = "block";
         document.body.classList.add("no-scroll");
     }
     function ErrorPage() {

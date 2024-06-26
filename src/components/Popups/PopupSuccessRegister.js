@@ -20,19 +20,37 @@ export default function PopupSuccessRegister(props) {
     return (
         <div id="popup-register-success" className="popup">
             <div className={"blur-filter"}>
-                <div className="popup-content-code" id={"popup-content"}>
-            <form action={'https://nloto-promo.ru/backend/api/login'}
-                  method={'POST'}
-                   className={'form-register'}>
-                <img className={'bottle-float-left exit-register success-email'} onClick={closePopup2} src={lcexit}/>
-                <img className={'bottle-float-left success-image'} onClick={closeModal} src={success}/>
-                <div><span className={'register-main-text top-margin new-meow'}>Ваша регистрация <br></br>прошла успешно</span>
-                    <p className={'register-inputs-text new-reg'}>На вашу почту отправлена ссылка <br></br>для
-                        активации аккаунта.</p>
+                <div className="popup-content-code success-reg-new" id={"popup-content"}>
+                    <form action={'https://nloto-promo.ru/backend/api/login'}
+                          method={'POST'}
+                          className={'form-register'}>
+                        <div className={'success-reg-new-left'}>
+                            <img className={'bottle-float-left exit-register success-email-new'} onClick={closePopup2}
+                                 src={lcexit}/>
+                            <img className={'bottle-float-left success-image-new'} onClick={closeModal} src={success}/>
+                            <div><span className={'register-main-text top-margin new-meow'}>Ваша регистрация <br></br>прошла успешно</span>
+                                <p className={'register-inputs-text new-reg'}>На вашу почту отправлена ссылка <br></br>для
+                                    активации аккаунта.</p>
+                            </div>
+                            <div className={'vertical-line-reg'}></div>
+                            <div className={'horiz-line-reg'}></div>
+                        </div>
+                        <div className={'success-reg-new-right'}>
+                            <div className={'container-right'}>
+                            <div><span className={'register-main-text top-margin new-meow-second'}>Обратите внимание </span>
+                                <p className={'register-inputs-text new-reg-number'}><span
+                                    className={'register-main-text top-margin new-meow-1'}>1</span>
+                                    Если письма нет во входящих,<br></br> проверьте,
+                                    пожалуйста, папку<br></br> "Спам" или папку "Рассылки"</p>
+                                <p className={'register-inputs-text new-reg-number'}><span className={'register-main-text top-margin new-meow-2'}>2</span> Если письмо оказалось в спаме, <br></br>просим
+                                    вам переместить его в папку <br></br>"Входящие", чтобы все последующие <br></br>письма
+                                    с сайта не попадали в спам
+                                    </p>
+                            </div>
+                            </div>
+                        </div>
 
-
-                </div>
-            </form>
+                    </form>
                     {/*<button onClick={togglePopup}>Закрыть</button>*/}
                 </div>
             </div>
