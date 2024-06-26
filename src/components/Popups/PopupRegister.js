@@ -24,6 +24,30 @@ export default function PopupRegister(props) {
     const [text1Error, setText1Error] = useState('');
     const [isPopupLoginOpen, setIsPopupLoginOpen] = useState(false);
     const [allCheckboxesChecked, setAllCheckboxesChecked] = useState(false);
+    const emailInputRef = React.useRef();
+    const nameInputRef = React.useRef();
+    const formRef = React.useRef();
+    const scrollToError = () => {
+        if (registrationError1 || registrationError2) {
+            formRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+    const scrollToEmailError = () => {
+        if (registrationError1) {
+            emailInputRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    const scrollToNameError = () => {
+        if (registrationError2) {
+            nameInputRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    useEffect(() => {
+        scrollToEmailError();
+        scrollToNameError();
+    }, [registrationError1, registrationError2]);
 
     const handleAgree4Change = () => {
         setAgree4Checked(agree4Checked => {
@@ -168,6 +192,7 @@ export default function PopupRegister(props) {
         }
 
     }
+
     const [inputValue, setInputValue] = useState('');
     const [allCities, setAllCities] = useState([]);
     const [filteredCities, setFilteredCities] = useState([]);
@@ -198,6 +223,7 @@ export default function PopupRegister(props) {
         setFilteredCities(filteredCities);
     };
     const currentDomain = window.location.origin;
+
 
     return (
         <div id="popup-complete" className="popup">
@@ -233,21 +259,24 @@ export default function PopupRegister(props) {
         >
             <form action={'https://promo.laimonfresh.ch/backend/api/registerByEmail'}
                   method={'POST'} onSubmit={postRegister}
-                  id={'form-register-password'} className={'form-register'}>
+                  id={'form-register-password'} className={'form-register'}
+                  ref={formRef}>
                 <div className={'container-register-modal'}>
                     <div><span className={'register-main-text'}>Регистрация</span>
                         <img className={'bottle-float-left exit-register'} onClick={closeModal} src={lcexit}/>
                     </div>
                     <p className={'register-inputs-text login'}>Фио</p>
-                    <input type="text" className={`register-inputs ${registrationError2 ? 'error' : ''}`} id={'name'}
+                    <input type="text"  className={`register-inputs ${registrationError2 ? 'error' : ''}`} id={'name'}
                            required
                            placeholder="ФИО"
+                           ref={nameInputRef}
 
                     />
                     {registrationError2 &&  <div className={'error-block-phone test-register'} style={{color: '#FFFFFF'}}>{registrationError2}</div>}
                     <span id="phoneError" className="error"></span>
                     <p className={'register-inputs-text login'}>E-mail</p>
                     <input
+                        ref={emailInputRef}
                         type="email"
                         id={'login'}
                         className={`register-inputs ${registrationError1 ? 'error' : ''}`}
@@ -257,7 +286,9 @@ export default function PopupRegister(props) {
                         onBlur={handleBlur}
                         required
                     />
+
                     {registrationError1 &&  <div className={'error-block-phone test-register'} style={{color: '#FFFFFF'}}>{registrationError1}</div>}
+
                     <span id="phoneError" className="error"></span>
                     <p className={'register-inputs-text login'}>Телефон</p>
                     <PhoneInput id='phone' name='login' className={'register-inputs'}
@@ -335,10 +366,13 @@ export default function PopupRegister(props) {
                     <div className="popup-p-center down">
                         <p>Уже есть аккаунт? <a onClick={openPopupLogin} className="text-laimon">Войти</a></p>
                     </div>
+
                 </div>
             </form>
+
             {/*<button onClick={togglePopup}>Закрыть</button>*/}
         </Modal>
         </div>
     )
 }
+

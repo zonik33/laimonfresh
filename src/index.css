@@ -4430,6 +4430,10 @@ input.new-code-profile:hover {
 .register-button:hover {
   cursor: pointer;
 }
+.register-button:active {
+  transform: scale(0.99); /* Example of visual effect - scaling down the button upon click */
+  /* Include other visual effects as per your design */
+}
 .text-laimon {
   text-decoration: underline;
   color: rgba(163, 212, 65, 1) !important;
