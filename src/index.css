@@ -4111,17 +4111,18 @@ backface-visibility: hidden;
   width: 6.427083vw;
   margin-top: 1.7vw;
   margin-left: -1vw;
+  margin-right: 9vw;
 }
-.head-colm-name{
+.head-colm-name {
   font-size: 1.74vw;
   line-height: 2.08vw;
   font-weight: 600;
   font-family: Inter;
   color: rgba(0, 98, 65, 1);
   width: auto;
-  min-width: 21vw;
+  min-width: 38vw;
   margin-top: 1.75vw;
-  margin-left: 2.2vw;
+  margin-left: -6.8vw;
   text-align: left;
   letter-spacing: 0.1vw;
 }
@@ -4133,7 +4134,7 @@ backface-visibility: hidden;
 .head-colm-phone1 {
   min-width: 0.364583vw;
   margin-top: 2vw;
-  padding-left: 25.2vw;
+  padding-left: 8.2vw;
 }
 .head-colm-date1-ticket {
   min-width: 15.364583vw;
@@ -5714,9 +5715,9 @@ cursor: pointer;
     font-size: 4.57vw;
     font-weight: 600;
     letter-spacing: .3vw;
-    line-height: 8vw;
+    line-height: 4.5vw;
     margin-left: 11vw;
-    margin-top: 2.8vw;
+    margin-top: 4.4vw;
     position: absolute;
     text-align: left;
     width: 61.427083vw;
