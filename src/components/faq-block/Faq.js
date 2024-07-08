@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import lemondots from "../../image/lemon.png";
 import dotslemon from "../../image/Dots.svg";
 import logo2 from "../../image/logo2.png";
@@ -135,6 +135,28 @@ export default function Faq(props) {
         document.body.classList.add("no-scroll");
     };
     const currentDomain = window.location.origin;
+    const [copied, setCopied] = useState(false);
+
+    useEffect(() => {
+        const copyEmail = () => {
+            const textToCopy = 'info@promo.laimonfresh.ch';
+            navigator.clipboard.writeText(textToCopy)
+                .then(() => {
+                    setCopied(true);
+                    setTimeout(() => {
+                        setCopied(false); // Hide the notification after 1 second
+                    }, 1000);
+                })
+                .catch((err) => console.error('Unable to copy to clipboard', err));
+        };
+
+        const emailLink = document.querySelector('.faq-question-p-a');
+        emailLink.addEventListener('click', copyEmail);
+
+        return () => {
+            emailLink.removeEventListener('click', copyEmail);
+        };
+    }, [setCopied]); // Include setCopied in the dependency array to prevent stale closures
     return (
         <header>
             <img src={lemondots} alt="Photo" className="left-photo"/>
@@ -677,6 +699,7 @@ export default function Faq(props) {
                             <p className={'faq-question-p'}>если у вас остались вопросы, напишите нам</p>
                             <a className={'faq-question-p-a'}>info@promo.laimonfresh.ch</a>
                         </div>
+                        {copied && <div className="copied-notification">Почта скопирована!</div>}
                         <img className={'bottle-float-left example-tree5 faq-down'} src={owntreep}/>
                         <img className={'bottle-float-left lime-faq'} src={limeright1}/>
                     </div>
