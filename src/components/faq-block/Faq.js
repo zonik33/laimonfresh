@@ -695,6 +695,47 @@ export default function Faq(props) {
                                 </Typography>
                             </AccordionDetails>
                         </Accordion>
+                        <Accordion
+                            expanded={expanded === 'panel15'}
+                            onChange={handleChange('panel15')}
+                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                        >
+                            <AccordionSummary
+                                expandIcon={
+                                    expanded === 'panel15' ? <NorthEastIcon/> : <NorthEastIcon/>
+                                }
+                                aria-controls="panel2-content"
+                                id="panel2-header"
+                            >
+                                <Typography className={classes.heading}><b className={'heading-id'}>15</b> <p
+                                    className={'heading-name'}>Как собрать карточки городов и участвовать в розыгрыше призов?</p></Typography>
+                                <Typography className={classes.secondaryHeading}>
+                                </Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <Typography>
+                                    {expanded === 'panel15' && <div className={classes.line}></div>}
+                                    1. Приобретите продукцию Laimon Fresh, участвующую в акции.
+                                    <br></br>
+                                    2. Найдите промокод под крышкой или ключиком.
+                                    <br></br>
+                                    3. Перейдите на сайт промо-акции Laimon Fresh и введите промокод в соответствующее
+                                    поле.
+                                    <br></br><br></br>
+                                    1 промокод = 1 карточка.
+                                    <br></br>
+                                    <br></br>
+                                    4. Карточки городов дают возможность участвовать в розыгрыше еженедельных призов.
+                                    <br></br>
+                                    5. Соберите пять карточек городов, чтобы принять участие в розыгрыше мерча
+                                    от Laimon Fresh.
+                                    <br></br>
+                                    6. Соберите все десять карточек городов, чтобы стать претендентом на супер приз
+                                    — 1 миллион рублей на путешествие по России или денежный эквивалент на ваш счёт.
+
+                                </Typography>
+                            </AccordionDetails>
+                        </Accordion>
                         <div className={'faq-question'}>
                             <p className={'faq-question-p'}>если у вас остались вопросы, напишите нам</p>
                             <a className={'faq-question-p-a'}>info@promo.laimonfresh.ch</a>
