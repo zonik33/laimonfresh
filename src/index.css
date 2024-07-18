@@ -600,9 +600,11 @@ body {
   /* Дополнительные стили по необходимости */
 }
 .error-message.check-box-error {
+  width: 20vw;
   margin: -1vw 0vw 0vw 0.2vw;
 }
 .error-message.check-box-error-second {
+  width: 20vw;
   margin: 0vw 0vw 0vw 0.2vw;
 }
 .custom-checkbox.error {
@@ -7447,11 +7449,13 @@ cursor: pointer;
     position: absolute;
     margin: 0vw 0vw 0vw 0.2vw;
     font-size: 2.5vw;
+    width: 55vw;
   }
   .error-message.check-box-error-second {
     position: absolute;
     margin: -1.2vw 0vw 0vw 0.2vw;
     font-size: 2.5vw;
+    width: 55vw;
   }
 
 

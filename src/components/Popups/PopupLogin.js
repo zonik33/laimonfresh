@@ -52,14 +52,22 @@ export default function PopupLogin(props) {
         document.body.classList.add("no-scroll");
     }
     function closePopup2() {
-        document.getElementById("popup-login").style.display = "none";
-        document.body.classList.remove("no-scroll");
-        document.getElementById('logins').value = '';
-        document.getElementById('password').value = '';
         setRegistrationErrorEm('');
         setRegistrationErrorPas('');
+
+        // Сброс значений полей ввода
+        document.getElementById('logins').value = '';
+        document.getElementById('password').value = '';
+
+        // Удаление классов ошибок
         document.getElementById('logins').classList.remove('error');
         document.getElementById('password').classList.remove('error');
+
+        // Остановка асинхронных операций, если они есть
+
+        // Закрытие попапа и сброс класса "no-scroll"
+        document.getElementById("popup-login").style.display = "none";
+        document.body.classList.remove("no-scroll");
     }
     let isRequestPending = false;
 

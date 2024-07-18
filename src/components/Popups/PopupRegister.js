@@ -403,7 +403,7 @@ export default function PopupRegister(props) {
                             className={`register-button ${isLoading ? 'disabled' : ''}`}
                             disabled={isLoading}
                         >
-                            {isLoading ? 'Загрузка...' : 'Зарегистрироваться'}
+                            {isLoading ? 'Зарегистрироваться' : 'Зарегистрироваться'}
                         </button>
                     </div>
                     <div className="popup-p-center down">
