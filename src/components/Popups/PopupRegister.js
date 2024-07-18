@@ -27,6 +27,30 @@ export default function PopupRegister(props) {
     const emailInputRef = React.useRef();
     const nameInputRef = React.useRef();
     const formRef = React.useRef();
+
+    const handleNameInputChange = () => {
+        setRegistrationError2('');
+    };
+
+    // const handleEmailInputChange = () => {
+    //     setRegistrationError1('');
+    // };
+
+    const handleCityInputChange = () => {
+        setRegistrationError('');
+    };
+
+    const handlePass2InputChange = () => {
+        setRegistrationError4('');
+    };
+
+    const handlePass3InputChange = () => {
+        setRegistrationError5('');
+    };
+
+
+
+
     const scrollToError = () => {
         if (registrationError1 || registrationError2) {
             formRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -43,6 +67,7 @@ export default function PopupRegister(props) {
             nameInputRef.current.scrollIntoView({ behavior: 'smooth' });
         }
     };
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         scrollToEmailError();
@@ -52,6 +77,7 @@ export default function PopupRegister(props) {
     const handleAgree4Change = () => {
         setAgree4Checked(agree4Checked => {
             checkAllCheckboxes(!agree4Checked, agree5Checked);
+            setAgree4Error(!agree4Checked);
             return !agree4Checked;
         });
     }
@@ -59,6 +85,7 @@ export default function PopupRegister(props) {
     const handleAgree5Change = () => {
         setAgree5Checked(agree5Checked => {
             checkAllCheckboxes(agree4Checked, !agree5Checked);
+            setAgree5Error(!agree5Checked);
             return !agree5Checked;
         });
     }
@@ -95,6 +122,7 @@ export default function PopupRegister(props) {
 
     const handleChange = (e) => {
         setEmail(e.target.value);
+        setRegistrationError1('');
     };
 
     const handleBlur = () => {
@@ -104,6 +132,7 @@ export default function PopupRegister(props) {
     let isRequestPending = false;
 
     async function postRegister(event) {
+
         const form = document.getElementById('form-register-password');
         event.preventDefault();
         const login = document.getElementById('login');
@@ -133,6 +162,7 @@ export default function PopupRegister(props) {
         formData.append('passR', passR.value);
         formData.append('rules1', rules1 ? '1' : '0');
         formData.append('rules2', rules2 ? '1' : '0');
+        setIsLoading(true);
         try {
 
             const response = await axios.post('https://promo.laimonfresh.ch/backend/api/registerByEmail', formData);
@@ -189,6 +219,7 @@ export default function PopupRegister(props) {
             }
         } finally {
             isRequestPending = false;
+            setIsLoading(false);
         }
 
     }
@@ -270,6 +301,7 @@ export default function PopupRegister(props) {
                            required
                            placeholder="ФИО"
                            ref={nameInputRef}
+                           onChange={handleNameInputChange}
 
                     />
                     {registrationError2 &&  <div className={'error-block-phone test-register'} style={{color: '#FFFFFF'}}>{registrationError2}</div>}
@@ -317,6 +349,7 @@ export default function PopupRegister(props) {
                         id={'pass'}
                         placeholder="Пароль"
                         required
+                        onChange={handlePass2InputChange}
                         />
                     {registrationError4 &&  <div className={'error-block-phone test-register'} style={{color: '#FFFFFF'}}>{registrationError4}</div>}
                     <span id="phoneError" className="error"></span>
@@ -324,6 +357,7 @@ export default function PopupRegister(props) {
                     <input type="password"
                            required
                            id={'passR'}
+                           onChange={handlePass3InputChange}
                            className={`register-inputs ${registrationError5 ? 'error' : ''}`} placeholder="Подтвердить пароль"
                            />
                     {registrationError5 &&  <div className={'error-block-phone test-register'} style={{color: '#FFFFFF'}}>{registrationError5}</div>}
@@ -341,6 +375,7 @@ export default function PopupRegister(props) {
                             <span className={`custom-checkbox ${!agree4Checked ? 'error' : ''}`}></span>
                             <p>Я согласен с <a href={`${currentDomain}/rules.pdf`} className={"text-laimon"} target="_blank">Правилами акции</a>
                             </p>
+                            {!agree4Checked && <span className={`error-message check-box-error ${!agree4Checked ? 'error' : ''}`}>Обязательно для регистрации</span>}
                             <span id="phoneError" className="error"></span>
                         </label>
 
@@ -357,11 +392,19 @@ export default function PopupRegister(props) {
                             />
                             <span className={`custom-checkbox ${!agree5Checked ? 'error' : ''}`}></span>
                             <p>Я согласен на обработку <br></br>моих <a href={`${currentDomain}/politika_pd_omi.pdf`} className={"text-laimon"} target="_blank">Персональных данных</a></p>
+                            {!agree5Checked && <span className={`error-message check-box-error-second ${!agree5Checked ? 'error' : ''}`}>Обязательно для регистрации</span>}
                             <span id="phoneError" className="error"></span>
                         </label>
                     </div>
                     <div className="register-button-container">
-                        <button type={'submit'} id={'submit-r'} className={'register-button'}>Зарегистрироваться</button>
+                        <button
+                            type="submit"
+                            id="submit-r"
+                            className={`register-button ${isLoading ? 'disabled' : ''}`}
+                            disabled={isLoading}
+                        >
+                            {isLoading ? 'Загрузка...' : 'Зарегистрироваться'}
+                        </button>
                     </div>
                     <div className="popup-p-center down">
                         <p>Уже есть аккаунт? <a onClick={openPopupLogin} className="text-laimon">Войти</a></p>

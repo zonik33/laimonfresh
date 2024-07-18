@@ -599,6 +599,12 @@ body {
   color: red; /* Цвет текста ошибки */
   /* Дополнительные стили по необходимости */
 }
+.error-message.check-box-error {
+  margin: -1vw 0vw 0vw 0.2vw;
+}
+.error-message.check-box-error-second {
+  margin: 0vw 0vw 0vw 0.2vw;
+}
 .custom-checkbox.error {
   border: 0.07vw solid red;
 }
@@ -4467,6 +4473,11 @@ input.new-code-profile:hover {
   background: linear-gradient(to right, rgba(255, 200, 40, 1), rgba(227, 29, 26, 1) 40%);
   border: 1px solid white;
 }
+.register-button.disabled {
+  background: linear-gradient(to right, rgba(255, 200, 40, 0.5), rgba(227, 29, 26, 0.5) 40%);
+  filter: brightness(80%); /* Reduce brightness by 50% */
+  cursor: not-allowed; /* Change cursor to not-allowed */
+}
 .register-button.code-down {
   margin-bottom: -2.7vw;
 }
@@ -7431,6 +7442,16 @@ cursor: pointer;
     display: block;
     margin: 1vw -2.3vw 0vw 2vw;
     padding-top: 1vw;
+  }
+  .error-message.check-box-error {
+    position: absolute;
+    margin: 0vw 0vw 0vw 0.2vw;
+    font-size: 2.5vw;
+  }
+  .error-message.check-box-error-second {
+    position: absolute;
+    margin: -1.2vw 0vw 0vw 0.2vw;
+    font-size: 2.5vw;
   }
 
 
