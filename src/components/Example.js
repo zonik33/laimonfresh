@@ -60,6 +60,47 @@ export default function ControlledAccordions() {
 
             <img className={'bottle-float-left-mobile bigline-mobile'} src={biglinemobile}/>
             <Accordion
+                expanded={expanded === 'panel15'}
+                onChange={handleChange('panel15')}
+                className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+            >
+                <AccordionSummary
+                    expandIcon={
+                        expanded === 'panel15' ? <NorthEastIcon/> : <NorthEastIcon/>
+                    }
+                    aria-controls="panel2-content"
+                    id="panel2-header"
+                >
+                    <Typography className={classes.heading}><b className={'heading-id'}>01</b> <p
+                        className={'heading-name'}>Как собрать карточки городов и участвовать в розыгрыше призов?</p></Typography>
+                    <Typography className={classes.secondaryHeading}>
+                    </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Typography>
+                        {expanded === 'panel15' && <div className={classes.line}></div>}
+                        1. Приобретите продукцию Laimon Fresh, участвующую в акции.
+                        <br></br>
+                        2. Найдите промокод под крышкой или ключиком.
+                        <br></br>
+                        3. Перейдите на сайт промо-акции Laimon Fresh и введите промокод в соответствующее
+                        поле.
+                        <br></br><br></br>
+                        1 промокод = 1 карточка.
+                        <br></br>
+                        <br></br>
+                        4. Карточки городов дают возможность участвовать в розыгрыше еженедельных призов.
+                        <br></br>
+                        5. Соберите пять карточек городов, чтобы принять участие в розыгрыше мерча
+                        от Laimon Fresh.
+                        <br></br>
+                        6. Соберите все десять карточек городов, чтобы стать претендентом на супер приз
+                        — 1 миллион рублей на путешествие по России или денежный эквивалент на ваш счёт.
+
+                    </Typography>
+                </AccordionDetails>
+            </Accordion>
+            <Accordion
                 expanded={expanded === 'panel1'}
                 onChange={handleChange('panel1')}
             >
@@ -69,7 +110,7 @@ export default function ControlledAccordions() {
                     id="panel1-header"
                 >
                     <Typography className={classes.heading}>
-                        <b className={'heading-id'}>01</b> <p className={'heading-name'}>Кто является организатором Акции?</p>
+                        <b className={'heading-id'}>02</b> <p className={'heading-name'}>Кто является организатором Акции?</p>
                     </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -111,7 +152,7 @@ export default function ControlledAccordions() {
                     id="panel2-header"
                 >
                     <Typography className={classes.heading}>
-                        <b className={'heading-id'}>02</b> <p className={'heading-name'}>Где я могу прочесть правила Акции?</p>
+                        <b className={'heading-id'}>03</b> <p className={'heading-name'}>Где я могу прочесть правила Акции?</p>
                     </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -135,7 +176,7 @@ export default function ControlledAccordions() {
                     id="panel2-header"
                 >
                     <Typography className={classes.heading}>
-                        <b className={'heading-id'}>03</b> <p className={'heading-name'}>Какая продукция участвует в Акции?</p>
+                        <b className={'heading-id'}>04</b> <p className={'heading-name'}>Какая продукция участвует в Акции?</p>
                     </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -161,35 +202,6 @@ export default function ControlledAccordions() {
                         • Laimon Fresh Груша в банке объемом 0.33л, в бутылках объемом 0.5 л, 1 л и 1.5 л
 
 
-                    </Typography>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion
-                expanded={expanded === 'panel4'}
-                onChange={handleChange('panel4')}
-                className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
-            >
-                <AccordionSummary
-                    expandIcon={
-                        expanded === 'panel4' ? <NorthEastIcon/> : <NorthEastIcon/>
-                    }
-                    aria-controls="panel2-content"
-                    id="panel2-header"
-                >
-                    <Typography className={classes.heading}>
-                        <b className={'heading-id'}>04</b> <p className={'heading-name'}>Сроки проведения Акции?</p>
-                    </Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>
-                        {expanded === 'panel4' && <div className={classes.line}></div>}
-                        Общий срок проведения Акции, включая срок выдачи призов: с «15» мая 2024 г. по «30»
-                        сентября 2024 г. (включительно).
-                        <br></br>
-                        Срок совершения необходимой для участия в Акции покупки Продуктов на территории РФ:
-                        с «15» мая 2024 г. по «31» августа 2024 г. (включительно).
-                        <br></br>
-                        Период регистрации Кодов: с «15» мая 2024 г. по «31» августа 2024 г. (включительно).
                     </Typography>
                 </AccordionDetails>
             </Accordion>
