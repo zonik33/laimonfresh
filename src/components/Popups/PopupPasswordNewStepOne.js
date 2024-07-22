@@ -88,7 +88,7 @@ export default function PopupPasswordNewStepOne(props) {
                         <img className={'bottle-float-left exit-register email-remember'} onClick={closePopup2} src={lcexit}/>
                     </div>
                     <p className={'register-inputs-text new-password'}>Введите Е-mail, указанный при регистрации. <br></br>Мы
-                        вышлем туда ссылку для смены пароля.</p>
+                        вышлем туда информацию о восстановлении пароля.</p>
                     <p className={'register-inputs-text'}>E-mail</p>
                     <input
                         type="email"

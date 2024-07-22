@@ -30,8 +30,8 @@ export default function PopupSuccessEmail(props) {
                 <div><span className={'register-main-text top-margin'}>Спасибо</span>
 
 
-                    <p className={'register-inputs-text code-left'}>Ссылка для восстановления пароля <br></br>отправлена
-                        на указанный Е-mail</p>
+                    <p className={'register-inputs-text code-left code-left-email'}>Информация о восстановлении пароля <br></br> выслана
+                        на указанный E-mail</p>
                 </div>
             </form>
             {/*<button onClick={togglePopup}>Закрыть</button>*/}
