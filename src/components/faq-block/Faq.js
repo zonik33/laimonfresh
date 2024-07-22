@@ -260,6 +260,48 @@ export default function Faq(props) {
                 <div className={'mega-test'}>
                     <div className={`centered-container ${classes.root}`}>
                         <Accordion
+                            expanded={expanded === 'panel15'}
+                            onChange={handleChange('panel15')}
+                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                        >
+                            <AccordionSummary
+                                expandIcon={
+                                    expanded === 'panel15' ? <NorthEastIcon/> : <NorthEastIcon/>
+                                }
+                                aria-controls="panel2-content"
+                                id="panel2-header"
+                            >
+                                <Typography className={classes.heading}><b className={'heading-id'}>01</b> <p
+                                    className={'heading-name'}>Как собрать карточки городов и участвовать в розыгрыше призов?</p></Typography>
+                                <Typography className={classes.secondaryHeading}>
+                                </Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <Typography>
+                                    {expanded === 'panel15' && <div className={classes.line}></div>}
+                                    1. Приобретите продукцию Laimon Fresh, участвующую в акции.
+                                    <br></br>
+                                    2. Найдите промокод под крышкой или ключиком.
+                                    <br></br>
+                                    3. Перейдите на сайт промо-акции Laimon Fresh и введите промокод в соответствующее
+                                    поле.
+                                    <br></br><br></br>
+                                    1 промокод = 1 карточка.
+                                    <br></br>
+                                    <br></br>
+                                    4. Карточки городов дают возможность участвовать в розыгрыше еженедельных призов.
+                                    <br></br>
+                                    5. Соберите пять карточек городов, чтобы принять участие в розыгрыше мерча
+                                    от Laimon Fresh.
+                                    <br></br>
+                                    6. Соберите все десять карточек городов, чтобы стать претендентом на супер приз
+                                    — 1 миллион рублей на путешествие по России или денежный эквивалент на ваш счёт.
+
+                                </Typography>
+                            </AccordionDetails>
+                        </Accordion>
+
+                        <Accordion
                             expanded={expanded === 'panel1'}
                             onChange={handleChange('panel1')}
                         >
@@ -269,7 +311,7 @@ export default function Faq(props) {
                                 id="panel1-header"
                             >
                                 <Typography className={classes.heading}>
-                                    <b className={'heading-id'}>01</b> <p className={'heading-name'}>Кто является организатором Акции?</p>
+                                    <b className={'heading-id'}>02</b> <p className={'heading-name'}>Кто является организатором Акции?</p>
                                 </Typography>
                             </AccordionSummary>
                             <AccordionDetails>
@@ -311,7 +353,7 @@ export default function Faq(props) {
                                 id="panel2-header"
                             >
                                 <Typography className={classes.heading}>
-                                    <b className={'heading-id'}>02</b> <p className={'heading-name'}>Где я могу прочесть правила Акции?</p>
+                                    <b className={'heading-id'}>03</b> <p className={'heading-name'}>Где я могу прочесть правила Акции?</p>
                                 </Typography>
                             </AccordionSummary>
                             <AccordionDetails>
@@ -335,7 +377,7 @@ export default function Faq(props) {
                                 id="panel2-header"
                             >
                                 <Typography className={classes.heading}>
-                                    <b className={'heading-id'}>03</b> <p className={'heading-name'}>Какая продукция участвует в Акции?</p>
+                                    <b className={'heading-id'}>04</b> <p className={'heading-name'}>Какая продукция участвует в Акции?</p>
                                 </Typography>
                             </AccordionSummary>
                             <AccordionDetails>
@@ -377,7 +419,7 @@ export default function Faq(props) {
                                 id="panel2-header"
                             >
                                 <Typography className={classes.heading}>
-                                    <b className={'heading-id'}>04</b> <p className={'heading-name'}>Сроки проведения Акции?</p>
+                                    <b className={'heading-id'}>05</b> <p className={'heading-name'}>Сроки проведения Акции?</p>
                                 </Typography>
                             </AccordionSummary>
                             <AccordionDetails>
@@ -406,7 +448,7 @@ export default function Faq(props) {
                                 id="panel2-header"
                             >
                                 <Typography className={classes.heading}>
-                                    <b className={'heading-id'}>05</b> <p className={'heading-name'}>Как принять участие в Акции?</p>
+                                    <b className={'heading-id'}>06</b> <p className={'heading-name'}>Как принять участие в Акции?</p>
                                 </Typography>
                             </AccordionSummary>
                             <AccordionDetails>
@@ -450,7 +492,7 @@ export default function Faq(props) {
                                 id="panel2-header"
                             >
                                 <Typography className={classes.heading}>
-                                    <b className={'heading-id'}>06</b> <p className={'heading-name'}>Что делать, если не получается зарегистрировать код?</p>
+                                    <b className={'heading-id'}>07</b> <p className={'heading-name'}>Что делать, если не получается зарегистрировать код?</p>
                                 </Typography>
                             </AccordionSummary>
                             <AccordionDetails>
@@ -478,7 +520,7 @@ export default function Faq(props) {
                                 id="panel2-header"
                             >
                                 <Typography className={classes.heading}>
-                                    <b className={'heading-id'}>07</b> <p className={'heading-name'}>Какие Призы будут разыгрываться в Акции?</p>
+                                    <b className={'heading-id'}>08</b> <p className={'heading-name'}>Какие Призы будут разыгрываться в Акции?</p>
                                 </Typography>
                             </AccordionSummary>
                             <AccordionDetails>
@@ -519,7 +561,7 @@ export default function Faq(props) {
                                 aria-controls="panel2-content"
                                 id="panel2-header"
                             >
-                                <Typography className={classes.heading}><b className={'heading-id'}>08</b> <p
+                                <Typography className={classes.heading}><b className={'heading-id'}>09</b> <p
                                     className={'heading-name'}>Как определяются Призеры Акции?</p></Typography>
                                 <Typography className={classes.secondaryHeading}>
                                 </Typography>
@@ -543,7 +585,7 @@ export default function Faq(props) {
                                 aria-controls="panel2-content"
                                 id="panel2-header"
                             >
-                                <Typography className={classes.heading}><b className={'heading-id'}>09</b> <p
+                                <Typography className={classes.heading}><b className={'heading-id'}>10</b> <p
                                     className={'heading-name'}>Как я могу узнать, выиграл я или нет?</p></Typography>
                                 <Typography className={classes.secondaryHeading}>
                                 </Typography>
@@ -567,7 +609,7 @@ export default function Faq(props) {
                                 aria-controls="panel2-content"
                                 id="panel2-header"
                             >
-                                <Typography className={classes.heading}><b className={'heading-id'}>10</b> <p
+                                <Typography className={classes.heading}><b className={'heading-id'}>11</b> <p
                                     className={'heading-name'}>Кто оплачивает налог за призы?</p></Typography>
                                 <Typography className={classes.secondaryHeading}>
                                 </Typography>
@@ -611,7 +653,7 @@ export default function Faq(props) {
                                 aria-controls="panel2-content"
                                 id="panel2-header"
                             >
-                                <Typography className={classes.heading}><b className={'heading-id'}>11</b> <p
+                                <Typography className={classes.heading}><b className={'heading-id'}>12</b> <p
                                     className={'heading-name'}>Могу ли я поменять вещественный приз на денежный?</p></Typography>
                                 <Typography className={classes.secondaryHeading}>
                                 </Typography>
@@ -635,7 +677,7 @@ export default function Faq(props) {
                                 aria-controls="panel2-content"
                                 id="panel2-header"
                             >
-                                <Typography className={classes.heading}><b className={'heading-id'}>12</b> <p
+                                <Typography className={classes.heading}><b className={'heading-id'}>13</b> <p
                                     className={'heading-name'}>Нет ответа на обращение?</p></Typography>
                                 <Typography className={classes.secondaryHeading}>
                                 </Typography>
@@ -659,7 +701,7 @@ export default function Faq(props) {
                                 aria-controls="panel2-content"
                                 id="panel2-header"
                             >
-                                <Typography className={classes.heading}><b className={'heading-id'}>13</b> <p
+                                <Typography className={classes.heading}><b className={'heading-id'}>14</b> <p
                                     className={'heading-name'}>Как мне связаться с Организатором?</p></Typography>
                                 <Typography className={classes.secondaryHeading}>
                                 </Typography>
@@ -683,7 +725,7 @@ export default function Faq(props) {
                                 aria-controls="panel2-content"
                                 id="panel2-header"
                             >
-                                <Typography className={classes.heading}><b className={'heading-id'}>14</b> <p
+                                <Typography className={classes.heading}><b className={'heading-id'}>15</b> <p
                                     className={'heading-name'}>Что делать, если возникли вопросы, на которые нет ответов в разделе «Часто задаваемые вопросы»?</p></Typography>
                                 <Typography className={classes.secondaryHeading}>
                                 </Typography>
@@ -692,47 +734,6 @@ export default function Faq(props) {
                                 <Typography>
                                     {expanded === 'panel14' && <div className={classes.line}></div>}
                                     Внимательно прочитайте Правила Акции и данные из раздела «Часто задаваемые вопросы». В случае, если Вы не нашли ответ на свой вопрос, обратитесь в службу технической поддержки по электронной почте на адрес: info@promo.laimonfresh.ch
-                                </Typography>
-                            </AccordionDetails>
-                        </Accordion>
-                        <Accordion
-                            expanded={expanded === 'panel15'}
-                            onChange={handleChange('panel15')}
-                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
-                        >
-                            <AccordionSummary
-                                expandIcon={
-                                    expanded === 'panel15' ? <NorthEastIcon/> : <NorthEastIcon/>
-                                }
-                                aria-controls="panel2-content"
-                                id="panel2-header"
-                            >
-                                <Typography className={classes.heading}><b className={'heading-id'}>15</b> <p
-                                    className={'heading-name'}>Как собрать карточки городов и участвовать в розыгрыше призов?</p></Typography>
-                                <Typography className={classes.secondaryHeading}>
-                                </Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography>
-                                    {expanded === 'panel15' && <div className={classes.line}></div>}
-                                    1. Приобретите продукцию Laimon Fresh, участвующую в акции.
-                                    <br></br>
-                                    2. Найдите промокод под крышкой или ключиком.
-                                    <br></br>
-                                    3. Перейдите на сайт промо-акции Laimon Fresh и введите промокод в соответствующее
-                                    поле.
-                                    <br></br><br></br>
-                                    1 промокод = 1 карточка.
-                                    <br></br>
-                                    <br></br>
-                                    4. Карточки городов дают возможность участвовать в розыгрыше еженедельных призов.
-                                    <br></br>
-                                    5. Соберите пять карточек городов, чтобы принять участие в розыгрыше мерча
-                                    от Laimon Fresh.
-                                    <br></br>
-                                    6. Соберите все десять карточек городов, чтобы стать претендентом на супер приз
-                                    — 1 миллион рублей на путешествие по России или денежный эквивалент на ваш счёт.
-
                                 </Typography>
                             </AccordionDetails>
                         </Accordion>
@@ -765,6 +766,7 @@ export default function Faq(props) {
                                 </Typography>
                             </AccordionDetails>
                         </Accordion>
+
                         <div className={'faq-question'}>
                             <p className={'faq-question-p'}>если у вас остались вопросы, напишите нам</p>
                             <a className={'faq-question-p-a'}>info@promo.laimonfresh.ch</a>
