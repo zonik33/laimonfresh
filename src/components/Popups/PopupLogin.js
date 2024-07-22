@@ -46,6 +46,18 @@ export default function PopupLogin(props) {
     const closePopupLogin = () => {
         setIsPopupLoginOpen(false);
     };
+
+
+
+
+
+
+
+
+
+
+
+
     function openPopup2() {
         closePopup2()
         document.getElementById("popup-password-step-one").style.display = "block";

@@ -736,6 +736,35 @@ export default function Faq(props) {
                                 </Typography>
                             </AccordionDetails>
                         </Accordion>
+                        <Accordion
+                            expanded={expanded === 'panel16'}
+                            onChange={handleChange('panel16')}
+                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                        >
+                            <AccordionSummary
+                                expandIcon={
+                                    expanded === 'panel16' ? <NorthEastIcon/> : <NorthEastIcon/>
+                                }
+                                aria-controls="panel2-content"
+                                id="panel2-header"
+                            >
+                                <Typography className={classes.heading}><b className={'heading-id'}>16</b> <p
+                                    className={'heading-name'}>Где найти код?</p></Typography>
+                                <Typography className={classes.secondaryHeading}>
+                                </Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <Typography>
+                                    {expanded === 'panel16' && <div className={classes.line}></div>}
+                                    Код расположен под крышкой или ключиком напитков LAIMON FRESH в промо-упаковке,
+                                    вы узнаете ее по надписи «Лето-путешествие». <br></br><br></br>
+                                    Обратите внимание: для того, чтобы найти код под ключиком - его нужно приподнять.
+                                    Код расположен на оборотной стороне ключика. Будьте внимательны и не перепутайте
+                                    его с номером партии, который находится непосредственно на банке.
+
+                                </Typography>
+                            </AccordionDetails>
+                        </Accordion>
                         <div className={'faq-question'}>
                             <p className={'faq-question-p'}>если у вас остались вопросы, напишите нам</p>
                             <a className={'faq-question-p-a'}>info@promo.laimonfresh.ch</a>

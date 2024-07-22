@@ -256,6 +256,7 @@ export default function PopupRegister(props) {
     const currentDomain = window.location.origin;
 
 
+
     return (
         <div id="popup-complete" className="popup">
         <Modal closeTimeoutMS={300}
