@@ -300,46 +300,6 @@ export default function Faq(props) {
                                 </Typography>
                             </AccordionDetails>
                         </Accordion>
-
-                        <Accordion
-                            expanded={expanded === 'panel1'}
-                            onChange={handleChange('panel1')}
-                        >
-                            <AccordionSummary
-                                expandIcon={expanded === 'panel1' ? <NorthEastIcon/> : <NorthEastIcon/>}
-                                aria-controls="panel1-content"
-                                id="panel1-header"
-                            >
-                                <Typography className={classes.heading}>
-                                    <b className={'heading-id'}>02</b> <p className={'heading-name'}>Кто является организатором Акции?</p>
-                                </Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography>
-                                    {expanded === 'panel1' && <div className={classes.line}></div>}
-                                    <b className={'black-b'}>Заказчиком Акции</b> является юридическое лицо, созданное в соответствии с
-                                    законодательством Российской Федерации ООО "ТД "МЕГАПАК" ОГРН 1035000900593, ИНН
-                                    5003028050, адрес местонахождения: 142704 Московская область, Ленинский г. о., г.
-                                    Видное, территория промзона, ВЗ ГИАП, корпус 453 (далее – Заказчик).
-                                    <br></br>
-                                    <br></br>
-                                    <b className={'black-b'}>Организатор Акции</b> является юридическое лицо, созданное в соответствии с
-                                    законодательством Российской Федерации, а именно, Общество с ограниченной
-                                    ответственностью «Резонанс Фэмили» ОГРН: 1047855156854, ИНН: 7840309005, адрес
-                                    местонахождения: 101000 г. Москва, ул. Мясницкая, д. 38, стр. 1, этаж 4,
-                                    помещение 1/4 (далее - Организатор).
-                                    <br></br>
-                                    <br></br>
-                                    <b className={'black-b'}>Оператором Акции</b> является юридическое лицо, созданное в соответствии с
-                                    законодательством Российской Федерации, а именно Общество с ограниченной
-                                    ответственностью «Аутдор Медиа Интернэшнл», ОГРН 1027700335717, ИНН 7731177750,
-                                    адрес местонахождения: 119435, г. Москва, Большой Саввинский пер.9, стр.3 (далее
-                                    - Оператор).
-
-                                </Typography>
-                            </AccordionDetails>
-
-                        </Accordion>
                         <Accordion
                             expanded={expanded === 'panel2'}
                             onChange={handleChange('panel2')}
@@ -352,433 +312,7 @@ export default function Faq(props) {
                                 aria-controls="panel2-content"
                                 id="panel2-header"
                             >
-                                <Typography className={classes.heading}>
-                                    <b className={'heading-id'}>03</b> <p className={'heading-name'}>Где я могу прочесть правила Акции?</p>
-                                </Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography>
-                                    {expanded === 'panel2' && <div className={classes.line}></div>}
-                                    Всю информацию об Акции, а также правилах её проведения можно найти на Официальном сайте Акции  <a className={'black-b'} href={'https://promo.laimonfresh.ch/'}>promo.laimonfresh.ch.</a>
-
-                                </Typography>
-                            </AccordionDetails>
-                        </Accordion>
-                        <Accordion
-                            expanded={expanded === 'panel3'}
-                            onChange={handleChange('panel3')}
-                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
-                        >
-                            <AccordionSummary
-                                expandIcon={
-                                    expanded === 'panel3' ? <NorthEastIcon/> : <NorthEastIcon/>
-                                }
-                                aria-controls="panel2-content"
-                                id="panel2-header"
-                            >
-                                <Typography className={classes.heading}>
-                                    <b className={'heading-id'}>04</b> <p className={'heading-name'}>Какая продукция участвует в Акции?</p>
-                                </Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography>
-                                    {expanded === 'panel3' && <div className={classes.line}></div>}
-
-                                    Акция проводится в целях прямого стимулирования сбыта продукции - безалкогольные
-                                    газированные напитки, реализуемой Заказчиком Акции, а именно (далее - «Продукты»):
-                                    <br></br>
-                                    <br></br>
-                                    • Laimon Fresh в банке объемом 0.33л, в бутылках объемом 0.5 л, 1 л и 1.5 л
-                                    <br></br>
-                                    <br></br>
-
-                                    • Laimon Fresh Манго в банке объемом 0.33л, в бутылках объемом 0.5 л, 1 л и 1.5 л
-                                    <br></br>
-                                    <br></br>
-
-                                    • Laimon Fresh Ягоды в банке объемом 0.33л, в бутылках объемом 0.5 л, 1 л и 1.5 л
-                                    <br></br>
-                                    <br></br>
-
-                                    • Laimon Fresh Груша в банке объемом 0.33л, в бутылках объемом 0.5 л, 1 л и 1.5 л
-
-
-                                </Typography>
-                            </AccordionDetails>
-                        </Accordion>
-                        <Accordion
-                            expanded={expanded === 'panel4'}
-                            onChange={handleChange('panel4')}
-                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
-                        >
-                            <AccordionSummary
-                                expandIcon={
-                                    expanded === 'panel4' ? <NorthEastIcon/> : <NorthEastIcon/>
-                                }
-                                aria-controls="panel2-content"
-                                id="panel2-header"
-                            >
-                                <Typography className={classes.heading}>
-                                    <b className={'heading-id'}>05</b> <p className={'heading-name'}>Сроки проведения Акции?</p>
-                                </Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography>
-                                    {expanded === 'panel4' && <div className={classes.line}></div>}
-                                    Общий срок проведения Акции, включая срок выдачи призов: с «15» мая 2024 г. по «30»
-                                    сентября 2024 г. (включительно).
-                                    <br></br>
-                                    Срок совершения необходимой для участия в Акции покупки Продуктов на территории РФ:
-                                    с «15» мая 2024 г. по «31» августа 2024 г. (включительно).
-                                    <br></br>
-                                    Период регистрации Кодов: с «15» мая 2024 г. по «31» августа 2024 г. (включительно).
-                                </Typography>
-                            </AccordionDetails>
-                        </Accordion>
-                        <Accordion
-                            expanded={expanded === 'panel5'}
-                            onChange={handleChange('panel5')}
-                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
-                        >
-                            <AccordionSummary
-                                expandIcon={
-                                    expanded === 'panel5' ? <NorthEastIcon/> : <NorthEastIcon/>
-                                }
-                                aria-controls="panel2-content"
-                                id="panel2-header"
-                            >
-                                <Typography className={classes.heading}>
-                                    <b className={'heading-id'}>06</b> <p className={'heading-name'}>Как принять участие в Акции?</p>
-                                </Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography>
-                                    {expanded === 'panel5' && <div className={classes.line}></div>}
-                                    Для того чтобы стать Участником Акции, необходимо:
-                                    <br></br><br></br>
-                                    - совершить покупку согласно п.3.1 Правил и найти под крышкой или ключиком Продукта
-                                    уникальный буквенно-цифровой код (далее – Код) ;
-                                    <br></br><br></br>
-                                    - пройти процедуру регистрации на сайте <a className={'black-b'} href={'https://promo.laimonfresh.ch/'}>promo.laimonfresh.ch.</a> (далее – Сайт Акции),
-                                    заполнив все необходимые поля (Имя, адрес электронной почты, город, номер телефона,
-                                    создать свой уникальный пароль);
-                                    <br></br><br></br>
-                                    - дать свое согласие с Правилами Акции (условия обязательное для выполнения);
-                                    <br></br><br></br>
-                                    - дать свое согласие на обработку и хранение персональных данных (условия
-                                    обязательное
-                                    для выполнения);
-                                    <br></br><br></br>
-                                    - пройти процедуру подтверждения электронной почты;
-                                    <br></br><br></br>
-                                    - авторизоваться на Сайте Акции
-                                    <br></br><br></br>
-                                    - зарегистрировать Код на Сайте Акции;
-
-
-                                </Typography>
-                            </AccordionDetails>
-                        </Accordion>
-                        <Accordion
-                            expanded={expanded === 'panel6'}
-                            onChange={handleChange('panel6')}
-                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
-                        >
-                            <AccordionSummary
-                                expandIcon={
-                                    expanded === 'panel6' ? <NorthEastIcon/> : <NorthEastIcon/>
-                                }
-                                aria-controls="panel2-content"
-                                id="panel2-header"
-                            >
-                                <Typography className={classes.heading}>
-                                    <b className={'heading-id'}>07</b> <p className={'heading-name'}>Что делать, если не получается зарегистрировать код?</p>
-                                </Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography>
-                                    {expanded === 'panel6' && <div className={classes.line}></div>}
-                                    Убедитесь, что: <br></br>
-                                    - загружаемый код соответствует периоду и условиям Акции;
-                                    <br></br>
-                                    В случае, если проблема сохранится, напишите нам на адрес электронной почты
-                                    info@promo.laimonfresh.ch и опишите проблему.
-
-                                </Typography>
-                            </AccordionDetails>
-                        </Accordion>
-                        <Accordion
-                            expanded={expanded === 'panel7'}
-                            onChange={handleChange('panel7')}
-                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
-                        >
-                            <AccordionSummary
-                                expandIcon={
-                                    expanded === 'panel7' ? <NorthEastIcon/> : <NorthEastIcon/>
-                                }
-                                aria-controls="panel2-content"
-                                id="panel2-header"
-                            >
-                                <Typography className={classes.heading}>
-                                    <b className={'heading-id'}>08</b> <p className={'heading-name'}>Какие Призы будут разыгрываться в Акции?</p>
-                                </Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography>
-                                    {expanded === 'panel7' && <div className={classes.line}></div>}
-                                    1. Гарантированный приз — Подписка Fitmost, 300 000 шт
-                                    <br></br>
-                                    2. Гарантированный приз — Подписка Wink+more.tv, 1 000 000 шт
-                                    <br></br>
-                                    3. Гарантированный приз — Подписка Литрес, 2 000 000 шт<br></br>
-                                    4. Еженедельный приз — Подписка ВК музыка, 480 шт<br></br>
-                                    5. Еженедельный приз — Подписка Яндекс Плюс, 480 шт<br></br>
-                                    6. Еженедельный приз — Сертификат ОЗОН, 64 шт<br></br>
-                                    7. Еженедельный приз — Сертификат Кассир, 48 шт<br></br>
-                                    8. Еженедельный приз — Сертификат Спортмастер, 48 шт<br></br>
-                                    9. Еженедельный приз — Сертификат Золотое яблоко, 64 шт<br></br>
-                                    10. Еженедельный приз — Сертификат М Видео, 48 шт<br></br>
-                                    11. Еженедельный приз — Сертификат МосИгра, 48 шт<br></br>
-                                    12. Еженедельный приз — Вк капсула НЕО, 64 шт<br></br>
-                                    13. Приз за карточки городов — Панамка 25 шт / Плед 25 шт /<br></br>
-                                    14. Приз творческого конкурса — Сертификат Сuva 10<br></br>
-                                    15. Главный приз — По выбору Призера денежные средства на счет либо сертификат ОЗОН
-                                    Тревел на сумму 1 000 000 рублей, 1 шт
-
-
-                                </Typography>
-                            </AccordionDetails>
-                        </Accordion>
-                        <Accordion
-                            expanded={expanded === 'panel8'}
-                            onChange={handleChange('panel8')}
-                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
-                        >
-                            <AccordionSummary
-                                expandIcon={
-                                    expanded === 'panel8' ? <NorthEastIcon/> : <NorthEastIcon/>
-                                }
-                                aria-controls="panel2-content"
-                                id="panel2-header"
-                            >
-                                <Typography className={classes.heading}><b className={'heading-id'}>09</b> <p
-                                    className={'heading-name'}>Как определяются Призеры Акции?</p></Typography>
-                                <Typography className={classes.secondaryHeading}>
-                                </Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography>
-                                    {expanded === 'panel8' && <div className={classes.line}></div>}
-                                    Призеры  определяются специальной программой в соответствии с порядком установленным в Правил Акции, размещённых на <a className={'black-b'} href={'https://promo.laimonfresh.ch/'}>promo.laimonfresh.ch.</a>
-                                </Typography>
-                            </AccordionDetails>
-                        </Accordion>
-                        <Accordion
-                            expanded={expanded === 'panel9'}
-                            onChange={handleChange('panel9')}
-                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
-                        >
-                            <AccordionSummary
-                                expandIcon={
-                                    expanded === 'panel9' ? <NorthEastIcon/> : <NorthEastIcon/>
-                                }
-                                aria-controls="panel2-content"
-                                id="panel2-header"
-                            >
-                                <Typography className={classes.heading}><b className={'heading-id'}>10</b> <p
-                                    className={'heading-name'}>Как я могу узнать, выиграл я или нет?</p></Typography>
-                                <Typography className={classes.secondaryHeading}>
-                                </Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography>
-                                    {expanded === 'panel9' && <div className={classes.line}></div>}
-                                    Оператор  уведомляет Участников Акции, ставших Призерами Акции, посредством отправки сообщения на электронную почту, оставленную Участником во время регистрации на Сайте Акции.
-                                </Typography>
-                            </AccordionDetails>
-                        </Accordion>
-                        <Accordion
-                            expanded={expanded === 'panel10'}
-                            onChange={handleChange('panel10')}
-                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
-                        >
-                            <AccordionSummary
-                                expandIcon={
-                                    expanded === 'panel10' ? <NorthEastIcon/> : <NorthEastIcon/>
-                                }
-                                aria-controls="panel2-content"
-                                id="panel2-header"
-                            >
-                                <Typography className={classes.heading}><b className={'heading-id'}>11</b> <p
-                                    className={'heading-name'}>Кто оплачивает налог за призы?</p></Typography>
-                                <Typography className={classes.secondaryHeading}>
-                                </Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography>
-                                    {expanded === 'panel10' && <div className={classes.line}></div>}
-                                    Налог за Приз оплачивает Оператор Акции
-                                    <br></br>
-                                    Призеры Акции, получившие право на Главный приз, Ежемесячный приз или призы
-                                    стоимостью более 4000 (четырех тысяч рублей) для получения Приза обязаны, в течение
-                                    5 (пяти) календарных дней с момента получения сообщения на адрес электронной почты
-                                    оставленную Участником во время регистрации на Сайте Акции предоставить Оператору
-                                    следующую информацию и документы:
-                                    <br></br><br></br>
-                                    - Копию российского паспорта (Копия должна быть хорошо читаемой), а именно: основную
-                                    страницу и страницу с регистрацией по месту жительства (на обозрение исключительно с
-                                    целью идентификации личности Призера и проверки на соответствие требованиям
-                                    настоящих Правил, а также в целях, указанных в разделе 6 Правил);
-                                    <br></br><br></br>
-                                    - адрес фактического проживания Призера, с почтовым индексом;
-                                    <br></br><br></br>
-                                    - номер контактного телефона Призера с кодом города;
-                                    <br></br><br></br>
-                                    - идентификационный номер налогоплательщика (ИНН);
-                                    <br></br><br></br>
-                                    - иную информацию и документы, необходимые для получения Приза (сообщаются
-                                    Организатором дополнительно).
-                                </Typography>
-                            </AccordionDetails>
-                        </Accordion>
-                        <Accordion
-                            expanded={expanded === 'panel11'}
-                            onChange={handleChange('panel11')}
-                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
-                        >
-                            <AccordionSummary
-                                expandIcon={
-                                    expanded === 'panel11' ? <NorthEastIcon/> : <NorthEastIcon/>
-                                }
-                                aria-controls="panel2-content"
-                                id="panel2-header"
-                            >
-                                <Typography className={classes.heading}><b className={'heading-id'}>12</b> <p
-                                    className={'heading-name'}>Могу ли я поменять вещественный приз на денежный?</p></Typography>
-                                <Typography className={classes.secondaryHeading}>
-                                </Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography>
-                                    {expanded === 'panel11' && <div className={classes.line}></div>}
-                                    Денежный эквивалент стоимости Призов ( кроме Главного Приза) не выплачивается, Призы замене не подлежат.
-                                </Typography>
-                            </AccordionDetails>
-                        </Accordion>
-                        <Accordion
-                            expanded={expanded === 'panel12'}
-                            onChange={handleChange('panel12')}
-                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
-                        >
-                            <AccordionSummary
-                                expandIcon={
-                                    expanded === 'panel12' ? <NorthEastIcon/> : <NorthEastIcon/>
-                                }
-                                aria-controls="panel2-content"
-                                id="panel2-header"
-                            >
-                                <Typography className={classes.heading}><b className={'heading-id'}>13</b> <p
-                                    className={'heading-name'}>Нет ответа на обращение?</p></Typography>
-                                <Typography className={classes.secondaryHeading}>
-                                </Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography>
-                                    {expanded === 'panel12' && <div className={classes.line}></div>}
-                                    Организатор вправе не отвечать на вопросы Участников, не касающиеся регистрации кода и получения приза. Организатор отвечает на вопросы, касающиеся участия в Акции в течение 72 часов
-                                </Typography>
-                            </AccordionDetails>
-                        </Accordion>
-                        <Accordion
-                            expanded={expanded === 'panel13'}
-                            onChange={handleChange('panel13')}
-                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
-                        >
-                            <AccordionSummary
-                                expandIcon={
-                                    expanded === 'panel13' ? <NorthEastIcon/> : <NorthEastIcon/>
-                                }
-                                aria-controls="panel2-content"
-                                id="panel2-header"
-                            >
-                                <Typography className={classes.heading}><b className={'heading-id'}>14</b> <p
-                                    className={'heading-name'}>Как мне связаться с Организатором?</p></Typography>
-                                <Typography className={classes.secondaryHeading}>
-                                </Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography>
-                                    {expanded === 'panel13' && <div className={classes.line}></div>}
-                                    Необходимо отправить письмо с запросом на адрес: info@promo.laimonfresh.ch
-                                </Typography>
-                            </AccordionDetails>
-                        </Accordion>
-                        <Accordion
-                            expanded={expanded === 'panel14'}
-                            onChange={handleChange('panel14')}
-                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
-                        >
-                            <AccordionSummary
-                                expandIcon={
-                                    expanded === 'panel14' ? <NorthEastIcon/> : <NorthEastIcon/>
-                                }
-                                aria-controls="panel2-content"
-                                id="panel2-header"
-                            >
-                                <Typography className={classes.heading}><b className={'heading-id'}>15</b> <p
-                                    className={'heading-name'}>Что делать, если возникли вопросы, на которые нет ответов в разделе «Часто задаваемые вопросы»?</p></Typography>
-                                <Typography className={classes.secondaryHeading}>
-                                </Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography>
-                                    {expanded === 'panel14' && <div className={classes.line}></div>}
-                                    Внимательно прочитайте Правила Акции и данные из раздела «Часто задаваемые вопросы». В случае, если Вы не нашли ответ на свой вопрос, обратитесь в службу технической поддержки по электронной почте на адрес: info@promo.laimonfresh.ch
-                                </Typography>
-                            </AccordionDetails>
-                        </Accordion>
-                        <Accordion
-                            expanded={expanded === 'panel16'}
-                            onChange={handleChange('panel16')}
-                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
-                        >
-                            <AccordionSummary
-                                expandIcon={
-                                    expanded === 'panel16' ? <NorthEastIcon/> : <NorthEastIcon/>
-                                }
-                                aria-controls="panel2-content"
-                                id="panel2-header"
-                            >
-                                <Typography className={classes.heading}><b className={'heading-id'}>16</b> <p
-                                    className={'heading-name'}>Где найти код?</p></Typography>
-                                <Typography className={classes.secondaryHeading}>
-                                </Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography>
-                                    {expanded === 'panel16' && <div className={classes.line}></div>}
-                                    Код расположен под крышкой или ключиком напитков LAIMON FRESH в промо-упаковке,
-                                    вы узнаете ее по надписи «Лето-путешествие». <br></br><br></br>
-                                    Обратите внимание: для того, чтобы найти код под ключиком - его нужно приподнять.
-                                    Код расположен на оборотной стороне ключика. Будьте внимательны и не перепутайте
-                                    его с номером партии, который находится непосредственно на банке.
-
-                                </Typography>
-                            </AccordionDetails>
-                        </Accordion>
-                        <Accordion
-                            expanded={expanded === 'panel17'}
-                            onChange={handleChange('panel17')}
-                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
-                        >
-                            <AccordionSummary
-                                expandIcon={
-                                    expanded === 'panel17' ? <NorthEastIcon/> : <NorthEastIcon/>
-                                }
-                                aria-controls="panel2-content"
-                                id="panel2-header"
-                            >
-                                <Typography className={classes.heading}><b className={'heading-id'}>17</b> <p
+                                <Typography className={classes.heading}><b className={'heading-id'}>02</b> <p
                                     className={'heading-name'}>Что такое творческий конкурс от Laimon Fresh и как принять в нем участие?
                                 </p></Typography>
                                 <Typography className={classes.secondaryHeading}>
@@ -786,7 +320,7 @@ export default function Faq(props) {
                             </AccordionSummary>
                             <AccordionDetails>
                                 <Typography>
-                                    {expanded === 'panel17' && <div className={classes.line}></div>}
+                                    {expanded === 'panel2' && <div className={classes.line}></div>}
                                     Laimon Fresh вместе с блогерами* из Москвы, Санкт-Петербурга, Калининграда, Нижнего
                                     Новгорода,
                                     Казани, Владивостока, Новосибирска и Екатеринбурга подготовили творческий конкурс.
@@ -869,6 +403,470 @@ export default function Faq(props) {
                                     Laimon
                                     Fresh!
 
+
+                                </Typography>
+                            </AccordionDetails>
+                        </Accordion>
+                        <Accordion
+                            expanded={expanded === 'panel1'}
+                            onChange={handleChange('panel1')}
+                        >
+                            <AccordionSummary
+                                expandIcon={expanded === 'panel1' ? <NorthEastIcon/> : <NorthEastIcon/>}
+                                aria-controls="panel1-content"
+                                id="panel1-header"
+                            >
+                                <Typography className={classes.heading}>
+                                    <b className={'heading-id'}>03</b> <p className={'heading-name'}>Кто является организатором Акции?</p>
+                                </Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <Typography>
+                                    {expanded === 'panel1' && <div className={classes.line}></div>}
+                                    <b className={'black-b'}>Заказчиком Акции</b> является юридическое лицо, созданное в соответствии с
+                                    законодательством Российской Федерации ООО "ТД "МЕГАПАК" ОГРН 1035000900593, ИНН
+                                    5003028050, адрес местонахождения: 142704 Московская область, Ленинский г. о., г.
+                                    Видное, территория промзона, ВЗ ГИАП, корпус 453 (далее – Заказчик).
+                                    <br></br>
+                                    <br></br>
+                                    <b className={'black-b'}>Организатор Акции</b> является юридическое лицо, созданное в соответствии с
+                                    законодательством Российской Федерации, а именно, Общество с ограниченной
+                                    ответственностью «Резонанс Фэмили» ОГРН: 1047855156854, ИНН: 7840309005, адрес
+                                    местонахождения: 101000 г. Москва, ул. Мясницкая, д. 38, стр. 1, этаж 4,
+                                    помещение 1/4 (далее - Организатор).
+                                    <br></br>
+                                    <br></br>
+                                    <b className={'black-b'}>Оператором Акции</b> является юридическое лицо, созданное в соответствии с
+                                    законодательством Российской Федерации, а именно Общество с ограниченной
+                                    ответственностью «Аутдор Медиа Интернэшнл», ОГРН 1027700335717, ИНН 7731177750,
+                                    адрес местонахождения: 119435, г. Москва, Большой Саввинский пер.9, стр.3 (далее
+                                    - Оператор).
+
+                                </Typography>
+                            </AccordionDetails>
+                        </Accordion>
+                        <Accordion
+                            expanded={expanded === 'panel3'}
+                            onChange={handleChange('panel3')}
+                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                        >
+                            <AccordionSummary
+                                expandIcon={
+                                    expanded === 'panel3' ? <NorthEastIcon/> : <NorthEastIcon/>
+                                }
+                                aria-controls="panel2-content"
+                                id="panel2-header"
+                            >
+                                <Typography className={classes.heading}>
+                                    <b className={'heading-id'}>04</b> <p className={'heading-name'}>Где я могу прочесть правила Акции?</p>
+                                </Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <Typography>
+                                    {expanded === 'panel3' && <div className={classes.line}></div>}
+                                    Всю информацию об Акции, а также правилах её проведения можно найти на Официальном сайте Акции  <a className={'black-b'} href={'https://promo.laimonfresh.ch/'}>promo.laimonfresh.ch.</a>
+
+                                </Typography>
+                            </AccordionDetails>
+                        </Accordion>
+                        <Accordion
+                            expanded={expanded === 'panel4'}
+                            onChange={handleChange('panel4')}
+                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                        >
+                            <AccordionSummary
+                                expandIcon={
+                                    expanded === 'panel4' ? <NorthEastIcon/> : <NorthEastIcon/>
+                                }
+                                aria-controls="panel2-content"
+                                id="panel2-header"
+                            >
+                                <Typography className={classes.heading}>
+                                    <b className={'heading-id'}>05</b> <p className={'heading-name'}>Какая продукция участвует в Акции?</p>
+                                </Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <Typography>
+                                    {expanded === 'panel4' && <div className={classes.line}></div>}
+
+                                    Акция проводится в целях прямого стимулирования сбыта продукции - безалкогольные
+                                    газированные напитки, реализуемой Заказчиком Акции, а именно (далее - «Продукты»):
+                                    <br></br>
+                                    <br></br>
+                                    • Laimon Fresh в банке объемом 0.33л, в бутылках объемом 0.5 л, 1 л и 1.5 л
+                                    <br></br>
+                                    <br></br>
+
+                                    • Laimon Fresh Манго в банке объемом 0.33л, в бутылках объемом 0.5 л, 1 л и 1.5 л
+                                    <br></br>
+                                    <br></br>
+
+                                    • Laimon Fresh Ягоды в банке объемом 0.33л, в бутылках объемом 0.5 л, 1 л и 1.5 л
+                                    <br></br>
+                                    <br></br>
+
+                                    • Laimon Fresh Груша в банке объемом 0.33л, в бутылках объемом 0.5 л, 1 л и 1.5 л
+
+
+                                </Typography>
+                            </AccordionDetails>
+                        </Accordion>
+                        <Accordion
+                            expanded={expanded === 'panel22'}
+                            onChange={handleChange('panel22')}
+                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                        >
+                            <AccordionSummary
+                                expandIcon={
+                                    expanded === 'panel4' ? <NorthEastIcon/> : <NorthEastIcon/>
+                                }
+                                aria-controls="panel2-content"
+                                id="panel2-header"
+                            >
+                                <Typography className={classes.heading}>
+                                    <b className={'heading-id'}>06</b> <p className={'heading-name'}>Сроки проведения Акции?</p>
+                                </Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <Typography>
+                                    {expanded === 'panel22' && <div className={classes.line}></div>}
+                                    Общий срок проведения Акции, включая срок выдачи призов: с «15» мая 2024 г. по «30»
+                                    сентября 2024 г. (включительно).
+                                    <br></br>
+                                    Срок совершения необходимой для участия в Акции покупки Продуктов на территории РФ:
+                                    с «15» мая 2024 г. по «31» августа 2024 г. (включительно).
+                                    <br></br>
+                                    Период регистрации Кодов: с «15» мая 2024 г. по «31» августа 2024 г. (включительно).
+                                </Typography>
+                            </AccordionDetails>
+                        </Accordion>
+                        <Accordion
+                            expanded={expanded === 'panel5'}
+                            onChange={handleChange('panel5')}
+                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                        >
+                            <AccordionSummary
+                                expandIcon={
+                                    expanded === 'panel5' ? <NorthEastIcon/> : <NorthEastIcon/>
+                                }
+                                aria-controls="panel2-content"
+                                id="panel2-header"
+                            >
+                                <Typography className={classes.heading}>
+                                    <b className={'heading-id'}>07</b> <p className={'heading-name'}>Как принять участие в Акции?</p>
+                                </Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <Typography>
+                                    {expanded === 'panel5' && <div className={classes.line}></div>}
+                                    Для того чтобы стать Участником Акции, необходимо:
+                                    <br></br><br></br>
+                                    - совершить покупку согласно п.3.1 Правил и найти под крышкой или ключиком Продукта
+                                    уникальный буквенно-цифровой код (далее – Код) ;
+                                    <br></br><br></br>
+                                    - пройти процедуру регистрации на сайте <a className={'black-b'} href={'https://promo.laimonfresh.ch/'}>promo.laimonfresh.ch.</a> (далее – Сайт Акции),
+                                    заполнив все необходимые поля (Имя, адрес электронной почты, город, номер телефона,
+                                    создать свой уникальный пароль);
+                                    <br></br><br></br>
+                                    - дать свое согласие с Правилами Акции (условия обязательное для выполнения);
+                                    <br></br><br></br>
+                                    - дать свое согласие на обработку и хранение персональных данных (условия
+                                    обязательное
+                                    для выполнения);
+                                    <br></br><br></br>
+                                    - пройти процедуру подтверждения электронной почты;
+                                    <br></br><br></br>
+                                    - авторизоваться на Сайте Акции
+                                    <br></br><br></br>
+                                    - зарегистрировать Код на Сайте Акции;
+
+
+                                </Typography>
+                            </AccordionDetails>
+                        </Accordion>
+                        <Accordion
+                            expanded={expanded === 'panel6'}
+                            onChange={handleChange('panel6')}
+                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                        >
+                            <AccordionSummary
+                                expandIcon={
+                                    expanded === 'panel6' ? <NorthEastIcon/> : <NorthEastIcon/>
+                                }
+                                aria-controls="panel2-content"
+                                id="panel2-header"
+                            >
+                                <Typography className={classes.heading}>
+                                    <b className={'heading-id'}>08</b> <p className={'heading-name'}>Что делать, если не получается зарегистрировать код?</p>
+                                </Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <Typography>
+                                    {expanded === 'panel6' && <div className={classes.line}></div>}
+                                    Убедитесь, что: <br></br>
+                                    - загружаемый код соответствует периоду и условиям Акции;
+                                    <br></br>
+                                    В случае, если проблема сохранится, напишите нам на адрес электронной почты
+                                    info@promo.laimonfresh.ch и опишите проблему.
+
+                                </Typography>
+                            </AccordionDetails>
+                        </Accordion>
+                        <Accordion
+                            expanded={expanded === 'panel7'}
+                            onChange={handleChange('panel7')}
+                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                        >
+                            <AccordionSummary
+                                expandIcon={
+                                    expanded === 'panel7' ? <NorthEastIcon/> : <NorthEastIcon/>
+                                }
+                                aria-controls="panel2-content"
+                                id="panel2-header"
+                            >
+                                <Typography className={classes.heading}>
+                                    <b className={'heading-id'}>09</b> <p className={'heading-name'}>Какие Призы будут разыгрываться в Акции?</p>
+                                </Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <Typography>
+                                    {expanded === 'panel7' && <div className={classes.line}></div>}
+                                    1. Гарантированный приз — Подписка Fitmost, 300 000 шт
+                                    <br></br>
+                                    2. Гарантированный приз — Подписка Wink+more.tv, 1 000 000 шт
+                                    <br></br>
+                                    3. Гарантированный приз — Подписка Литрес, 2 000 000 шт<br></br>
+                                    4. Еженедельный приз — Подписка ВК музыка, 480 шт<br></br>
+                                    5. Еженедельный приз — Подписка Яндекс Плюс, 480 шт<br></br>
+                                    6. Еженедельный приз — Сертификат ОЗОН, 64 шт<br></br>
+                                    7. Еженедельный приз — Сертификат Кассир, 48 шт<br></br>
+                                    8. Еженедельный приз — Сертификат Спортмастер, 48 шт<br></br>
+                                    9. Еженедельный приз — Сертификат Золотое яблоко, 64 шт<br></br>
+                                    10. Еженедельный приз — Сертификат М Видео, 48 шт<br></br>
+                                    11. Еженедельный приз — Сертификат МосИгра, 48 шт<br></br>
+                                    12. Еженедельный приз — Вк капсула НЕО, 64 шт<br></br>
+                                    13. Приз за карточки городов — Панамка 25 шт / Плед 25 шт /<br></br>
+                                    14. Приз творческого конкурса — Сертификат Сuva 10<br></br>
+                                    15. Главный приз — По выбору Призера денежные средства на счет либо сертификат ОЗОН
+                                    Тревел на сумму 1 000 000 рублей, 1 шт
+
+
+                                </Typography>
+                            </AccordionDetails>
+                        </Accordion>
+                        <Accordion
+                            expanded={expanded === 'panel8'}
+                            onChange={handleChange('panel8')}
+                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                        >
+                            <AccordionSummary
+                                expandIcon={
+                                    expanded === 'panel8' ? <NorthEastIcon/> : <NorthEastIcon/>
+                                }
+                                aria-controls="panel2-content"
+                                id="panel2-header"
+                            >
+                                <Typography className={classes.heading}><b className={'heading-id'}>10</b> <p
+                                    className={'heading-name'}>Как определяются Призеры Акции?</p></Typography>
+                                <Typography className={classes.secondaryHeading}>
+                                </Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <Typography>
+                                    {expanded === 'panel8' && <div className={classes.line}></div>}
+                                    Призеры  определяются специальной программой в соответствии с порядком установленным в Правил Акции, размещённых на <a className={'black-b'} href={'https://promo.laimonfresh.ch/'}>promo.laimonfresh.ch.</a>
+                                </Typography>
+                            </AccordionDetails>
+                        </Accordion>
+                        <Accordion
+                            expanded={expanded === 'panel9'}
+                            onChange={handleChange('panel9')}
+                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                        >
+                            <AccordionSummary
+                                expandIcon={
+                                    expanded === 'panel9' ? <NorthEastIcon/> : <NorthEastIcon/>
+                                }
+                                aria-controls="panel2-content"
+                                id="panel2-header"
+                            >
+                                <Typography className={classes.heading}><b className={'heading-id'}>11</b> <p
+                                    className={'heading-name'}>Как я могу узнать, выиграл я или нет?</p></Typography>
+                                <Typography className={classes.secondaryHeading}>
+                                </Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <Typography>
+                                    {expanded === 'panel9' && <div className={classes.line}></div>}
+                                    Оператор  уведомляет Участников Акции, ставших Призерами Акции, посредством отправки сообщения на электронную почту, оставленную Участником во время регистрации на Сайте Акции.
+                                </Typography>
+                            </AccordionDetails>
+                        </Accordion>
+                        <Accordion
+                            expanded={expanded === 'panel10'}
+                            onChange={handleChange('panel10')}
+                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                        >
+                            <AccordionSummary
+                                expandIcon={
+                                    expanded === 'panel10' ? <NorthEastIcon/> : <NorthEastIcon/>
+                                }
+                                aria-controls="panel2-content"
+                                id="panel2-header"
+                            >
+                                <Typography className={classes.heading}><b className={'heading-id'}>12</b> <p
+                                    className={'heading-name'}>Кто оплачивает налог за призы?</p></Typography>
+                                <Typography className={classes.secondaryHeading}>
+                                </Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <Typography>
+                                    {expanded === 'panel10' && <div className={classes.line}></div>}
+                                    Налог за Приз оплачивает Оператор Акции
+                                    <br></br>
+                                    Призеры Акции, получившие право на Главный приз, Ежемесячный приз или призы
+                                    стоимостью более 4000 (четырех тысяч рублей) для получения Приза обязаны, в течение
+                                    5 (пяти) календарных дней с момента получения сообщения на адрес электронной почты
+                                    оставленную Участником во время регистрации на Сайте Акции предоставить Оператору
+                                    следующую информацию и документы:
+                                    <br></br><br></br>
+                                    - Копию российского паспорта (Копия должна быть хорошо читаемой), а именно: основную
+                                    страницу и страницу с регистрацией по месту жительства (на обозрение исключительно с
+                                    целью идентификации личности Призера и проверки на соответствие требованиям
+                                    настоящих Правил, а также в целях, указанных в разделе 6 Правил);
+                                    <br></br><br></br>
+                                    - адрес фактического проживания Призера, с почтовым индексом;
+                                    <br></br><br></br>
+                                    - номер контактного телефона Призера с кодом города;
+                                    <br></br><br></br>
+                                    - идентификационный номер налогоплательщика (ИНН);
+                                    <br></br><br></br>
+                                    - иную информацию и документы, необходимые для получения Приза (сообщаются
+                                    Организатором дополнительно).
+                                </Typography>
+                            </AccordionDetails>
+                        </Accordion>
+                        <Accordion
+                            expanded={expanded === 'panel11'}
+                            onChange={handleChange('panel11')}
+                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                        >
+                            <AccordionSummary
+                                expandIcon={
+                                    expanded === 'panel11' ? <NorthEastIcon/> : <NorthEastIcon/>
+                                }
+                                aria-controls="panel2-content"
+                                id="panel2-header"
+                            >
+                                <Typography className={classes.heading}><b className={'heading-id'}>13</b> <p
+                                    className={'heading-name'}>Могу ли я поменять вещественный приз на денежный?</p></Typography>
+                                <Typography className={classes.secondaryHeading}>
+                                </Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <Typography>
+                                    {expanded === 'panel11' && <div className={classes.line}></div>}
+                                    Денежный эквивалент стоимости Призов ( кроме Главного Приза) не выплачивается, Призы замене не подлежат.
+                                </Typography>
+                            </AccordionDetails>
+                        </Accordion>
+                        <Accordion
+                            expanded={expanded === 'panel12'}
+                            onChange={handleChange('panel12')}
+                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                        >
+                            <AccordionSummary
+                                expandIcon={
+                                    expanded === 'panel12' ? <NorthEastIcon/> : <NorthEastIcon/>
+                                }
+                                aria-controls="panel2-content"
+                                id="panel2-header"
+                            >
+                                <Typography className={classes.heading}><b className={'heading-id'}>14</b> <p
+                                    className={'heading-name'}>Нет ответа на обращение?</p></Typography>
+                                <Typography className={classes.secondaryHeading}>
+                                </Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <Typography>
+                                    {expanded === 'panel12' && <div className={classes.line}></div>}
+                                    Организатор вправе не отвечать на вопросы Участников, не касающиеся регистрации кода и получения приза. Организатор отвечает на вопросы, касающиеся участия в Акции в течение 72 часов
+                                </Typography>
+                            </AccordionDetails>
+                        </Accordion>
+                        <Accordion
+                            expanded={expanded === 'panel13'}
+                            onChange={handleChange('panel13')}
+                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                        >
+                            <AccordionSummary
+                                expandIcon={
+                                    expanded === 'panel13' ? <NorthEastIcon/> : <NorthEastIcon/>
+                                }
+                                aria-controls="panel2-content"
+                                id="panel2-header"
+                            >
+                                <Typography className={classes.heading}><b className={'heading-id'}>15</b> <p
+                                    className={'heading-name'}>Как мне связаться с Организатором?</p></Typography>
+                                <Typography className={classes.secondaryHeading}>
+                                </Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <Typography>
+                                    {expanded === 'panel13' && <div className={classes.line}></div>}
+                                    Необходимо отправить письмо с запросом на адрес: info@promo.laimonfresh.ch
+                                </Typography>
+                            </AccordionDetails>
+                        </Accordion>
+                        <Accordion
+                            expanded={expanded === 'panel14'}
+                            onChange={handleChange('panel14')}
+                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                        >
+                            <AccordionSummary
+                                expandIcon={
+                                    expanded === 'panel14' ? <NorthEastIcon/> : <NorthEastIcon/>
+                                }
+                                aria-controls="panel2-content"
+                                id="panel2-header"
+                            >
+                                <Typography className={classes.heading}><b className={'heading-id'}>16</b> <p
+                                    className={'heading-name'}>Что делать, если возникли вопросы, на которые нет ответов в разделе «Часто задаваемые вопросы»?</p></Typography>
+                                <Typography className={classes.secondaryHeading}>
+                                </Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <Typography>
+                                    {expanded === 'panel14' && <div className={classes.line}></div>}
+                                    Внимательно прочитайте Правила Акции и данные из раздела «Часто задаваемые вопросы». В случае, если Вы не нашли ответ на свой вопрос, обратитесь в службу технической поддержки по электронной почте на адрес: info@promo.laimonfresh.ch
+                                </Typography>
+                            </AccordionDetails>
+                        </Accordion>
+                        <Accordion
+                            expanded={expanded === 'panel16'}
+                            onChange={handleChange('panel16')}
+                            className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                        >
+                            <AccordionSummary
+                                expandIcon={
+                                    expanded === 'panel16' ? <NorthEastIcon/> : <NorthEastIcon/>
+                                }
+                                aria-controls="panel2-content"
+                                id="panel2-header"
+                            >
+                                <Typography className={classes.heading}><b className={'heading-id'}>17</b> <p
+                                    className={'heading-name'}>Где найти код?</p></Typography>
+                                <Typography className={classes.secondaryHeading}>
+                                </Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <Typography>
+                                    {expanded === 'panel16' && <div className={classes.line}></div>}
+                                    Код расположен под крышкой или ключиком напитков LAIMON FRESH в промо-упаковке,
+                                    вы узнаете ее по надписи «Лето-путешествие». <br></br><br></br>
+                                    Обратите внимание: для того, чтобы найти код под ключиком - его нужно приподнять.
+                                    Код расположен на оборотной стороне ключика. Будьте внимательны и не перепутайте
+                                    его с номером партии, который находится непосредственно на банке.
 
                                 </Typography>
                             </AccordionDetails>
