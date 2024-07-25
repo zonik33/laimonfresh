@@ -110,10 +110,8 @@ export default function Main(props) {
                         <div className={'winners-text-inputcode'}>
                             <span className={'text-inputcode'}>*найди код под крышкой/ключиком и введи промокод</span>
                         </div>
-                        <div className={'main-promo block'}>Соберите все 10 карточек городов,
-                            <br/>чтобы принять участие
-                            <br/>в розыгрыше главного приза!
-                            <br/>1 код = 1 карточка
+                        <div className={'main-promo block'}>Зарегистрируй код и забирай гарантированные подарки.
+                            <br/>Не упусти возможность выиграть главный приз 1 000 000 рублей на путешествие мечты.
                         </div>
                     </div>
                     <div className={'bottle-left'}>

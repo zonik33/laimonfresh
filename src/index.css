@@ -819,7 +819,7 @@ body {
   background: rgba(255, 255, 255, 0.31);
   color: rgba(0, 98, 65, 1);
   width: 24.722vw;
-  height: 6.564vw;
+  height: 7.964vw;
   font-size: 1.250vw;
   border-color: rgba(0, 98, 65, 1);
   border-style: solid;
@@ -1583,6 +1583,12 @@ body {
 }
 .black-b {
   color: white;
+}
+.black-b.black {
+  color: black;
+}
+.margin-left-17 {
+  margin-left: 2vw;
 }
 
 .full-image-background {
@@ -7359,7 +7365,7 @@ cursor: pointer;
     background: rgba(255, 255, 255, 0.31);
     color: rgba(0, 98, 65, 1);
     width: 64.722vw;
-    height: 18.564vw;
+    height: 21.564vw;
     font-size: 3.45vw;
     border-color: rgba(0, 98, 65, 1);
     border-style: solid;
@@ -7367,7 +7373,7 @@ cursor: pointer;
     padding-top: 2.2vw;
     text-transform: none;
     text-align: center;
-    margin: -31vw 0vw 0vw 3vw;
+    margin: -33vw 0vw 0vw 3vw;
     font-family: Inter, sans-serif;
   }
   .bottle-float-left.air {
