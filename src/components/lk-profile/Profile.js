@@ -42,6 +42,7 @@ import prizetreav from "../../image/img_68.png";
 import lfberriesback from "../../image/img_115.png";
 import prizewinknew from "../../image/logo-wink.png";
 import prizetreavnew from "../../image/cuva.png";
+import PopupU from "../Popups/PopupU";
 
 export default function Profile(props) {
     const [isPopupOpen, setIsPopupOpen] = useState(null);
@@ -283,7 +284,7 @@ export default function Profile(props) {
                                 placeholder=""
                             />
                             {isPopupOpen === 'AddCode' && isAuthenticated &&
-                                <PopupAddCode showPopup={true} closeModal={closePopup}/>}
+                                <PopupU showPopup={true} closeModal={closePopup}/>}
 
                             <img className={'bottle-float-left inputcode profile-mobile'} src={inputcode}/>
                             <div className="main-promo-text-input-new-mobile">ввести промокод*</div>
@@ -449,6 +450,7 @@ export default function Profile(props) {
             <PopupLogin/>
             <Footer/>
             <PopupAddCode/>
+            <PopupU/>
         </header>
 
 
