@@ -1151,6 +1151,10 @@ body {
   right: -25%;
   top: 1.04vw;
 }
+.styledsd {
+  width: 36vw !important;
+  height: 14vw !important;
+}
 .bottle-float-left.example-tree5.faq-down-leetree {
  display: none;
 }
@@ -1559,27 +1563,40 @@ body {
   font-size: 1vw;
 }
 .register-inputs-text.login {
+  width: 19.5vw;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 1.18vw;
+  line-height: 1.46vw;
+  margin-top: 2vw;
+  margin-bottom: -1vw;
+  margin-left: 8.5vw;
+
+}
+.register-inputs-text.code-left {
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-bottom: 3.5vw;
+  margin-left: 5vw;
+  width: 29vw;
   text-align: left;
   color: rgba(255, 255, 255, 1);
   font-family: Inter;
   font-weight: 400;
   font-size: 1.18vw;
   line-height: 1.46vw;
-  margin-bottom: 0.5vw;
-  margin-left: 0.5vw;
-}
-.register-inputs-text.code-left {
-  text-align: center;
-  color: rgba(255, 255, 255, 1);
-  display: flex; /* Используем Flexbox */
-  justify-content: center; /* Центрирование по горизонтали */
-  align-items: center; /* Центрирование по вертикали */
-  height: 100%; /* Для центрирования по вертикали */
-  margin-bottom: 3.5vw;
-  margin-left: 0vw;
+  margin-top: 3vw;
+  margin-bottom: 2.5vw;
+  margin-left: 4vw;
 }
 .register-inputs-text.u {
-  width: 19vw;
+  width: 20vw;
   text-align: left;
   color: rgba(255, 255, 255, 1);
   display: flex; /* Используем Flexbox */
@@ -3390,7 +3407,11 @@ display: none !important;
 .footer-padding-text {
   margin-top: 2vw;
 }
-
+.footer-padding-text.new {
+  /*width: 50vw;*/
+  /*position: absolute;*/
+  margin-top: 2vw;
+}
 .buttons {
   margin-top: -2vw;
   padding-bottom: 5vw;
@@ -4711,17 +4732,7 @@ cursor: pointer;
   transform: translate(-50%, -50%);
 }
 #popup-content-soon{
-  left: 50%;
-  height: auto;
-  border-radius: 2.08vw;
-  padding: 1.6vw;
-  width: 40.42vw;
-  position: absolute;
-  overflow: hidden;
-
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  display: none;
 }
 .popup-content-code {
   background-color: rgba(0, 98, 65, 1);
@@ -4845,6 +4856,20 @@ cursor: pointer;
     width: 89.33vw;
     height: auto;
     min-height: 89vw;
+    padding: 1.46vw;
+    border-radius: 0.37vw;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  .styledsd {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: #FFFFFF4D;
+    width: 89.33vw !important;
+    height: auto;
+    min-height: 46vw;
     padding: 1.46vw;
     border-radius: 0.37vw;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
@@ -6129,7 +6154,7 @@ cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 60vw;
+    height: 87vw;
   }
   .bottle-float-left.show {
     display: flex;
@@ -6513,14 +6538,16 @@ cursor: pointer;
     color: rgba(255, 255, 255, 1);
   }
   .register-inputs-text.login {
-    text-align: left;
     color: rgba(255, 255, 255, 1);
     font-family: Inter;
     font-weight: 400;
     font-size: 4.18vw;
     line-height: 4.46vw;
-    margin-bottom: 0.5vw;
-    margin-left: 1.5vw;
+    margin-bottom: -2.5vw;
+    margin-left: 7.2vw;
+    margin-top: 7vw;
+    width: 60vw;
+    text-align: center;
   }
   .Modal {
     position: fixed;
@@ -6589,14 +6616,16 @@ cursor: pointer;
   }
 
   .register-inputs-text.code-left {
-    text-align: center;
     color: rgba(255, 255, 255, 1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    margin-bottom: 5vw;
-    margin-left: 0vw;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 4.18vw;
+    line-height: 4.46vw;
+    margin-bottom: 3.5vw;
+    margin-left: 1.2vw;
+    margin-top: 7vw;
+    width: 60vw;
+    text-align: center;
   }
   .register-inputs-text.code-left-email {
     width: 62vw;
@@ -7604,38 +7633,40 @@ cursor: pointer;
 
   .Modal-add-u {
     width: 96.188vw !important;
-    height: 34.146vw !important;
+    height: 57.146vw !important;
   }
+
   .content-right-u {
     position: absolute;
-    margin: -29.9vw 0vw 0vw 65.4vw;
+    margin: -52.4vw 0vw 0vw 57.45vw;
     background-color: #FFC828;
     border-bottom-right-radius: 2.08vw;
     border-top-right-radius: 2.08vw;
     flex: 1 1;
     display: flex;
-    width: 29vw;
-    height: 34.1vw;
+    width: 37vw;
+    height: 57vw;
     justify-content: center;
     align-items: center;
     overflow: hidden;
   }
   .register-main-text.u {
-    width: 63vw;
+    width: 58vw;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     color: #FFFFFF;
     font-family: 'AutumnSweaterLaimon', Arial, sans-serif;
-    font-size: 4.064vw;
+    font-size: 5.814vw;
     font-weight: 400;
-    line-height: 4vw;
-    margin-left: -4.4vw;
+    line-height: 6vw;
+    margin-left: -2.4vw;
   }
 .register-inputs-mobile {
   display: flex;
-  width: 49vw;
+  margin-top: 5vw;
+  width: 38vw;
   text-align: left;
   color: rgba(255, 255, 255, 1);
   justify-content: center;
@@ -7644,14 +7675,14 @@ cursor: pointer;
   margin-bottom: 3.5vw;
   margin-left: -2vw;
   font-weight: 600;
-  font-size: 2.338vw;
+  font-size: 2.713vw;
   line-height: 2.922vw;
 }
   .lfur-r-linef {
     position: absolute;
-    margin: -30.105vw 0vw 0vw 65.2vw;
+    margin: -52.434vw 0vw 0vw 57.2vw;
     z-index: 1;
-    width: 2.0584vw;
+    width: 3.478vw;
     height: auto;
   }
   .register-inputs-text.u2 {
@@ -7661,24 +7692,24 @@ cursor: pointer;
     display: none;
   }
   .lfur-r-btl {
-    margin: 1vw 0vw 0vw -10.3vw;
-    width: 28vw;
+    margin: 8vw 0vw 0vw -1.3vw;
+    width: 37vw;
     z-index: 3;
     height: auto;
   }
   .lfur-r-tct {
     position: absolute;
-    margin: -13vw 0vw 0vw 58vw;
+    margin: -26.5vw 0vw 0vw 51vw;
     z-index: 2;
-    width: 17vw;
+    width: 25vw;
     height: auto;
   }
   .bottle-float-left.exit-register-u {
     right: 0;
-    padding-right: 0.7vw;
-    margin: -8.2vw 0vw 0vw 35vw;
+    padding-right: 1.7vw;
+    margin: -15.2vw 0vw 0vw -2vw;
     position: absolute;
-    width: 7vw;
+    width: 8vw;
     height: auto;
     z-index: 5;
     transition: opacity 0.3s ease;
@@ -7705,5 +7736,10 @@ cursor: pointer;
   }
   .bottle-float-left.u {
    display: none;
+  }
+  .lfur-r {
+    margin: -6vw 0 0 -60vw;
+    opacity: .7;
+    width: 97vw;
   }
 }

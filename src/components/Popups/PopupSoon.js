@@ -7,19 +7,19 @@ import PhoneInput from "../PhoneInput";
 import PopupRegister from "./PopupRegister";
 export default function PopupSoon(props) {
     return (
-        <div id="popup-soon" className="popup-soon">
+        <div id="popup-soons" className="popup-soons">
             <div className={"blur-filter-test"}>
                 <div className="popup-content-code" id={"popup-content-soon"}>
-                    <div className={'container-register'}>
-                        <div>
-                            <span className={'register-main-text soon'}>Осталось совсем чуть-чуть и акция Laimon Fresh начнется!</span>
-                        </div>
-                        <div>
-                            <span className={'register-main-text soon-white'}>СТАРТ 15 МАЯ</span>
-                        </div>
-                        <div className="register-button-container">
-                        </div>
-                    </div>
+                    {/*<div className={'container-register'}>*/}
+                    {/*    <div>*/}
+                    {/*        <span className={'register-main-text soon'}>Осталось совсем чуть-чуть и акция Laimon Fresh начнется!</span>*/}
+                    {/*    </div>*/}
+                    {/*    <div>*/}
+                    {/*        <span className={'register-main-text soon-white'}>СТАРТ 15 МАЯ</span>*/}
+                    {/*    </div>*/}
+                    {/*    <div className="register-button-container">*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
                     {/*<button onClick={togglePopup}>Закрыть</button>*/}
                 </div>
             </div>

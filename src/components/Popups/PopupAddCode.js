@@ -102,6 +102,7 @@ debugger;
                         <img className={'bottle-float-left exit-register'} onClick={closeModal} src={lcexit}/>
                     </div>
                     <p className={'register-inputs-text code-left'}>Введите промокод:</p>
+                    {/*<p className={'register-inputs-text code-left'}>Загрузка кодов завершена.</p>*/}
                     <input type="text" id={'addCode'}
                            required
                            className={`register-inputs code-bottom ${registrationErrorEm ? 'error' : ''}`}
@@ -111,7 +112,8 @@ debugger;
                                                  style={{color: '#FFFFFF'}}>{registrationErrorEm}</div>}
                     <span id="phoneError" className="error"></span>
                     <div className="register-button-container">
-                        <button type={'submit'} id={'submit-add'} className={'register-button code-down'}>Отправить</button>
+                        <button type={'submit'} id={'submit-add'} className={'register-button code-down'}>Отправить
+                        </button>
                     </div>
                 </div>
             </form>

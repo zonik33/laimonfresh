@@ -261,7 +261,7 @@ export default function PopupRegister(props) {
         <div id="popup-complete" className="popup">
         <Modal closeTimeoutMS={300}
                className={{
-                   base: 'Modal',
+                   base: 'styledsd',
                    afterOpen: showPopup ? 'ReactModal__Overlay--after-open' : '',
                    beforeClose: showPopup ? 'ReactModal__Overlay--before-close' : '',
                }}
@@ -294,122 +294,123 @@ export default function PopupRegister(props) {
                   id={'form-register-password'} className={'form-register'}
                   ref={formRef}>
                 <div className={'container-register-modal'}>
-                    <div><span className={'register-main-text'}>Регистрация</span>
+                    <div><span className={'register-main-text'}>Промоакция</span>
                         <img className={'bottle-float-left exit-register'} onClick={closeModal} src={lcexit}/>
                     </div>
-                    <p className={'register-inputs-text login'}>Фио</p>
-                    <input type="text"  className={`register-inputs ${registrationError2 ? 'error' : ''}`} id={'name'}
-                           required
-                           placeholder="ФИО"
-                           ref={nameInputRef}
-                           onChange={handleNameInputChange}
+                    <p className={'register-inputs-text login'}>Срок вручения призов продлен до 31 октября!
+                    </p>
+                    {/*    <input type="text"  className={`register-inputs ${registrationError2 ? 'error' : ''}`} id={'name'}*/}
+                {/*           required*/}
+                {/*           placeholder="ФИО"*/}
+                {/*           ref={nameInputRef}*/}
+                {/*           onChange={handleNameInputChange}*/}
 
-                    />
-                    {registrationError2 &&  <div className={'error-block-phone test-register'} style={{color: '#FFFFFF'}}>{registrationError2}</div>}
-                    <span id="phoneError" className="error"></span>
-                    <p className={'register-inputs-text login'}>E-mail</p>
-                    <input
-                        ref={emailInputRef}
-                        type="email"
-                        id={'login'}
-                        className={`register-inputs ${registrationError1 ? 'error' : ''}`}
-                        placeholder="E-mail"
-                        value={email}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        required
-                    />
+                {/*    />*/}
+                {/*    {registrationError2 &&  <div className={'error-block-phone test-register'} style={{color: '#FFFFFF'}}>{registrationError2}</div>}*/}
+                {/*    <span id="phoneError" className="error"></span>*/}
+                    <p className={'register-inputs-text login'}>Подробности в правилах акции.</p>
+                {/*    <input*/}
+                {/*        ref={emailInputRef}*/}
+                {/*        type="email"*/}
+                {/*        id={'login'}*/}
+                {/*        className={`register-inputs ${registrationError1 ? 'error' : ''}`}*/}
+                {/*        placeholder="E-mail"*/}
+                {/*        value={email}*/}
+                {/*        onChange={handleChange}*/}
+                {/*        onBlur={handleBlur}*/}
+                {/*        required*/}
+                {/*    />*/}
 
-                    {registrationError1 &&  <div className={'error-block-phone test-register'} style={{color: '#FFFFFF'}}>{registrationError1}</div>}
+                {/*    {registrationError1 &&  <div className={'error-block-phone test-register'} style={{color: '#FFFFFF'}}>{registrationError1}</div>}*/}
 
-                    <span id="phoneError" className="error"></span>
-                    <p className={'register-inputs-text login'}>Телефон</p>
-                    <PhoneInput id='phone' name='login' className={'register-inputs'}
-                                registrationError={registrationError} />
-                    {registrationError && <div className={'error-block-phone test-register'}
-                                               style={{color: '#FFFFFF'}}>{registrationError}</div>}
-                    <span id="phoneError" className="error"></span>
-                    <p className={'register-inputs-text login'}>Город</p>
-                    <input
-                        list="cities"
-                        id={'city'}
-                        className={'register-inputs'}
-                        placeholder="Город"
-                        value={inputValue}
-                        onChange={handleInputChange}
-                        required
-                    />
-                    <datalist id="cities">
-                        {filteredCities.map((city, index) => (
-                            <option key={index} value={city}/>
-                        ))}
-                    </datalist>
-                    <p className={'register-inputs-text login'}>Пароль</p>
-                    <input
-                        type="password" className={`register-inputs ${registrationError4 ? 'error' : ''}`}
-                        id={'pass'}
-                        placeholder="Пароль"
-                        required
-                        onChange={handlePass2InputChange}
-                        />
-                    {registrationError4 &&  <div className={'error-block-phone test-register'} style={{color: '#FFFFFF'}}>{registrationError4}</div>}
-                    <span id="phoneError" className="error"></span>
-                    <p className={'register-inputs-text login'}>Подтвердить пароль</p>
-                    <input type="password"
-                           required
-                           id={'passR'}
-                           onChange={handlePass3InputChange}
-                           className={`register-inputs ${registrationError5 ? 'error' : ''}`} placeholder="Подтвердить пароль"
-                           />
-                    {registrationError5 &&  <div className={'error-block-phone test-register'} style={{color: '#FFFFFF'}}>{registrationError5}</div>}
-                    <span id="phoneError" className="error"></span>
-                    <div>
-                        <label className={'popup-p-center p-span-1'}>
-                            <input
-                                type="checkbox"
-                                id="rules1"
-                                className={`input-checkbox ${!agree4Checked ? 'error' : ''}`}
-                                onChange={handleAgree4Change}
-                                required
+                {/*    <span id="phoneError" className="error"></span>*/}
+                {/*    <p className={'register-inputs-text login'}>Телефон</p>*/}
+                {/*    <PhoneInput id='phone' name='login' className={'register-inputs'}*/}
+                {/*                registrationError={registrationError} />*/}
+                {/*    {registrationError && <div className={'error-block-phone test-register'}*/}
+                {/*                               style={{color: '#FFFFFF'}}>{registrationError}</div>}*/}
+                {/*    <span id="phoneError" className="error"></span>*/}
+                {/*    <p className={'register-inputs-text login'}>Город</p>*/}
+                {/*    <input*/}
+                {/*        list="cities"*/}
+                {/*        id={'city'}*/}
+                {/*        className={'register-inputs'}*/}
+                {/*        placeholder="Город"*/}
+                {/*        value={inputValue}*/}
+                {/*        onChange={handleInputChange}*/}
+                {/*        required*/}
+                {/*    />*/}
+                {/*    <datalist id="cities">*/}
+                {/*        {filteredCities.map((city, index) => (*/}
+                {/*            <option key={index} value={city}/>*/}
+                {/*        ))}*/}
+                {/*    </datalist>*/}
+                {/*    <p className={'register-inputs-text login'}>Пароль</p>*/}
+                {/*    <input*/}
+                {/*        type="password" className={`register-inputs ${registrationError4 ? 'error' : ''}`}*/}
+                {/*        id={'pass'}*/}
+                {/*        placeholder="Пароль"*/}
+                {/*        required*/}
+                {/*        onChange={handlePass2InputChange}*/}
+                {/*        />*/}
+                {/*    {registrationError4 &&  <div className={'error-block-phone test-register'} style={{color: '#FFFFFF'}}>{registrationError4}</div>}*/}
+                {/*    <span id="phoneError" className="error"></span>*/}
+                {/*    <p className={'register-inputs-text login'}>Подтвердить пароль</p>*/}
+                {/*    <input type="password"*/}
+                {/*           required*/}
+                {/*           id={'passR'}*/}
+                {/*           onChange={handlePass3InputChange}*/}
+                {/*           className={`register-inputs ${registrationError5 ? 'error' : ''}`} placeholder="Подтвердить пароль"*/}
+                {/*           />*/}
+                {/*    {registrationError5 &&  <div className={'error-block-phone test-register'} style={{color: '#FFFFFF'}}>{registrationError5}</div>}*/}
+                {/*    <span id="phoneError" className="error"></span>*/}
+                {/*    <div>*/}
+                {/*        <label className={'popup-p-center p-span-1'}>*/}
+                {/*            <input*/}
+                {/*                type="checkbox"*/}
+                {/*                id="rules1"*/}
+                {/*                className={`input-checkbox ${!agree4Checked ? 'error' : ''}`}*/}
+                {/*                onChange={handleAgree4Change}*/}
+                {/*                required*/}
 
-                            />
-                            <span className={`custom-checkbox ${!agree4Checked ? 'error' : ''}`}></span>
-                            <p>Я согласен с <a href={`${currentDomain}/rules.pdf`} className={"text-laimon"} target="_blank">Правилами акции</a>
-                            </p>
-                            {!agree4Checked && <span className={`error-message check-box-error ${!agree4Checked ? 'error' : ''}`}>Обязательно для регистрации</span>}
-                            <span id="phoneError" className="error"></span>
-                        </label>
+                {/*            />*/}
+                {/*            <span className={`custom-checkbox ${!agree4Checked ? 'error' : ''}`}></span>*/}
+                {/*            <p>Я согласен с <a href={`${currentDomain}/rules.pdf`} className={"text-laimon"} target="_blank">Правилами акции</a>*/}
+                {/*            </p>*/}
+                {/*            {!agree4Checked && <span className={`error-message check-box-error ${!agree4Checked ? 'error' : ''}`}>Обязательно для регистрации</span>}*/}
+                {/*            <span id="phoneError" className="error"></span>*/}
+                {/*        </label>*/}
 
-                    </div>
-                    <div>
-                        <label className={'popup-p-center p-span'}>
-                            <input
-                                type="checkbox"
-                                id="rules2"
-                                className={`input-checkbox ${!agree5Checked ? 'error' : ''}`}
-                                onChange={handleAgree5Change}
-                                required
+                {/*    </div>*/}
+                {/*    <div>*/}
+                {/*        <label className={'popup-p-center p-span'}>*/}
+                {/*            <input*/}
+                {/*                type="checkbox"*/}
+                {/*                id="rules2"*/}
+                {/*                className={`input-checkbox ${!agree5Checked ? 'error' : ''}`}*/}
+                {/*                onChange={handleAgree5Change}*/}
+                {/*                required*/}
 
-                            />
-                            <span className={`custom-checkbox ${!agree5Checked ? 'error' : ''}`}></span>
-                            <p>Я согласен на обработку <br></br>моих <a href={`${currentDomain}/politika_pd_omi.pdf`} className={"text-laimon"} target="_blank">Персональных данных</a></p>
-                            {!agree5Checked && <span className={`error-message check-box-error-second ${!agree5Checked ? 'error' : ''}`}>Обязательно для регистрации</span>}
-                            <span id="phoneError" className="error"></span>
-                        </label>
-                    </div>
-                    <div className="register-button-container">
-                        <button
-                            type="submit"
-                            id="submit-r"
-                            className={`register-button ${isLoading ? 'disabled' : ''}`}
-                            disabled={isLoading}
-                        >
-                            {isLoading ? 'Зарегистрироваться' : 'Зарегистрироваться'}
-                        </button>
-                    </div>
-                    <div className="popup-p-center down">
-                        <p>Уже есть аккаунт? <a onClick={openPopupLogin} className="text-laimon">Войти</a></p>
-                    </div>
+                {/*            />*/}
+                {/*            <span className={`custom-checkbox ${!agree5Checked ? 'error' : ''}`}></span>*/}
+                {/*            <p>Я согласен на обработку <br></br>моих <a href={`${currentDomain}/politika_pd_omi.pdf`} className={"text-laimon"} target="_blank">Персональных данных</a></p>*/}
+                {/*            {!agree5Checked && <span className={`error-message check-box-error-second ${!agree5Checked ? 'error' : ''}`}>Обязательно для регистрации</span>}*/}
+                {/*            <span id="phoneError" className="error"></span>*/}
+                {/*        </label>*/}
+                {/*    </div>*/}
+                {/*    <div className="register-button-container">*/}
+                {/*        <button*/}
+                {/*            type="submit"*/}
+                {/*            id="submit-r"*/}
+                {/*            className={`register-button ${isLoading ? 'disabled' : ''}`}*/}
+                {/*            disabled={isLoading}*/}
+                {/*        >*/}
+                {/*            {isLoading ? 'Зарегистрироваться' : 'Зарегистрироваться'}*/}
+                {/*        </button>*/}
+                {/*    </div>*/}
+                {/*    <div className="popup-p-center down">*/}
+                {/*        <p>Уже есть аккаунт? <a onClick={openPopupLogin} className="text-laimon">Войти</a></p>*/}
+                {/*    </div>*/}
 
                 </div>
             </form>

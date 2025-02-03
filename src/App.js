@@ -10,6 +10,8 @@ import Modal from "react-modal";
 import axios from "axios";
 import PopupSoon from "./components/Popups/PopupSoon";
 import Error from "./components/Error/Error";
+import PopupBanner from "./components/Popups/PopupBanner";
+import PopupRegister from "./components/Popups/PopupRegister";
 
 
 const urlParams = new URLSearchParams(window.location.search);
@@ -48,8 +50,12 @@ if (isAuthenticated) {
 
 
 function App() {
-    const [showPopup, setShowPopup] = useState(false);
+    const [showPopup, setShowPopup] = useState(true);
     const [isContentLoaded, setIsContentLoaded] = useState(false);
+
+    const closeModal = () => {
+        setShowPopup(false);
+    };
 
 
 // Проверяем, содержит ли текущий URL указанный путь перенаправления
@@ -60,8 +66,6 @@ function App() {
             setIsContentLoaded(true);
         };
         document.addEventListener('DOMContentLoaded', handleContentLoaded);
-        // openPopup3()
-        // openPopup3()
         return () => {
             document.removeEventListener('DOMContentLoaded', handleContentLoaded);
         };
@@ -74,7 +78,7 @@ function App() {
     }, [isContentLoaded]);
 
     function openPopup3() {
-        document.getElementById("popup-register-success").style.display = "block";
+        document.getElementById("popup-soon5").style.display = "block";
         document.body.classList.add("no-scroll");
     }
     function ErrorPage() {
@@ -96,7 +100,8 @@ function App() {
                 <Route path="*" element={<Error/>} />
             </Routes>
         </BrowserRouter>
-        <PopupSoon/>
+        <PopupRegister showPopup={showPopup} closeModal={closeModal} />
+        <PopupBanner/>
     </div>
 
     );

@@ -422,6 +422,7 @@ export default function Winners(props) {
         9: prizeImage9,
         10: prizeImage10,
         11: prizeImage11,
+        101: prizeImage10
     };
     const formatName = (name) => {
         const words = name.split(' ');
@@ -515,32 +516,32 @@ export default function Winners(props) {
                                             <img className={'bottle-float-left gps-novo'} src={gps}/>
                                             <img className={'bottle-float-left gps-vlad'} src={gps}/>
 
-                                            {/*/!*{winnersMain && winnersMain.length > 0 ? (*!/*/}
-                                            {/*    winnersMain.map((winner, index) => (*/}
-                                            {/*        <div key={index} className={'table-body-winners down'}>*/}
-                                            {/*            <div className={'head-colm-prize1'}>{index + 1}</div>*/}
-                                            {/*            <div className={'head-colm-name'}>{winner.name}</div>*/}
-                                            {/*            <div className={'head-colm-phone1'}>{winner.code}</div>*/}
-                                            {/*            <div className={'head-colm-date1'}>*/}
-                                            {/*                /!*<img className={'winners-prize-img'} alt={'Приз'} src={prizeImages[winner.prize_id]}/>*!/*/}
-                                            {/*            </div>*/}
-                                            {/*        </div>*/}
-                                            {/*/!*    ))*!/*/}
-                                            {/*) : (*/}
-                                            {/*    <div className="table-body-winners down">*/}
-                                            {/*        <div className={'head-colm-prize1'}>&nbsp;</div>*/}
-                                            {/*        <div className={'head-colm-name'}>&nbsp;</div>*/}
-                                            {/*        <div className={'head-colm-phone1'}>&nbsp;</div>*/}
-                                            {/*        <div className={'head-colm-date1'}>&nbsp;</div>*/}
-                                            {/*    </div>*/}
+                                            {winnersMain && winnersMain.length > 0 ? (
+                                                winnersMain.map((winner, index) => (
+                                                    <div key={index} className={'table-body-winners down'}>
+                                                        <div className={'head-colm-prize1'}>{index + 1}</div>
+                                                        <div className={'head-colm-name'}>{winner.name}</div>
+                                                        <div className={'head-colm-phone1'}>{winner.code}</div>
+                                                        <div className={'head-colm-date1'}>
+                                                            {/*<img className={'winners-prize-img'} alt={'Приз'} src={prizeImages[winner.prize_id]}/>*/}
+                                                        </div>
+                                                    </div>
+                                                ))
+                                            ) : (
+                                                <div className="table-body-winners down">
+                                                    <div className={'head-colm-prize1'}>&nbsp;</div>
+                                                    <div className={'head-colm-name'}>&nbsp;</div>
+                                                    <div className={'head-colm-phone1'}>&nbsp;</div>
+                                                    <div className={'head-colm-date1'}>&nbsp;</div>
+                                                </div>
 
-                                            {/*)}*/}
-                                            <div className="table-body-winners down">
-                                                <div className={'head-colm-prize1'}>&nbsp;</div>
-                                                <div className={'head-colm-name'}>&nbsp;</div>
-                                                <div className={'head-colm-phone1'}>&nbsp;</div>
-                                                <div className={'head-colm-date1'}>&nbsp;</div>
-                                            </div>
+                                            )}
+                                            {/*<div className="table-body-winners down">*/}
+                                            {/*    <div className={'head-colm-prize1'}>&nbsp;</div>*/}
+                                            {/*    <div className={'head-colm-name'}>&nbsp;</div>*/}
+                                            {/*    <div className={'head-colm-phone1'}>&nbsp;</div>*/}
+                                            {/*    <div className={'head-colm-date1'}>&nbsp;</div>*/}
+                                            {/*</div>*/}
 
 
                                         </div>

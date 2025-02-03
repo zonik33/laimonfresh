@@ -31,6 +31,7 @@ import PopupAddCode from "./Popups/PopupAddCode";
 import PopupSuccessCode from "./Popups/PopupSuccessCode";
 import PopupRegister from "./Popups/PopupRegister";
 import owntreep from "../image/img_36.png";
+import PopupU from "./Popups/PopupU";
 
 
 export default function Main(props) {
@@ -43,6 +44,10 @@ export default function Main(props) {
     };
 
     const closePopup = () => {
+        setIsPopupOpen(null);  // Add this line to reset isPopupOpen
+        document.body.classList.remove("no-scroll");
+    };
+    const closePopupTest = () => {
         setIsPopupOpen(null);  // Add this line to reset isPopupOpen
         document.body.classList.remove("no-scroll");
     };
@@ -89,6 +94,8 @@ export default function Main(props) {
         document.getElementById("popup-login").style.display = "block";
         document.body.classList.add("no-scroll");
     };
+
+
     return (
         <main>
             <div className={'main'} id={'main'}>
@@ -103,8 +110,7 @@ export default function Main(props) {
                             readOnly
                             placeholder=""
                         />
-                        {isPopupOpen === 'AddCode' && isAuthenticated &&
-                            <PopupAddCode showPopup={true} closeModal={closePopup}/>}
+                        {isPopupOpen === 'AddCode' && <PopupRegister showPopup={true} closeModal={closePopup} />} {/* Render PopupRegister */}
                         <img className={'bottle-float-left inputcode'} src={inputcode}/>
                         <div className="main-promo-text-input">ввести промокод*</div>
                         <div className={'winners-text-inputcode'}>
@@ -185,6 +191,7 @@ export default function Main(props) {
             {/*<Footer/>*/}
             <Footer/>
             <PopupSuccessCode/>
+            <PopupU/>
         </main>
     );
 }

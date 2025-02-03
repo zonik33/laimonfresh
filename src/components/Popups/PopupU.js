@@ -17,6 +17,7 @@ export default function PopupU(props) {
     const [registrationError, setRegistrationError] = useState('');
     const [registrationErrorEm, setRegistrationErrorEm] = useState('');
     const popupRef = useRef(null);
+    const currentDomain = window.location.origin;
 
     function openPopup2() {
         closeModal()
@@ -60,17 +61,17 @@ export default function PopupU(props) {
                     <div><span className={'register-main-text u'}>Чем больше призов, тем ярче лето!</span>
                         <img className={'bottle-float-left exit-register-u'} onClick={closeModal} src={lcexit}/>
                     </div>
-                    <p className={'register-inputs-text u'}>Зарегистрируйте 2 кода <br></br>12 по 18 августа на сайте
+                    <p className={'register-inputs-text u'}>Зарегистрируйте 2 кода <br></br>c 19 по 30 августа на сайте
                         акции и участвуйте в дополнительном розыгрыше 50 сертификатов
                         OZON на 1000 и 2000 рублей. <br></br>
                         <br></br>Удачи!<br></br></p>
-                    <p className={'register-inputs-mobile'}>Зарегистрируйте 2 кода с 12 по 18 августа на сайте акции
+                    <p className={'register-inputs-mobile'}>Зарегистрируйте 2 кода с 19 по 30 августа на сайте акции
                         и участвуйте в дополнительном розыгрыше призов.
-                        50 сертификатов OZON на 1000 или 2000 рублей! </p>
+                        <br></br><br></br>50 сертификатов OZON на 1000 или 2000 рублей! </p>
                     <p className={'register-inputs-text u2'}>Ознакомиться с правилами <br></br>С уважением,
                         команда Laimon Fresh!</p>
-                    <a className={'link-here'} href="#">здесь</a>
-                    <a className={'link-here-mobile'} href="#">к правилам</a>
+                    <a className={'link-here'} href={`${currentDomain}/rules.pdf`} target="_blank">здесь</a>
+                    <a className={'link-here-mobile'} href={`${currentDomain}/rules.pdf`} target="_blank">к правилам</a>
                     <img className={'bottle-float-left u'} onClick={closeModal} src={lfu}/>
                     <div className="register-button-container">
                     </div>

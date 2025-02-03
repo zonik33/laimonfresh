@@ -68,6 +68,7 @@ export default function Profile(props) {
     const selectChoose = (text) => {
         // Удалить токен из localStorage
         localStorage.removeItem('auth_key');
+        localStorage.removeItem('popupUShown'); // Удаляем значение каждые 5 секунд
 
         // Перенаправить на главную страницу
         window.location.href = '/';
@@ -283,9 +284,7 @@ export default function Profile(props) {
                                 readOnly
                                 placeholder=""
                             />
-                            {isPopupOpen === 'AddCode' && isAuthenticated &&
-                                <PopupU showPopup={true} closeModal={closePopup}/>}
-
+                            {isPopupOpen === 'AddCode' && <PopupRegister showPopup={true} closeModal={closePopup} />} {/* Render PopupRegister */}
                             <img className={'bottle-float-left inputcode profile-mobile'} src={inputcode}/>
                             <div className="main-promo-text-input-new-mobile">ввести промокод*</div>
                             <div className={'winners-text-inputcode lc'}>

@@ -72,9 +72,11 @@ export default function Footer (props) {
                     {/*<p>А также некоторые особенности внутренней политики формируют глобальную экономическую сеть и при*/}
                     {/*    этом — указаны как претенденты на роль ключевых.</p>*/}
                     <p className={'footer-padding-text'}>info@promo.laimonfresh.ch</p>
+                    <p className={'footer-padding-text new'}>12.08.2024 г. в силу вступит Дополнение №1 к Правилам
+                        проведения и условиям участия в Акции «ЛетоПутешествие».</p>
                 </div>
                 <div className="right-footer">
-                    <p>Документы об акции</p>
+                <p>Документы об акции</p>
                     <div className="buttons">
                         <button className={'footer-left-button'} onClick={handlePolicyClick}>Политика персональных данных</button>
                         <button className={'footer-right-button'} onClick={handleRulesClick}>Правила акции</button>

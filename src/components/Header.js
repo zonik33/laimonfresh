@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import logo2 from '../image/logo2.png';
 import lemondots from '../image/lemon.png';
 import dotslemon from '../image/Dots.svg';
@@ -17,11 +17,55 @@ import inputcode from "../image/img_118.png";
 import PopupAddCode from "./Popups/PopupAddCode";
 import {Link} from "react-router-dom";
 import PopupSoon from "./Popups/PopupSoon";
+import PopupU from "./Popups/PopupU";
+import Cookies from 'js-cookie';
+// function setPopupExpiration() {
+//     const expirationTime = Date.now() + 5000; // Установите время истечения через 5 секунд
+//     localStorage.setItem('popupUShown', 'true');
+//     localStorage.setItem('popupExpiration', expirationTime);
+// }
+
+// function isPopupExpired() {
+//     const expirationTime = localStorage.getItem('popupExpiration');
+//     return expirationTime && Date.now() > expirationTime;
+// }
 
 export default function Header(props) {
     const [showPopup, setShowPopup] = useState(false);
-
     const [isPopupOpen, setIsPopupOpen] = useState(null);
+    // useEffect(() => {
+    //     const popupShown = Cookies.get('popupUShown');
+    //
+    //     if (!popupShown) {
+    //         setShowPopup(true);
+    //         Cookies.set('popupUShown', 'true', { expires: 5/1440 }); // 1 минута в днях, 1/1440 = 1 минута
+    //         // console.log("Cookie set: popupUShown");
+    //
+    //         const timer = setTimeout(() => {
+    //             // console.log("Removing cookie...");
+    //             Cookies.remove('popupUShown'); // Удаляем куку вручную
+    //
+    //             // Проверяем, была ли кука удалена
+    //             const checkCookieAfterRemoval = Cookies.get('popupUShown');
+    //             if (!checkCookieAfterRemoval) {
+    //                 // console.log("Cookie successfully removed");
+    //             } else {
+    //                 // console.log("Cookie still exists: ", checkCookieAfterRemoval);
+    //             }
+    //
+    //             setShowPopup(false); // Скрываем попап после удаления куки
+    //             // console.log("Popup hidden");
+    //         }, 60000); // 10 секунд для демонстрации, чтобы скрыть попап
+    //
+    //         return () => {
+    //             clearTimeout(timer); // Очищаем таймер при размонтировании
+    //             // console.log("Cleanup timer");
+    //         };
+    //     } else {
+    //         // console.log("Cookie already set: popupUShown");
+    //     }
+    // }, []);
+
     const openPopup = (popupName) => {
         if (!isPopupOpen) {
             setIsPopupOpen(popupName);
@@ -134,6 +178,7 @@ export default function Header(props) {
     <PopupLogin/>
             <PopupSoon/>
             <PopupSuccessRegister/>
+            {/*<PopupU showPopup={showPopup} closeModal={() => setShowPopup(false)} />*/}
         </header>
     );
 }
