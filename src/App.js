@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React, {useEffect, useState} from 'react';
-import {BrowserRouter, Routes, Route, Navigate, Outlet} from 'react-router-dom';
+import {BrowserRouter, Routes, Route, Navigate, Outlet, HashRouter} from 'react-router-dom';
 import Nav from "./Nav/Nav";
 import Faq from "./components/faq-block/Faq";
 import Profile from "./components/lk-profile/Profile";
@@ -86,7 +86,7 @@ function App() {
     }
     return (
     <div className="App">
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route path="/" element={<Nav/>}/>
                 <Route path="/faq/*" element={<Faq/>}
@@ -99,7 +99,7 @@ function App() {
                 />
                 <Route path="*" element={<Error/>} />
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
         <PopupRegister showPopup={showPopup} closeModal={closeModal} />
         <PopupBanner/>
     </div>
