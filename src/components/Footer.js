@@ -41,7 +41,7 @@ export default function Footer (props) {
                 <div className={'footer'} id={'footer'}>
                     <div className="logo logo-footer">
                         <Link to="">
-                            <img src={logo2} alt="Logo" onMouseOver={() => { /* Обработчик наведения на картинку */
+                            <img src={logo2} alt="Logo" onMouseOver={() => {
                             }} onClick={handleImageClick}
                             />
                         </Link>
