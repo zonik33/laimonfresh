@@ -69,8 +69,6 @@ export default function Footer (props) {
                     </div>
                 </div>
                 <div className="left-footer">
-                    {/*<p>А также некоторые особенности внутренней политики формируют глобальную экономическую сеть и при*/}
-                    {/*    этом — указаны как претенденты на роль ключевых.</p>*/}
                     <p className={'footer-padding-text'}>info@promo.laimonfresh.ch</p>
                     <p className={'footer-padding-text new'}>12.08.2024 г. в силу вступит Дополнение №1 к Правилам
                         проведения и условиям участия в Акции «ЛетоПутешествие».</p>

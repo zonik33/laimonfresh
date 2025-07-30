@@ -1,14 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
 import React, {useEffect, useState} from 'react';
-import {BrowserRouter, Routes, Route, Navigate, Outlet, HashRouter} from 'react-router-dom';
+import {HashRouter, Navigate, Route, Routes} from 'react-router-dom';
 import Nav from "./Nav/Nav";
 import Faq from "./components/faq-block/Faq";
 import Profile from "./components/lk-profile/Profile";
 import WinnersAll from "./components/winners/WinnersAll";
-import Modal from "react-modal";
 import axios from "axios";
-import PopupSoon from "./components/Popups/PopupSoon";
 import Error from "./components/Error/Error";
 import PopupBanner from "./components/Popups/PopupBanner";
 import PopupRegister from "./components/Popups/PopupRegister";
